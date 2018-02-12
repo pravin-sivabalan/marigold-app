@@ -120,7 +120,7 @@
                                                         <state key="normal" title="Back"/>
                                                     </button>
                                                     <connections>
-                                                        <segue destination="W7X-I5-FV2" kind="show" id="se7-w2-n4i"/>
+                                                        <segue destination="W7X-I5-FV2" kind="presentation" id="zo6-Mi-A9V"/>
                                                     </connections>
                                                 </barButtonItem>
                                             </navigationItem>
@@ -227,7 +227,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0a1-sN-I7h">
-                                <rect key="frame" x="78" y="269" width="165" height="30"/>
+                                <rect key="frame" x="78" y="269" width="165" height="41"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" title="Get Started"/>
@@ -255,6 +255,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="YDj-Q5-6sQ"/>
                     </view>
+                    <navigationItem key="navigationItem" id="6UH-1n-hCM"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gXA-DH-GrJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="Y0e-jA-dj7"/>
@@ -283,7 +284,7 @@
                                                 <state key="normal" title="Back"/>
                                             </button>
                                             <connections>
-                                                <segue destination="W7X-I5-FV2" kind="show" id="yaw-lo-VL4"/>
+                                                <segue destination="W7X-I5-FV2" kind="show" id="vyV-tA-7Mq"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -353,6 +354,6 @@
         <image name="Logo" width="866" height="189"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="se7-w2-n4i"/>
+        <segue reference="zo6-Mi-A9V"/>
     </inferredMetricsTieBreakers>
 </document>
