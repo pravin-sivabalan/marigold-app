@@ -119,6 +119,9 @@
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <state key="normal" title="Back"/>
                                                     </button>
+                                                    <connections>
+                                                        <segue destination="W7X-I5-FV2" kind="show" id="se7-w2-n4i"/>
+                                                    </connections>
                                                 </barButtonItem>
                                             </navigationItem>
                                         </items>
@@ -279,6 +282,9 @@
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" title="Back"/>
                                             </button>
+                                            <connections>
+                                                <segue destination="W7X-I5-FV2" kind="show" id="yaw-lo-VL4"/>
+                                            </connections>
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>
@@ -346,4 +352,7 @@
     <resources>
         <image name="Logo" width="866" height="189"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="se7-w2-n4i"/>
+    </inferredMetricsTieBreakers>
 </document>
