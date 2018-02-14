@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		039D85C9202E599D000B6485 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 039D85C8202E599D000B6485 /* GradientView.swift */; };
+		31352B2EE813AE49C5D1458F /* Pods_MariGold.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EE7A3C8BF907B511BD1C536 /* Pods_MariGold.framework */; };
 		3D17623D2017E62000A1C77A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D17623C2017E62000A1C77A /* AppDelegate.swift */; };
 		3D17623F2017E62000A1C77A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D17623E2017E62000A1C77A /* ViewController.swift */; };
 		3D1762422017E62000A1C77A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D1762402017E62000A1C77A /* Main.storyboard */; };
@@ -15,6 +15,8 @@
 		3D1762472017E62000A1C77A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D1762452017E62000A1C77A /* LaunchScreen.storyboard */; };
 		3D1762522017E62000A1C77A /* MariGoldTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D1762512017E62000A1C77A /* MariGoldTests.swift */; };
 		3D17625D2017E62000A1C77A /* MariGoldUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D17625C2017E62000A1C77A /* MariGoldUITests.swift */; };
+		836F4A0F2D5CE8BA51E0E74A /* Pods_MariGoldTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 808FD94660326ACCE7C84B9F /* Pods_MariGoldTests.framework */; };
+		8F9C7AFECB9DBD3A57889C23 /* Pods_MariGoldUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F2CBD343E0DE49496D77F0B /* Pods_MariGoldUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,7 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		039D85C8202E599D000B6485 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
+		187359E3B3010650DBFCD7C2 /* Pods-MariGold.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MariGold.release.xcconfig"; path = "Pods/Target Support Files/Pods-MariGold/Pods-MariGold.release.xcconfig"; sourceTree = "<group>"; };
+		39AD9A9148C9320D500C9247 /* Pods-MariGoldTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MariGoldTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MariGoldTests/Pods-MariGoldTests.debug.xcconfig"; sourceTree = "<group>"; };
 		3D1762392017E62000A1C77A /* MariGold.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MariGold.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D17623C2017E62000A1C77A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3D17623E2017E62000A1C77A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -49,6 +52,13 @@
 		3D1762582017E62000A1C77A /* MariGoldUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MariGoldUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D17625C2017E62000A1C77A /* MariGoldUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MariGoldUITests.swift; sourceTree = "<group>"; };
 		3D17625E2017E62000A1C77A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4EE7A3C8BF907B511BD1C536 /* Pods_MariGold.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MariGold.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5486E0B4DEADC1DBBCA4CC25 /* Pods-MariGoldUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MariGoldUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MariGoldUITests/Pods-MariGoldUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		808FD94660326ACCE7C84B9F /* Pods_MariGoldTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MariGoldTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F2CBD343E0DE49496D77F0B /* Pods_MariGoldUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MariGoldUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D98664A8222DBB362BE463A0 /* Pods-MariGold.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MariGold.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MariGold/Pods-MariGold.debug.xcconfig"; sourceTree = "<group>"; };
+		F29E3937BF20AFCBE51C4D7A /* Pods-MariGoldUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MariGoldUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MariGoldUITests/Pods-MariGoldUITests.release.xcconfig"; sourceTree = "<group>"; };
+		FC93FA618C839FB2DC36D6E5 /* Pods-MariGoldTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MariGoldTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MariGoldTests/Pods-MariGoldTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				31352B2EE813AE49C5D1458F /* Pods_MariGold.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				836F4A0F2D5CE8BA51E0E74A /* Pods_MariGoldTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,6 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F9C7AFECB9DBD3A57889C23 /* Pods_MariGoldUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +96,8 @@
 				3D1762502017E62000A1C77A /* MariGoldTests */,
 				3D17625B2017E62000A1C77A /* MariGoldUITests */,
 				3D17623A2017E62000A1C77A /* Products */,
+				D457B292921EC795305A5AB4 /* Pods */,
+				59B53A6BF23CDE6B59B396C3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -105,7 +120,6 @@
 				3D1762432017E62000A1C77A /* Assets.xcassets */,
 				3D1762452017E62000A1C77A /* LaunchScreen.storyboard */,
 				3D1762482017E62000A1C77A /* Info.plist */,
-				039D85C8202E599D000B6485 /* GradientView.swift */,
 			);
 			path = MariGold;
 			sourceTree = "<group>";
@@ -128,6 +142,29 @@
 			path = MariGoldUITests;
 			sourceTree = "<group>";
 		};
+		59B53A6BF23CDE6B59B396C3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4EE7A3C8BF907B511BD1C536 /* Pods_MariGold.framework */,
+				808FD94660326ACCE7C84B9F /* Pods_MariGoldTests.framework */,
+				9F2CBD343E0DE49496D77F0B /* Pods_MariGoldUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D457B292921EC795305A5AB4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D98664A8222DBB362BE463A0 /* Pods-MariGold.debug.xcconfig */,
+				187359E3B3010650DBFCD7C2 /* Pods-MariGold.release.xcconfig */,
+				39AD9A9148C9320D500C9247 /* Pods-MariGoldTests.debug.xcconfig */,
+				FC93FA618C839FB2DC36D6E5 /* Pods-MariGoldTests.release.xcconfig */,
+				5486E0B4DEADC1DBBCA4CC25 /* Pods-MariGoldUITests.debug.xcconfig */,
+				F29E3937BF20AFCBE51C4D7A /* Pods-MariGoldUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,9 +172,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3D1762612017E62000A1C77A /* Build configuration list for PBXNativeTarget "MariGold" */;
 			buildPhases = (
+				E7D1D7F87241653CE9832752 /* [CP] Check Pods Manifest.lock */,
 				3D1762352017E62000A1C77A /* Sources */,
 				3D1762362017E62000A1C77A /* Frameworks */,
 				3D1762372017E62000A1C77A /* Resources */,
+				C77F07024D39F5C9519FFE8E /* [CP] Embed Pods Frameworks */,
+				75855DF639C342F574395F80 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -152,9 +192,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3D1762642017E62000A1C77A /* Build configuration list for PBXNativeTarget "MariGoldTests" */;
 			buildPhases = (
+				DD036BF71F9FE71AE84DA75F /* [CP] Check Pods Manifest.lock */,
 				3D1762492017E62000A1C77A /* Sources */,
 				3D17624A2017E62000A1C77A /* Frameworks */,
 				3D17624B2017E62000A1C77A /* Resources */,
+				E8F191FA13F499203552A4B6 /* [CP] Embed Pods Frameworks */,
+				4DEFD39A00A85D09D1D47FE3 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -170,9 +213,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3D1762672017E62000A1C77A /* Build configuration list for PBXNativeTarget "MariGoldUITests" */;
 			buildPhases = (
+				0FCDB3B7F5991CAD99DDB9CB /* [CP] Check Pods Manifest.lock */,
 				3D1762542017E62000A1C77A /* Sources */,
 				3D1762552017E62000A1C77A /* Frameworks */,
 				3D1762562017E62000A1C77A /* Resources */,
+				5EFAC79B55205435BE4FB62F /* [CP] Embed Pods Frameworks */,
+				466F17FEA72C6688D7C579BD /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -257,6 +303,156 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0FCDB3B7F5991CAD99DDB9CB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MariGoldUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		466F17FEA72C6688D7C579BD /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MariGoldUITests/Pods-MariGoldUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4DEFD39A00A85D09D1D47FE3 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MariGoldTests/Pods-MariGoldTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5EFAC79B55205435BE4FB62F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MariGoldUITests/Pods-MariGoldUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		75855DF639C342F574395F80 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MariGold/Pods-MariGold-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C77F07024D39F5C9519FFE8E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-MariGold/Pods-MariGold-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Pastel/Pastel.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Pastel.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MariGold/Pods-MariGold-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DD036BF71F9FE71AE84DA75F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MariGoldTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E7D1D7F87241653CE9832752 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MariGold-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E8F191FA13F499203552A4B6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MariGoldTests/Pods-MariGoldTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		3D1762352017E62000A1C77A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -264,7 +460,6 @@
 			files = (
 				3D17623F2017E62000A1C77A /* ViewController.swift in Sources */,
 				3D17623D2017E62000A1C77A /* AppDelegate.swift in Sources */,
-				039D85C9202E599D000B6485 /* GradientView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -428,6 +623,7 @@
 		};
 		3D1762622017E62000A1C77A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D98664A8222DBB362BE463A0 /* Pods-MariGold.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -443,6 +639,7 @@
 		};
 		3D1762632017E62000A1C77A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 187359E3B3010650DBFCD7C2 /* Pods-MariGold.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -458,6 +655,7 @@
 		};
 		3D1762652017E62000A1C77A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 39AD9A9148C9320D500C9247 /* Pods-MariGoldTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -474,6 +672,7 @@
 		};
 		3D1762662017E62000A1C77A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FC93FA618C839FB2DC36D6E5 /* Pods-MariGoldTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -490,6 +689,7 @@
 		};
 		3D1762682017E62000A1C77A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5486E0B4DEADC1DBBCA4CC25 /* Pods-MariGoldUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -505,6 +705,7 @@
 		};
 		3D1762692017E62000A1C77A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F29E3937BF20AFCBE51C4D7A /* Pods-MariGoldUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

@@ -1,0 +1,876 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1CF962A4E6B6B66AACDFF71B4AE3C259 /* Pods-MariGoldTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = FE4E1008E95AF305F75AC907B5E74686 /* Pods-MariGoldTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3FB78F8D3F910CD68F73626D7677909D /* Pods-MariGold-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2548AB2E92174C116A57228ACC2A0D41 /* Pods-MariGold-dummy.m */; };
+		4EAA0AC4229C21072A3892A1859F90F9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		5FF31A431DC5199B8C6107B4E087361A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		72DC14E956F45F642E3207BDA5E5E478 /* PastelGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91EBC655D45F8500590724375FC56F15 /* PastelGradient.swift */; };
+		79EA7BFF5D6688E0A2D83DD386275DC8 /* Pods-MariGold-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = CFB9E188864AE117D9DC94A76D313CA7 /* Pods-MariGold-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AF819B23C5064E00908E417420160A8A /* Pods-MariGoldTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 605B87D59EE0327322B6ECE549CD0F4C /* Pods-MariGoldTests-dummy.m */; };
+		B61CC1DBB14930743EE04F30527CEA79 /* Pods-MariGoldUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8DBD94CBD1410435507E3590B6FAB6E0 /* Pods-MariGoldUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C3876E92B5D48CFC1C10A10AE2B3E812 /* PastelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D9323B12B49B11D84C897027EF38DEA /* PastelView.swift */; };
+		E03F419287F929DF0C7FCE665F0E96EA /* Pastel-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 38DAF96979208039C12CF8BE3551EA0D /* Pastel-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E4268869183317C5E39F79399AB6EFFB /* Pastel-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B8F68E86E6A5642A70CBC3D836C77977 /* Pastel-dummy.m */; };
+		FBD32EBF3D521582E73C272C98DBB3DF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		FD49EC123F272D92FDC9144FE503AAB6 /* Pods-MariGoldUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 437A8E1F8F0B038F03B0E8827B3E2EC4 /* Pods-MariGoldUITests-dummy.m */; };
+		FFD7EC2E785ED7B99BA0071E5C16F575 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2950563C7DB3BDB210EEC88BB432245F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8E1D092BF86FB8C0ABE055E421219B71;
+			remoteInfo = Pastel;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0123EEF10FC7D889A331E18FD08168EF /* Pods-MariGoldTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MariGoldTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		02F91AE7B60A13FB4EC6AF1A1AA22914 /* Pods-MariGoldUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MariGoldUITests.release.xcconfig"; sourceTree = "<group>"; };
+		07F970DD51C03682C50C5FF52D896716 /* Pods-MariGold-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MariGold-frameworks.sh"; sourceTree = "<group>"; };
+		12D6E94A1736DA96CB8FFD915A331BB2 /* Pods-MariGoldUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MariGoldUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		1A20AC8523E1F8FE7A96CA044C9BAD49 /* Pastel.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Pastel.modulemap; sourceTree = "<group>"; };
+		21A98C054F30D12DAC9F201F942F6EB3 /* Pods_MariGoldTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_MariGoldTests.framework; path = "Pods-MariGoldTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2548AB2E92174C116A57228ACC2A0D41 /* Pods-MariGold-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MariGold-dummy.m"; sourceTree = "<group>"; };
+		3227207C02CE5E0C19C4098334A9981A /* Pods-MariGoldUITests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MariGoldUITests-resources.sh"; sourceTree = "<group>"; };
+		3492DAEC2C1C08AA3DAC1EE2DF62CAFD /* Pods_MariGold.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_MariGold.framework; path = "Pods-MariGold.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		38DAF96979208039C12CF8BE3551EA0D /* Pastel-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pastel-umbrella.h"; sourceTree = "<group>"; };
+		3E7AEC236620D27E82FB33EE1686669B /* Pods-MariGoldTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-MariGoldTests.modulemap"; sourceTree = "<group>"; };
+		437A8E1F8F0B038F03B0E8827B3E2EC4 /* Pods-MariGoldUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MariGoldUITests-dummy.m"; sourceTree = "<group>"; };
+		4519DBD4AC71DE402D9B300FF37B2827 /* Pods-MariGoldUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MariGoldUITests-frameworks.sh"; sourceTree = "<group>"; };
+		47702FC7981EF9C4EA3D7CD970B65CA3 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5423A5E5F421F2F381075AF1B454DF95 /* Pods-MariGoldTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MariGoldTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		54F2138AB1056B74AC7D236AB6336428 /* Pods-MariGold.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-MariGold.modulemap"; sourceTree = "<group>"; };
+		605B87D59EE0327322B6ECE549CD0F4C /* Pods-MariGoldTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MariGoldTests-dummy.m"; sourceTree = "<group>"; };
+		635FB5AC29427C45F963D2C7A4850AF0 /* Pods-MariGold.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MariGold.release.xcconfig"; sourceTree = "<group>"; };
+		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		6AE7AE601A611E10EC47E1303CB66517 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6B9B80669FA9C58CD61F570114C7CDB6 /* Pods-MariGoldUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MariGoldUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		6DD4C5E734022BF4F90B84CD05977758 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6E5C56916477A129E930E2740894D06C /* Pods-MariGold-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MariGold-acknowledgements.plist"; sourceTree = "<group>"; };
+		74186A1698FCC99311C19E808E0ABABC /* Pods-MariGoldUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MariGoldUITests-acknowledgements.plist"; sourceTree = "<group>"; };
+		781C7F88B450D2DFDAFB23FF8F41BFD3 /* Pastel.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pastel.xcconfig; sourceTree = "<group>"; };
+		7D9323B12B49B11D84C897027EF38DEA /* PastelView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PastelView.swift; path = Pastel/Classes/PastelView.swift; sourceTree = "<group>"; };
+		80BA415119AA81B944338315361C283E /* Pods-MariGold-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MariGold-acknowledgements.markdown"; sourceTree = "<group>"; };
+		8DBD94CBD1410435507E3590B6FAB6E0 /* Pods-MariGoldUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MariGoldUITests-umbrella.h"; sourceTree = "<group>"; };
+		91EBC655D45F8500590724375FC56F15 /* PastelGradient.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PastelGradient.swift; path = Pastel/Classes/PastelGradient.swift; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		98AB26516E8161DDE4910E63ED8C5313 /* Pastel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pastel.framework; path = Pastel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		995CF67F9E0A67052EAF72FA85B35565 /* Pods-MariGoldTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MariGoldTests.release.xcconfig"; sourceTree = "<group>"; };
+		A401ECB9E34210667B08726532AFE62E /* Pods-MariGold-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MariGold-resources.sh"; sourceTree = "<group>"; };
+		AE4C22FC85BB7E6DED9811ED39929F3D /* Pods_MariGoldUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_MariGoldUITests.framework; path = "Pods-MariGoldUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B5807E7AE22BC5C4E9D1CA25768AB6DC /* Pods-MariGold.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MariGold.debug.xcconfig"; sourceTree = "<group>"; };
+		B61BFBFB8C3E1839D8CBB31EF073E7A2 /* Pastel-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pastel-prefix.pch"; sourceTree = "<group>"; };
+		B8F68E86E6A5642A70CBC3D836C77977 /* Pastel-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pastel-dummy.m"; sourceTree = "<group>"; };
+		C1ACED123F12E57EE796A4D7364F98B8 /* Pods-MariGoldUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-MariGoldUITests.modulemap"; sourceTree = "<group>"; };
+		CFB9E188864AE117D9DC94A76D313CA7 /* Pods-MariGold-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MariGold-umbrella.h"; sourceTree = "<group>"; };
+		D5DE98C7875CD26D137C1D00A1EFF9DC /* Pods-MariGoldTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MariGoldTests-resources.sh"; sourceTree = "<group>"; };
+		E4D00302889B5E8A499E701CEB164674 /* Pods-MariGoldTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MariGoldTests.debug.xcconfig"; sourceTree = "<group>"; };
+		E697CABB91A8CB8CD521FF6AD88CAD05 /* Pods-MariGoldTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MariGoldTests-frameworks.sh"; sourceTree = "<group>"; };
+		F95FC53421CB8121B732844819DCDEE0 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FE4E1008E95AF305F75AC907B5E74686 /* Pods-MariGoldTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MariGoldTests-umbrella.h"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		05EBCB8AF8A62A5952327AC4CD3D7868 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4EAA0AC4229C21072A3892A1859F90F9 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		808F20E55E4479114B92DCAAA3F10212 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5FF31A431DC5199B8C6107B4E087361A /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B886ADC363243239BA6B40D42FAA9CC0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FBD32EBF3D521582E73C272C98DBB3DF /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D71AFFA7FAAF292D8ED71AFCCC2990C4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FFD7EC2E785ED7B99BA0071E5C16F575 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		33C3F377B4014F15A656ED8B269D24FB /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				47702FC7981EF9C4EA3D7CD970B65CA3 /* Info.plist */,
+				1A20AC8523E1F8FE7A96CA044C9BAD49 /* Pastel.modulemap */,
+				781C7F88B450D2DFDAFB23FF8F41BFD3 /* Pastel.xcconfig */,
+				B8F68E86E6A5642A70CBC3D836C77977 /* Pastel-dummy.m */,
+				B61BFBFB8C3E1839D8CBB31EF073E7A2 /* Pastel-prefix.pch */,
+				38DAF96979208039C12CF8BE3551EA0D /* Pastel-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Pastel";
+			sourceTree = "<group>";
+		};
+		51385EFAA86DDA7C5976FF016DFE56B9 /* Pods-MariGold */ = {
+			isa = PBXGroup;
+			children = (
+				F95FC53421CB8121B732844819DCDEE0 /* Info.plist */,
+				54F2138AB1056B74AC7D236AB6336428 /* Pods-MariGold.modulemap */,
+				80BA415119AA81B944338315361C283E /* Pods-MariGold-acknowledgements.markdown */,
+				6E5C56916477A129E930E2740894D06C /* Pods-MariGold-acknowledgements.plist */,
+				2548AB2E92174C116A57228ACC2A0D41 /* Pods-MariGold-dummy.m */,
+				07F970DD51C03682C50C5FF52D896716 /* Pods-MariGold-frameworks.sh */,
+				A401ECB9E34210667B08726532AFE62E /* Pods-MariGold-resources.sh */,
+				CFB9E188864AE117D9DC94A76D313CA7 /* Pods-MariGold-umbrella.h */,
+				B5807E7AE22BC5C4E9D1CA25768AB6DC /* Pods-MariGold.debug.xcconfig */,
+				635FB5AC29427C45F963D2C7A4850AF0 /* Pods-MariGold.release.xcconfig */,
+			);
+			name = "Pods-MariGold";
+			path = "Target Support Files/Pods-MariGold";
+			sourceTree = "<group>";
+		};
+		714F761E8E8DFD3A791F241EAA97F619 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				51385EFAA86DDA7C5976FF016DFE56B9 /* Pods-MariGold */,
+				86FCF024DE20A2792D6527C874A0815F /* Pods-MariGoldTests */,
+				AF85CB76F9E7D760B5859787DD9A5D13 /* Pods-MariGoldUITests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				937D81996BF33AEBD55DE24FB866E3A3 /* Pods */,
+				B9859F9DF1434245F1731F1C9E3A5F0F /* Products */,
+				714F761E8E8DFD3A791F241EAA97F619 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		86FCF024DE20A2792D6527C874A0815F /* Pods-MariGoldTests */ = {
+			isa = PBXGroup;
+			children = (
+				6AE7AE601A611E10EC47E1303CB66517 /* Info.plist */,
+				3E7AEC236620D27E82FB33EE1686669B /* Pods-MariGoldTests.modulemap */,
+				0123EEF10FC7D889A331E18FD08168EF /* Pods-MariGoldTests-acknowledgements.markdown */,
+				5423A5E5F421F2F381075AF1B454DF95 /* Pods-MariGoldTests-acknowledgements.plist */,
+				605B87D59EE0327322B6ECE549CD0F4C /* Pods-MariGoldTests-dummy.m */,
+				E697CABB91A8CB8CD521FF6AD88CAD05 /* Pods-MariGoldTests-frameworks.sh */,
+				D5DE98C7875CD26D137C1D00A1EFF9DC /* Pods-MariGoldTests-resources.sh */,
+				FE4E1008E95AF305F75AC907B5E74686 /* Pods-MariGoldTests-umbrella.h */,
+				E4D00302889B5E8A499E701CEB164674 /* Pods-MariGoldTests.debug.xcconfig */,
+				995CF67F9E0A67052EAF72FA85B35565 /* Pods-MariGoldTests.release.xcconfig */,
+			);
+			name = "Pods-MariGoldTests";
+			path = "Target Support Files/Pods-MariGoldTests";
+			sourceTree = "<group>";
+		};
+		937D81996BF33AEBD55DE24FB866E3A3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BB77C33CD4946EFF6E246063B07B8B53 /* Pastel */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		AF85CB76F9E7D760B5859787DD9A5D13 /* Pods-MariGoldUITests */ = {
+			isa = PBXGroup;
+			children = (
+				6DD4C5E734022BF4F90B84CD05977758 /* Info.plist */,
+				C1ACED123F12E57EE796A4D7364F98B8 /* Pods-MariGoldUITests.modulemap */,
+				6B9B80669FA9C58CD61F570114C7CDB6 /* Pods-MariGoldUITests-acknowledgements.markdown */,
+				74186A1698FCC99311C19E808E0ABABC /* Pods-MariGoldUITests-acknowledgements.plist */,
+				437A8E1F8F0B038F03B0E8827B3E2EC4 /* Pods-MariGoldUITests-dummy.m */,
+				4519DBD4AC71DE402D9B300FF37B2827 /* Pods-MariGoldUITests-frameworks.sh */,
+				3227207C02CE5E0C19C4098334A9981A /* Pods-MariGoldUITests-resources.sh */,
+				8DBD94CBD1410435507E3590B6FAB6E0 /* Pods-MariGoldUITests-umbrella.h */,
+				12D6E94A1736DA96CB8FFD915A331BB2 /* Pods-MariGoldUITests.debug.xcconfig */,
+				02F91AE7B60A13FB4EC6AF1A1AA22914 /* Pods-MariGoldUITests.release.xcconfig */,
+			);
+			name = "Pods-MariGoldUITests";
+			path = "Target Support Files/Pods-MariGoldUITests";
+			sourceTree = "<group>";
+		};
+		B9859F9DF1434245F1731F1C9E3A5F0F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				98AB26516E8161DDE4910E63ED8C5313 /* Pastel.framework */,
+				3492DAEC2C1C08AA3DAC1EE2DF62CAFD /* Pods_MariGold.framework */,
+				21A98C054F30D12DAC9F201F942F6EB3 /* Pods_MariGoldTests.framework */,
+				AE4C22FC85BB7E6DED9811ED39929F3D /* Pods_MariGoldUITests.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BB77C33CD4946EFF6E246063B07B8B53 /* Pastel */ = {
+			isa = PBXGroup;
+			children = (
+				91EBC655D45F8500590724375FC56F15 /* PastelGradient.swift */,
+				7D9323B12B49B11D84C897027EF38DEA /* PastelView.swift */,
+				33C3F377B4014F15A656ED8B269D24FB /* Support Files */,
+			);
+			name = Pastel;
+			path = Pastel;
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D35AF013A5F0BAD4F32504907A52519E /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D35AF013A5F0BAD4F32504907A52519E /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		4A60B5084C7CB5B3D0A5465B55459558 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E03F419287F929DF0C7FCE665F0E96EA /* Pastel-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6A69E22A94957F56EEFF7A84A44054AA /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1CF962A4E6B6B66AACDFF71B4AE3C259 /* Pods-MariGoldTests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		90DB9E43717C6F1F6731C163696D86A2 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B61CC1DBB14930743EE04F30527CEA79 /* Pods-MariGoldUITests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C1C17BD41DA58B6A9458A6C4401EBEDF /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				79EA7BFF5D6688E0A2D83DD386275DC8 /* Pods-MariGold-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		5EE2D1DC2E267FA25E768C4702E1D6E5 /* Pods-MariGold */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AFBEFCF5A21351ED9D02A5A9F0AC71F3 /* Build configuration list for PBXNativeTarget "Pods-MariGold" */;
+			buildPhases = (
+				471794F17D18BB6064712829BC4649F3 /* Sources */,
+				05EBCB8AF8A62A5952327AC4CD3D7868 /* Frameworks */,
+				C1C17BD41DA58B6A9458A6C4401EBEDF /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				29F7F7A9EF4D6E71BF34720F1577E827 /* PBXTargetDependency */,
+			);
+			name = "Pods-MariGold";
+			productName = "Pods-MariGold";
+			productReference = 3492DAEC2C1C08AA3DAC1EE2DF62CAFD /* Pods_MariGold.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		8E1D092BF86FB8C0ABE055E421219B71 /* Pastel */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9C6593740037C02E9291E1477CEB6528 /* Build configuration list for PBXNativeTarget "Pastel" */;
+			buildPhases = (
+				9175DF6E5C72BC0972090DB37B76A5F9 /* Sources */,
+				D71AFFA7FAAF292D8ED71AFCCC2990C4 /* Frameworks */,
+				4A60B5084C7CB5B3D0A5465B55459558 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Pastel;
+			productName = Pastel;
+			productReference = 98AB26516E8161DDE4910E63ED8C5313 /* Pastel.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		9F844FB79E8D6F9CB30F5C1D37B3A855 /* Pods-MariGoldTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 67D338FAD0E6FC23005412547BBBB2E9 /* Build configuration list for PBXNativeTarget "Pods-MariGoldTests" */;
+			buildPhases = (
+				08572A23CCBA469C13E207D8979F15FD /* Sources */,
+				808F20E55E4479114B92DCAAA3F10212 /* Frameworks */,
+				6A69E22A94957F56EEFF7A84A44054AA /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-MariGoldTests";
+			productName = "Pods-MariGoldTests";
+			productReference = 21A98C054F30D12DAC9F201F942F6EB3 /* Pods_MariGoldTests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		BCE0FE63E6C5BB59C469C5F7EA7FEFC1 /* Pods-MariGoldUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 18983F177E8D2B6EFBD0FD416AA51B0B /* Build configuration list for PBXNativeTarget "Pods-MariGoldUITests" */;
+			buildPhases = (
+				EE726615ED59E5CA1AE8C23B278493D6 /* Sources */,
+				B886ADC363243239BA6B40D42FAA9CC0 /* Frameworks */,
+				90DB9E43717C6F1F6731C163696D86A2 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-MariGoldUITests";
+			productName = "Pods-MariGoldUITests";
+			productReference = AE4C22FC85BB7E6DED9811ED39929F3D /* Pods_MariGoldUITests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 0930;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = B9859F9DF1434245F1731F1C9E3A5F0F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8E1D092BF86FB8C0ABE055E421219B71 /* Pastel */,
+				5EE2D1DC2E267FA25E768C4702E1D6E5 /* Pods-MariGold */,
+				9F844FB79E8D6F9CB30F5C1D37B3A855 /* Pods-MariGoldTests */,
+				BCE0FE63E6C5BB59C469C5F7EA7FEFC1 /* Pods-MariGoldUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		08572A23CCBA469C13E207D8979F15FD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF819B23C5064E00908E417420160A8A /* Pods-MariGoldTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		471794F17D18BB6064712829BC4649F3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3FB78F8D3F910CD68F73626D7677909D /* Pods-MariGold-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9175DF6E5C72BC0972090DB37B76A5F9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E4268869183317C5E39F79399AB6EFFB /* Pastel-dummy.m in Sources */,
+				72DC14E956F45F642E3207BDA5E5E478 /* PastelGradient.swift in Sources */,
+				C3876E92B5D48CFC1C10A10AE2B3E812 /* PastelView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE726615ED59E5CA1AE8C23B278493D6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FD49EC123F272D92FDC9144FE503AAB6 /* Pods-MariGoldUITests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		29F7F7A9EF4D6E71BF34720F1577E827 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Pastel;
+			target = 8E1D092BF86FB8C0ABE055E421219B71 /* Pastel */;
+			targetProxy = 2950563C7DB3BDB210EEC88BB432245F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		323A24856F1A4871A780301AF5C02A2A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		3F5435BA5DE0B1A4C5C547C75ECC36DE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E4D00302889B5E8A499E701CEB164674 /* Pods-MariGoldTests.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-MariGoldTests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-MariGoldTests/Pods-MariGoldTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_MariGoldTests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		408B9F4853BF0C92A15FF98A84780EA8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 635FB5AC29427C45F963D2C7A4850AF0 /* Pods-MariGold.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-MariGold/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-MariGold/Pods-MariGold.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_MariGold;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		47D3CB11C61F5C0133F0F4B6A8EBC2EC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 12D6E94A1736DA96CB8FFD915A331BB2 /* Pods-MariGoldUITests.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-MariGoldUITests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-MariGoldUITests/Pods-MariGoldUITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_MariGoldUITests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		71EBA0547FEAE34A3EC2415E8F1001C6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B5807E7AE22BC5C4E9D1CA25768AB6DC /* Pods-MariGold.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-MariGold/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-MariGold/Pods-MariGold.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_MariGold;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		789E2BBDB801AB11A5B452216465DD7F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 781C7F88B450D2DFDAFB23FF8F41BFD3 /* Pastel.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Pastel/Pastel-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Pastel/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pastel/Pastel.modulemap";
+				PRODUCT_NAME = Pastel;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		CA33F186435244FD0FD5B7325332656C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		D5F2EC11DE534CB19B94D0E80CA121A3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 781C7F88B450D2DFDAFB23FF8F41BFD3 /* Pastel.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Pastel/Pastel-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Pastel/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pastel/Pastel.modulemap";
+				PRODUCT_NAME = Pastel;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		DA60266D7E146F6DF26187F788F98709 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 995CF67F9E0A67052EAF72FA85B35565 /* Pods-MariGoldTests.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-MariGoldTests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-MariGoldTests/Pods-MariGoldTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_MariGoldTests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		DBDD9809EFEB70CAEDFE3D0BA0D9DE45 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 02F91AE7B60A13FB4EC6AF1A1AA22914 /* Pods-MariGoldUITests.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-MariGoldUITests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-MariGoldUITests/Pods-MariGoldUITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_MariGoldUITests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		18983F177E8D2B6EFBD0FD416AA51B0B /* Build configuration list for PBXNativeTarget "Pods-MariGoldUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				47D3CB11C61F5C0133F0F4B6A8EBC2EC /* Debug */,
+				DBDD9809EFEB70CAEDFE3D0BA0D9DE45 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				323A24856F1A4871A780301AF5C02A2A /* Debug */,
+				CA33F186435244FD0FD5B7325332656C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		67D338FAD0E6FC23005412547BBBB2E9 /* Build configuration list for PBXNativeTarget "Pods-MariGoldTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3F5435BA5DE0B1A4C5C547C75ECC36DE /* Debug */,
+				DA60266D7E146F6DF26187F788F98709 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9C6593740037C02E9291E1477CEB6528 /* Build configuration list for PBXNativeTarget "Pastel" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				789E2BBDB801AB11A5B452216465DD7F /* Debug */,
+				D5F2EC11DE534CB19B94D0E80CA121A3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AFBEFCF5A21351ED9D02A5A9F0AC71F3 /* Build configuration list for PBXNativeTarget "Pods-MariGold" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				71EBA0547FEAE34A3EC2415E8F1001C6 /* Debug */,
+				408B9F4853BF0C92A15FF98A84780EA8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

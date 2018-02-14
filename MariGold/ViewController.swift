@@ -7,12 +7,25 @@
 //
 
 import UIKit
+import Pastel
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        // Make navigation bar transprent
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationController?.navigationBar.isTranslucent = true
+        self.navigationController?.view.backgroundColor = .clear
+
+
+        // Add Pastel Gradient
+        let pastelView = PastelView(frame: view.bounds)
+        pastelView.startAnimation()
+        view.insertSubview(pastelView, at: 0)
+
     }
 
     override func didReceiveMemoryWarning() {
