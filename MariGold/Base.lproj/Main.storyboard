@@ -59,6 +59,9 @@
                                                         <integer key="value" value="10"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <segue destination="4Qc-Fd-S05" kind="show" id="6xs-4E-Tha"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -105,6 +108,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
+        </scene>
+        <!--tabbarControllerID-->
+        <scene sceneID="g72-hX-G0S">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="dashboardID" storyboardName="TabBar" referencedIdentifier="tabbarControllerID" id="4Qc-Fd-S05" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ftH-t9-KmI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="787" y="133"/>
         </scene>
     </scenes>
     <resources>
