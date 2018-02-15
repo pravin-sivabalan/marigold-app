@@ -1,14 +1,14 @@
 //
-//  MariGoldUITests.swift
+//  LoginUITests.swift
 //  MariGoldUITests
 //
-//  Created by Pravin Sivabalan on 1/23/18.
+//  Created by Devin Sova on 2/14/18.
 //  Copyright © 2018 MariGold. All rights reserved.
 //
 
 import XCTest
 
-class MariGoldUITests: XCTestCase {
+class LoginUITests: XCTestCase {
         
     override func setUp() {
         super.setUp()
@@ -28,9 +28,22 @@ class MariGoldUITests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
+    func testLoginWithValidCredentials() {
         // Use recording to get started writing UI tests.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
+		
+		let app = XCUIApplication()
+		let emailAddressTextField = app.textFields["Email Address"]
+		emailAddressTextField.tap()
+		emailAddressTextField.typeText("test@example.com")
+		
+		let passwordSecureTextField = app.secureTextFields["Password"]
+		passwordSecureTextField.tap()
+		passwordSecureTextField.typeText("password")
+		
+		app.buttons["Sign In"].tap()
+		
+		XCTAssert(app.navigationBars["Dashboard View Controller"].exists)
     }
-	
+    
 }
