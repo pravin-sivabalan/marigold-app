@@ -15,6 +15,7 @@
 		3D1762472017E62000A1C77A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D1762452017E62000A1C77A /* LaunchScreen.storyboard */; };
 		3D1762522017E62000A1C77A /* MariGoldTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D1762512017E62000A1C77A /* MariGoldTests.swift */; };
 		3D17625D2017E62000A1C77A /* MariGoldUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D17625C2017E62000A1C77A /* MariGoldUITests.swift */; };
+		3D1A988D2037511D003C7977 /* yantramanav in Resources */ = {isa = PBXBuildFile; fileRef = 3D1A988C2037511D003C7977 /* yantramanav */; };
 		836F4A0F2D5CE8BA51E0E74A /* Pods_MariGoldTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 808FD94660326ACCE7C84B9F /* Pods_MariGoldTests.framework */; };
 		8F9C7AFECB9DBD3A57889C23 /* Pods_MariGoldUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F2CBD343E0DE49496D77F0B /* Pods_MariGoldUITests.framework */; };
 /* End PBXBuildFile section */
@@ -52,6 +53,7 @@
 		3D1762582017E62000A1C77A /* MariGoldUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MariGoldUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D17625C2017E62000A1C77A /* MariGoldUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MariGoldUITests.swift; sourceTree = "<group>"; };
 		3D17625E2017E62000A1C77A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3D1A988C2037511D003C7977 /* yantramanav */ = {isa = PBXFileReference; lastKnownFileType = folder; name = yantramanav; path = "../../../../Library/Messages/Attachments/42/02/DD561324-2CB1-4EBC-B99E-46B32FC8B019/Yantramanav-Medium/yantramanav"; sourceTree = "<group>"; };
 		4EE7A3C8BF907B511BD1C536 /* Pods_MariGold.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MariGold.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5486E0B4DEADC1DBBCA4CC25 /* Pods-MariGoldUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MariGoldUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MariGoldUITests/Pods-MariGoldUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		808FD94660326ACCE7C84B9F /* Pods_MariGoldTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MariGoldTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -114,6 +116,7 @@
 		3D17623B2017E62000A1C77A /* MariGold */ = {
 			isa = PBXGroup;
 			children = (
+				3D1A988C2037511D003C7977 /* yantramanav */,
 				3D17623C2017E62000A1C77A /* AppDelegate.swift */,
 				3D17623E2017E62000A1C77A /* ViewController.swift */,
 				3D1762402017E62000A1C77A /* Main.storyboard */,
@@ -284,6 +287,7 @@
 				3D1762472017E62000A1C77A /* LaunchScreen.storyboard in Resources */,
 				3D1762442017E62000A1C77A /* Assets.xcassets in Resources */,
 				3D1762422017E62000A1C77A /* Main.storyboard in Resources */,
+				3D1A988D2037511D003C7977 /* yantramanav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
