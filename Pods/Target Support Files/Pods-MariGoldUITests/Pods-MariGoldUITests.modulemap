@@ -1,0 +1,6 @@
+framework module Pods_MariGoldUITests {
+  umbrella header "Pods-MariGoldUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
