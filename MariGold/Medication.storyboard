@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Medication View Controller-->
+        <!--Medication-->
         <scene sceneID="V8A-Hl-sQe">
             <objects>
-                <viewController storyboardIdentifier="Medication.storyboard" title="Medication View Controller" useStoryboardIdentifierAsRestorationIdentifier="YES" id="jzm-8v-ITY" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Medication.storyboard" title="Medication" useStoryboardIdentifierAsRestorationIdentifier="YES" id="jzm-8v-ITY" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="AqN-AW-Zeq">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

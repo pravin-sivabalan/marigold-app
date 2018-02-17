@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Search View Contoller-->
+        <!--Search-->
         <scene sceneID="bPQ-s8-L6g">
             <objects>
-                <viewController storyboardIdentifier="Search.storyboard" title="Search View Contoller" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Zxt-Oh-acZ" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Search.storyboard" title="Search" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Zxt-Oh-acZ" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tzf-gv-WrQ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
