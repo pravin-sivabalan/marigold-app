@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 48;
+	objectVersion = 46;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -38,20 +38,20 @@
 		0B0D5C46A3120CC39036C1BC1C3A1315 /* Pods-MariGold-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MariGold-resources.sh"; sourceTree = "<group>"; };
 		0B114FD7BEAEA2D57AD018D7DD667FB2 /* Pods-MariGold-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MariGold-umbrella.h"; sourceTree = "<group>"; };
 		0EA6F3BD4894030789C8442107ACFCC1 /* Pastel-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pastel-prefix.pch"; sourceTree = "<group>"; };
-		10041EEEED74511C81A8B03E46BBACA7 /* Pods-MariGoldTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-MariGoldTests.modulemap"; sourceTree = "<group>"; };
+		10041EEEED74511C81A8B03E46BBACA7 /* Pods-MariGoldTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-MariGoldTests.modulemap"; sourceTree = "<group>"; };
 		15B68F9A658B3F67B6616550625FC69A /* Pods-MariGoldTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MariGoldTests-acknowledgements.plist"; sourceTree = "<group>"; };
 		16B9582883A63FB959B0D5EE8A215E2D /* Pastel-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pastel-dummy.m"; sourceTree = "<group>"; };
 		1EEF948D5F3F4760F33963733DCC6AC9 /* Pods-MariGold-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MariGold-acknowledgements.markdown"; sourceTree = "<group>"; };
-		21A98C054F30D12DAC9F201F942F6EB3 /* Pods_MariGoldTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_MariGoldTests.framework; path = "Pods-MariGoldTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		21A98C054F30D12DAC9F201F942F6EB3 /* Pods_MariGoldTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MariGoldTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		248C884F147FAB1EB236DFEF19D5F323 /* Pods-MariGoldUITests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MariGoldUITests-resources.sh"; sourceTree = "<group>"; };
 		309A98C7AF8441BBD4C18C6A43066C75 /* Pastel.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pastel.xcconfig; sourceTree = "<group>"; };
-		3492DAEC2C1C08AA3DAC1EE2DF62CAFD /* Pods_MariGold.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_MariGold.framework; path = "Pods-MariGold.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3492DAEC2C1C08AA3DAC1EE2DF62CAFD /* Pods_MariGold.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MariGold.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		402A2524C7F892DB6CBEBC6899EC6DBD /* Pods-MariGoldUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MariGoldUITests-frameworks.sh"; sourceTree = "<group>"; };
 		4B6F39D28A7978B7EBE34ACC1511FC61 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4F91E6BDDC947DB3D18C37A679911D5A /* Pods-MariGoldUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-MariGoldUITests.modulemap"; sourceTree = "<group>"; };
+		4F91E6BDDC947DB3D18C37A679911D5A /* Pods-MariGoldUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-MariGoldUITests.modulemap"; sourceTree = "<group>"; };
 		51DD6178169115AAA784DA3B80B4E7E3 /* Pastel-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pastel-umbrella.h"; sourceTree = "<group>"; };
 		566A411D446314FEBC35CD09AAE28BC3 /* Pods-MariGold.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MariGold.release.xcconfig"; sourceTree = "<group>"; };
-		59D8DC5EA9631C9116B408F3FC176EDA /* Pods-MariGold.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-MariGold.modulemap"; sourceTree = "<group>"; };
+		59D8DC5EA9631C9116B408F3FC176EDA /* Pods-MariGold.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-MariGold.modulemap"; sourceTree = "<group>"; };
 		5DA6BD934A092AE7664C34C40AB05A1E /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		654EA11654BE6926D5462B1F30DA9D81 /* Pods-MariGoldUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MariGoldUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
@@ -59,18 +59,18 @@
 		6E0582358D5687D54D4C6238843FDBD4 /* Pods-MariGold-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MariGold-dummy.m"; sourceTree = "<group>"; };
 		6EBD2CA5A9CFF53FAF2B441819139A96 /* Pods-MariGoldTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MariGoldTests.debug.xcconfig"; sourceTree = "<group>"; };
 		73CD4146498540049900A4059008092F /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		74B3F575D27F5F51DA2B1BA040ED9DB5 /* Pastel.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = Pastel.modulemap; sourceTree = "<group>"; };
+		74B3F575D27F5F51DA2B1BA040ED9DB5 /* Pastel.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Pastel.modulemap; sourceTree = "<group>"; };
 		75FF50CF6250E72D78906A79C33A3E9A /* Pods-MariGoldUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MariGoldUITests-dummy.m"; sourceTree = "<group>"; };
 		7D9323B12B49B11D84C897027EF38DEA /* PastelView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PastelView.swift; path = Pastel/Classes/PastelView.swift; sourceTree = "<group>"; };
 		8204BD0FDC6294BCCA82AADF028D2D0B /* Pods-MariGoldUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MariGoldUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		83052D14A652A4D90839C2E7618BE174 /* Pods-MariGold-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MariGold-frameworks.sh"; sourceTree = "<group>"; };
 		91826AE1812C7A4DCCE259CD1DC3B488 /* Pods-MariGoldUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MariGoldUITests-acknowledgements.plist"; sourceTree = "<group>"; };
 		91EBC655D45F8500590724375FC56F15 /* PastelGradient.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PastelGradient.swift; path = Pastel/Classes/PastelGradient.swift; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		962CCCFEBEF5FC7EBF963895C53823DE /* Pods-MariGoldUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MariGoldUITests-umbrella.h"; sourceTree = "<group>"; };
-		98AB26516E8161DDE4910E63ED8C5313 /* Pastel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pastel.framework; path = Pastel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		98AB26516E8161DDE4910E63ED8C5313 /* Pastel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pastel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE25D0B0D1E38A5DD736E08E2ACAC2C9 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AE4C22FC85BB7E6DED9811ED39929F3D /* Pods_MariGoldUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_MariGoldUITests.framework; path = "Pods-MariGoldUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE4C22FC85BB7E6DED9811ED39929F3D /* Pods_MariGoldUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MariGoldUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4D0A5704DEEFA444155A4A5D73D1E8D /* Pods-MariGoldTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MariGoldTests-resources.sh"; sourceTree = "<group>"; };
 		CB2823E88B6F0F62403A60A1F7CCEB13 /* Pods-MariGoldTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MariGoldTests-dummy.m"; sourceTree = "<group>"; };
 		DF2944AF6D96CFB581C4F9362E501AD3 /* Pods-MariGold-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MariGold-acknowledgements.plist"; sourceTree = "<group>"; };
@@ -213,7 +213,6 @@
 				7D9323B12B49B11D84C897027EF38DEA /* PastelView.swift */,
 				A7C8AE23D830666692D01E92E6C1177A /* Support Files */,
 			);
-			name = Pastel;
 			path = Pastel;
 			sourceTree = "<group>";
 		};
@@ -365,7 +364,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 0700;
+				LastUpgradeCheck = 0920;
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -708,6 +707,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
 				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Release;

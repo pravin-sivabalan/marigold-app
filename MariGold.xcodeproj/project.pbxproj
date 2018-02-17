@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0350560A2034D7DF00FD8AA5 /* LoginUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035056092034D7DF00FD8AA5 /* LoginUITests.swift */; };
+		039253B32038B7F0005A2C42 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 039253B22038B7F0005A2C42 /* LaunchScreen.storyboard */; };
 		0399401F2037B87900A6AEF1 /* Dashboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0399401E2037B87900A6AEF1 /* Dashboard.storyboard */; };
 		039940212037B91700A6AEF1 /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 039940202037B91700A6AEF1 /* Search.storyboard */; };
 		039940252037C48900A6AEF1 /* Account.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 039940242037C48900A6AEF1 /* Account.storyboard */; };
@@ -18,7 +19,6 @@
 		3D17623F2017E62000A1C77A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D17623E2017E62000A1C77A /* ViewController.swift */; };
 		3D1762422017E62000A1C77A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D1762402017E62000A1C77A /* Main.storyboard */; };
 		3D1762442017E62000A1C77A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D1762432017E62000A1C77A /* Assets.xcassets */; };
-		3D1762472017E62000A1C77A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D1762452017E62000A1C77A /* LaunchScreen.storyboard */; };
 		3D1762522017E62000A1C77A /* MariGoldTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D1762512017E62000A1C77A /* MariGoldTests.swift */; };
 		3D17625D2017E62000A1C77A /* MariGoldUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D17625C2017E62000A1C77A /* MariGoldUITests.swift */; };
 		7D21F4DED653EE42F79EEEC6 /* Pods_MariGoldTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE1410DA3A197F6555FA1071 /* Pods_MariGoldTests.framework */; };
@@ -45,6 +45,7 @@
 
 /* Begin PBXFileReference section */
 		035056092034D7DF00FD8AA5 /* LoginUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUITests.swift; sourceTree = "<group>"; };
+		039253B22038B7F0005A2C42 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0399401E2037B87900A6AEF1 /* Dashboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Dashboard.storyboard; sourceTree = "<group>"; };
 		039940202037B91700A6AEF1 /* Search.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
 		039940242037C48900A6AEF1 /* Account.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Account.storyboard; sourceTree = "<group>"; };
@@ -57,7 +58,6 @@
 		3D17623E2017E62000A1C77A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3D1762412017E62000A1C77A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3D1762432017E62000A1C77A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		3D1762462017E62000A1C77A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3D1762482017E62000A1C77A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3D17624D2017E62000A1C77A /* MariGoldTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MariGoldTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D1762512017E62000A1C77A /* MariGoldTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MariGoldTests.swift; sourceTree = "<group>"; };
@@ -138,11 +138,11 @@
 		3D17623B2017E62000A1C77A /* MariGold */ = {
 			isa = PBXGroup;
 			children = (
+				039253B22038B7F0005A2C42 /* LaunchScreen.storyboard */,
 				3D17623C2017E62000A1C77A /* AppDelegate.swift */,
 				3D17623E2017E62000A1C77A /* ViewController.swift */,
 				3D1762402017E62000A1C77A /* Main.storyboard */,
 				3D1762432017E62000A1C77A /* Assets.xcassets */,
-				3D1762452017E62000A1C77A /* LaunchScreen.storyboard */,
 				03B2062A2033EDF900C5F7F5 /* TabBar.storyboard */,
 				0399401E2037B87900A6AEF1 /* Dashboard.storyboard */,
 				039940262037C9F600A6AEF1 /* Medication.storyboard */,
@@ -303,9 +303,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				03B2062B2033EDF900C5F7F5 /* TabBar.storyboard in Resources */,
+				039253B32038B7F0005A2C42 /* LaunchScreen.storyboard in Resources */,
 				039940272037C9F600A6AEF1 /* Medication.storyboard in Resources */,
 				0399401F2037B87900A6AEF1 /* Dashboard.storyboard in Resources */,
-				3D1762472017E62000A1C77A /* LaunchScreen.storyboard in Resources */,
 				3D1762442017E62000A1C77A /* Assets.xcassets in Resources */,
 				039940212037B91700A6AEF1 /* Search.storyboard in Resources */,
 				3D1762422017E62000A1C77A /* Main.storyboard in Resources */,
@@ -529,14 +529,6 @@
 				3D1762412017E62000A1C77A /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		3D1762452017E62000A1C77A /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				3D1762462017E62000A1C77A /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
