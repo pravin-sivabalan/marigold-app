@@ -1,0 +1,10 @@
+# Ignore all swap files (Althought there shouldn't be any)
+*.swp
+
+# Ignore macOS .DS_Store files
+.DS_Store
+
+# Ignore Individual User Settings for Xcode
+xcuserdata/
+
+
