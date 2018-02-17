@@ -13,7 +13,6 @@
 		039940212037B91700A6AEF1 /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 039940202037B91700A6AEF1 /* Search.storyboard */; };
 		039940252037C48900A6AEF1 /* Account.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 039940242037C48900A6AEF1 /* Account.storyboard */; };
 		039940272037C9F600A6AEF1 /* Medication.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 039940262037C9F600A6AEF1 /* Medication.storyboard */; };
-		039D85C9202E599D000B6485 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 039D85C8202E599D000B6485 /* GradientView.swift */; };
 		03B2062B2033EDF900C5F7F5 /* TabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03B2062A2033EDF900C5F7F5 /* TabBar.storyboard */; };
 		3D17623D2017E62000A1C77A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D17623C2017E62000A1C77A /* AppDelegate.swift */; };
 		3D17623F2017E62000A1C77A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D17623E2017E62000A1C77A /* ViewController.swift */; };
@@ -50,7 +49,6 @@
 		039940202037B91700A6AEF1 /* Search.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
 		039940242037C48900A6AEF1 /* Account.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Account.storyboard; sourceTree = "<group>"; };
 		039940262037C9F600A6AEF1 /* Medication.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Medication.storyboard; sourceTree = "<group>"; };
-		039D85C8202E599D000B6485 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		03B2062A2033EDF900C5F7F5 /* TabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBar.storyboard; sourceTree = "<group>"; };
 		0E4FE26337B0BA937F5A53D3 /* Pods-MariGold.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MariGold.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MariGold/Pods-MariGold.debug.xcconfig"; sourceTree = "<group>"; };
 		3D1762392017E62000A1C77A /* MariGold.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MariGold.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -138,18 +136,17 @@
 		3D17623B2017E62000A1C77A /* MariGold */ = {
 			isa = PBXGroup;
 			children = (
-				039253B22038B7F0005A2C42 /* LaunchScreen.storyboard */,
+				3D1762432017E62000A1C77A /* Assets.xcassets */,
 				3D17623C2017E62000A1C77A /* AppDelegate.swift */,
 				3D17623E2017E62000A1C77A /* ViewController.swift */,
 				3D1762402017E62000A1C77A /* Main.storyboard */,
-				3D1762432017E62000A1C77A /* Assets.xcassets */,
+				039253B22038B7F0005A2C42 /* LaunchScreen.storyboard */,
 				03B2062A2033EDF900C5F7F5 /* TabBar.storyboard */,
 				0399401E2037B87900A6AEF1 /* Dashboard.storyboard */,
 				039940262037C9F600A6AEF1 /* Medication.storyboard */,
 				039940202037B91700A6AEF1 /* Search.storyboard */,
 				039940242037C48900A6AEF1 /* Account.storyboard */,
 				3D1762482017E62000A1C77A /* Info.plist */,
-				039D85C8202E599D000B6485 /* GradientView.swift */,
 			);
 			path = MariGold;
 			sourceTree = "<group>";
@@ -486,7 +483,6 @@
 			files = (
 				3D17623F2017E62000A1C77A /* ViewController.swift in Sources */,
 				3D17623D2017E62000A1C77A /* AppDelegate.swift in Sources */,
-				039D85C9202E599D000B6485 /* GradientView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
