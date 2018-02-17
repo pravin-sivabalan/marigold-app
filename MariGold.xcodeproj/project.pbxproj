@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		0350560A2034D7DF00FD8AA5 /* LoginUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035056092034D7DF00FD8AA5 /* LoginUITests.swift */; };
+		0399401F2037B87900A6AEF1 /* Dashboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0399401E2037B87900A6AEF1 /* Dashboard.storyboard */; };
+		039940212037B91700A6AEF1 /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 039940202037B91700A6AEF1 /* Search.storyboard */; };
+		039940252037C48900A6AEF1 /* Account.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 039940242037C48900A6AEF1 /* Account.storyboard */; };
+		039940272037C9F600A6AEF1 /* Medication.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 039940262037C9F600A6AEF1 /* Medication.storyboard */; };
 		039D85C9202E599D000B6485 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 039D85C8202E599D000B6485 /* GradientView.swift */; };
 		03B2062B2033EDF900C5F7F5 /* TabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03B2062A2033EDF900C5F7F5 /* TabBar.storyboard */; };
 		3D17623D2017E62000A1C77A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D17623C2017E62000A1C77A /* AppDelegate.swift */; };
@@ -38,6 +42,10 @@
 
 /* Begin PBXFileReference section */
 		035056092034D7DF00FD8AA5 /* LoginUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUITests.swift; sourceTree = "<group>"; };
+		0399401E2037B87900A6AEF1 /* Dashboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Dashboard.storyboard; sourceTree = "<group>"; };
+		039940202037B91700A6AEF1 /* Search.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
+		039940242037C48900A6AEF1 /* Account.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Account.storyboard; sourceTree = "<group>"; };
+		039940262037C9F600A6AEF1 /* Medication.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Medication.storyboard; sourceTree = "<group>"; };
 		039D85C8202E599D000B6485 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		03B2062A2033EDF900C5F7F5 /* TabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBar.storyboard; sourceTree = "<group>"; };
 		3D1762392017E62000A1C77A /* MariGold.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MariGold.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -109,6 +117,10 @@
 				3D1762432017E62000A1C77A /* Assets.xcassets */,
 				3D1762452017E62000A1C77A /* LaunchScreen.storyboard */,
 				03B2062A2033EDF900C5F7F5 /* TabBar.storyboard */,
+				0399401E2037B87900A6AEF1 /* Dashboard.storyboard */,
+				039940262037C9F600A6AEF1 /* Medication.storyboard */,
+				039940202037B91700A6AEF1 /* Search.storyboard */,
+				039940242037C48900A6AEF1 /* Account.storyboard */,
 				3D1762482017E62000A1C77A /* Info.plist */,
 				039D85C8202E599D000B6485 /* GradientView.swift */,
 			);
@@ -242,9 +254,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				03B2062B2033EDF900C5F7F5 /* TabBar.storyboard in Resources */,
+				039940272037C9F600A6AEF1 /* Medication.storyboard in Resources */,
+				0399401F2037B87900A6AEF1 /* Dashboard.storyboard in Resources */,
 				3D1762472017E62000A1C77A /* LaunchScreen.storyboard in Resources */,
 				3D1762442017E62000A1C77A /* Assets.xcassets in Resources */,
+				039940212037B91700A6AEF1 /* Search.storyboard in Resources */,
 				3D1762422017E62000A1C77A /* Main.storyboard in Resources */,
+				039940252037C48900A6AEF1 /* Account.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
