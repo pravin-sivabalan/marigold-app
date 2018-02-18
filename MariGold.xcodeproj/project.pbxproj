@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0315BA7F203A40C500CBD416 /* RegisterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0315BA7E203A40C500CBD416 /* RegisterUITests.swift */; };
 		0350560A2034D7DF00FD8AA5 /* LoginUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035056092034D7DF00FD8AA5 /* LoginUITests.swift */; };
 		039253B32038B7F0005A2C42 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 039253B22038B7F0005A2C42 /* LaunchScreen.storyboard */; };
 		039253BD2038E382005A2C42 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 039253BC2038E382005A2C42 /* RegisterViewController.swift */; };
@@ -44,6 +45,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0315BA7E203A40C500CBD416 /* RegisterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterUITests.swift; sourceTree = "<group>"; };
 		035056092034D7DF00FD8AA5 /* LoginUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUITests.swift; sourceTree = "<group>"; };
 		039253B22038B7F0005A2C42 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		039253BC2038E382005A2C42 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
@@ -141,8 +143,8 @@
 				3D1762432017E62000A1C77A /* Assets.xcassets */,
 				3D17623C2017E62000A1C77A /* AppDelegate.swift */,
 				3D17623E2017E62000A1C77A /* ViewController.swift */,
-				3D1762402017E62000A1C77A /* Main.storyboard */,
 				039253BC2038E382005A2C42 /* RegisterViewController.swift */,
+				3D1762402017E62000A1C77A /* Main.storyboard */,
 				039253B22038B7F0005A2C42 /* LaunchScreen.storyboard */,
 				03B2062A2033EDF900C5F7F5 /* TabBar.storyboard */,
 				0399401E2037B87900A6AEF1 /* Dashboard.storyboard */,
@@ -166,6 +168,7 @@
 		3D17625B2017E62000A1C77A /* MariGoldUITests */ = {
 			isa = PBXGroup;
 			children = (
+				0315BA7E203A40C500CBD416 /* RegisterUITests.swift */,
 				035056092034D7DF00FD8AA5 /* LoginUITests.swift */,
 				3D17625C2017E62000A1C77A /* MariGoldUITests.swift */,
 				3D17625E2017E62000A1C77A /* Info.plist */,
@@ -503,6 +506,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3D17625D2017E62000A1C77A /* MariGoldUITests.swift in Sources */,
+				0315BA7F203A40C500CBD416 /* RegisterUITests.swift in Sources */,
 				0350560A2034D7DF00FD8AA5 /* LoginUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

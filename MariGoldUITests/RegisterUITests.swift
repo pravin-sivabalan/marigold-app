@@ -1,14 +1,14 @@
 //
-//  LoginUITests.swift
+//  RegisterUITests.swift
 //  MariGoldUITests
 //
-//  Created by Devin Sova on 2/14/18.
+//  Created by Devin Sova on 2/18/18.
 //  Copyright © 2018 MariGold. All rights reserved.
 //
 
 import XCTest
 
-class LoginUITests: XCTestCase {
+class RegisterUITests: XCTestCase {
         
     override func setUp() {
         super.setUp()
@@ -28,11 +28,13 @@ class LoginUITests: XCTestCase {
         super.tearDown()
     }
     
-    func testLoginWithValidCredentials() {
+    func testRegisterWithValidInput() {
         // Use recording to get started writing UI tests.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
 		
 		let app = XCUIApplication()
+		app.buttons["Don't have an account? Register Here."].tap()
+		
 		let emailAddressTextField = app.textFields["Email Address"]
 		emailAddressTextField.tap()
 		emailAddressTextField.typeText("test@example.com")
@@ -41,9 +43,12 @@ class LoginUITests: XCTestCase {
 		passwordSecureTextField.tap()
 		passwordSecureTextField.typeText("password1")
 		
-		app.buttons["Sign In"].tap()
+		let confirmPasswordSecureTextField = app.secureTextFields["Confirm Password"]
+		confirmPasswordSecureTextField.tap()
+		confirmPasswordSecureTextField.typeText("password1")
+		app.buttons["Register"].tap()
 		
-		//Set to real assertion test when Dashboard has something to check
+		//Finish test when backend communication is available.
 		XCTAssert(true)
     }
     
