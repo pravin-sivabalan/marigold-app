@@ -21,6 +21,16 @@ class ViewController: UIViewController {
 							  UIColor(red: 249/255, green: 212/255, blue: 0/255, alpha: 1.0)])
 		pastelView.startAnimation()
     }
+	
+	override func viewDidAppear(_ animated: Bool) {
+		super.viewDidAppear(animated)
+		self.navigationController?.setNavigationBarHidden(true, animated: true)
+	}
+	
+	override func viewDidDisappear(_ animated: Bool) {
+		super.viewDidDisappear(animated)
+		self.navigationController?.setNavigationBarHidden(false, animated: true)
+	}
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
