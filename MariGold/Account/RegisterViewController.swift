@@ -17,6 +17,8 @@ class RegisterViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.navigationController?.navigationBar.tintColor = UIColor.white;
+        
         var border = CALayer()
         let width: CGFloat = 1
         border.borderColor = UIColor(red: 1, green: 1, blue: 1, alpha: 1).cgColor

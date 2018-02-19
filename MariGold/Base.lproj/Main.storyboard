@@ -23,8 +23,34 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nmC-EP-66o">
-                                <rect key="frame" x="28" y="305" width="319" height="57"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Jzo-xq-aeX">
+                                <rect key="frame" x="48" y="131" width="278" height="24"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" textContentType="email"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="_placeholderLabel.textColor">
+                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ONQ-V5-C3Z">
+                                <rect key="frame" x="48" y="188" width="278" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="278" id="G49-d8-fW1"/>
+                                    <constraint firstAttribute="height" constant="30" id="XCr-3d-hX1"/>
+                                </constraints>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="_placeholderLabel.textColor">
+                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nmC-EP-66o">
+                                <rect key="frame" x="28" y="289" width="319" height="57"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="lessThanOrEqual" constant="57" id="2an-HH-1rC"/>
@@ -49,36 +75,24 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Jzo-xq-aeX">
-                                <rect key="frame" x="28" y="129" width="319" height="30"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" textContentType="email"/>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ONQ-V5-C3Z">
-                                <rect key="frame" x="28" y="223" width="319" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="319" id="G49-d8-fW1"/>
-                                    <constraint firstAttribute="height" constant="30" id="XCr-3d-hX1"/>
-                                </constraints>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
-                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="tintColor" red="1" green="0.54263025519999997" blue="0.0027539934959999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Jzo-xq-aeX" firstAttribute="leading" secondItem="ONQ-V5-C3Z" secondAttribute="leading" id="7Oj-fp-g0b"/>
-                            <constraint firstItem="nmC-EP-66o" firstAttribute="top" secondItem="ONQ-V5-C3Z" secondAttribute="bottom" constant="52" id="9CX-QJ-zj2"/>
+                            <constraint firstItem="nmC-EP-66o" firstAttribute="top" secondItem="ONQ-V5-C3Z" secondAttribute="bottom" constant="71" id="9CX-QJ-zj2"/>
                             <constraint firstItem="Jzo-xq-aeX" firstAttribute="trailing" secondItem="ONQ-V5-C3Z" secondAttribute="trailing" id="AJf-f8-fit"/>
-                            <constraint firstItem="ONQ-V5-C3Z" firstAttribute="leading" secondItem="nmC-EP-66o" secondAttribute="leading" id="FXQ-pJ-ui0"/>
+                            <constraint firstItem="ONQ-V5-C3Z" firstAttribute="leading" secondItem="nmC-EP-66o" secondAttribute="leading" constant="20.5" id="FXQ-pJ-ui0"/>
                             <constraint firstItem="ONQ-V5-C3Z" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="PfT-bN-l6n"/>
-                            <constraint firstItem="Jzo-xq-aeX" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="65" id="jZ2-a0-B9V"/>
-                            <constraint firstItem="ONQ-V5-C3Z" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="223" id="mjU-Zl-f38"/>
+                            <constraint firstItem="Jzo-xq-aeX" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="67" id="jZ2-a0-B9V"/>
+                            <constraint firstItem="ONQ-V5-C3Z" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="227" id="mjU-Zl-f38"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="emailView" destination="Jzo-xq-aeX" id="laX-aa-uLH"/>
+                        <outlet property="passwordView" destination="ONQ-V5-C3Z" id="3bq-vV-kHR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
