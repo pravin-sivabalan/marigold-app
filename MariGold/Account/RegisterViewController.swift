@@ -7,13 +7,44 @@
 //
 
 import UIKit
+import Pastel
 
 class RegisterViewController: UIViewController {
-
+    @IBOutlet weak var emailView: UITextField!
+    @IBOutlet weak var passwordView: UITextField!
+    @IBOutlet weak var confirmPasswordView: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        var border = CALayer()
+        let width: CGFloat = 1
+        border.borderColor = UIColor(red: 1, green: 1, blue: 1, alpha: 1).cgColor
+        border.frame = CGRect(x: 0, y: passwordView.frame.size.height - width, width: passwordView.frame.size.width, height: 1)
+            border.borderWidth = width
+        passwordView.layer.addSublayer(border)
+        
+        border = CALayer()
+        border.borderColor = UIColor(red: 1, green: 1, blue: 1, alpha: 1).cgColor
+        border.frame = CGRect(x: 0, y: emailView.frame.size.height - width, width: emailView.frame.size.width, height: 1)
+        border.borderWidth = width
+        emailView.layer.addSublayer(border)
+        
+        border = CALayer()
+        border.borderColor = UIColor(red: 1, green: 1, blue: 1, alpha: 1).cgColor
+        border.frame = CGRect(x: 0, y: confirmPasswordView.frame.size.height - width, width: confirmPasswordView.frame.size.width, height: 1)
+        border.borderWidth = width
+        confirmPasswordView.layer.addSublayer(border)
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationController?.navigationBar.isTranslucent = true
+        self.navigationController?.view.backgroundColor = .clear
+        
+        let pastelView = PastelView(frame: view.bounds)
+        pastelView.setColors([UIColor(red: 240/255, green: 138/255, blue: 1/255, alpha: 1.0),
+                              UIColor(red: 249/255, green: 212/255, blue: 0/255, alpha: 1.0)])
+        pastelView.startAnimation()
+        view.insertSubview(pastelView, at: 0)
     }
 
     override func didReceiveMemoryWarning() {

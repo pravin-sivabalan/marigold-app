@@ -15,10 +15,10 @@
         </array>
     </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MariGold" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="MariGold" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -84,10 +84,10 @@
             </objects>
             <point key="canvasLocation" x="1319.2" y="574.36281859070471"/>
         </scene>
-        <!--View Controller-->
+        <!--Get Started View Controller-->
         <scene sceneID="qPC-Up-oPf">
             <objects>
-                <viewController id="W7X-I5-FV2" customClass="ViewController" customModule="MariGold" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="W7X-I5-FV2" customClass="GetStartedViewController" customModule="MariGold" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ztj-ov-whs">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -103,7 +103,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="Qu9-2N-hk0"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="6ze-fT-LW2"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Picture1" translatesAutoresizingMaskIntoConstraints="NO" id="013-rx-nH0">
@@ -145,7 +145,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="lMZ-Jf-tW1" kind="show" id="TG3-b9-Ja2"/>
+                                    <segue destination="lMZ-Jf-tW1" kind="show" id="8WY-cl-DBd"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="MariGold" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PaV-iq-Znd">
@@ -191,9 +191,6 @@
                         <viewLayoutGuide key="safeArea" id="YDj-Q5-6sQ"/>
                     </view>
                     <navigationItem key="navigationItem" id="6UH-1n-hCM"/>
-                    <connections>
-                        <outlet property="getStartedButton" destination="0a1-sN-I7h" id="Zga-SV-gRK"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gXA-DH-GrJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="Y0e-jA-dj7"/>
@@ -201,25 +198,30 @@
             </objects>
             <point key="canvasLocation" x="306.39999999999998" y="130.88455772113943"/>
         </scene>
-        <!--View Controller-->
+        <!--Register View Controller-->
         <scene sceneID="wXn-xN-r9o">
             <objects>
-                <viewController id="lMZ-Jf-tW1" customClass="ViewController" customModule="MariGold" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="lMZ-Jf-tW1" customClass="RegisterViewController" customModule="MariGold" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Z2u-is-wlj">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirm Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fpY-Ns-rYJ">
-                                <rect key="frame" x="28" y="197" width="319" height="30"/>
+                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Confirm Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fpY-Ns-rYJ">
+                                <rect key="frame" x="28" y="197" width="278" height="30"/>
                                 <accessibility key="accessibilityConfiguration" hint="Email"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="9b2-dD-wqS"/>
                                     <constraint firstAttribute="width" constant="288" id="Tha-Cm-SbD"/>
                                     <constraint firstAttribute="height" constant="30" id="V6k-BQ-4M7"/>
                                 </constraints>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" secureTextEntry="YES" textContentType="password"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="_placeholderLabel.textColor">
+                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kNV-ln-0Ih">
                                 <rect key="frame" x="28" y="257" width="319" height="57"/>
@@ -245,8 +247,8 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yIx-JJ-Tt5">
-                                <rect key="frame" x="28" y="143" width="319" height="30"/>
+                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yIx-JJ-Tt5">
+                                <rect key="frame" x="28" y="143" width="278" height="30"/>
                                 <accessibility key="accessibilityConfiguration" hint="Email"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="1JT-Tk-9JD"/>
@@ -254,12 +256,17 @@
                                     <constraint firstAttribute="width" constant="288" id="Sji-Rg-euZ"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="ncN-LK-3Yd"/>
                                 </constraints>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" secureTextEntry="YES" textContentType="password"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="_placeholderLabel.textColor">
+                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EOK-wm-OTr">
-                                <rect key="frame" x="28" y="83" width="319" height="30"/>
+                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EOK-wm-OTr">
+                                <rect key="frame" x="28" y="83" width="278" height="30"/>
                                 <accessibility key="accessibilityConfiguration" hint="Email"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="288" id="Hmj-7N-V6D"/>
@@ -267,12 +274,12 @@
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="288" id="ntW-UM-X2d"/>
                                     <constraint firstAttribute="height" constant="30" id="z61-DC-LSs"/>
                                 </constraints>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress" textContentType="email"/>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="rect" keyPath="border.frame">
-                                        <rect key="value" x="0.0" y="0.0" width="0.0" height="0.0"/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="_placeholderLabel.textColor">
+                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textField>
@@ -292,18 +299,19 @@
                         <viewLayoutGuide key="safeArea" id="UAQ-Bo-Bfb"/>
                     </view>
                     <connections>
-                        <outlet property="emailView" destination="EOK-wm-OTr" id="CNR-tG-l67"/>
-                        <outlet property="passwordView" destination="yIx-JJ-Tt5" id="gpL-Qr-6HV"/>
+                        <outlet property="confirmPasswordView" destination="fpY-Ns-rYJ" id="qEF-c4-dbr"/>
+                        <outlet property="emailView" destination="EOK-wm-OTr" id="bZ2-Gf-mi9"/>
+                        <outlet property="passwordView" destination="yIx-JJ-Tt5" id="vm9-WU-Oeu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uV3-di-j0n" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1319.2" y="-183.05847076461771"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Navigation View Controller-->
         <scene sceneID="Rc6-z3-Jzj">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="j8u-JG-Imv" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="j8u-JG-Imv" customClass="NavigationViewController" customModule="MariGold" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="LwX-Uc-9K6">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
