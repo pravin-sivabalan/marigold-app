@@ -10,7 +10,9 @@ import UIKit
 import Pastel
 
 class ViewController: UIViewController {
-	
+    @IBOutlet weak var emailField: UITextField!
+    @IBOutlet weak var passwordField: UITextField!
+    
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
@@ -32,5 +34,27 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    @IBAction func signInAction(_ sender: Any) {
+        if(emailField.text == "" || passwordField.text == "") {
+            return createAlert(title: "Not Finished", message: "Please finish filling out fields")
+        } else if(!isValidEmail(email: emailField.text!)) {
+            return createAlert(title: "Invalid Email", message: "Please enter a valid email")
+        }
+    }
+
+    
+    func createAlert(title: String, message: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Try Again", style: .cancel, handler: nil))
+        self.present(alert, animated: true)
+    }
+    
+    func isValidEmail(email: String) -> Bool {
+        let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
+        let match = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
+        return match.evaluate(with: email)
+    }
+
 }
 
