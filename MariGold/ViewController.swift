@@ -4,33 +4,29 @@
 //
 //  Created by Pravin Sivabalan on 1/23/18.
 //  Copyright © 2018 MariGold. All rights reserved.
-//
-// View Controller for Login View Controller (Do not rename)
+//  View Controller for Login View Controller
 
 import UIKit
 import Pastel
 
 class ViewController: UIViewController {
-	@IBOutlet var pastelView: PastelView!
 	
-    override func viewDidLoad() {
-        super.viewDidLoad()
+	override func viewDidLoad() {
+		super.viewDidLoad()
 		
-		//Setup PastelView
+		//Setup pastelView (Can't do in storyboard due to safe area restraint)
+		
+		let pastelView = PastelView(frame: view.bounds)
 		pastelView.setColors([UIColor(red: 240/255, green: 138/255, blue: 1/255, alpha: 1.0),
 							  UIColor(red: 249/255, green: 212/255, blue: 0/255, alpha: 1.0)])
 		pastelView.startAnimation()
+		view.insertSubview(pastelView, at: 0)
+		
+		//Navigation Bar Transparent
+		self.navigationController?.navigationBar.isTranslucent = true
+		self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+		self.navigationController?.navigationBar.shadowImage = UIImage()
     }
-	
-	override func viewDidAppear(_ animated: Bool) {
-		super.viewDidAppear(animated)
-		self.navigationController?.setNavigationBarHidden(true, animated: true)
-	}
-	
-	override func viewDidDisappear(_ animated: Bool) {
-		super.viewDidDisappear(animated)
-		self.navigationController?.setNavigationBarHidden(false, animated: true)
-	}
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
