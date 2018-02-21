@@ -8,6 +8,7 @@
 
 import UIKit
 import Pastel
+import Alamofire
 
 class ViewController: UIViewController {
     @IBOutlet weak var emailField: UITextField!
@@ -41,9 +42,37 @@ class ViewController: UIViewController {
         } else if(!isValidEmail(email: emailField.text!)) {
             return createAlert(title: "Invalid Email", message: "Please enter a valid email")
         }
+        
+        let body: [String: Any] = [
+            "email" : emailField.text!,
+            "password" : passwordField.text!,
+        ]
+        
+        Alamofire.request(api.rootURL + "/user/login", method: .post, parameters: body, encoding: JSONEncoding.default, headers: nil).responseJSON { response in
+            if let JSON = response.result.value {
+                let data = JSON as! NSDictionary
+                if(data["error_code"] != nil) {
+                    switch data["error_code"] as! Int {
+                        case 20:
+                            return self.createAlert(title: "Account ", message: "This account does not exist. Please check you have entered your information correctly.")
+                        case 21:
+                            return self.createAlert(title: "Incorrect Password", message: "You have entered the incorrect password for this account")
+                        default:
+                            return self.createAlert(title: "Server Error", message: "There is a connection error. Please check your internet connection or try again later")
+                    }
+                } else if(data["jwt"] != nil) {
+                    UserDefaults.standard.set(data["jwt"]!, forKey: "jwt");
+                    print("hi")
+                    let storyboard = UIStoryboard(name: "Dashboard", bundle: nil)
+                    let vc = storyboard.instantiateViewController(withIdentifier: "DashboardViewController") as UIViewController
+                    self.present(vc, animated: true, completion: nil)
+                } else {
+                    return self.createAlert(title: "Server Error", message: "There is a connection error. Please check your internet connection or try again later")
+                }
+            }
+        }
     }
 
-    
     func createAlert(title: String, message: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Try Again", style: .cancel, handler: nil))

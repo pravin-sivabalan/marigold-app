@@ -13,7 +13,7 @@
         <!--Dashboard-->
         <scene sceneID="EvD-GN-Ykr">
             <objects>
-                <viewController storyboardIdentifier="Dashboard.storyboard" title="Dashboard" useStoryboardIdentifierAsRestorationIdentifier="YES" id="89W-zA-F4y" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DashboardViewController" title="Dashboard" useStoryboardIdentifierAsRestorationIdentifier="YES" id="89W-zA-F4y" customClass="DashboardViewController" customModule="MariGold" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4bQ-7U-KHy">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
