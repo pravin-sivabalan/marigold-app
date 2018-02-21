@@ -27,6 +27,14 @@ class User {
             return false
         }
     }
+    
+    static var header: HTTPHeaders {
+        let headers: HTTPHeaders = [
+            "Authorization": UserDefaults.standard.string(forKey: "jwt")!,
+            "Accept": "application/json"
+        ]
+        return headers;
+    }
 }
 
 class Connectivity {

@@ -19,7 +19,7 @@ class ViewController: UIViewController {
         
         // Check if there is internet connectivity
         if(!Connectivity.isConnectedToInternet) {
-            createAlert(title: "Connection Error", message: "There is a connection error. Please check your internet connection or try again later")
+            createAlert(title: "Connection Error", message: "There is a connection error. Please check your internet connection or try again later.")
         }
 		
 		//Setup pastelView (Can't do in storyboard due to safe area restraint)
@@ -42,7 +42,7 @@ class ViewController: UIViewController {
     
     @IBAction func signInAction(_ sender: Any) {
         if(!Connectivity.isConnectedToInternet) {
-            return createAlert(title: "Connection Error", message: "There is a connection error. Please check your internet connection or try again later")
+            return createAlert(title: "Connection Error", message: "There is a connection error. Please check your internet connection or try again later.")
         } else if(emailField.text == "" || passwordField.text == "") {
             return createAlert(title: "Not Finished", message: "Please finish filling out fields")
         } else if(!isValidEmail(email: emailField.text!)) {
@@ -62,9 +62,9 @@ class ViewController: UIViewController {
                         case 20:
                             return self.createAlert(title: "Account ", message: "This account does not exist. Please check you have entered your information correctly.")
                         case 21:
-                            return self.createAlert(title: "Incorrect Password", message: "You have entered the incorrect password for this account")
+                            return self.createAlert(title: "Incorrect Password", message: "You have entered the incorrect password for this account.")
                         default:
-                            return self.createAlert(title: "Server Error", message: "There is a connection error. Please check your internet connection or try again later")
+                            return self.createAlert(title: "Server Error", message: "There is a connection error. Please check your internet connection or try again later.")
                     }
                 } else if(data.object(forKey: "jwt") != nil) {
                     UserDefaults.standard.set(data.object(forKey: "jwt"), forKey: "jwt");
