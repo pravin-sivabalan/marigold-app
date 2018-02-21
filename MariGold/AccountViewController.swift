@@ -22,18 +22,18 @@ class AccountViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-//    @IBAction func logoutAction(_ sender: Any) {
-//        let alert = UIAlertController(title: "Logout", message: "Are you sure you would like to logout?", preferredStyle: .alert)
-//        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
-//        alert.addAction(UIAlertAction(title: "Yes", style: .destructive) { (action:UIAlertAction!) in
-//            UserDefaults.standard.removeObject(forKey: "jwt")
-//            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-//            let vc = storyboard.instantiateViewController(withIdentifier: "AccountSetupId") as UIViewController
-//            self.present(vc, animated: true, completion: nil)
-//        })
-//        self.present(alert, animated: true)
-//        
-//    }
+    @IBAction func logoutAction(_ sender: Any) {
+        let alert = UIAlertController(title: "Logout", message: "Are you sure you would like to logout?", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        alert.addAction(UIAlertAction(title: "Yes", style: .destructive) { (action:UIAlertAction!) in
+            UserDefaults.standard.removeObject(forKey: "jwt")
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let vc = storyboard.instantiateViewController(withIdentifier: "AccountSetupId") as UIViewController
+            self.present(vc, animated: true, completion: nil)
+        })
+        self.present(alert, animated: true)
+        
+    }
     
     @IBAction func deleteAccountAction(_ sender: Any) {
         if(!Connectivity.isConnectedToInternet) {
