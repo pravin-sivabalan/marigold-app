@@ -33,7 +33,9 @@ class RegisterViewController: UIViewController {
 	}
     
     @IBAction func registerAction(_ sender: Any) {
-        if(firstNameField.text == "" || lastNameField.text == "" || emailField.text == "" || passwordField.text == "" || confirmPasswordField.text == "") {
+        if(!Connectivity.isConnectedToInternet) {
+            return createAlert(title: "Connection Error", message: "There is a connection error. Please check your internet connection or try again later")
+        } else if(firstNameField.text == "" || lastNameField.text == "" || emailField.text == "" || passwordField.text == "" || confirmPasswordField.text == "") {
             return createAlert(title: "Not Finished", message: "Please finish filling out fields")
         } else if(!isValidEmail(email: emailField.text!)) {
             return createAlert(title: "Invalid Email", message: "Please enter a valid email")
@@ -58,8 +60,8 @@ class RegisterViewController: UIViewController {
                     default:
                         return self.createAlert(title: "Server Error", message: "There is a connection error. Please check your internet connection or try again later")
                     }
-                } else if(data["jwt"] != nil) {
-                    UserDefaults.standard.set(data["jwt"]!, forKey: "jwt");
+                } else if(data.object(forKey: "jwt") != nil) {
+                    UserDefaults.standard.set(data.object(forKey: "jwt"), forKey: "jwt");
                     let storyboard = UIStoryboard(name: "TabBar", bundle: nil)
                     let vc = storyboard.instantiateViewController(withIdentifier: "tabbarControllerID") as UIViewController
                     self.present(vc, animated: true, completion: nil)

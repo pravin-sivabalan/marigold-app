@@ -13,10 +13,28 @@
         <!--Account-->
         <scene sceneID="1BC-3g-4pq">
             <objects>
-                <viewController storyboardIdentifier="Account.storyboard" title="Account" useStoryboardIdentifierAsRestorationIdentifier="YES" id="YJe-8Y-maC" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Account.storyboard" title="Account" useStoryboardIdentifierAsRestorationIdentifier="YES" id="YJe-8Y-maC" customClass="AccountViewController" customModule="MariGold" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="RkD-eR-TVj">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FsZ-f9-TrC">
+                                <rect key="frame" x="160" y="280" width="55" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Log Out"/>
+                                <connections>
+                                    <action selector="logoutAction:" destination="YJe-8Y-maC" eventType="touchUpInside" id="2V1-Gs-M6W"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7CW-yO-8Tg">
+                                <rect key="frame" x="135" y="347" width="105" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Delete Account"/>
+                                <connections>
+                                    <action selector="deleteAccountAction:" destination="YJe-8Y-maC" eventType="touchUpInside" id="mLw-3V-hZJ"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="o3o-Yp-ke9"/>
                     </view>

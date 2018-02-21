@@ -16,9 +16,13 @@ class ViewController: UIViewController {
     
 	override func viewDidLoad() {
 		super.viewDidLoad()
+        
+        // Check if there is internet connectivity
+        if(!Connectivity.isConnectedToInternet) {
+            createAlert(title: "Connection Error", message: "There is a connection error. Please check your internet connection or try again later.")
+        }
 		
 		//Setup pastelView (Can't do in storyboard due to safe area restraint)
-		
 		let pastelView = PastelView(frame: view.bounds)
 		pastelView.setColors([UIColor(red: 240/255, green: 138/255, blue: 1/255, alpha: 1.0),
 							  UIColor(red: 249/255, green: 212/255, blue: 0/255, alpha: 1.0)])
@@ -37,7 +41,9 @@ class ViewController: UIViewController {
     }
     
     @IBAction func signInAction(_ sender: Any) {
-        if(emailField.text == "" || passwordField.text == "") {
+        if(!Connectivity.isConnectedToInternet) {
+            return createAlert(title: "Connection Error", message: "There is a connection error. Please check your internet connection or try again later.")
+        } else if(emailField.text == "" || passwordField.text == "") {
             return createAlert(title: "Not Finished", message: "Please finish filling out fields")
         } else if(!isValidEmail(email: emailField.text!)) {
             return createAlert(title: "Invalid Email", message: "Please enter a valid email")
@@ -56,12 +62,12 @@ class ViewController: UIViewController {
                         case 20:
                             return self.createAlert(title: "Account ", message: "This account does not exist. Please check you have entered your information correctly.")
                         case 21:
-                            return self.createAlert(title: "Incorrect Password", message: "You have entered the incorrect password for this account")
+                            return self.createAlert(title: "Incorrect Password", message: "You have entered the incorrect password for this account.")
                         default:
-                            return self.createAlert(title: "Server Error", message: "There is a connection error. Please check your internet connection or try again later")
+                            return self.createAlert(title: "Server Error", message: "There is a connection error. Please check your internet connection or try again later.")
                     }
-                } else if(data["jwt"] != nil) {
-                    UserDefaults.standard.set(data["jwt"]!, forKey: "jwt");
+                } else if(data.object(forKey: "jwt") != nil) {
+                    UserDefaults.standard.set(data.object(forKey: "jwt"), forKey: "jwt");
                     let storyboard = UIStoryboard(name: "TabBar", bundle: nil)
                     let vc = storyboard.instantiateViewController(withIdentifier: "tabbarControllerID") as UIViewController
                     self.present(vc, animated: true, completion: nil)
