@@ -62,9 +62,8 @@ class ViewController: UIViewController {
                     }
                 } else if(data["jwt"] != nil) {
                     UserDefaults.standard.set(data["jwt"]!, forKey: "jwt");
-                    print("hi")
-                    let storyboard = UIStoryboard(name: "Dashboard", bundle: nil)
-                    let vc = storyboard.instantiateViewController(withIdentifier: "DashboardViewController") as UIViewController
+                    let storyboard = UIStoryboard(name: "TabBar", bundle: nil)
+                    let vc = storyboard.instantiateViewController(withIdentifier: "tabbarControllerID") as UIViewController
                     self.present(vc, animated: true, completion: nil)
                 } else {
                     return self.createAlert(title: "Server Error", message: "There is a connection error. Please check your internet connection or try again later")

@@ -1,14 +1,13 @@
 //
-//  DashboardViewController.swift
-//  MariGold
+//  TabBarViewController.swift
+//  
 //
 //  Created by Pravin Sivabalan on 2/21/18.
-//  Copyright © 2018 MariGold. All rights reserved.
 //
 
 import UIKit
 
-class DashboardViewController: UINavigationController {
+class TabBarViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

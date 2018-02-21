@@ -288,6 +288,9 @@
                                                         <integer key="value" value="10"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="registerAction:" destination="yHG-2e-DSy" eventType="touchUpInside" id="5Tv-fF-SXC"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -334,6 +337,11 @@
                         <viewLayoutGuide key="safeArea" id="Rlc-Y2-YiN"/>
                     </view>
                     <connections>
+                        <outlet property="confirmPasswordField" destination="02M-p0-jJ4" id="XCQ-1Z-tE2"/>
+                        <outlet property="emailField" destination="8oF-B3-t4I" id="Tcy-r0-XJF"/>
+                        <outlet property="firstNameField" destination="iZ0-EM-wQH" id="JVe-nL-3PA"/>
+                        <outlet property="lastNameField" destination="9d6-26-BhP" id="umv-cE-Axa"/>
+                        <outlet property="passwordField" destination="7Qq-7c-s4V" id="jQl-Q7-6Ol"/>
                         <outlet property="pastelView" destination="2n3-Y3-YdU" id="jvZ-Rf-ELK"/>
                     </connections>
                 </viewController>
