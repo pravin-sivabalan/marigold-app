@@ -12,7 +12,7 @@
         <!--Medication-->
         <scene sceneID="V8A-Hl-sQe">
             <objects>
-                <viewController storyboardIdentifier="Medication.storyboard" title="Medication" useStoryboardIdentifierAsRestorationIdentifier="YES" id="jzm-8v-ITY" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Medication.storyboard" title="Medication" useStoryboardIdentifierAsRestorationIdentifier="YES" id="jzm-8v-ITY" customClass="MedicationViewController" customModule="MariGold" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Lsi-VZ-Imh">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -20,7 +20,11 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Medication" id="NnH-b0-Y8I">
                         <barButtonItem key="leftBarButtonItem" systemItem="refresh" id="XLc-Wt-e6x"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="n78-zg-EN4"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="n78-zg-EN4">
+                            <connections>
+                                <action selector="medicationAdd:" destination="jzm-8v-ITY" id="WZM-nn-lYH"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ezm-nl-GD7" userLabel="First Responder" sceneMemberID="firstResponder"/>
