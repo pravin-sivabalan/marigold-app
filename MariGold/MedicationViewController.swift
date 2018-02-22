@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class MedicationViewController: UIViewController {
 	
@@ -22,16 +23,78 @@ class MedicationViewController: UIViewController {
 	//Medication Add Navigation Menu Item
 	@IBAction func medicationAdd(_ sender: Any) {
 		let alert = UIAlertController(title: "Add Medication", message: "Enter the name of the Medication:", preferredStyle: .alert)
-		alert.addAction(UIAlertAction(title: NSLocalizedString("Add", comment: "Default action"), style: .default, handler: { _ in
-			NSLog("The \"Add\" action occured.")
-		}))
-		alert.addAction(UIAlertAction(title: NSLocalizedString("Cancel", comment: "Cancel Action"), style: .cancel, handler: { _ in
-			NSLog("The \"Cancel\" action occured.")
-		}))
 		alert.addTextField { (inputTextField) in
 			inputTextField.placeholder = "Medication Name";
 		}
+		alert.addAction(UIAlertAction(title: NSLocalizedString("Add", comment: "Default action"), style: .default, handler: { _ in
+			guard let inputTextField = alert.textFields?.first else {
+				NSLog("Could not find inputTextField in alert")
+				return
+			}
+			self.addMedicationAction(input: inputTextField);
+		})
+		)
+		alert.addAction(UIAlertAction(title: NSLocalizedString("Cancel", comment: "Cancel Action"), style: .cancel, handler: { _ in
+			NSLog("The \"Cancel\" action occured.")
+		}))
 		self.present(alert, animated: true, completion: nil)
+	}
+	
+	//Helper createAlert function
+	func createAlert(title: String, message: String) {
+		let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+		alert.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: nil))
+		self.present(alert, animated: true)
+	}
+
+	func addMedicationAction(input: UITextField) {
+		if(!Connectivity.isConnectedToInternet) {
+			return self.createAlert(title: "Connection Error", message: "There is a connection error. Please check your internet connection or try again later.")
+		}
+		else if(input.text == "") {
+			return self.createAlert(title: "Try Again", message: "Please enter the name of the medication you wish to add.")
+		}
+			
+		//Valid Input
+		else {
+			let body: [String: Any] = [
+				"name" : input.text!,
+				"dose" : "30",
+				"expir_date" : "04 09 2018"
+			]
+			
+			Alamofire.request(api.rootURL + "/meds/add", method: .post, parameters: body, encoding: JSONEncoding.default, headers: User.header).responseJSON { response in
+				if let JSON = response.result.value {
+					let data = JSON as! NSDictionary
+					if(data["error_code"] != nil) {
+						switch data["error_code"] as! Int {
+						//Not sure what other errors there are.
+							default:
+								return self.createAlert(title: "Server Error", message: "There is a connection error. Please check your internet connection or try again later.")
+						}
+					}
+					else {
+						NSLog(data["message"] as! String)
+						self.getMedicationList()
+					}
+				}
+			}
+		}
+	}
+	func getMedicationList() {
+		if(!Connectivity.isConnectedToInternet) {
+			return self.createAlert(title: "Connection Error", message: "There is a connection error. Please check your internet connection or try again later.")
+		}
+		Alamofire.request(api.rootURL + "/meds/for-user", method: .get, parameters: nil, encoding: JSONEncoding.default, headers: User.header).responseJSON { response in
+			if let JSON = response.result.value {
+				let data = JSON as! NSDictionary
+				NSLog("%@", data)
+				let meds = data["meds"] as! NSArray
+				for med in meds{
+					//med["name"]
+				}
+			}
+		}
 	}
 }
 
