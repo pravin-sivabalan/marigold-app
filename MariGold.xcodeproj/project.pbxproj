@@ -510,6 +510,7 @@
 			files = (
 				3D12B123203CBD0200FD701D /* Constants.swift in Sources */,
 				039253BD2038E382005A2C42 /* RegisterViewController.swift in Sources */,
+				3D12B12B203DF8F900FD701D /* AccountViewController.swift in Sources */,
 				3D17623F2017E62000A1C77A /* ViewController.swift in Sources */,
 				037DF0DC203DDCB600D7F1A4 /* MedicationViewController.swift in Sources */,
 				3D17623D2017E62000A1C77A /* AppDelegate.swift in Sources */,
