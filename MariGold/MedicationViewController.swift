@@ -10,6 +10,8 @@ import UIKit
 import Alamofire
 
 class MedicationViewController: UIViewController {
+	@IBOutlet var medicationTableView: UITableView!
+	var medicationArray: [[String: Any]] = [[String: Any]]()
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
@@ -18,6 +20,11 @@ class MedicationViewController: UIViewController {
 	override func didReceiveMemoryWarning() {
 		super.didReceiveMemoryWarning()
 		// Dispose of any resources that can be recreated.
+	}
+	
+	override func viewDidAppear(_ animated: Bool) {
+		super.viewDidAppear(animated)
+		getMedicationList()
 	}
 	
 	//Medication Add Navigation Menu Item
@@ -88,13 +95,29 @@ class MedicationViewController: UIViewController {
 		Alamofire.request(api.rootURL + "/meds/for-user", method: .get, parameters: nil, encoding: JSONEncoding.default, headers: User.header).responseJSON { response in
 			if let JSON = response.result.value {
 				let data = JSON as! NSDictionary
-				NSLog("%@", data)
-				let meds = data["meds"] as! NSArray
-				for med in meds{
-					//med["name"]
-				}
+				let meds = data["meds"] as! [[String: Any]]
+				self.medicationArray = meds
+				self.medicationTableView.reloadData()
 			}
 		}
 	}
 }
+class medicaitonTableViewCell: UITableViewCell {
+	@IBOutlet var label: UILabel!
+	
+}
+
+extension MedicationViewController: UITableViewDataSource {
+	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+		return medicationArray.count
+	}
+	
+	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+		let cell = tableView.dequeueReusableCell(withIdentifier: "Plain Cell", for: indexPath) as! medicaitonTableViewCell
+		cell.label.text = medicationArray[indexPath.row]["name"] as? String
+		return cell
+	}
+	
+}
+
 
