@@ -225,6 +225,7 @@
                     <connections>
                         <outlet property="emailField" destination="Xrv-3w-3St" id="jZT-sB-jHq"/>
                         <outlet property="pastelView" destination="x5h-4r-aio" id="hgj-iw-cbd"/>
+                        <outlet property="resetPasswordButton" destination="asv-Vs-2bZ" id="o2O-If-2eU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2D5-Fe-u3e" userLabel="First Responder" sceneMemberID="firstResponder"/>
