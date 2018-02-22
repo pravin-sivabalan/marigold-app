@@ -48,6 +48,7 @@ class RegisterViewController: UIViewController {
             "last_name" : lastNameField.text!,
             "email" : emailField.text!,
             "password" : passwordField.text!,
+            "league" : "NFL, NBA, NCAA"
         ]
         
         Alamofire.request(api.rootURL + "/user/register", method: .post, parameters: body, encoding: JSONEncoding.default, headers: nil).responseJSON { response in
