@@ -10,6 +10,7 @@
 		030D0E27203B399700AC400C /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030D0E26203B399700AC400C /* ResetPasswordViewController.swift */; };
 		0315BA7F203A40C500CBD416 /* RegisterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0315BA7E203A40C500CBD416 /* RegisterUITests.swift */; };
 		0350560A2034D7DF00FD8AA5 /* LoginUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035056092034D7DF00FD8AA5 /* LoginUITests.swift */; };
+		037DF0DC203DDCB600D7F1A4 /* MedicationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037DF0DB203DDCB600D7F1A4 /* MedicationViewController.swift */; };
 		039253B32038B7F0005A2C42 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 039253B22038B7F0005A2C42 /* LaunchScreen.storyboard */; };
 		039253BD2038E382005A2C42 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 039253BC2038E382005A2C42 /* RegisterViewController.swift */; };
 		0399401F2037B87900A6AEF1 /* Dashboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0399401E2037B87900A6AEF1 /* Dashboard.storyboard */; };
@@ -18,8 +19,6 @@
 		039940272037C9F600A6AEF1 /* Medication.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 039940262037C9F600A6AEF1 /* Medication.storyboard */; };
 		03B2062B2033EDF900C5F7F5 /* TabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03B2062A2033EDF900C5F7F5 /* TabBar.storyboard */; };
 		3D12B123203CBD0200FD701D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D12B122203CBD0200FD701D /* Constants.swift */; };
-		3D12B127203D3DA500FD701D /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D12B126203D3DA500FD701D /* TabBarViewController.swift */; };
-		3D12B12B203DF8F900FD701D /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D12B12A203DF8F900FD701D /* AccountViewController.swift */; };
 		3D17623D2017E62000A1C77A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D17623C2017E62000A1C77A /* AppDelegate.swift */; };
 		3D17623F2017E62000A1C77A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D17623E2017E62000A1C77A /* ViewController.swift */; };
 		3D1762422017E62000A1C77A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D1762402017E62000A1C77A /* Main.storyboard */; };
@@ -32,6 +31,41 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		03BCDD30203E68D000138271 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 03BCDD28203E68D000138271 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 048E32A4DC3D9C812F334C273C15A951;
+			remoteInfo = Alamofire;
+		};
+		03BCDD32203E68D000138271 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 03BCDD28203E68D000138271 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = EF1168FD75660A0A35BBEC78BC357DE3;
+			remoteInfo = Pastel;
+		};
+		03BCDD34203E68D000138271 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 03BCDD28203E68D000138271 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 54D6B84854BE28CDFFAFC3E061BC36FD;
+			remoteInfo = "Pods-MariGold";
+		};
+		03BCDD36203E68D000138271 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 03BCDD28203E68D000138271 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = BA6B07CD5B0129F5F1802B88BC2E5E7C;
+			remoteInfo = "Pods-MariGoldTests";
+		};
+		03BCDD38203E68D000138271 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 03BCDD28203E68D000138271 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = CDA85AC1795766EDA99896F15AB4006A;
+			remoteInfo = "Pods-MariGoldUITests";
+		};
 		3D17624E2017E62000A1C77A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 3D1762312017E62000A1C77A /* Project object */;
@@ -52,6 +86,7 @@
 		030D0E26203B399700AC400C /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
 		0315BA7E203A40C500CBD416 /* RegisterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterUITests.swift; sourceTree = "<group>"; };
 		035056092034D7DF00FD8AA5 /* LoginUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUITests.swift; sourceTree = "<group>"; };
+		037DF0DB203DDCB600D7F1A4 /* MedicationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicationViewController.swift; sourceTree = "<group>"; };
 		039253B22038B7F0005A2C42 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		039253BC2038E382005A2C42 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		0399401E2037B87900A6AEF1 /* Dashboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Dashboard.storyboard; sourceTree = "<group>"; };
@@ -59,10 +94,10 @@
 		039940242037C48900A6AEF1 /* Account.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Account.storyboard; sourceTree = "<group>"; };
 		039940262037C9F600A6AEF1 /* Medication.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Medication.storyboard; sourceTree = "<group>"; };
 		03B2062A2033EDF900C5F7F5 /* TabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBar.storyboard; sourceTree = "<group>"; };
+		03BCDD03203E653F00138271 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		03BCDD28203E68D000138271 /* Pods.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Pods.xcodeproj; path = Pods/Pods.xcodeproj; sourceTree = "<group>"; };
 		0E4FE26337B0BA937F5A53D3 /* Pods-MariGold.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MariGold.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MariGold/Pods-MariGold.debug.xcconfig"; sourceTree = "<group>"; };
 		3D12B122203CBD0200FD701D /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		3D12B126203D3DA500FD701D /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TabBarViewController.swift; path = "/Users/pravin/Github/marigold/marigold-app/MariGold/TabBarViewController.swift"; sourceTree = "<absolute>"; };
-		3D12B12A203DF8F900FD701D /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		3D1762392017E62000A1C77A /* MariGold.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MariGold.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D17623C2017E62000A1C77A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3D17623E2017E62000A1C77A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -123,12 +158,24 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		03BCDD29203E68D000138271 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				03BCDD31203E68D000138271 /* Alamofire.framework */,
+				03BCDD33203E68D000138271 /* Pastel.framework */,
+				03BCDD35203E68D000138271 /* Pods_MariGold.framework */,
+				03BCDD37203E68D000138271 /* Pods_MariGoldTests.framework */,
+				03BCDD39203E68D000138271 /* Pods_MariGoldUITests.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		3D12B11F203CB94500FD701D /* AccountSetup */ = {
 			isa = PBXGroup;
 			children = (
+				030D0E26203B399700AC400C /* ResetPasswordViewController.swift */,
 				039253BC2038E382005A2C42 /* RegisterViewController.swift */,
 				3D17623E2017E62000A1C77A /* ViewController.swift */,
-				030D0E26203B399700AC400C /* ResetPasswordViewController.swift */,
 			);
 			path = AccountSetup;
 			sourceTree = "<group>";
@@ -136,6 +183,7 @@
 		3D1762302017E62000A1C77A = {
 			isa = PBXGroup;
 			children = (
+				03BCDD28203E68D000138271 /* Pods.xcodeproj */,
 				3D17623B2017E62000A1C77A /* MariGold */,
 				3D1762502017E62000A1C77A /* MariGoldTests */,
 				3D17625B2017E62000A1C77A /* MariGoldUITests */,
@@ -161,6 +209,8 @@
 				3D12B11F203CB94500FD701D /* AccountSetup */,
 				3D1762432017E62000A1C77A /* Assets.xcassets */,
 				3D17623C2017E62000A1C77A /* AppDelegate.swift */,
+				037DF0DB203DDCB600D7F1A4 /* MedicationViewController.swift */,
+				03BCDD03203E653F00138271 /* TabBarViewController.swift */,
 				3D1762402017E62000A1C77A /* Main.storyboard */,
 				039253B22038B7F0005A2C42 /* LaunchScreen.storyboard */,
 				03B2062A2033EDF900C5F7F5 /* TabBar.storyboard */,
@@ -170,8 +220,6 @@
 				039940242037C48900A6AEF1 /* Account.storyboard */,
 				3D1762482017E62000A1C77A /* Info.plist */,
 				3D12B122203CBD0200FD701D /* Constants.swift */,
-				3D12B126203D3DA500FD701D /* TabBarViewController.swift */,
-				3D12B12A203DF8F900FD701D /* AccountViewController.swift */,
 			);
 			path = MariGold;
 			sourceTree = "<group>";
@@ -311,6 +359,12 @@
 			mainGroup = 3D1762302017E62000A1C77A;
 			productRefGroup = 3D17623A2017E62000A1C77A /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 03BCDD29203E68D000138271 /* Products */;
+					ProjectRef = 03BCDD28203E68D000138271 /* Pods.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				3D1762382017E62000A1C77A /* MariGold */,
@@ -319,6 +373,44 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		03BCDD31203E68D000138271 /* Alamofire.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Alamofire.framework;
+			remoteRef = 03BCDD30203E68D000138271 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		03BCDD33203E68D000138271 /* Pastel.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Pastel.framework;
+			remoteRef = 03BCDD32203E68D000138271 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		03BCDD35203E68D000138271 /* Pods_MariGold.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Pods_MariGold.framework;
+			remoteRef = 03BCDD34203E68D000138271 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		03BCDD37203E68D000138271 /* Pods_MariGoldTests.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Pods_MariGoldTests.framework;
+			remoteRef = 03BCDD36203E68D000138271 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		03BCDD39203E68D000138271 /* Pods_MariGoldUITests.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Pods_MariGoldUITests.framework;
+			remoteRef = 03BCDD38203E68D000138271 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		3D1762372017E62000A1C77A /* Resources */ = {
@@ -511,10 +603,9 @@
 			files = (
 				3D12B123203CBD0200FD701D /* Constants.swift in Sources */,
 				039253BD2038E382005A2C42 /* RegisterViewController.swift in Sources */,
-				3D12B12B203DF8F900FD701D /* AccountViewController.swift in Sources */,
 				3D17623F2017E62000A1C77A /* ViewController.swift in Sources */,
+				037DF0DC203DDCB600D7F1A4 /* MedicationViewController.swift in Sources */,
 				3D17623D2017E62000A1C77A /* AppDelegate.swift in Sources */,
-				3D12B127203D3DA500FD701D /* TabBarViewController.swift in Sources */,
 				030D0E27203B399700AC400C /* ResetPasswordViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
