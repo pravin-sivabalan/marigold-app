@@ -10,11 +10,25 @@ import UIKit
 import Alamofire
 
 class AccountViewController: UIViewController {
-
+    @IBOutlet weak var leaguesLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        Alamofire.request(api.rootURL + "/user", encoding: JSONEncoding.default, headers: User.header).responseJSON { response in
+            if let JSON = response.result.value {
+                let data = JSON as! NSDictionary
+                if(data.object(forKey: "message") as! String == "ok") {
+                    let profile = data["profile"] as! NSDictionary
+                    if(profile["league"] != nil) {
+                        let league: String = profile["league"] as! String
+                        self.leaguesLabel.text = league
+                    }
+                } else {
+                    self.createAlert(title: "Server Error", message: "There is a connection error. Please check your internet connection or try again later")
+                }
+            }
+        }
     }
 
     override func didReceiveMemoryWarning() {
