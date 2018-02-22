@@ -178,6 +178,9 @@
                                                         <integer key="value" value="10"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="resetPasswordAction:" destination="jyV-iH-RnC" eventType="touchUpInside" id="Xai-bL-Uqi"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -220,6 +223,7 @@
                         <viewLayoutGuide key="safeArea" id="BLL-c5-k0b"/>
                     </view>
                     <connections>
+                        <outlet property="emailField" destination="Xrv-3w-3St" id="jZT-sB-jHq"/>
                         <outlet property="pastelView" destination="x5h-4r-aio" id="hgj-iw-cbd"/>
                     </connections>
                 </viewController>
