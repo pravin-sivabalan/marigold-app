@@ -32,9 +32,17 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MTo-9j-ACh">
+                                            <rect key="frame" x="317" y="11" width="42" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="ID" destination="MTo-9j-ACh" id="BbC-H4-m90"/>
                                     <outlet property="label" destination="Zji-6w-uiE" id="vPo-0P-Sfd"/>
                                 </connections>
                             </tableViewCell>
@@ -45,7 +53,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Medication" id="NnH-b0-Y8I">
-                        <barButtonItem key="leftBarButtonItem" systemItem="refresh" id="XLc-Wt-e6x"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="refresh" id="XLc-Wt-e6x">
+                            <connections>
+                                <action selector="refreshButton:" destination="jzm-8v-ITY" id="fKo-Pa-0d1"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="n78-zg-EN4">
                             <connections>
                                 <action selector="medicationAdd:" destination="jzm-8v-ITY" id="WZM-nn-lYH"/>

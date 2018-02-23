@@ -27,6 +27,22 @@ class MedicationViewController: UIViewController {
 		getMedicationList()
 	}
 	
+	//Refresh Button (Might remove later)
+	@IBAction func refreshButton(_ sender: Any) {
+		getMedicationList()
+	}
+	
+	//Helper createAlert function
+	func createAlert(title: String, message: String) {
+		let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+		alert.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: nil))
+		self.present(alert, animated: true)
+	}
+
+	////////////////////////////////////////
+	// API Calls
+	///////////////////////////////////////
+	
 	//Medication Add Navigation Menu Item
 	@IBAction func medicationAdd(_ sender: Any) {
 		let alert = UIAlertController(title: "Add Medication", message: "Enter the name of the Medication:", preferredStyle: .alert)
@@ -47,13 +63,6 @@ class MedicationViewController: UIViewController {
 		self.present(alert, animated: true, completion: nil)
 	}
 	
-	//Helper createAlert function
-	func createAlert(title: String, message: String) {
-		let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-		alert.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: nil))
-		self.present(alert, animated: true)
-	}
-
 	func addMedicationAction(input: UITextField) {
 		if(!Connectivity.isConnectedToInternet) {
 			return self.createAlert(title: "Connection Error", message: "There is a connection error. Please check your internet connection or try again later.")
@@ -81,7 +90,6 @@ class MedicationViewController: UIViewController {
 						}
 					}
 					else {
-						NSLog(data["message"] as! String)
 						self.getMedicationList()
 					}
 				}
@@ -102,9 +110,14 @@ class MedicationViewController: UIViewController {
 		}
 	}
 }
+
+////////////////////////////////////////
+// Table View Cell Class and Methods
+///////////////////////////////////////
+
 class medicaitonTableViewCell: UITableViewCell {
 	@IBOutlet var label: UILabel!
-	
+	@IBOutlet var ID: UILabel!
 }
 
 extension MedicationViewController: UITableViewDataSource {
@@ -115,9 +128,39 @@ extension MedicationViewController: UITableViewDataSource {
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		let cell = tableView.dequeueReusableCell(withIdentifier: "Plain Cell", for: indexPath) as! medicaitonTableViewCell
 		cell.label.text = medicationArray[indexPath.row]["name"] as? String
+		let ID:Int = (medicationArray[indexPath.row]["id"] as? Int)!
+		cell.ID.text = String(ID)
+		cell.accessibilityIdentifier = cell.label.text
 		return cell
 	}
 	
+	func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+		
+		let cell = tableView.cellForRow(at: indexPath) as! medicaitonTableViewCell
+		let medid = cell.ID.text
+		
+		if editingStyle == .delete {
+			let body: [String: Any] = [
+				"id" : medid!
+			]
+			Alamofire.request(api.rootURL + "/meds/delete", method: .post, parameters: body, encoding: JSONEncoding.default, headers: User.header).responseJSON
+				{ response in
+				if let JSON = response.result.value {
+					let data = JSON as! NSDictionary
+					if(data["error_code"] != nil) {
+						switch data["error_code"] as! Int {
+						//Not sure what other errors there are.
+						default:
+							return self.createAlert(title: "Server Error", message: "There is a connection error. Please check your internet connection or try again later.")
+						}
+					}
+					else {
+							self.getMedicationList()
+					}
+				}
+			}
+		}
+	}
 }
 
 
