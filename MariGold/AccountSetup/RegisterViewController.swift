@@ -17,7 +17,10 @@ class RegisterViewController: UIViewController {
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
     @IBOutlet weak var confirmPasswordField: UITextField!
-    
+	@IBOutlet var NFLSwitch: UISwitch!
+	@IBOutlet var NBASwitch: UISwitch!
+	@IBOutlet var NCAASwitch: UISwitch!
+	
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
@@ -42,13 +45,25 @@ class RegisterViewController: UIViewController {
         } else if(passwordField.text != confirmPasswordField.text) {
             return createAlert(title: "Password Do Not Match", message: "Please make sure your passwords match")
         } 
-        
+		
+		var leagueArray = [String]()
+		if(NFLSwitch.isOn) {
+			leagueArray.append("NFL")
+		}
+		if(NBASwitch.isOn) {
+			leagueArray.append("NBA")
+		}
+		if(NCAASwitch.isOn) {
+			leagueArray.append("NCAA")
+		}
+		let leagues = leagueArray.joined(separator: ", ")
+		
         let body: [String: Any] = [
             "first_name" : firstNameField.text!,
             "last_name" : lastNameField.text!,
             "email" : emailField.text!,
             "password" : passwordField.text!,
-            "league" : "NFL, NBA, NCAA"
+            "league" : leagues
         ]
         
         Alamofire.request(api.rootURL + "/user/register", method: .post, parameters: body, encoding: JSONEncoding.default, headers: nil).responseJSON { response in
