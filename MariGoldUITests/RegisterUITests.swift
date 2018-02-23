@@ -33,7 +33,15 @@ class RegisterUITests: XCTestCase {
         // Use XCTAssert and related functions to verify your tests produce the correct results.
 		
 		let app = XCUIApplication()
-		app.buttons["Don't have an account? Register Here."].tap()
+		app.buttons["Create an Account"].tap()
+		
+		let firstNameTextField = app.textFields["First Name"]
+		firstNameTextField.tap()
+		firstNameTextField.typeText("John")
+		
+		let lastNameTextField = app.textFields["Last Name"]
+		lastNameTextField.tap()
+		lastNameTextField.typeText("Smith")
 		
 		let emailAddressTextField = app.textFields["Email Address"]
 		emailAddressTextField.tap()
