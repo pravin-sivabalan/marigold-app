@@ -226,8 +226,8 @@
 				039940202037B91700A6AEF1 /* Search.storyboard */,
 				039940242037C48900A6AEF1 /* Account.storyboard */,
 				3D1762482017E62000A1C77A /* Info.plist */,
-				03BB6A6B204CC7F200955186 /* CoreDataHelper.swift */,
 				03A106B22049BABE00E31BD9 /* MariGold.xcdatamodeld */,
+				03BB6A6B204CC7F200955186 /* CoreDataHelper.swift */,
 				3D12B122203CBD0200FD701D /* Constants.swift */,
 			);
 			path = MariGold;

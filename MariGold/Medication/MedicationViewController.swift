@@ -27,7 +27,8 @@ class MedicationViewController: UIViewController {
 		getMedicationList()
 	}
 	
-	//Medication Add Navigation Menu Item
+	
+	//UI Buttons
 	@IBAction func medicationAdd(_ sender: Any) {
 		let alert = UIAlertController(title: "Add Medication", message: "Enter the name of the Medication:", preferredStyle: .alert)
 		alert.addTextField { (inputTextField) in
@@ -75,7 +76,7 @@ class MedicationViewController: UIViewController {
 					let data = JSON as! NSDictionary
 					if(data["error_code"] != nil) {
 						switch data["error_code"] as! Int {
-						//Not sure what other errors there are.
+							//Room for adding more detailed error messages
 							default:
 								return self.createAlert(title: "Server Error", message: "There is a connection error. Please check your internet connection or try again later.")
 						}
@@ -95,13 +96,25 @@ class MedicationViewController: UIViewController {
 		Alamofire.request(api.rootURL + "/meds/for-user", method: .get, parameters: nil, encoding: JSONEncoding.default, headers: User.header).responseJSON { response in
 			if let JSON = response.result.value {
 				let data = JSON as! NSDictionary
-				let meds = data["meds"] as! [[String: Any]]
-				self.medicationArray = meds
-				self.medicationTableView.reloadData()
+				if(data["error_code"] != nil) {
+					switch data["error_code"] as! Int {
+						//Room for adding more detailed error messages
+						default:
+							return self.createAlert(title: "Server Error", message: "There is a connection error. Please check your internet connection or try again later.")
+					}
+				}
+				else {
+					let meds = data["meds"] as! [[String: Any]]
+					self.medicationArray = meds
+					self.medicationTableView.reloadData()
+				}
 			}
 		}
 	}
 }
+
+//Table view Classes and Methods
+
 class medicaitonTableViewCell: UITableViewCell {
 	@IBOutlet var label: UILabel!
 	
