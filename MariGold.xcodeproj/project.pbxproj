@@ -11,9 +11,8 @@
 		0315BA7F203A40C500CBD416 /* RegisterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0315BA7E203A40C500CBD416 /* RegisterUITests.swift */; };
 		03304F7E2049A6AB0002AAD5 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03304F7D2049A6AA0002AAD5 /* AccountViewController.swift */; };
 		0350560A2034D7DF00FD8AA5 /* LoginUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035056092034D7DF00FD8AA5 /* LoginUITests.swift */; };
-		035640F4203FBF0E001621E9 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035640EE203FBF0E001621E9 /* AccountViewController.swift */; };
 		037DF0DC203DDCB600D7F1A4 /* MedicationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037DF0DB203DDCB600D7F1A4 /* MedicationViewController.swift */; };
-		0386D6CF2040824B00E0C62E /* MedicationUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0386D6CE2040824B00E0C62E /* MedicationUITests.swift */; };
+		0386D6CF2040824B00E0C62E /* (null) in Sources */ = {isa = PBXBuildFile; };
 		039253B32038B7F0005A2C42 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 039253B22038B7F0005A2C42 /* LaunchScreen.storyboard */; };
 		039253BD2038E382005A2C42 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 039253BC2038E382005A2C42 /* RegisterViewController.swift */; };
 		0399401F2037B87900A6AEF1 /* Dashboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0399401E2037B87900A6AEF1 /* Dashboard.storyboard */; };
@@ -23,6 +22,7 @@
 		03A106B92049BABE00E31BD9 /* MariGold.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 03A106B22049BABE00E31BD9 /* MariGold.xcdatamodeld */; };
 		03B2062B2033EDF900C5F7F5 /* TabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03B2062A2033EDF900C5F7F5 /* TabBar.storyboard */; };
 		03BB6A71204CC7F200955186 /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BB6A6B204CC7F200955186 /* CoreDataHelper.swift */; };
+		03C08A52204CE6540072E7A5 /* MedicationAdditionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C08A51204CE6540072E7A5 /* MedicationAdditionViewController.swift */; };
 		3D12B123203CBD0200FD701D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D12B122203CBD0200FD701D /* Constants.swift */; };
 		3D17623D2017E62000A1C77A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D17623C2017E62000A1C77A /* AppDelegate.swift */; };
 		3D17623F2017E62000A1C77A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D17623E2017E62000A1C77A /* ViewController.swift */; };
@@ -104,6 +104,7 @@
 		03BB6A6B204CC7F200955186 /* CoreDataHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CoreDataHelper.swift; path = Models/CoreDataHelper.swift; sourceTree = "<group>"; };
 		03BCDD03203E653F00138271 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		03BCDD28203E68D000138271 /* Pods.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Pods.xcodeproj; path = Pods/Pods.xcodeproj; sourceTree = "<group>"; };
+		03C08A51204CE6540072E7A5 /* MedicationAdditionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicationAdditionViewController.swift; sourceTree = "<group>"; };
 		0E4FE26337B0BA937F5A53D3 /* Pods-MariGold.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MariGold.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MariGold/Pods-MariGold.debug.xcconfig"; sourceTree = "<group>"; };
 		3D12B122203CBD0200FD701D /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		3D1762392017E62000A1C77A /* MariGold.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MariGold.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -219,6 +220,7 @@
 				3D17623C2017E62000A1C77A /* AppDelegate.swift */,
 				03304F7D2049A6AA0002AAD5 /* AccountViewController.swift */,
 				037DF0DB203DDCB600D7F1A4 /* MedicationViewController.swift */,
+				03C08A51204CE6540072E7A5 /* MedicationAdditionViewController.swift */,
 				03BCDD03203E653F00138271 /* TabBarViewController.swift */,
 				3D1762402017E62000A1C77A /* Main.storyboard */,
 				039253B22038B7F0005A2C42 /* LaunchScreen.storyboard */,
@@ -247,7 +249,6 @@
 		3D17625B2017E62000A1C77A /* MariGoldUITests */ = {
 			isa = PBXGroup;
 			children = (
-				0386D6CE2040824B00E0C62E /* MedicationUITests.swift */,
 				0315BA7E203A40C500CBD416 /* RegisterUITests.swift */,
 				035056092034D7DF00FD8AA5 /* LoginUITests.swift */,
 				3D17625C2017E62000A1C77A /* MariGoldUITests.swift */,
@@ -618,6 +619,7 @@
 				03304F7E2049A6AB0002AAD5 /* AccountViewController.swift in Sources */,
 				3D17623F2017E62000A1C77A /* ViewController.swift in Sources */,
 				03A106B92049BABE00E31BD9 /* MariGold.xcdatamodeld in Sources */,
+				03C08A52204CE6540072E7A5 /* MedicationAdditionViewController.swift in Sources */,
 				037DF0DC203DDCB600D7F1A4 /* MedicationViewController.swift in Sources */,
 				03BB6A71204CC7F200955186 /* CoreDataHelper.swift in Sources */,
 				3D17623D2017E62000A1C77A /* AppDelegate.swift in Sources */,
@@ -637,7 +639,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0386D6CF2040824B00E0C62E /* MedicationUITests.swift in Sources */,
+				0386D6CF2040824B00E0C62E /* (null) in Sources */,
 				3D17625D2017E62000A1C77A /* MariGoldUITests.swift in Sources */,
 				0315BA7F203A40C500CBD416 /* RegisterUITests.swift in Sources */,
 				0350560A2034D7DF00FD8AA5 /* LoginUITests.swift in Sources */,
