@@ -18,8 +18,9 @@
 		039940212037B91700A6AEF1 /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 039940202037B91700A6AEF1 /* Search.storyboard */; };
 		039940252037C48900A6AEF1 /* Account.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 039940242037C48900A6AEF1 /* Account.storyboard */; };
 		039940272037C9F600A6AEF1 /* Medication.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 039940262037C9F600A6AEF1 /* Medication.storyboard */; };
-		03A106B92049BABE00E31BD9 /* Medication.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 03A106B22049BABE00E31BD9 /* Medication.xcdatamodeld */; };
+		03A106B92049BABE00E31BD9 /* MariGold.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 03A106B22049BABE00E31BD9 /* MariGold.xcdatamodeld */; };
 		03B2062B2033EDF900C5F7F5 /* TabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03B2062A2033EDF900C5F7F5 /* TabBar.storyboard */; };
+		03BB6A71204CC7F200955186 /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BB6A6B204CC7F200955186 /* CoreDataHelper.swift */; };
 		3D12B123203CBD0200FD701D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D12B122203CBD0200FD701D /* Constants.swift */; };
 		3D17623D2017E62000A1C77A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D17623C2017E62000A1C77A /* AppDelegate.swift */; };
 		3D17623F2017E62000A1C77A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D17623E2017E62000A1C77A /* ViewController.swift */; };
@@ -98,6 +99,7 @@
 		039940262037C9F600A6AEF1 /* Medication.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Medication.storyboard; path = Medication/Medication.storyboard; sourceTree = "<group>"; };
 		03A106B32049BABE00E31BD9 /* Medication.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Medication.xcdatamodel; sourceTree = "<group>"; };
 		03B2062A2033EDF900C5F7F5 /* TabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBar.storyboard; sourceTree = "<group>"; };
+		03BB6A6B204CC7F200955186 /* CoreDataHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CoreDataHelper.swift; path = Models/CoreDataHelper.swift; sourceTree = "<group>"; };
 		03BCDD03203E653F00138271 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		03BCDD28203E68D000138271 /* Pods.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Pods.xcodeproj; path = Pods/Pods.xcodeproj; sourceTree = "<group>"; };
 		0E4FE26337B0BA937F5A53D3 /* Pods-MariGold.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MariGold.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MariGold/Pods-MariGold.debug.xcconfig"; sourceTree = "<group>"; };
@@ -224,7 +226,8 @@
 				039940202037B91700A6AEF1 /* Search.storyboard */,
 				039940242037C48900A6AEF1 /* Account.storyboard */,
 				3D1762482017E62000A1C77A /* Info.plist */,
-				03A106B22049BABE00E31BD9 /* Medication.xcdatamodeld */,
+				03BB6A6B204CC7F200955186 /* CoreDataHelper.swift */,
+				03A106B22049BABE00E31BD9 /* MariGold.xcdatamodeld */,
 				3D12B122203CBD0200FD701D /* Constants.swift */,
 			);
 			path = MariGold;
@@ -611,8 +614,9 @@
 				039253BD2038E382005A2C42 /* RegisterViewController.swift in Sources */,
 				03304F7E2049A6AB0002AAD5 /* AccountViewController.swift in Sources */,
 				3D17623F2017E62000A1C77A /* ViewController.swift in Sources */,
-				03A106B92049BABE00E31BD9 /* Medication.xcdatamodeld in Sources */,
+				03A106B92049BABE00E31BD9 /* MariGold.xcdatamodeld in Sources */,
 				037DF0DC203DDCB600D7F1A4 /* MedicationViewController.swift in Sources */,
+				03BB6A71204CC7F200955186 /* CoreDataHelper.swift in Sources */,
 				3D17623D2017E62000A1C77A /* AppDelegate.swift in Sources */,
 				030D0E27203B399700AC400C /* ResetPasswordViewController.swift in Sources */,
 			);
@@ -914,14 +918,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		03A106B22049BABE00E31BD9 /* Medication.xcdatamodeld */ = {
+		03A106B22049BABE00E31BD9 /* MariGold.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
 				03A106B32049BABE00E31BD9 /* Medication.xcdatamodel */,
 			);
 			currentVersion = 03A106B32049BABE00E31BD9 /* Medication.xcdatamodel */;
-			name = Medication.xcdatamodeld;
-			path = Models/Medication.xcdatamodeld;
+			name = MariGold.xcdatamodeld;
+			path = Models/MariGold.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
