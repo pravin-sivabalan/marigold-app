@@ -11,7 +11,9 @@
 		0315BA7F203A40C500CBD416 /* RegisterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0315BA7E203A40C500CBD416 /* RegisterUITests.swift */; };
 		03304F7E2049A6AB0002AAD5 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03304F7D2049A6AA0002AAD5 /* AccountViewController.swift */; };
 		0350560A2034D7DF00FD8AA5 /* LoginUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035056092034D7DF00FD8AA5 /* LoginUITests.swift */; };
+		035640F4203FBF0E001621E9 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035640EE203FBF0E001621E9 /* AccountViewController.swift */; };
 		037DF0DC203DDCB600D7F1A4 /* MedicationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037DF0DB203DDCB600D7F1A4 /* MedicationViewController.swift */; };
+		0386D6CF2040824B00E0C62E /* MedicationUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0386D6CE2040824B00E0C62E /* MedicationUITests.swift */; };
 		039253B32038B7F0005A2C42 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 039253B22038B7F0005A2C42 /* LaunchScreen.storyboard */; };
 		039253BD2038E382005A2C42 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 039253BC2038E382005A2C42 /* RegisterViewController.swift */; };
 		0399401F2037B87900A6AEF1 /* Dashboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0399401E2037B87900A6AEF1 /* Dashboard.storyboard */; };
@@ -245,6 +247,7 @@
 		3D17625B2017E62000A1C77A /* MariGoldUITests */ = {
 			isa = PBXGroup;
 			children = (
+				0386D6CE2040824B00E0C62E /* MedicationUITests.swift */,
 				0315BA7E203A40C500CBD416 /* RegisterUITests.swift */,
 				035056092034D7DF00FD8AA5 /* LoginUITests.swift */,
 				3D17625C2017E62000A1C77A /* MariGoldUITests.swift */,
@@ -634,6 +637,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0386D6CF2040824B00E0C62E /* MedicationUITests.swift in Sources */,
 				3D17625D2017E62000A1C77A /* MariGoldUITests.swift in Sources */,
 				0315BA7F203A40C500CBD416 /* RegisterUITests.swift in Sources */,
 				0350560A2034D7DF00FD8AA5 /* LoginUITests.swift in Sources */,

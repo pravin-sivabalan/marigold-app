@@ -22,7 +22,11 @@ class AccountViewController: UIViewController {
                     let profile = data["profile"] as! NSDictionary
                     if(profile["league"] != nil) {
                         let league: String = profile["league"] as! String
-                        self.leaguesLabel.text = league
+                        if(league != "") {
+                            self.leaguesLabel.text = league
+                        } else {
+                            self.leaguesLabel.text = "--"
+                        }
                     }
                 } else {
                     self.createAlert(title: "Server Error", message: "There is a connection error. Please check your internet connection or try again later")
