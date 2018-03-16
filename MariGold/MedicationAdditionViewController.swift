@@ -12,3 +12,15 @@ import UIKit
 class MedicationAdditionViewController: UIViewController {
 	
 }
+
+class MedicationAdditionTableViewController: UITableViewController {
+	//Fields
+	@IBOutlet var name: UITextField!
+	@IBOutlet var dosage: UITextField!
+	@IBOutlet var brandName: UITextField!
+	@IBOutlet var NDCNumber: UITextField!
+	
+	//Nav Bar
+	@IBOutlet var cancel: UIBarButtonItem!
+	@IBOutlet var done: UIBarButtonItem!
+}
