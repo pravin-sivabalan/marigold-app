@@ -9,10 +9,6 @@
 import Foundation
 import UIKit
 
-class MedicationAdditionViewController: UIViewController {
-	
-}
-
 class MedicationAdditionTableViewController: UITableViewController {
 	//Fields
 	@IBOutlet var name: UITextField!
@@ -21,6 +17,16 @@ class MedicationAdditionTableViewController: UITableViewController {
 	@IBOutlet var NDCNumber: UITextField!
 	
 	//Nav Bar
-	@IBOutlet var cancel: UIBarButtonItem!
-	@IBOutlet var done: UIBarButtonItem!
+	@IBAction func Cancel(_ sender: Any) {
+		self.navigationController?.popViewController(animated: true)
+	}
+	@IBAction func Done(_ sender: Any) {
+		//Display Spinning Swirly Thingy
+		
+		//Make API Call
+		
+		//If Successful Pop View Controller
+		self.navigationController?.popViewController(animated: true)
+		
+	}
 }

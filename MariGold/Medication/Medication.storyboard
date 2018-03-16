@@ -65,7 +65,7 @@
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="n78-zg-EN4">
                             <connections>
                                 <action selector="medicationAdd:" destination="jzm-8v-ITY" id="WZM-nn-lYH"/>
-                                <segue destination="alJ-zX-iI9" kind="show" id="40A-Tc-ZcV"/>
+                                <segue destination="TaA-Pf-vyw" kind="show" id="xLI-BO-sqY"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -189,17 +189,21 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Add Medication" id="7fP-O6-J6X">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="BjI-89-xPx"/>
-                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="done" id="P8g-o8-zcA"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="BjI-89-xPx">
+                            <connections>
+                                <action selector="Cancel:" destination="TaA-Pf-vyw" id="flz-8T-SGl"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="done" id="P8g-o8-zcA">
+                            <connections>
+                                <action selector="Done:" destination="TaA-Pf-vyw" id="L3T-jF-lrP"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
-                    <connections>
-                        <outlet property="cancel" destination="BjI-89-xPx" id="L6M-PH-hsp"/>
-                        <outlet property="done" destination="P8g-o8-zcA" id="gQz-zj-sKO"/>
-                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QuH-GL-J1C" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2139" y="51"/>
+            <point key="canvasLocation" x="1243" y="51"/>
         </scene>
         <!--Medication-->
         <scene sceneID="Q7s-t7-3xQ">
@@ -221,24 +225,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X1Z-el-YjO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-417" y="52"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="YMA-Qf-LWF">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="alJ-zX-iI9" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="9sz-xM-md9">
-                        <rect key="frame" x="0.0" y="20" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="TaA-Pf-vyw" kind="relationship" relationship="rootViewController" id="czx-Mg-hJ6"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Cpy-Ti-uPI" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1257.9710144927537" y="50.54347826086957"/>
         </scene>
     </scenes>
     <resources>
