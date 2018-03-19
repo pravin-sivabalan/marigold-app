@@ -8,25 +8,78 @@
 
 import Foundation
 import UIKit
+import Alamofire
 
 class MedicationAdditionTableViewController: UITableViewController {
-	//Fields
-	@IBOutlet var name: UITextField!
-	@IBOutlet var dosage: UITextField!
-	@IBOutlet var brandName: UITextField!
+	
+	//Outlets
+	@IBOutlet var Name: UITextField!
+	@IBOutlet var Dosage: UITextField!
+	@IBOutlet var Quantity: UITextField!
+	@IBOutlet var BrandName: UITextField!
 	@IBOutlet var NDCNumber: UITextField!
+	@IBOutlet var TimesPerWeek: UITextField!
+	@IBOutlet var Done: UIBarButtonItem!
+	@IBOutlet var Temporary: UISwitch!
+	
+	//Check if Required Fields are filled out so Done can be pressed
+	@IBAction func NameDoseOrQuantityChanged(_ sender: Any) {
+		if(Name.text != "" && Dosage.text != "" && Quantity.text != "" && TimesPerWeek.text != "") {
+			Done.isEnabled = true
+		}
+		else {
+			Done.isEnabled = false
+		}
+	}
 	
 	//Nav Bar
 	@IBAction func Cancel(_ sender: Any) {
 		self.navigationController?.popViewController(animated: true)
 	}
+	
 	@IBAction func Done(_ sender: Any) {
-		//Display Spinning Swirly Thingy
-		
 		//Make API Call
+		if(!Connectivity.isConnectedToInternet) {
+			return self.createAlert(title: "Connection Error", message: "There is a connection error. Please check your internet connection or try again later.")
+		}
+			
+		//Valid Input
+		else {
+			let body: [String: Any] = [
+				"name" : Name.text!,
+				"dose" : Dosage.text!,
+				"quantity" : Quantity.text!,
+				"per_week" : TimesPerWeek.text!,
+				"temporary" : Temporary.isOn
+			]
+			
+			Alamofire.request(api.rootURL + "/meds/add", method: .post, parameters: body, encoding: JSONEncoding.default, headers: User.header).responseJSON { response in
+				if let JSON = response.result.value {
+					let data = JSON as! NSDictionary
+					if(data["error_code"] != nil) {
+						switch data["error_code"] as! Int {
+						//Room for adding more detailed error messages
+						default:
+							return self.createAlert(title: "Server Error", message: "There is a connection error. Please check your internet connection or try again later.")
+						}
+					}
+					else {
+						//self.getMedicationList()
+					}
+				}
+			}
+		}
+		
 		
 		//If Successful Pop View Controller
 		self.navigationController?.popViewController(animated: true)
 		
+	}
+	
+	//Helper Methods
+	func createAlert(title: String, message: String) {
+		let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+		alert.addAction(UIAlertAction(title: "Try Again", style: .cancel, handler: nil))
+		self.present(alert, animated: true)
 	}
 }
