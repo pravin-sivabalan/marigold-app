@@ -20,6 +20,7 @@
 		039940252037C48900A6AEF1 /* Account.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 039940242037C48900A6AEF1 /* Account.storyboard */; };
 		039940272037C9F600A6AEF1 /* Medication.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 039940262037C9F600A6AEF1 /* Medication.storyboard */; };
 		03A106B92049BABE00E31BD9 /* MariGold.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 03A106B22049BABE00E31BD9 /* MariGold.xcdatamodeld */; };
+		03A58D00205F53B1005D9B13 /* MedicationUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A58CFA205F53B0005D9B13 /* MedicationUITests.swift */; };
 		03B2062B2033EDF900C5F7F5 /* TabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03B2062A2033EDF900C5F7F5 /* TabBar.storyboard */; };
 		03BB6A71204CC7F200955186 /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BB6A6B204CC7F200955186 /* CoreDataHelper.swift */; };
 		03C08A52204CE6540072E7A5 /* MedicationAdditionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C08A51204CE6540072E7A5 /* MedicationAdditionViewController.swift */; };
@@ -100,6 +101,7 @@
 		039940242037C48900A6AEF1 /* Account.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Account.storyboard; sourceTree = "<group>"; };
 		039940262037C9F600A6AEF1 /* Medication.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Medication.storyboard; path = Medication/Medication.storyboard; sourceTree = "<group>"; };
 		03A106B32049BABE00E31BD9 /* Medication.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Medication.xcdatamodel; sourceTree = "<group>"; };
+		03A58CFA205F53B0005D9B13 /* MedicationUITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicationUITests.swift; sourceTree = "<group>"; };
 		03B2062A2033EDF900C5F7F5 /* TabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBar.storyboard; sourceTree = "<group>"; };
 		03BB6A6B204CC7F200955186 /* CoreDataHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CoreDataHelper.swift; path = Models/CoreDataHelper.swift; sourceTree = "<group>"; };
 		03BCDD03203E653F00138271 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
@@ -250,6 +252,7 @@
 			isa = PBXGroup;
 			children = (
 				0315BA7E203A40C500CBD416 /* RegisterUITests.swift */,
+				03A58CFA205F53B0005D9B13 /* MedicationUITests.swift */,
 				035056092034D7DF00FD8AA5 /* LoginUITests.swift */,
 				3D17625C2017E62000A1C77A /* MariGoldUITests.swift */,
 				3D17625E2017E62000A1C77A /* Info.plist */,
@@ -642,6 +645,7 @@
 				0386D6CF2040824B00E0C62E /* (null) in Sources */,
 				3D17625D2017E62000A1C77A /* MariGoldUITests.swift in Sources */,
 				0315BA7F203A40C500CBD416 /* RegisterUITests.swift in Sources */,
+				03A58D00205F53B1005D9B13 /* MedicationUITests.swift in Sources */,
 				0350560A2034D7DF00FD8AA5 /* LoginUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

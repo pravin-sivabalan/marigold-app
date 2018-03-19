@@ -29,13 +29,27 @@ class MedicationUITests: XCTestCase {
     }
     
     func testMedicationAdd() {
+		
 		let app = XCUIApplication()
-		XCUIApplication().tabBars.buttons["Medication"].tap()
+		app.tabBars.buttons["Medication"].tap()
 		app.navigationBars["Medication"].buttons["Add"].tap()
-		app.alerts["Add Medication"].collectionViews.textFields["Medication Name"].typeText("Med 1")
-		app.alerts["Add Medication"].buttons["Add"].tap()
-		sleep(15)
-		XCTAssert(true)
+
+		let tablesQuery = app.tables
+		
+		tablesQuery/*@START_MENU_TOKEN@*/.textFields["Name"]/*[[".cells.textFields[\"Name\"]",".textFields[\"Name\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+		tablesQuery.children(matching: .cell).element(boundBy: 0).children(matching: .textField).element.typeText("Test Med")
+		
+		tablesQuery/*@START_MENU_TOKEN@*/.textFields["Dosage"]/*[[".cells.textFields[\"Dosage\"]",".textFields[\"Dosage\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+		tablesQuery.children(matching: .cell).element(boundBy: 1).children(matching: .textField).element.typeText("20")
+		
+		tablesQuery/*@START_MENU_TOKEN@*/.textFields["Quantity"]/*[[".cells.textFields[\"Quantity\"]",".textFields[\"Quantity\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+		tablesQuery.children(matching: .cell).element(boundBy: 2).children(matching: .textField).element.typeText("36")
+		
+		tablesQuery/*@START_MENU_TOKEN@*/.textFields["Times Per Week"]/*[[".cells.textFields[\"Times Per Week\"]",".textFields[\"Times Per Week\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+		tablesQuery.children(matching: .cell).element(boundBy: 3).children(matching: .textField).element.typeText("3")
+		
+		app.navigationBars["Add Medication"].buttons["Done"].tap()
+		
     }
 	
 	func testMedicationDelete() {
