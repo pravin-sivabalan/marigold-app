@@ -16,14 +16,12 @@ class MedicationAdditionTableViewController: UITableViewController {
 	@IBOutlet var Name: UITextField!
 	@IBOutlet var Dosage: UITextField!
 	@IBOutlet var Quantity: UITextField!
-	@IBOutlet var BrandName: UITextField!
-	@IBOutlet var NDCNumber: UITextField!
 	@IBOutlet var TimesPerWeek: UITextField!
 	@IBOutlet var Done: UIBarButtonItem!
 	@IBOutlet var Temporary: UISwitch!
 	
 	//Check if Required Fields are filled out so Done can be pressed
-	@IBAction func NameDoseOrQuantityChanged(_ sender: Any) {
+	@IBAction func RequiredFieldsChanged(_ sender: Any) {
 		if(Name.text != "" && Dosage.text != "" && Quantity.text != "" && TimesPerWeek.text != "") {
 			Done.isEnabled = true
 		}
@@ -47,7 +45,7 @@ class MedicationAdditionTableViewController: UITableViewController {
 		else {
 			let body: [String: Any] = [
 				"name" : Name.text!,
-				"dose" : Dosage.text!,
+				//"dose" : Dosage.text!,
 				"quantity" : Quantity.text!,
 				"per_week" : TimesPerWeek.text!,
 				"temporary" : Temporary.isOn
@@ -56,15 +54,13 @@ class MedicationAdditionTableViewController: UITableViewController {
 			Alamofire.request(api.rootURL + "/meds/add", method: .post, parameters: body, encoding: JSONEncoding.default, headers: User.header).responseJSON { response in
 				if let JSON = response.result.value {
 					let data = JSON as! NSDictionary
+					NSLog("Break!")
 					if(data["error_code"] != nil) {
 						switch data["error_code"] as! Int {
 						//Room for adding more detailed error messages
 						default:
 							return self.createAlert(title: "Server Error", message: "There is a connection error. Please check your internet connection or try again later.")
 						}
-					}
-					else {
-						//self.getMedicationList()
 					}
 				}
 			}

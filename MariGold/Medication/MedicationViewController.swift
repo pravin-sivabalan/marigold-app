@@ -27,65 +27,17 @@ class MedicationViewController: UIViewController {
 		getMedicationList()
 	}
 	
+	@IBAction func Refresh(_ sender: Any) {
+		getMedicationList()
+	}
+	
+	
 	func createAlert(title: String, message: String) {
 		let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
 		alert.addAction(UIAlertAction(title: "Try Again", style: .cancel, handler: nil))
 		self.present(alert, animated: true)
 	}
 	
-	//UI Buttons
-	@IBAction func medicationAdd(_ sender: Any) {
-		let alert = UIAlertController(title: "Add Medication", message: "Enter the name of the Medication:", preferredStyle: .alert)
-		alert.addTextField { (inputTextField) in
-			inputTextField.placeholder = "Medication Name";
-		}
-		alert.addAction(UIAlertAction(title: NSLocalizedString("Add", comment: "Default action"), style: .default, handler: { _ in
-			guard let inputTextField = alert.textFields?.first else {
-				NSLog("Could not find inputTextField in alert")
-				return
-			}
-			self.addMedicationAction(input: inputTextField);
-		})
-		)
-		alert.addAction(UIAlertAction(title: NSLocalizedString("Cancel", comment: "Cancel Action"), style: .cancel, handler: { _ in
-			NSLog("The \"Cancel\" action occured.")
-		}))
-		self.present(alert, animated: true, completion: nil)
-	}
-	
-	func addMedicationAction(input: UITextField) {
-		if(!Connectivity.isConnectedToInternet) {
-			return self.createAlert(title: "Connection Error", message: "There is a connection error. Please check your internet connection or try again later.")
-		}
-		else if(input.text == "") {
-			return self.createAlert(title: "Try Again", message: "Please enter the name of the medication you wish to add.")
-		}
-			
-		//Valid Input
-		else {
-			let body: [String: Any] = [
-				"name" : input.text!,
-				"dose" : "30",
-				"expir_date" : "04 09 2018"
-			]
-			
-			Alamofire.request(api.rootURL + "/meds/add", method: .post, parameters: body, encoding: JSONEncoding.default, headers: User.header).responseJSON { response in
-				if let JSON = response.result.value {
-					let data = JSON as! NSDictionary
-					if(data["error_code"] != nil) {
-						switch data["error_code"] as! Int {
-							//Room for adding more detailed error messages
-							default:
-								return self.createAlert(title: "Server Error", message: "There is a connection error. Please check your internet connection or try again later.")
-						}
-					}
-					else {
-						self.getMedicationList()
-					}
-				}
-			}
-		}
-	}
 	func getMedicationList() {
 		if(!Connectivity.isConnectedToInternet) {
 			return self.createAlert(title: "Connection Error", message: "There is a connection error. Please check your internet connection or try again later.")
@@ -102,7 +54,10 @@ class MedicationViewController: UIViewController {
 				}
 				else {
 					let meds = data["meds"] as! [[String: Any]]
-					self.medicationArray = meds
+					for med in meds {
+					//CoreDataHelper.newMed(dose: med["dose"], id: med["dose"], medication_id: <#T##Int64#>, name: <#T##String#>, quantity: <#T##Int64#>, run_out_date: <#T##String#>, rxcui: <#T##String#>, temporary: <#T##Bool#>)
+					}
+					//self.medicationArray = meds
 					self.medicationTableView.reloadData()
 				}
 			}
@@ -111,7 +66,6 @@ class MedicationViewController: UIViewController {
 }
 
 //Table view Classes and Methods
-
 class medicaitonTableViewCell: UITableViewCell {
 	@IBOutlet var label: UILabel!
 	@IBOutlet var ID: UILabel!
@@ -124,15 +78,14 @@ extension MedicationViewController: UITableViewDataSource {
 	
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		let cell = tableView.dequeueReusableCell(withIdentifier: "Plain Cell", for: indexPath) as! medicaitonTableViewCell
-		cell.label.text = medicationArray[indexPath.row]["name"] as? String
-		let ID:Int = (medicationArray[indexPath.row]["id"] as? Int)!
-		cell.ID.text = String(ID)
+		let medications = CoreDataHelper.retrieveMeds()
+		cell.label.text = medications[indexPath.row].name
+		cell.ID.text = String(medications[indexPath.row].id)
 		cell.accessibilityIdentifier = cell.label.text
 		return cell
 	}
 	
 	func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-		
 		let cell = tableView.cellForRow(at: indexPath) as! medicaitonTableViewCell
 		let medid = cell.ID.text
 		
