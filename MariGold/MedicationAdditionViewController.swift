@@ -45,7 +45,7 @@ class MedicationAdditionTableViewController: UITableViewController {
 		else {
 			let body: [String: Any] = [
 				"name" : Name.text!,
-				//"dose" : Dosage.text!,
+				"cui" : "1",
 				"quantity" : Quantity.text!,
 				"per_week" : TimesPerWeek.text!,
 				"temporary" : Temporary.isOn
@@ -54,7 +54,6 @@ class MedicationAdditionTableViewController: UITableViewController {
 			Alamofire.request(api.rootURL + "/meds/add", method: .post, parameters: body, encoding: JSONEncoding.default, headers: User.header).responseJSON { response in
 				if let JSON = response.result.value {
 					let data = JSON as! NSDictionary
-					NSLog("Break!")
 					if(data["error_code"] != nil) {
 						switch data["error_code"] as! Int {
 						//Room for adding more detailed error messages

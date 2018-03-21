@@ -18,17 +18,8 @@ struct CoreDataHelper {
 		return context
 	}()
 	
-	static func newMed(dose: Int64, id:Int64, medication_id: Int64, name: String, quantity: Int64, run_out_date: String, rxcui: String, temporary: Bool) -> Medication {
+	static func newMed() -> Medication {
 		let med = NSEntityDescription.insertNewObject(forEntityName: "Medication", into: context) as! Medication
-		
-		med.dose = dose
-		med.id = id
-		med.medication_id = medication_id
-		med.name = name
-		med.quantity = quantity
-		med.run_out_date = run_out_date
-		med.rxcui = rxcui
-		med.temporary = temporary
 		
 		return med
 	}

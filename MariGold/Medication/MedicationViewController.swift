@@ -24,11 +24,11 @@ class MedicationViewController: UIViewController {
 	
 	override func viewDidAppear(_ animated: Bool) {
 		super.viewDidAppear(animated)
-		getMedicationList()
+		updateMedicationList()
 	}
 	
 	@IBAction func Refresh(_ sender: Any) {
-		getMedicationList()
+		updateMedicationList()
 	}
 	
 	
@@ -38,7 +38,7 @@ class MedicationViewController: UIViewController {
 		self.present(alert, animated: true)
 	}
 	
-	func getMedicationList() {
+	func updateMedicationList() {
 		if(!Connectivity.isConnectedToInternet) {
 			return self.createAlert(title: "Connection Error", message: "There is a connection error. Please check your internet connection or try again later.")
 		}
@@ -53,11 +53,19 @@ class MedicationViewController: UIViewController {
 					}
 				}
 				else {
-					let meds = data["meds"] as! [[String: Any]]
-					for med in meds {
-					//CoreDataHelper.newMed(dose: med["dose"], id: med["dose"], medication_id: <#T##Int64#>, name: <#T##String#>, quantity: <#T##Int64#>, run_out_date: <#T##String#>, rxcui: <#T##String#>, temporary: <#T##Bool#>)
+					CoreDataHelper.deleteAllMeds()
+					let JSONmeds = data["meds"] as! [[String: Any]]
+					for JSONmed in JSONmeds {
+						let newMed = CoreDataHelper.newMed()
+						newMed.id = JSONmed["id"] as! Int64 
+						newMed.medication_id = JSONmed["medication_id"] as! Int64
+						newMed.name = JSONmed["name"] as? String
+						newMed.quantity = JSONmed["quantity"] as! Int64
+						newMed.run_out_date = JSONmed["run_out_date"] as? String
+						newMed.rxcui = JSONmed["rxcui"] as? String
+						newMed.temporary = JSONmed["temporary"] as! Bool
 					}
-					//self.medicationArray = meds
+					CoreDataHelper.saveMeds()
 					self.medicationTableView.reloadData()
 				}
 			}
@@ -73,7 +81,8 @@ class medicaitonTableViewCell: UITableViewCell {
 
 extension MedicationViewController: UITableViewDataSource {
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-		return medicationArray.count
+		let medication = CoreDataHelper.retrieveMeds()
+		return medication.count
 	}
 	
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -105,7 +114,7 @@ extension MedicationViewController: UITableViewDataSource {
 						}
 					}
 					else {
-							self.getMedicationList()
+							self.updateMedicationList()
 					}
 				}
 			}
