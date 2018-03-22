@@ -48,6 +48,7 @@
                                 <connections>
                                     <outlet property="ID" destination="MTo-9j-ACh" id="BbC-H4-m90"/>
                                     <outlet property="label" destination="Zji-6w-uiE" id="vPo-0P-Sfd"/>
+                                    <segue destination="1Dw-Kv-2UN" kind="show" id="Mzx-PU-zOV"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -76,6 +77,73 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ezm-nl-GD7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="451.875" y="50.70422535211268"/>
+        </scene>
+        <!--Medication Details-->
+        <scene sceneID="gyX-09-tgB">
+            <objects>
+                <tableViewController title="Medication Details" id="1Dw-Kv-2UN" customClass="MedicationDetailsViewController" customModule="MariGold" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="prj-gE-dIY">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="7Xk-Ul-pO4">
+                                <rect key="frame" x="0.0" y="28" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="7Xk-Ul-pO4" id="0r8-8E-8OJ">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="1Dw-Kv-2UN" id="g5v-dm-heQ"/>
+                            <outlet property="delegate" destination="1Dw-Kv-2UN" id="0Cx-Go-dBR"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Info" id="9KA-V7-202">
+                        <barButtonItem key="rightBarButtonItem" systemItem="edit" id="qjA-Pa-GAJ">
+                            <connections>
+                                <segue destination="4P2-sU-awu" kind="show" id="BXq-gj-dsB"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="m9p-oa-ofy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="452" y="764"/>
+        </scene>
+        <!--Medication Details Edit-->
+        <scene sceneID="16H-m5-Br8">
+            <objects>
+                <tableViewController title="Medication Details Edit" id="4P2-sU-awu" customClass="MedicationDetailsEditViewController" customModule="MariGold" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="L8Y-ib-m6f">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="aeW-HT-X0S">
+                                <rect key="frame" x="0.0" y="28" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="aeW-HT-X0S" id="PBC-LY-CBv">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="4P2-sU-awu" id="WLH-MN-MAN"/>
+                            <outlet property="delegate" destination="4P2-sU-awu" id="hJW-tW-Xp7"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Edit Medication" id="ic2-0q-Sp1">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="X1s-1m-X7t"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="3nE-aU-18k"/>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YJz-Io-1nc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1262" y="764"/>
         </scene>
         <!--Add Medication-->
         <scene sceneID="YxS-hB-8U7">
@@ -244,7 +312,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QuH-GL-J1C" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1243" y="51"/>
+            <point key="canvasLocation" x="1262" y="51"/>
         </scene>
         <!--Medication-->
         <scene sceneID="Q7s-t7-3xQ">

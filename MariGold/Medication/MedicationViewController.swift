@@ -11,7 +11,6 @@ import Alamofire
 
 class MedicationViewController: UIViewController {
 	@IBOutlet var medicationTableView: UITableView!
-	var medicationArray: [[String: Any]] = [[String: Any]]()
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
@@ -25,6 +24,7 @@ class MedicationViewController: UIViewController {
 	override func viewDidAppear(_ animated: Bool) {
 		super.viewDidAppear(animated)
 		updateMedicationList()
+		self.medicationTableView.reloadData()
 	}
 	
 	@IBAction func Refresh(_ sender: Any) {
