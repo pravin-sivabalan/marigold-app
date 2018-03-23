@@ -33,19 +33,19 @@ class MedicationDetailsViewController: UITableViewController{
 		RunOutDate.text = medication.run_out_date ?? "Undefined"
 		Temporary.text = String(medication.temporary)
 		
-		DoneButton = UIBarButtonItem(title: "Done", style: .done, target: self, action: #selector(setEditingMedication))
-		CancelButton = UIBarButtonItem(title: "Cancel", style: .plain, target: self, action: #selector(setEditingMedication))
-		EditButton = UIBarButtonItem(title: "Edit", style: .plain, target: self, action: #selector(setEditingMedication))
+		DoneButton = UIBarButtonItem(title: "Done", style: .done, target: self, action: #selector(setEditingMedication(sender:)))
+		CancelButton = UIBarButtonItem(title: "Cancel", style: .plain, target: self, action: #selector(setEditingMedication(sender:)))
+		EditButton = UIBarButtonItem(title: "Edit", style: .plain, target: self, action: #selector(setEditingMedication(sender:)))
 		
 		self.navigationItem.setRightBarButton(EditButton, animated: false)
 		
 		self.tableView.reloadData()
 	}
 	
-	@objc func setEditingMedication() {
+	@objc func setEditingMedication(sender: UIBarButtonItem) {
 		//Check for Done Button Pressed
-		if self.navigationItem.rightBarButtonItem == DoneButton {
-			//Make API call
+		if sender == DoneButton {
+			//Make API call and update fields
 			NSLog("Done Pressed!")
 		}
 		
