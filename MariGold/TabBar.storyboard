@@ -52,8 +52,8 @@
         <!--Main Tab Bar View Controller-->
         <scene sceneID="dot-i1-M5S">
             <objects>
-                <tabBarController storyboardIdentifier="tabbarControllerID" title="Main Tab Bar View Controller" useStoryboardIdentifierAsRestorationIdentifier="YES" id="a5M-lG-9Jn" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="DQJ-S1-1Ch">
+                <tabBarController storyboardIdentifier="tabbarControllerID" title="Main Tab Bar View Controller" hidesBottomBarWhenPushed="YES" useStoryboardIdentifierAsRestorationIdentifier="YES" id="a5M-lG-9Jn" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="DQJ-S1-1Ch">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
