@@ -27,6 +27,17 @@ class MedicationViewController: UIViewController {
 		self.medicationTableView.reloadData()
 	}
 	
+	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+		guard let identifier = segue.identifier else { return }
+		
+		if identifier == "displayMedicationDetails" {
+			guard let indexPath = medicationTableView.indexPathForSelectedRow else { NSLog("Could not get index path of selected medication"); return }
+			let nextVC = segue.destination as! MedicationDetailsViewController
+			let medicationSelected = CoreDataHelper.retrieveMeds()[indexPath.row]
+			nextVC.medication = medicationSelected
+		}
+	}
+	
 	@IBAction func Refresh(_ sender: Any) {
 		updateMedicationList()
 	}
@@ -80,6 +91,7 @@ class medicaitonTableViewCell: UITableViewCell {
 }
 
 extension MedicationViewController: UITableViewDataSource {
+	
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 		let medication = CoreDataHelper.retrieveMeds()
 		return medication.count
