@@ -245,6 +245,7 @@
 			children = (
 				3D12B11F203CB94500FD701D /* AccountSetup */,
 				3D1762432017E62000A1C77A /* Assets.xcassets */,
+				3D12B122203CBD0200FD701D /* Constants.swift */,
 				3D17623C2017E62000A1C77A /* AppDelegate.swift */,
 				03304F7D2049A6AA0002AAD5 /* AccountViewController.swift */,
 				037DF0DB203DDCB600D7F1A4 /* MedicationViewController.swift */,
@@ -252,7 +253,6 @@
 				03BCDD03203E653F00138271 /* TabBarViewController.swift */,
 				3D2FDAE72066B834004F88D8 /* DashboardViewController.swift */,
 				03BB6A6B204CC7F200955186 /* CoreDataHelper.swift */,
-				3D12B122203CBD0200FD701D /* Constants.swift */,
 				3D2FDB002066D307004F88D8 /* AddNotificationViewController.swift */,
 				03C08A51204CE6540072E7A5 /* MedicationAdditionViewController.swift */,
 				3D2FDB062067F21B004F88D8 /* AddNotificationTableViewController.swift */,

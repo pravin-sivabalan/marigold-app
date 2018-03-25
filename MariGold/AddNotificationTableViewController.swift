@@ -13,7 +13,8 @@ import Alamofire
 class AddNotificationTableViewController: UITableViewController {
     var data: [String] = []
     var med: [String: Any] = [:]
-    var notifications: [[String:String] ] = []
+    var localNotifications: [[String:String] ] = []
+    var dataNotifications: [[String:String]] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,6 +48,7 @@ class AddNotificationTableViewController: UITableViewController {
 //            "per_week" : TimesPerWeek.text!,
 //            "temporary" : Temporary.isOn
 //        ]
+        
         var body = med
         
         let emailNotification = med["emailNotification"] as! Bool
@@ -55,13 +57,14 @@ class AddNotificationTableViewController: UITableViewController {
         } else {
             body["alert_user"] = "0"
         }
-        body["notifications"] = notifications
+        body["notifications"] = dataNotifications
         body.removeValue(forKey: "phoneNotification")
         body.removeValue(forKey: "emailNotification")
 
         Alamofire.request(api.rootURL + "/meds/add", method: .post, parameters: body, encoding: JSONEncoding.default, headers: User.header).responseJSON { response in
             if let JSON = response.result.value {
                 let data = JSON as! NSDictionary
+                print("output")
                 print(data)
                 if(data["error_code"] != nil) {
                     switch data["error_code"] as! Int {
@@ -154,13 +157,13 @@ class AddNotificationTableViewController: UITableViewController {
             let dateFormatter = DateFormatter()
             dateFormatter.dateFormat = "yyyy-MM-dd"
             
-            let newNotification = [
+            let newDataNotification = [
                 "day": String(notifVC.weekdayPicker.selectedRow(inComponent: 1)),
                 "time": dateFormatter.string(from: today) + ":" + self.localToUTC(date: notificationTime)
             ]
   
             self.data.append(displayNotification)
-            self.notifications.append(newNotification)
+            self.dataNotifications.append(newDataNotification)
             self.tableView.reloadData()
         }
         

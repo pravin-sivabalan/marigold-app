@@ -7,6 +7,7 @@
 //
 
 import Alamofire
+import UserNotifications
 
 struct api {
     static let rootURL = "https://marigoldapp.net"
@@ -42,3 +43,45 @@ class Connectivity {
         return NetworkReachabilityManager()!.isReachable
     }
 }
+
+class Notify {
+    static func createForMedication(medication: [String:Any]) {
+        let center = UNUserNotificationCenter.current()
+        let notifications = medication["notifications"] as! [[String:Any]]
+    
+        for notification in notifications {
+            print(notification)
+            let content = UNMutableNotificationContent()
+            content.title = NSString.localizedUserNotificationString(forKey: "Time to take your medication!", arguments: nil)
+            content.body = NSString.localizedUserNotificationString(forKey: "It is time to take your ", arguments: nil)
+            
+            var weekday = (notification["weekday"] as! Int) + 2
+            if(weekday > 7) {
+                weekday = 0
+            }
+            
+            var dateComponents = DateComponents()
+            dateComponents.hour = (notification["hour"] as? Int)
+            dateComponents.minute = (notification["minute"] as? Int)
+            dateComponents.weekday = weekday
+            
+            let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: true)
+            
+            let identifier = "UYLLocalNotification"
+            let request = UNNotificationRequest(identifier: identifier, content: content, trigger: trigger)
+            center.add(request, withCompletionHandler: { (error) in
+                if let error = error {
+                    print(error)
+                }
+            })
+        }
+
+//        var dateInfo = DateComponents()
+//        dateInfo.hour = 7
+//        dateInfo.minute = 0
+//        let trigger = UNCalendarNotificationTrigger(dateMatching: dateInfo, repeats: false)
+//
+//        let request = UNNotificationRequest(identifier: "Med reminder for this", content: content, trigger: trigger);
+    }
+}
+

@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreData
+import UserNotifications
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -22,6 +23,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             let vc = storyboard.instantiateViewController(withIdentifier: "tabbarControllerID") as UIViewController
             self.window?.rootViewController = vc
         }
+        
+        let center  = UNUserNotificationCenter.current()
+        center.requestAuthorization(options: [.sound, .alert, .badge]) { (granted, error) in
+            if error == nil{
+                DispatchQueue.main.async(execute: {
+                    UIApplication.shared.registerForRemoteNotifications()
+                })
+            }
+        }
+
         return true
     }
 
