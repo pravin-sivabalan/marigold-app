@@ -401,6 +401,7 @@
                         <outlet property="NBASwitch" destination="2aU-Zk-7UT" id="LeR-9C-b4K"/>
                         <outlet property="NCAASwitch" destination="Kgl-Sc-mgz" id="Qs6-vW-909"/>
                         <outlet property="NFLSwitch" destination="Q0o-im-xdK" id="m8A-Um-HbK"/>
+                        <outlet property="allergiesField" destination="1mJ-R6-gYl" id="OWa-Kb-PSh"/>
                         <outlet property="confirmPasswordField" destination="02M-p0-jJ4" id="XCQ-1Z-tE2"/>
                         <outlet property="emailField" destination="8oF-B3-t4I" id="Tcy-r0-XJF"/>
                         <outlet property="firstNameField" destination="iZ0-EM-wQH" id="JVe-nL-3PA"/>

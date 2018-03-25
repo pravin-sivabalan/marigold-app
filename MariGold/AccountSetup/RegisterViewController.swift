@@ -20,7 +20,8 @@ class RegisterViewController: UIViewController {
 	@IBOutlet var NFLSwitch: UISwitch!
 	@IBOutlet var NBASwitch: UISwitch!
 	@IBOutlet var NCAASwitch: UISwitch!
-	
+    @IBOutlet weak var allergiesField: UITextField!
+    
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
@@ -63,7 +64,8 @@ class RegisterViewController: UIViewController {
             "last_name" : lastNameField.text!,
             "email" : emailField.text!,
             "password" : passwordField.text!,
-            "league" : leagues
+            "league" : leagues,
+            "allergies" : allergiesField.text!
         ]
         
         Alamofire.request(api.rootURL + "/user/register", method: .post, parameters: body, encoding: JSONEncoding.default, headers: nil).responseJSON { response in
