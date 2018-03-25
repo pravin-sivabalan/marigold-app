@@ -85,12 +85,12 @@ class MedicationDetailsViewController: UITableViewController{
 							switch data["error_code"] as! Int {
 							//Room for adding more detailed error messages
 							default:
-								populateFieldsWithOGMedication()
+								self.populateFieldsWithOGMedication()
 								return self.createAlert(title: "Server Error", message: "There is a connection error. Please check your internet connection or try again later.")
 							}
 						}
 						else {
-							Name.text = EditNameField.text
+							self.Name.text = self.EditNameField.text
 						}
 					}
 				}
@@ -141,4 +141,10 @@ class MedicationDetailsViewController: UITableViewController{
 		// Dispose of any resources that can be recreated.
 	}
 	
+	//Helper Methods
+	func createAlert(title: String, message: String) {
+		let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+		alert.addAction(UIAlertAction(title: "Try Again", style: .cancel, handler: nil))
+		self.present(alert, animated: true)
+	}
 }
