@@ -11,6 +11,8 @@ import Alamofire
 
 class AccountViewController: UIViewController {
     @IBOutlet weak var leaguesLabel: UILabel!
+    @IBOutlet weak var displayName: UILabel!
+    @IBOutlet weak var emailLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,6 +23,8 @@ class AccountViewController: UIViewController {
                 if(data.object(forKey: "message") as! String == "ok") {
                     let profile = data["profile"] as! NSDictionary
                     if(profile["league"] != nil) {
+                        self.displayName.text = (profile["first_name"] as! String) + " " + (profile["last_name"] as! String)
+                        self.emailLabel.text = profile["email"] as? String
                         let league: String = profile["league"] as! String
                         if(league != "") {
                             self.leaguesLabel.text = league

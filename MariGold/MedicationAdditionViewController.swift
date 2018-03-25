@@ -19,7 +19,9 @@ class MedicationAdditionTableViewController: UITableViewController {
 	@IBOutlet var TimesPerWeek: UITextField!
 	@IBOutlet var Done: UIBarButtonItem!
 	@IBOutlet var Temporary: UISwitch!
-	
+    @IBOutlet weak var Phone: UISwitch!
+    @IBOutlet weak var Email: UISwitch!
+    
 	//Check if Required Fields are filled out so Done can be pressed
 	@IBAction func RequiredFieldsChanged(_ sender: Any) {
 		if(Name.text != "" && Dosage.text != "" && Quantity.text != "" && TimesPerWeek.text != "") {
@@ -34,43 +36,61 @@ class MedicationAdditionTableViewController: UITableViewController {
 	@IBAction func Cancel(_ sender: Any) {
 		self.navigationController?.popViewController(animated: true)
 	}
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let body: [String: Any] = [
+            "name" : Name.text!,
+            "cui" : "190465",
+            "quantity" : Quantity.text!,
+            "per_week" : TimesPerWeek.text!,
+            "temporary" : Temporary.isOn,
+            "phoneNotification": Phone.isOn,
+            "emailNotification": Email.isOn
+        ]
+        
+        // Create a new variable to store the instance of PlayerTableViewController
+        let destinationVC = segue.destination as! AddNotificationTableViewController
+        destinationVC.med = body
+    }
+
+
 	
-	@IBAction func Done(_ sender: Any) {
-		//Make API Call
-		if(!Connectivity.isConnectedToInternet) {
-			return self.createAlert(title: "Connection Error", message: "There is a connection error. Please check your internet connection or try again later.")
-		}
-			
-		//Valid Input
-		else {
-			let body: [String: Any] = [
-				"name" : Name.text!,
-				"cui" : "1",
-				"quantity" : Quantity.text!,
-				"per_week" : TimesPerWeek.text!,
-				"temporary" : Temporary.isOn
-			]
-			
-			Alamofire.request(api.rootURL + "/meds/add", method: .post, parameters: body, encoding: JSONEncoding.default, headers: User.header).responseJSON { response in
-				if let JSON = response.result.value {
-					let data = JSON as! NSDictionary
-					if(data["error_code"] != nil) {
-						switch data["error_code"] as! Int {
-						//Room for adding more detailed error messages
-						default:
-							return self.createAlert(title: "Server Error", message: "There is a connection error. Please check your internet connection or try again later.")
-						}
-					}
-				}
-			}
-		}
-		
-		
-		//If Successful Pop View Controller
-		self.navigationController?.popViewController(animated: true)
-		
-	}
-	
+//    @IBAction func Done(_ sender: Any) {
+////        //Make API Call
+////        if(!Connectivity.isConnectedToInternet) {
+////            return self.createAlert(title: "Connection Error", message: "There is a connection error. Please check your internet connection or try again later.")
+////        }
+////
+////        //Valid Input
+////        else {
+////            let body: [String: Any] = [
+////                "name" : Name.text!,
+////                "cui" : "1",
+////                "quantity" : Quantity.text!,
+////                "per_week" : TimesPerWeek.text!,
+////                "temporary" : Temporary.isOn
+////            ]
+//
+////            Alamofire.request(api.rootURL + "/meds/add", method: .post, parameters: body, encoding: JSONEncoding.default, headers: User.header).responseJSON { response in
+////                if let JSON = response.result.value {
+////                    let data = JSON as! NSDictionary
+////                    if(data["error_code"] != nil) {
+////                        switch data["error_code"] as! Int {
+////                        //Room for adding more detailed error messages
+////                        default:
+////                            return self.createAlert(title: "Server Error", message: "There is a connection error. Please check your internet connection or try again later.")
+////                        }
+////                    }
+////                }
+////            }
+////        }
+//
+//
+//        //If Successful Pop View Controller
+////        self.navigationController?.popViewController(animated: true)
+//
+//    }
+
 	//Helper Methods
 	func createAlert(title: String, message: String) {
 		let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
@@ -78,3 +98,4 @@ class MedicationAdditionTableViewController: UITableViewController {
 		self.present(alert, animated: true)
 	}
 }
+
