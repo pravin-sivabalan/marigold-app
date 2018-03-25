@@ -11,6 +11,9 @@ import Alamofire
 
 class AccountViewController: UIViewController {
     @IBOutlet weak var leaguesLabel: UILabel!
+    @IBOutlet weak var displayName: UILabel!
+    @IBOutlet weak var emailLabel: UILabel!
+    @IBOutlet weak var allergiesLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,13 +23,19 @@ class AccountViewController: UIViewController {
                 let data = JSON as! NSDictionary
                 if(data.object(forKey: "message") as! String == "ok") {
                     let profile = data["profile"] as! NSDictionary
+                    self.displayName.text = (profile["first_name"] as! String) + " " + (profile["last_name"] as! String)
+                    self.emailLabel.text = profile["email"] as? String
                     if(profile["league"] != nil) {
                         let league: String = profile["league"] as! String
                         if(league != "") {
                             self.leaguesLabel.text = league
-                        } else {
-                            self.leaguesLabel.text = "--"
-                        }
+                        } 
+                    }
+                    if !(profile["allergies"] is NSNull) {
+                        let allergies = profile["allergies"] as! String
+                        if(allergies != "") {
+                            self.allergiesLabel.text = allergies
+                        } 
                     }
                 } else {
                     self.createAlert(title: "Server Error", message: "There is a connection error. Please check your internet connection or try again later")
