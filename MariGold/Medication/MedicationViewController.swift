@@ -86,23 +86,33 @@ class MedicationViewController: UIViewController {
 
 //Table view Classes and Methods
 class medicaitonTableViewCell: UITableViewCell {
-	@IBOutlet var label: UILabel!
+	@IBOutlet var Label: UILabel!
 	@IBOutlet var ID: UILabel!
+	@IBOutlet var Temporary: UILabel!
 }
 
 extension MedicationViewController: UITableViewDataSource {
 	
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-		let medication = CoreDataHelper.retrieveMeds()
-		return medication.count
+		let medications = CoreDataHelper.retrieveMeds()
+		return medications.count
 	}
 	
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		let cell = tableView.dequeueReusableCell(withIdentifier: "Plain Cell", for: indexPath) as! medicaitonTableViewCell
 		let medications = CoreDataHelper.retrieveMeds()
-		cell.label.text = medications[indexPath.row].name
-		cell.ID.text = String(medications[indexPath.row].id)
-		cell.accessibilityIdentifier = cell.label.text
+		let medication = medications[indexPath.row]
+		cell.Label.text = medication.name
+		cell.ID.text = String(medication.id)
+		if medication.temporary {
+			cell.Temporary.isHidden = false
+		}
+		if medication.quantity < 1 {
+			cell.Label.textColor = UIColor.red
+			cell.ID.textColor = UIColor.red
+			cell.Temporary.textColor = UIColor.red
+		}
+		cell.accessibilityIdentifier = cell.Label.text
 		return cell
 	}
 	

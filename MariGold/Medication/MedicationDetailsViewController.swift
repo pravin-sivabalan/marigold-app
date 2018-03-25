@@ -37,16 +37,28 @@ class MedicationDetailsViewController: UITableViewController{
 		self.tableView.reloadData()
 	}
 	@IBAction func temporaryOnOffSwitch() {
-		Temporary.text = String(TemporarySwitch.isOn)
+		if TemporarySwitch.isOn {
+			Temporary.text = "Yes"
+		}
+		else {
+			Temporary.text = "No"
+		}
 	}
 	
 	func populateFieldsWithOGMedication() {
 		Name.text = medication.name ?? "Undefined"
 		//Dosage.text = medication.
 		Quantity.text = String(medication.quantity)
-		RunOutDate.text = medication.run_out_date ?? "Undefined"
+		var formattedRunOutDate = medication.run_out_date
+		formattedRunOutDate?.removeLast(13)
+		RunOutDate.text = formattedRunOutDate
 		Temporary.text = String(medication.temporary)
-		TemporarySwitch.isOn = medication.temporary
+		if TemporarySwitch.isOn {
+			Temporary.text = "Yes"
+		}
+		else {
+			Temporary.text = "No"
+		}
 	}
 	
 	@objc func setEditingMedication(sender: UIBarButtonItem) {
@@ -72,6 +84,7 @@ class MedicationDetailsViewController: UITableViewController{
 			Dosage.textAlignment = .left
 			Quantity.isEnabled = true
 			Quantity.textAlignment = .left
+			RunOutDate.textAlignment = .left
 			TemporarySwitch.isHidden = false
 			Temporary.textAlignment = .left
 		}
@@ -86,6 +99,7 @@ class MedicationDetailsViewController: UITableViewController{
 			Dosage.textAlignment = .right
 			Quantity.isEnabled = false
 			Quantity.textAlignment = .right
+			RunOutDate.textAlignment = .right
 			TemporarySwitch.isHidden = true
 			Temporary.textAlignment = .right
 		}
