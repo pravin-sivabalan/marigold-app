@@ -104,6 +104,7 @@ extension MedicationViewController: UITableViewDataSource {
 		let medication = medications[indexPath.row]
 		cell.Label.text = medication.name
 		cell.ID.text = String(medication.id)
+		
 		if medication.temporary {
 			cell.Temporary.isHidden = false
 		}
