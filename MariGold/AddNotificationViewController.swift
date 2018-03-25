@@ -3,8 +3,6 @@ import UIKit
 class AddNotificationViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
 //    @IBOutlet weak var commentTextField: UITextField!
     @IBOutlet weak var weekdayPicker: UIPickerView!
-    @IBOutlet weak var phoneSwitch: UISwitch!
-    @IBOutlet weak var emailSwitch: UISwitch!
     let weekdays = ["Mon","Tues","Wed","Thurs","Fri","Sat","Sun"]
     var hours = [String]()
     var minutes = [String]()

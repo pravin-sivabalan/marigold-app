@@ -46,7 +46,7 @@ class Connectivity {
 
 class Notify {
     static func createForMedication(medication: [String:Any]) {
-        let center = UNUserNotificationCenter.current()
+//        let center = UNUserNotificationCenter.current()
         let notifications = medication["notifications"] as! [[String:Any]]
     
         for notification in notifications {
@@ -66,14 +66,14 @@ class Notify {
             dateComponents.weekday = weekday
             
             let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: true)
+            let request = UNNotificationRequest(identifier: "", content: content, trigger: trigger)
             
-            let identifier = "UYLLocalNotification"
-            let request = UNNotificationRequest(identifier: identifier, content: content, trigger: trigger)
-            center.add(request, withCompletionHandler: { (error) in
+            UNUserNotificationCenter.current().add(request) { (error) in
                 if let error = error {
-                    print(error)
+                    print("error in pizza reminder: \(error.localizedDescription)")
                 }
-            })
+            }
+            print("added notification:\(request.identifier)")
         }
 
 //        var dateInfo = DateComponents()

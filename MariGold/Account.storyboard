@@ -19,21 +19,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FsZ-f9-TrC">
-                                <rect key="frame" x="160" y="480" width="55" height="30"/>
+                                <rect key="frame" x="160" y="497" width="55" height="30"/>
                                 <state key="normal" title="Log Out"/>
                                 <connections>
                                     <action selector="logoutAction:" destination="YJe-8Y-maC" eventType="touchUpInside" id="2V1-Gs-M6W"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7CW-yO-8Tg">
-                                <rect key="frame" x="135" y="540" width="105" height="30"/>
-                                <state key="normal" title="Delete Account"/>
-                                <connections>
-                                    <action selector="deleteAccountAction:" destination="YJe-8Y-maC" eventType="touchUpInside" id="mLw-3V-hZJ"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Leagues" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xUQ-mU-T5p">
-                                <rect key="frame" x="48" y="241" width="278" height="30"/>
+                                <rect key="frame" x="138" y="241" width="97" height="30"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -44,14 +37,20 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GKx-gf-brg">
+                                <rect key="frame" x="138" y="419" width="100" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1LJ-My-ha0">
-                                <rect key="frame" x="65" y="164" width="246" height="21"/>
+                                <rect key="frame" x="65" y="164" width="245" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JNj-n1-SY1">
-                                <rect key="frame" x="49" y="78" width="277" height="59"/>
+                                <rect key="frame" x="16" y="78" width="343" height="59"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="59" id="Fo3-qT-uxS"/>
                                 </constraints>
@@ -59,29 +58,48 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Allergies" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TLy-9W-3To">
+                                <rect key="frame" x="139" y="352" width="99" height="30"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7CW-yO-8Tg">
+                                <rect key="frame" x="135" y="557" width="105" height="30"/>
+                                <state key="normal" title="Delete Account"/>
+                                <connections>
+                                    <action selector="deleteAccountAction:" destination="YJe-8Y-maC" eventType="touchUpInside" id="mLw-3V-hZJ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="JNj-n1-SY1" firstAttribute="leading" secondItem="o3o-Yp-ke9" secondAttribute="leading" constant="49" id="1pA-HA-fJj"/>
+                            <constraint firstItem="GKx-gf-brg" firstAttribute="centerX" secondItem="FsZ-f9-TrC" secondAttribute="centerX" id="1Ss-Ml-kUK"/>
+                            <constraint firstItem="JNj-n1-SY1" firstAttribute="leading" secondItem="o3o-Yp-ke9" secondAttribute="leading" constant="16" id="1pA-HA-fJj"/>
                             <constraint firstItem="xUQ-mU-T5p" firstAttribute="top" secondItem="1LJ-My-ha0" secondAttribute="bottom" constant="56" id="3SI-gV-cud"/>
                             <constraint firstItem="JNj-n1-SY1" firstAttribute="top" secondItem="o3o-Yp-ke9" secondAttribute="top" constant="58" id="4ie-Yk-a57"/>
-                            <constraint firstItem="aA6-sr-Ogu" firstAttribute="leading" secondItem="JNj-n1-SY1" secondAttribute="leading" id="5ST-Hl-qJH"/>
                             <constraint firstItem="1LJ-My-ha0" firstAttribute="leading" secondItem="o3o-Yp-ke9" secondAttribute="leading" constant="65" id="6gp-cl-3Ah"/>
+                            <constraint firstItem="GKx-gf-brg" firstAttribute="centerX" secondItem="TLy-9W-3To" secondAttribute="centerX" id="AcS-E5-ZbT"/>
                             <constraint firstItem="7CW-yO-8Tg" firstAttribute="top" secondItem="FsZ-f9-TrC" secondAttribute="bottom" constant="30" id="Aej-wH-Cu4"/>
-                            <constraint firstItem="aA6-sr-Ogu" firstAttribute="trailing" secondItem="JNj-n1-SY1" secondAttribute="trailing" id="ET7-Yh-WEj"/>
-                            <constraint firstItem="aA6-sr-Ogu" firstAttribute="trailing" secondItem="xUQ-mU-T5p" secondAttribute="trailing" id="GWb-Jv-LeQ"/>
+                            <constraint firstItem="GKx-gf-brg" firstAttribute="leading" secondItem="xUQ-mU-T5p" secondAttribute="leading" id="Bei-ex-2W6"/>
+                            <constraint firstItem="TLy-9W-3To" firstAttribute="top" secondItem="aA6-sr-Ogu" secondAttribute="bottom" constant="39" id="D6d-aP-7CR"/>
+                            <constraint firstItem="aA6-sr-Ogu" firstAttribute="leading" secondItem="o3o-Yp-ke9" secondAttribute="leading" constant="49" id="Fc9-GH-8gx"/>
+                            <constraint firstItem="FsZ-f9-TrC" firstAttribute="top" secondItem="GKx-gf-brg" secondAttribute="bottom" constant="57" id="Ixa-Sh-Keh"/>
                             <constraint firstItem="JNj-n1-SY1" firstAttribute="centerX" secondItem="RkD-eR-TVj" secondAttribute="centerX" id="Jm0-Sd-ciD"/>
-                            <constraint firstAttribute="bottom" secondItem="FsZ-f9-TrC" secondAttribute="bottom" constant="157" id="LtW-J8-fDV"/>
+                            <constraint firstAttribute="bottom" secondItem="FsZ-f9-TrC" secondAttribute="bottom" constant="140" id="LtW-J8-fDV"/>
                             <constraint firstItem="1LJ-My-ha0" firstAttribute="centerX" secondItem="JNj-n1-SY1" secondAttribute="centerX" id="MzC-ML-7Ha"/>
-                            <constraint firstItem="aA6-sr-Ogu" firstAttribute="centerX" secondItem="xUQ-mU-T5p" secondAttribute="centerX" id="ZWN-VT-bbT"/>
+                            <constraint firstItem="aA6-sr-Ogu" firstAttribute="centerX" secondItem="GKx-gf-brg" secondAttribute="centerX" id="OUO-Fx-2Mx"/>
                             <constraint firstItem="7CW-yO-8Tg" firstAttribute="centerX" secondItem="FsZ-f9-TrC" secondAttribute="centerX" id="aDB-oJ-nUg"/>
                             <constraint firstItem="JNj-n1-SY1" firstAttribute="centerX" secondItem="FsZ-f9-TrC" secondAttribute="centerX" id="aI1-5i-eTj"/>
+                            <constraint firstItem="aA6-sr-Ogu" firstAttribute="top" secondItem="xUQ-mU-T5p" secondAttribute="bottom" constant="21" id="h9N-h7-xJi"/>
+                            <constraint firstItem="GKx-gf-brg" firstAttribute="trailing" secondItem="TLy-9W-3To" secondAttribute="trailing" id="m9Q-Am-eOL"/>
                             <constraint firstItem="1LJ-My-ha0" firstAttribute="top" secondItem="JNj-n1-SY1" secondAttribute="bottom" constant="27" id="qVn-QN-Ydc"/>
-                            <constraint firstItem="aA6-sr-Ogu" firstAttribute="top" secondItem="xUQ-mU-T5p" secondAttribute="bottom" constant="21" id="xnP-wz-3yW"/>
+                            <constraint firstItem="GKx-gf-brg" firstAttribute="top" secondItem="TLy-9W-3To" secondAttribute="bottom" constant="37" id="xn5-dd-Do5"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="o3o-Yp-ke9"/>
                     </view>
                     <connections>
+                        <outlet property="allergiesLabel" destination="GKx-gf-brg" id="EkM-2V-42w"/>
                         <outlet property="displayName" destination="JNj-n1-SY1" id="enK-t6-wsu"/>
                         <outlet property="emailLabel" destination="1LJ-My-ha0" id="wSH-zu-zIh"/>
                         <outlet property="leaguesLabel" destination="aA6-sr-Ogu" id="V9h-43-cTe"/>
