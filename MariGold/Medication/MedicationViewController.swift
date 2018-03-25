@@ -107,6 +107,7 @@ extension MedicationViewController: UITableViewDataSource {
 		if medication.temporary {
 			cell.Temporary.isHidden = false
 		}
+		
 		if medication.quantity < 1 {
 			cell.Label.textColor = UIColor.red
 			cell.ID.textColor = UIColor.red
