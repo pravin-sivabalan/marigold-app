@@ -36,6 +36,9 @@ class MedicationDetailsViewController: UITableViewController{
 		self.navigationItem.setRightBarButton(EditButton, animated: false)
 		self.tableView.reloadData()
 	}
+	@IBAction func temporaryOnOffSwitch() {
+		Temporary.text = String(TemporarySwitch.isOn)
+	}
 	
 	func populateFieldsWithOGMedication() {
 		Name.text = medication.name ?? "Undefined"

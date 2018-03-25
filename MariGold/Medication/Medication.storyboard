@@ -256,6 +256,9 @@
                                                         </label>
                                                         <switch hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="z2a-E6-wKw">
                                                             <rect key="frame" x="144" y="0.0" width="2" height="22"/>
+                                                            <connections>
+                                                                <action selector="temporaryOnOffSwitch" destination="1Dw-Kv-2UN" eventType="valueChanged" id="tIC-M2-iVq"/>
+                                                            </connections>
                                                         </switch>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Undefined" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UdG-ps-iEf">
                                                             <rect key="frame" x="144" y="0.0" width="144" height="22"/>
