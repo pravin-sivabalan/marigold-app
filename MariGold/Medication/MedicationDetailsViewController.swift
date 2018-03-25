@@ -7,14 +7,18 @@
 //
 
 import UIKit
+import Alamofire
 
 class MedicationDetailsViewController: UITableViewController{
-	@IBOutlet var Name: UITextField!
+	
+	@IBOutlet var MainNameCell: UITableViewCell!
+	@IBOutlet var Name: UILabel!
 	@IBOutlet var Dosage: UITextField!
 	@IBOutlet var Quantity: UITextField!
 	@IBOutlet var RunOutDate: UITextField!
 	@IBOutlet var Temporary: UILabel!
 	@IBOutlet var TemporarySwitch: UISwitch!
+	@IBOutlet var EditNameField: UITextField!
 	
 	var medication: Medication!
 	var isEditingMedication = false
@@ -27,7 +31,6 @@ class MedicationDetailsViewController: UITableViewController{
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		populateFieldsWithOGMedication()
-		self.navigationItem.title = medication.name
 		
 		DoneButton = UIBarButtonItem(title: "Done", style: .done, target: self, action: #selector(setEditingMedication(sender:)))
 		CancelButton = UIBarButtonItem(title: "Cancel", style: .plain, target: self, action: #selector(setEditingMedication(sender:)))
@@ -36,6 +39,7 @@ class MedicationDetailsViewController: UITableViewController{
 		self.navigationItem.setRightBarButton(EditButton, animated: false)
 		self.tableView.reloadData()
 	}
+	
 	@IBAction func temporaryOnOffSwitch() {
 		if TemporarySwitch.isOn {
 			Temporary.text = "Yes"
@@ -47,10 +51,12 @@ class MedicationDetailsViewController: UITableViewController{
 	
 	func populateFieldsWithOGMedication() {
 		Name.text = medication.name ?? "Undefined"
-		//Dosage.text = medication.
+		EditNameField.text = medication.name ?? "Undefined"
 		Quantity.text = String(medication.quantity)
 		var formattedRunOutDate = medication.run_out_date
-		formattedRunOutDate?.removeLast(13)
+		if formattedRunOutDate!.count >= 13 {
+			formattedRunOutDate?.removeLast(13)
+		}
 		RunOutDate.text = formattedRunOutDate
 		Temporary.text = String(medication.temporary)
 		if TemporarySwitch.isOn {
@@ -65,7 +71,31 @@ class MedicationDetailsViewController: UITableViewController{
 		//Check for Done Button Pressed
 		if sender == DoneButton {
 			//Make API call and update fields
-			NSLog("Done Pressed!")
+				let body: [String: Any] = [
+					"name" : EditNameField.text!,
+					"dose" : Dosage.text!,
+					"quantity" : Quantity.text!,
+					"temporary" : TemporarySwitch.isOn
+				]
+				
+				Alamofire.request(api.rootURL + "/update/med", method: .post, parameters: body, encoding: JSONEncoding.default, headers: User.header).responseJSON { response in
+					if let JSON = response.result.value {
+						let data = JSON as! NSDictionary
+						if(data["error_code"] != nil) {
+							switch data["error_code"] as! Int {
+							//Room for adding more detailed error messages
+							default:
+								populateFieldsWithOGMedication()
+								return self.createAlert(title: "Server Error", message: "There is a connection error. Please check your internet connection or try again later.")
+							}
+						}
+						else {
+							Name.text = EditNameField.text
+						}
+					}
+				}
+			
+			//Successful
 		}
 		
 		if sender == CancelButton {
@@ -78,8 +108,8 @@ class MedicationDetailsViewController: UITableViewController{
 			self.navigationItem.setLeftBarButton(CancelButton, animated: true)
 			self.navigationItem.setRightBarButton(DoneButton, animated: true)
 			
-			Name.isEnabled = true
-			Name.textAlignment = .left
+			EditNameField.isEnabled = true
+			EditNameField.textAlignment = .left
 			Dosage.isEnabled = true
 			Dosage.textAlignment = .left
 			Quantity.isEnabled = true
@@ -93,8 +123,8 @@ class MedicationDetailsViewController: UITableViewController{
 			self.navigationItem.setLeftBarButton(nil, animated: true)
 			self.navigationItem.setHidesBackButton(false, animated: true)
 			
-			Name.isEnabled = false
-			Name.textAlignment = .right
+			EditNameField.isEnabled = false
+			EditNameField.textAlignment = .right
 			Dosage.isEnabled = false
 			Dosage.textAlignment = .right
 			Quantity.isEnabled = false

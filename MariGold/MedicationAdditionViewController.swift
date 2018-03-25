@@ -48,7 +48,9 @@ class MedicationAdditionTableViewController: UITableViewController {
 				"cui" : "1",
 				"quantity" : Quantity.text!,
 				"per_week" : TimesPerWeek.text!,
-				"temporary" : Temporary.isOn
+				"temporary" : Temporary.isOn,
+				"notifications" : [String](),
+				"alert_user" : Int(0)
 			]
 			
 			Alamofire.request(api.rootURL + "/meds/add", method: .post, parameters: body, encoding: JSONEncoding.default, headers: User.header).responseJSON { response in
