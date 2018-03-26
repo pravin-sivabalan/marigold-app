@@ -14,40 +14,59 @@ class AccountViewController: UIViewController {
     @IBOutlet weak var displayName: UILabel!
     @IBOutlet weak var emailLabel: UILabel!
     @IBOutlet weak var allergiesLabel: UILabel!
+	var FirstName: String!
+	var LastName: String!
+	var Leagues: String!
+	var Allergies: String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        Alamofire.request(api.rootURL + "/user", encoding: JSONEncoding.default, headers: User.header).responseJSON { response in
-            if let JSON = response.result.value {
-                let data = JSON as! NSDictionary
-                if(data.object(forKey: "message") as! String == "ok") {
-                    let profile = data["profile"] as! NSDictionary
-                    self.displayName.text = (profile["first_name"] as! String) + " " + (profile["last_name"] as! String)
-                    self.emailLabel.text = profile["email"] as? String
-                    if(profile["league"] != nil) {
-                        let league: String = profile["league"] as! String
-                        if(league != "") {
-                            self.leaguesLabel.text = league
-                        }
-                    }
-                    if !(profile["allergies"] is NSNull) {
-                        let allergies = profile["allergies"] as! String
-                        if(allergies != "") {
-                            self.allergiesLabel.text = allergies
-                        }
-                    }
-                } else {
-                    self.createAlert(title: "Server Error", message: "There is a connection error. Please check your internet connection or try again later")
-                }
-            }
-        }
+		getAccountDetails()
+		
     }
+	
+	override func viewDidAppear(_ animated: Bool) {
+		super.viewDidAppear(animated)
+		getAccountDetails()
+	}
+	
+	func getAccountDetails() {
+		Alamofire.request(api.rootURL + "/user", encoding: JSONEncoding.default, headers: User.header).responseJSON { response in
+			if let JSON = response.result.value {
+				let data = JSON as! NSDictionary
+				if(data.object(forKey: "message") as! String == "ok") {
+					let profile = data["profile"] as! NSDictionary
+					self.FirstName = profile["first_name"] as! String
+					self.LastName = profile["last_name"] as! String
+					self.displayName.text = self.FirstName + " " + self.LastName
+					self.emailLabel.text = profile["email"] as? String
+					if(profile["league"] != nil) {
+						self.Leagues = profile["league"] as? String ?? ""
+						self.leaguesLabel.text = self.Leagues
+					}
+					if !(profile["allergies"] is NSNull) {
+						self.Allergies = profile["allergies"] as? String ?? ""
+						self.allergiesLabel.text = self.Allergies
+					}
+				}
+				else {
+					self.createAlert(title: "Server Error", message: "There is a connection error. Please check your internet connection or try again later")
+				}
+			}
+		}
+	}
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+		guard let identifier = segue.identifier else { return }
+		
+		if identifier == "displayAccountEdit" {
+			let nextVC = segue.destination as! AccountEditViewController
+			nextVC.FirstName = FirstName
+			nextVC.LastName = LastName
+			nextVC.Leagues = Leagues
+			nextVC.Allergies = Allergies
+		}
+	}
     
     @IBAction func logoutAction(_ sender: Any) {
         let alert = UIAlertController(title: "Logout", message: "Are you sure you would like to logout?", preferredStyle: .alert)
