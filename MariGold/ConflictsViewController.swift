@@ -12,13 +12,15 @@ class ConflictsViewController: UIViewController {
 	@IBOutlet var ConflictTableView: UITableView!
 	var medication: Medication!
 	
-	override func viewDidAppear(_ animated: Bool) {
-		super.viewDidAppear(animated)
-	}
-	
-	override func didReceiveMemoryWarning() {
-		super.didReceiveMemoryWarning()
-		// Dispose of any resources that can be recreated.
+	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+		guard let identifier = segue.identifier else { return }
+		
+		if identifier == "displayConflictDetails" {
+			guard let indexPath = ConflictTableView.indexPathForSelectedRow else { NSLog("Could not get index path of selected medication"); return }
+			let nextVC = segue.destination as! ConflictDetailsViewController
+			let conflictSelected = CoreDataHelper.retrieveConflictsForID(id: medication.id)[indexPath.row]
+			nextVC.conflict = conflictSelected
+		}
 	}
 }
 
