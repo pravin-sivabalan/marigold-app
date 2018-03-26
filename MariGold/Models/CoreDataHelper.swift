@@ -46,6 +46,15 @@ struct CoreDataHelper {
 		}
 	}
 	
+	static func retrieveMedWithID(id: Int64) -> Medication? {
+		for med in retrieveMeds() {
+			if(id == med.id) {
+				return med
+			}
+		}
+		return nil
+	}
+	
 	static func saveCoreData() {
 		do {
 			try context.save()
@@ -80,7 +89,7 @@ struct CoreDataHelper {
 		}
 	}
 	
-	static func retrieveConflictsForID(id: Int) -> [Conflict] {
+	static func retrieveConflictsForID(id: Int64) -> [Conflict] {
 		let conflicts = retrieveAllConflicts()
 		var validConflicts = [Conflict]()
 		for conf in conflicts {

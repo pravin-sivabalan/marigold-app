@@ -44,7 +44,7 @@ class MedicationAdditionTableViewController: UITableViewController {
 		else {
 			let body: [String: Any] = [
 				"name" : Name.text!,
-				"cui" : "198405",
+				"cui" : "317173",
 				"quantity" : Quantity.text!,
 				"per_week" : TimesPerWeek.text!,
 				"temporary" : Temporary.isOn,
@@ -63,6 +63,16 @@ class MedicationAdditionTableViewController: UITableViewController {
 						}
 					}
 					else {
+						let JSONconflicts = data["conflicts"] as! [[String: Any]]
+						for JSONconflict in JSONconflicts {
+							let newConflict = CoreDataHelper.newConflict()
+							newConflict.drug1id = JSONconflict["drug1"] as! Int64
+							newConflict.drug2id = JSONconflict["drug2"] as! Int64
+							let JSONconflictinfo = JSONconflict["info"] as! [[String : String]]
+							
+							newConflict.info = JSONconflictinfo[0]["desc"]
+							newConflict.severity = JSONconflictinfo[0]["severity"]
+						}
 						//If Successful Pop View Controller
 						self.navigationController?.popViewController(animated: true)
 					}

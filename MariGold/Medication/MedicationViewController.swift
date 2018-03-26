@@ -118,6 +118,11 @@ extension MedicationViewController: UITableViewDataSource {
 			cell.ID.textColor = UIColor.red
 			cell.Temporary.textColor = UIColor.red
 		}
+		else {
+			cell.Label.textColor = UIColor.black
+			cell.ID.textColor = UIColor.black
+			cell.Temporary.textColor = UIColor.black
+		}
 		cell.accessibilityIdentifier = cell.Label.text
 		return cell
 	}

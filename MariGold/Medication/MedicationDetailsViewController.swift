@@ -39,6 +39,15 @@ class MedicationDetailsViewController: UITableViewController{
 		self.tableView.reloadData()
 	}
 	
+	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+		guard let identifier = segue.identifier else { return }
+		
+		if identifier == "displayConflictList" {
+			let nextVC = segue.destination as! ConflictsViewController
+			nextVC.medication = medication
+		}
+	}
+	
 	@IBAction func temporaryOnOffSwitch() {
 		if TemporarySwitch.isOn {
 			Temporary.text = "Yes"
