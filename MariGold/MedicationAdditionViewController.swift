@@ -14,7 +14,6 @@ class MedicationAdditionTableViewController: UITableViewController {
 	
 	//Outlets
 	@IBOutlet var Name: UITextField!
-	@IBOutlet var Dosage: UITextField!
 	@IBOutlet var Quantity: UITextField!
 	@IBOutlet var TimesPerWeek: UITextField!
 	@IBOutlet var Done: UIBarButtonItem!
@@ -22,7 +21,7 @@ class MedicationAdditionTableViewController: UITableViewController {
 	
 	//Check if Required Fields are filled out so Done can be pressed
 	@IBAction func RequiredFieldsChanged(_ sender: Any) {
-		if(Name.text != "" && Dosage.text != "" && Quantity.text != "" && TimesPerWeek.text != "") {
+		if(Name.text != "" && Quantity.text != "" && TimesPerWeek.text != "") {
 			Done.isEnabled = true
 		}
 		else {
@@ -45,10 +44,12 @@ class MedicationAdditionTableViewController: UITableViewController {
 		else {
 			let body: [String: Any] = [
 				"name" : Name.text!,
-				"cui" : "1",
+				"cui" : "317173",
 				"quantity" : Quantity.text!,
 				"per_week" : TimesPerWeek.text!,
-				"temporary" : Temporary.isOn
+				"temporary" : Temporary.isOn,
+				"notifications" : [String](),
+				"alert_user" : 0
 			]
 			
 			Alamofire.request(api.rootURL + "/meds/add", method: .post, parameters: body, encoding: JSONEncoding.default, headers: User.header).responseJSON { response in
@@ -61,13 +62,23 @@ class MedicationAdditionTableViewController: UITableViewController {
 							return self.createAlert(title: "Server Error", message: "There is a connection error. Please check your internet connection or try again later.")
 						}
 					}
+					else {
+						let JSONconflicts = data["conflicts"] as! [[String: Any]]
+						for JSONconflict in JSONconflicts {
+							let newConflict = CoreDataHelper.newConflict()
+							newConflict.drug1id = JSONconflict["drug1"] as! Int64
+							newConflict.drug2id = JSONconflict["drug2"] as! Int64
+							let JSONconflictinfo = JSONconflict["info"] as! [[String : String]]
+							
+							newConflict.info = JSONconflictinfo[0]["desc"]
+							newConflict.severity = JSONconflictinfo[0]["severity"]
+						}
+						//If Successful Pop View Controller
+						self.navigationController?.popViewController(animated: true)
+					}
 				}
 			}
 		}
-		
-		
-		//If Successful Pop View Controller
-		self.navigationController?.popViewController(animated: true)
 		
 	}
 	
