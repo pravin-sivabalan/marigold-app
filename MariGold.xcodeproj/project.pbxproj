@@ -29,6 +29,10 @@
 		03EEF52C20645403007C5E7A /* MedicationDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03EEF52B20645403007C5E7A /* MedicationDetailsViewController.swift */; };
 		088AC5A42068CC63009C3B57 /* Spinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088AC5A32068CC63009C3B57 /* Spinner.swift */; };
 		088AC5AB2068CC8D009C3B57 /* LookupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088AC5AA2068CC8D009C3B57 /* LookupViewController.swift */; };
+		088AC5AE20693D84009C3B57 /* AddNotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088AC5AD20693D84009C3B57 /* AddNotificationViewController.swift */; };
+		088AC5B020693DAA009C3B57 /* AddNotificationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088AC5AF20693DAA009C3B57 /* AddNotificationTableViewController.swift */; };
+		088AC5B520694326009C3B57 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088AC5B420694326009C3B57 /* DashboardViewController.swift */; };
+		088AC5C2206943D0009C3B57 /* AddNotificationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 088AC5C1206943D0009C3B57 /* AddNotificationViewController.xib */; };
 		3D12B123203CBD0200FD701D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D12B122203CBD0200FD701D /* Constants.swift */; };
 		3D17623D2017E62000A1C77A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D17623C2017E62000A1C77A /* AppDelegate.swift */; };
 		3D17623F2017E62000A1C77A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D17623E2017E62000A1C77A /* ViewController.swift */; };
@@ -77,6 +81,20 @@
 			remoteGlobalIDString = CDA85AC1795766EDA99896F15AB4006A;
 			remoteInfo = "Pods-MariGoldUITests";
 		};
+		088AC5BD20694327009C3B57 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 03BCDD28203E68D000138271 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D48D74B8706FEB8636EF189200E17363;
+			remoteInfo = DynamicBlurView;
+		};
+		088AC5BF20694327009C3B57 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 03BCDD28203E68D000138271 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9618F227241C1DCE536536B1E53559DB;
+			remoteInfo = PopupDialog;
+		};
 		3D17624E2017E62000A1C77A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 3D1762312017E62000A1C77A /* Project object */;
@@ -117,6 +135,10 @@
 		03EEF52B20645403007C5E7A /* MedicationDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MedicationDetailsViewController.swift; path = Medication/MedicationDetailsViewController.swift; sourceTree = "<group>"; };
 		088AC5A32068CC63009C3B57 /* Spinner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spinner.swift; sourceTree = "<group>"; };
 		088AC5AA2068CC8D009C3B57 /* LookupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LookupViewController.swift; sourceTree = "<group>"; };
+		088AC5AD20693D84009C3B57 /* AddNotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNotificationViewController.swift; sourceTree = "<group>"; };
+		088AC5AF20693DAA009C3B57 /* AddNotificationTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNotificationTableViewController.swift; sourceTree = "<group>"; };
+		088AC5B420694326009C3B57 /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
+		088AC5C1206943D0009C3B57 /* AddNotificationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddNotificationViewController.xib; sourceTree = "<group>"; };
 		0E4FE26337B0BA937F5A53D3 /* Pods-MariGold.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MariGold.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MariGold/Pods-MariGold.debug.xcconfig"; sourceTree = "<group>"; };
 		3D12B122203CBD0200FD701D /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		3D1762392017E62000A1C77A /* MariGold.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MariGold.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -183,10 +205,12 @@
 			isa = PBXGroup;
 			children = (
 				03BCDD31203E68D000138271 /* Alamofire.framework */,
+				088AC5BE20694327009C3B57 /* DynamicBlurView.framework */,
 				03BCDD33203E68D000138271 /* Pastel.framework */,
 				03BCDD35203E68D000138271 /* Pods_MariGold.framework */,
 				03BCDD37203E68D000138271 /* Pods_MariGoldTests.framework */,
 				03BCDD39203E68D000138271 /* Pods_MariGoldUITests.framework */,
+				088AC5C020694327009C3B57 /* PopupDialog.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -250,6 +274,10 @@
 				03BB6A6B204CC7F200955186 /* CoreDataHelper.swift */,
 				3D12B122203CBD0200FD701D /* Constants.swift */,
 				088AC5A32068CC63009C3B57 /* Spinner.swift */,
+				088AC5AD20693D84009C3B57 /* AddNotificationViewController.swift */,
+				088AC5AF20693DAA009C3B57 /* AddNotificationTableViewController.swift */,
+				088AC5B420694326009C3B57 /* DashboardViewController.swift */,
+				088AC5C1206943D0009C3B57 /* AddNotificationViewController.xib */,
 			);
 			path = MariGold;
 			sourceTree = "<group>";
@@ -441,6 +469,20 @@
 			remoteRef = 03BCDD38203E68D000138271 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
+		088AC5BE20694327009C3B57 /* DynamicBlurView.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = DynamicBlurView.framework;
+			remoteRef = 088AC5BD20694327009C3B57 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		088AC5C020694327009C3B57 /* PopupDialog.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = PopupDialog.framework;
+			remoteRef = 088AC5BF20694327009C3B57 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 /* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
@@ -455,6 +497,7 @@
 				3D1762442017E62000A1C77A /* Assets.xcassets in Resources */,
 				039940212037B91700A6AEF1 /* Search.storyboard in Resources */,
 				3D1762422017E62000A1C77A /* Main.storyboard in Resources */,
+				088AC5C2206943D0009C3B57 /* AddNotificationViewController.xib in Resources */,
 				039940252037C48900A6AEF1 /* Account.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -613,12 +656,16 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-MariGold/Pods-MariGold-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/DynamicBlurView/DynamicBlurView.framework",
 				"${BUILT_PRODUCTS_DIR}/Pastel/Pastel.framework",
+				"${BUILT_PRODUCTS_DIR}/PopupDialog/PopupDialog.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DynamicBlurView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Pastel.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PopupDialog.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -633,13 +680,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				3D12B123203CBD0200FD701D /* Constants.swift in Sources */,
+				088AC5B520694326009C3B57 /* DashboardViewController.swift in Sources */,
 				03EEF52C20645403007C5E7A /* MedicationDetailsViewController.swift in Sources */,
 				032A99BB2068C1F800807745 /* ConflictDetailsViewController.swift in Sources */,
 				088AC5A42068CC63009C3B57 /* Spinner.swift in Sources */,
 				039253BD2038E382005A2C42 /* RegisterViewController.swift in Sources */,
+				088AC5AE20693D84009C3B57 /* AddNotificationViewController.swift in Sources */,
 				03304F7E2049A6AB0002AAD5 /* AccountViewController.swift in Sources */,
 				3D17623F2017E62000A1C77A /* ViewController.swift in Sources */,
 				03A106B92049BABE00E31BD9 /* MariGold.xcdatamodeld in Sources */,
+				088AC5B020693DAA009C3B57 /* AddNotificationTableViewController.swift in Sources */,
 				03C08A52204CE6540072E7A5 /* MedicationAdditionViewController.swift in Sources */,
 				037DF0DC203DDCB600D7F1A4 /* MedicationViewController.swift in Sources */,
 				0353585520687385005E4334 /* ConflictsViewController.swift in Sources */,

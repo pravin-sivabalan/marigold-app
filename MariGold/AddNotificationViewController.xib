@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AddNotificationViewController" customModule="MariGold" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="Pzx-dw-V06" id="FDg-Hf-F1t"/>
+                <outlet property="weekdayPicker" destination="sRj-U3-1U9" id="jUD-fq-rdW"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="Kxg-AJ-T0e">
+            <rect key="frame" x="0.0" y="0.0" width="290" height="240"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pzx-dw-V06">
+                    <rect key="frame" x="0.0" y="0.0" width="300" height="240"/>
+                    <subviews>
+                        <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sRj-U3-1U9">
+                            <rect key="frame" x="0.0" y="70" width="292" height="148"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="148" id="8BN-Hk-oSr"/>
+                            </constraints>
+                        </pickerView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Notification" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lyh-ut-Z2N">
+                            <rect key="frame" x="66" y="30" width="168" height="24"/>
+                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                            <color key="textColor" red="0.33333333329999998" green="0.33333333329999998" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="Lyh-ut-Z2N" firstAttribute="centerX" secondItem="Pzx-dw-V06" secondAttribute="centerX" id="29u-iJ-l4w"/>
+                        <constraint firstAttribute="bottom" secondItem="sRj-U3-1U9" secondAttribute="bottom" constant="22" id="MGX-6H-F6T"/>
+                        <constraint firstItem="Lyh-ut-Z2N" firstAttribute="leading" secondItem="Pzx-dw-V06" secondAttribute="leading" constant="66" id="Qrk-JZ-CKs"/>
+                        <constraint firstItem="sRj-U3-1U9" firstAttribute="trailing" secondItem="Pzx-dw-V06" secondAttribute="trailingMargin" id="azc-ya-tWE"/>
+                        <constraint firstItem="Lyh-ut-Z2N" firstAttribute="top" secondItem="Pzx-dw-V06" secondAttribute="top" constant="30" id="ee8-OL-5i2"/>
+                        <constraint firstItem="sRj-U3-1U9" firstAttribute="top" secondItem="Lyh-ut-Z2N" secondAttribute="bottom" constant="16" id="zKh-1s-0n7"/>
+                        <constraint firstItem="sRj-U3-1U9" firstAttribute="leading" secondItem="Pzx-dw-V06" secondAttribute="leading" id="zU3-rU-GaI"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Pzx-dw-V06" firstAttribute="top" secondItem="Kxg-AJ-T0e" secondAttribute="top" id="SGA-2u-blU"/>
+                <constraint firstAttribute="trailing" secondItem="Pzx-dw-V06" secondAttribute="trailing" constant="-10" id="Sqk-ai-rY0"/>
+                <constraint firstItem="Pzx-dw-V06" firstAttribute="leading" secondItem="Kxg-AJ-T0e" secondAttribute="leading" id="YT5-P1-8Av"/>
+                <constraint firstAttribute="bottom" secondItem="Pzx-dw-V06" secondAttribute="bottom" id="bBg-a0-9c3"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="OoJ-uY-sWS"/>
+            <point key="canvasLocation" x="263" y="297"/>
+        </view>
+    </objects>
+</document>

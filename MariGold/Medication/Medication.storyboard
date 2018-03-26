@@ -92,7 +92,7 @@
         <!--Medication Details-->
         <scene sceneID="gyX-09-tgB">
             <objects>
-                <tableViewController title="Medication Details" hidesBottomBarWhenPushed="YES" id="1Dw-Kv-2UN" customClass="MedicationDetailsViewController" customModule="MariGold" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="displayMedicationDetailsId" title="Medication Details" hidesBottomBarWhenPushed="YES" id="1Dw-Kv-2UN" customClass="MedicationDetailsViewController" customModule="MariGold" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="prj-gE-dIY">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -470,6 +470,7 @@
                         <barButtonItem key="rightBarButtonItem" enabled="NO" style="done" systemItem="done" id="P8g-o8-zcA">
                             <connections>
                                 <action selector="Done:" destination="TaA-Pf-vyw" id="L3T-jF-lrP"/>
+                                <segue destination="BYd-ql-bP5" kind="show" id="fb1-df-3G1"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -753,6 +754,52 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xa4-Dv-TRJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1348" y="51"/>
+        </scene>
+        <!--Add Notifications-->
+        <scene sceneID="tTI-LD-YtZ">
+            <objects>
+                <tableViewController id="BYd-ql-bP5" customClass="AddNotificationTableViewController" customModule="MariGold" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="KQs-4W-gKO">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <button key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="s49-Ed-Jfi">
+                            <rect key="frame" x="0.0" y="38" width="320" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" title="Done"/>
+                            <connections>
+                                <action selector="doneAction:" destination="BYd-ql-bP5" eventType="touchUpInside" id="fYM-QD-rve"/>
+                            </connections>
+                        </button>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="NotificationCell" rowHeight="10" id="DGY-nR-WmR">
+                                <rect key="frame" x="0.0" y="28" width="320" height="10"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="DGY-nR-WmR" id="oeW-fN-D4y">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="9.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="BYd-ql-bP5" id="P3H-aA-TjN"/>
+                            <outlet property="delegate" destination="BYd-ql-bP5" id="RJO-uh-cUB"/>
+                        </connections>
+                    </tableView>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Add Notifications" id="5K9-Id-ZQ5">
+                        <barButtonItem key="backBarButtonItem" title="Add" id="MWL-KL-rQU"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Thq-2J-Zvj">
+                            <connections>
+                                <action selector="addNotificationAction:" destination="BYd-ql-bP5" id="Vel-T4-Blk"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="thj-2R-qmD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3024" y="51"/>
         </scene>
     </scenes>
     <resources>

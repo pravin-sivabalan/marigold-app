@@ -40,7 +40,6 @@ class MedicationViewController: UIViewController {
 	
 	@IBAction func Refresh(_ sender: Any) {
 		updateMedicationList()
-        self.MedicationTableView.reloadData()
 	}
 	
 	
@@ -80,6 +79,8 @@ class MedicationViewController: UIViewController {
 						newMed.temporary = JSONmed["temporary"] as! Bool
 					}
 					CoreDataHelper.saveCoreData()
+                    
+                    self.MedicationTableView.reloadData()
 				}
 			}
 		}
@@ -136,8 +137,11 @@ extension MedicationViewController: UITableViewDataSource {
 			let body: [String: Any] = [
 				"id" : medid!
 			]
+            
+            let spinner = UIViewController.displaySpinner(onView: tableView)
 			Alamofire.request(api.rootURL + "/meds/delete", method: .post, parameters: body, encoding: JSONEncoding.default, headers: User.header).responseJSON
 				{ response in
+                UIViewController.removeSpinner(spinner: spinner)
 				if let JSON = response.result.value {
 					let data = JSON as! NSDictionary
 					if(data["error_code"] != nil) {
@@ -146,9 +150,8 @@ extension MedicationViewController: UITableViewDataSource {
 						default:
 							return self.createAlert(title: "Server Error", message: "There is a connection error. Please check your internet connection or try again later.")
 						}
-					}
-					else {
-						self.updateMedicationList()
+					} else {
+                        self.Refresh(self)
 					}
 				}
 			}

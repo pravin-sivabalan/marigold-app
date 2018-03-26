@@ -1,15 +1,21 @@
 PODS:
   - Alamofire (4.6.0)
+  - DynamicBlurView (2.0.2)
   - Pastel (0.3.0)
+  - PopupDialog (0.7.1):
+    - DynamicBlurView (~> 2.0)
 
 DEPENDENCIES:
   - Alamofire
   - Pastel
+  - PopupDialog
 
 SPEC CHECKSUMS:
   Alamofire: f41a599bd63041760b26d393ec1069d9d7b917f4
+  DynamicBlurView: aa6db4defc6e537eb86fc5e58dd3991666178399
   Pastel: 738740c84f2b15bbcd96ebe99c4e6c2f5dd42262
+  PopupDialog: 39598b7d41719f5c025b4b70e62728bae7734fef
 
-PODFILE CHECKSUM: b2f47db9f7fed2905d68793925c722ce15f4b8a0
+PODFILE CHECKSUM: 2ed66e97080cd24858c2a0db779e106e7c23ab5f
 
 COCOAPODS: 1.4.0

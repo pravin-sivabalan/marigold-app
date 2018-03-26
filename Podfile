@@ -8,6 +8,7 @@ target 'MariGold' do
   # Pods for MariGold
   pod 'Pastel'
   pod 'Alamofire'
+  pod 'PopupDialog'
 
   target 'MariGoldTests' do
     inherit! :search_paths

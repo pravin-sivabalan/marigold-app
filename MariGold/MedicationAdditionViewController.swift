@@ -41,63 +41,80 @@ class MedicationAdditionTableViewController: UITableViewController {
 	@IBAction func Cancel(_ sender: Any) {
 		self.navigationController?.popViewController(animated: true)
 	}
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let body: [String: Any] = [
+            "name" : Name,
+            "cui" : Cui,
+            "quantity" : Quantity.text!,
+            "temporary" : Temporary.isOn,
+            "phoneNotification": PhoneNotif.isOn,
+            "emailNotification": EmailNotif.isOn
+        ]
+        
+        // Create a new variable to store the instance of PlayerTableViewController
+        let destinationVC = segue.destination as! AddNotificationTableViewController
+        destinationVC.med = body
+    }
+    
+    
 	
-	@IBAction func Done(_ sender: Any) {
-		//Make API Call
-		if(!Connectivity.isConnectedToInternet) {
-			return self.createAlert(title: "Connection Error", message: "There is a connection error. Please check your internet connection or try again later.")
-		}
-			
-		//Valid Input
-		else {
-			let body: [String: Any] = [
-				"name" : Name,
-				"cui" : Cui,
-				"quantity" : Quantity.text!,
-				"temporary" : Temporary.isOn,
-				"notifications" : [String](),
-				"alert_user" : 0
-			]
-			
-			Alamofire.request(api.rootURL + "/meds/add", method: .post, parameters: body, encoding: JSONEncoding.default, headers: User.header).responseJSON { response in
-				if let JSON = response.result.value {
-					let data = JSON as! NSDictionary
-					if(data["error_code"] != nil) {
-						switch data["error_code"] as! Int {
-						//Room for adding more detailed error messages
-						default:
-							return self.createAlert(title: "Server Error", message: "There is a connection error. Please check your internet connection or try again later.")
-						}
-					}
-					else {
-						let JSONconflicts = data["conflicts"] as! [[String: Any]]
-                        
-                        if JSONconflicts.count > 0 {
-                            
-                        }
-                        
-						for JSONconflict in JSONconflicts {
-							let newConflict = CoreDataHelper.newConflict()
-							newConflict.drug1id = JSONconflict["drug1"] as! Int64
-							newConflict.drug2id = JSONconflict["drug2"] as! Int64
-							let JSONconflictinfo = JSONconflict["info"] as! [[String : String]]
-							
-							newConflict.info = JSONconflictinfo[0]["desc"]
-							newConflict.severity = JSONconflictinfo[0]["severity"]
-						}
-						//If Successful Pop View Controllers
-                        for vc in self.navigationController!.viewControllers {
-                            if let vc = vc as? MedicationViewController {
-                                vc.Refresh(self)
-                                self.navigationController!.popToViewController(vc, animated: true)
-                            }
-                        }
-                    }
-				}
-			}
-		}
-		
-	}
+//    @IBAction func Done(_ sender: Any) {
+//        //Make API Call
+//        if(!Connectivity.isConnectedToInternet) {
+//            return self.createAlert(title: "Connection Error", message: "There is a connection error. Please check your internet connection or try again later.")
+//        }
+//
+//        //Valid Input
+//        else {
+//            let body: [String: Any] = [
+//                "name" : Name,
+//                "cui" : Cui,
+//                "quantity" : Quantity.text!,
+//                "temporary" : Temporary.isOn,
+//                "notifications" : [String](),
+//                "alert_user" : 0
+//            ]
+//
+//            Alamofire.request(api.rootURL + "/meds/add", method: .post, parameters: body, encoding: JSONEncoding.default, headers: User.header).responseJSON { response in
+//                if let JSON = response.result.value {
+//                    let data = JSON as! NSDictionary
+//                    if(data["error_code"] != nil) {
+//                        switch data["error_code"] as! Int {
+//                        //Room for adding more detailed error messages
+//                        default:
+//                            return self.createAlert(title: "Server Error", message: "There is a connection error. Please check your internet connection or try again later.")
+//                        }
+//                    }
+//                    else {
+//                        let JSONconflicts = data["conflicts"] as! [[String: Any]]
+//
+//                        if JSONconflicts.count > 0 {
+//
+//                        }
+//
+//                        for JSONconflict in JSONconflicts {
+//                            let newConflict = CoreDataHelper.newConflict()
+//                            newConflict.drug1id = JSONconflict["drug1"] as! Int64
+//                            newConflict.drug2id = JSONconflict["drug2"] as! Int64
+//                            let JSONconflictinfo = JSONconflict["info"] as! [[String : String]]
+//
+//                            newConflict.info = JSONconflictinfo[0]["desc"]
+//                            newConflict.severity = JSONconflictinfo[0]["severity"]
+//                        }
+//                        //If Successful Pop View Controllers
+//                        for vc in self.navigationController!.viewControllers {
+//                            if let vc = vc as? MedicationViewController {
+//                                vc.Refresh(self)
+//                                self.navigationController!.popToViewController(vc, animated: true)
+//                            }
+//                        }
+//                    }
+//                }
+//            }
+//        }
+//
+//    }
 	
 	//Helper Methods
 	func createAlert(title: String, message: String) {

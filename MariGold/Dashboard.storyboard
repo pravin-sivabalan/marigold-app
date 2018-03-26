@@ -1,29 +1,119 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="89W-zA-F4y">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="egq-ej-ehw">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Dashboard-->
-        <scene sceneID="EvD-GN-Ykr">
+        <scene sceneID="4fP-ma-6MH">
             <objects>
-                <viewController storyboardIdentifier="DashboardViewController" title="Dashboard" useStoryboardIdentifierAsRestorationIdentifier="YES" id="89W-zA-F4y" customClass="DashboardViewController" customModule="MariGold" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="4bQ-7U-KHy">
+                <navigationController title="Dashboard" automaticallyAdjustsScrollViewInsets="NO" id="egq-ej-ehw" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="dca-t3-uig">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="q5O-nk-Av5" kind="relationship" relationship="rootViewController" id="k85-xS-Ewc"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0tc-MG-6Sk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-657" y="-69"/>
+        </scene>
+        <!--displayMedicationDetailsId-->
+        <scene sceneID="E9p-4E-yti">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ryr-Jj-1oj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardName="Medication" referencedIdentifier="displayMedicationDetailsId" id="12X-4S-aM7" sceneMemberID="viewController"/>
+            </objects>
+            <point key="canvasLocation" x="821" y="-70"/>
+        </scene>
+        <!--Dashboard-->
+        <scene sceneID="r5U-1S-88R">
+            <objects>
+                <viewController storyboardIdentifier="DashboardViewController" title="Dashboard" useStoryboardIdentifierAsRestorationIdentifier="YES" id="q5O-nk-Av5" customClass="DashboardViewController" customModule="MariGold" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lVn-Ao-Cz3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sx1-4L-BAJ">
+                                <rect key="frame" x="66" y="102" width="255" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="255" id="R85-0q-yVc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cd2-DF-427">
+                                <rect key="frame" x="329" y="85" width="30" height="54"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <state key="normal" title="&gt;"/>
+                                <connections>
+                                    <action selector="incrementDateAction:" destination="q5O-nk-Av5" eventType="touchUpInside" id="HOP-5b-T41"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Vj3-Ym-y42">
+                                <rect key="frame" x="16" y="175" width="343" height="472"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="DashNotificationCell" id="ovW-jU-45R">
+                                        <rect key="frame" x="0.0" y="28" width="343" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ovW-jU-45R" id="m2b-Qo-g4i">
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="12X-4S-aM7" kind="show" identifier="displayMedDetails" id="uih-FW-eR9"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wvh-ma-Eiu">
+                                <rect key="frame" x="28" y="85" width="30" height="54"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <state key="normal" title="&lt;"/>
+                                <connections>
+                                    <action selector="decrementDateAction:" destination="q5O-nk-Av5" eventType="touchUpInside" id="zFs-BB-Ji7"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="QXB-AC-cdw"/>
+                        <constraints>
+                            <constraint firstItem="Sx1-4L-BAJ" firstAttribute="leading" secondItem="wvh-ma-Eiu" secondAttribute="trailing" constant="8" symbolic="YES" id="A6e-Yg-0BM"/>
+                            <constraint firstItem="wvh-ma-Eiu" firstAttribute="leading" secondItem="blt-1z-IGK" secondAttribute="leading" constant="28" id="API-7a-Ubx"/>
+                            <constraint firstItem="Vj3-Ym-y42" firstAttribute="trailing" secondItem="cd2-DF-427" secondAttribute="trailing" id="C4I-l0-3sX"/>
+                            <constraint firstItem="wvh-ma-Eiu" firstAttribute="centerY" secondItem="Sx1-4L-BAJ" secondAttribute="centerY" id="HMu-YU-bLN"/>
+                            <constraint firstItem="wvh-ma-Eiu" firstAttribute="top" secondItem="blt-1z-IGK" secondAttribute="top" constant="21" id="HYM-3W-wT1"/>
+                            <constraint firstItem="cd2-DF-427" firstAttribute="leading" secondItem="Sx1-4L-BAJ" secondAttribute="trailing" constant="8" symbolic="YES" id="LcG-Qi-zQM"/>
+                            <constraint firstItem="Sx1-4L-BAJ" firstAttribute="centerY" secondItem="cd2-DF-427" secondAttribute="centerY" id="TNG-oG-6bM"/>
+                            <constraint firstItem="Vj3-Ym-y42" firstAttribute="top" secondItem="wvh-ma-Eiu" secondAttribute="bottom" constant="36" id="VpG-h3-7nn"/>
+                            <constraint firstAttribute="bottom" secondItem="Vj3-Ym-y42" secondAttribute="bottom" constant="20" symbolic="YES" id="hJL-13-Md3"/>
+                            <constraint firstItem="Vj3-Ym-y42" firstAttribute="leading" secondItem="lVn-Ao-Cz3" secondAttribute="leadingMargin" id="oGn-J3-SpW"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="blt-1z-IGK"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Dashboard" id="SAZ-KJ-E4z"/>
+                    <connections>
+                        <outlet property="currentDateLabel" destination="Sx1-4L-BAJ" id="J0X-xd-BTT"/>
+                        <outlet property="decrementButton" destination="wvh-ma-Eiu" id="cDY-Q1-Ee3"/>
+                        <outlet property="incrementButton" destination="cd2-DF-427" id="qea-Hv-NG6"/>
+                        <outlet property="tableView" destination="Vj3-Ym-y42" id="4fy-tX-J0y"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="lAk-fJ-aCO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PoJ-f5-3Ue" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-137" y="-68"/>
+            <point key="canvasLocation" x="200.80000000000001" y="-68.815592203898049"/>
         </scene>
     </scenes>
 </document>
