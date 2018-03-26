@@ -65,10 +65,12 @@ class MedicationViewController: UIViewController {
 				}
 				else {
 					CoreDataHelper.deleteAllMeds()
+					CoreDataHelper.saveCoreData()
+					
 					let JSONmeds = data["meds"] as! [[String: Any]]
 					for JSONmed in JSONmeds {
 						let newMed = CoreDataHelper.newMed()
-						newMed.id = JSONmed["id"] as! Int64 
+						newMed.id = JSONmed["id"] as! Int64
 						newMed.medication_id = JSONmed["medication_id"] as! Int64
 						newMed.name = JSONmed["name"] as? String
 						newMed.quantity = JSONmed["quantity"] as! Int64
@@ -77,7 +79,6 @@ class MedicationViewController: UIViewController {
 						newMed.temporary = JSONmed["temporary"] as! Bool
 					}
 					CoreDataHelper.saveCoreData()
-					self.MedicationTableView.reloadData()
 				}
 			}
 		}
@@ -107,6 +108,9 @@ extension MedicationViewController: UITableViewDataSource {
 		
 		if medication.temporary {
 			cell.Temporary.isHidden = false
+		}
+		else {
+			cell.Temporary.isHidden = true
 		}
 		
 		if medication.quantity < 1 {
@@ -138,12 +142,10 @@ extension MedicationViewController: UITableViewDataSource {
 						}
 					}
 					else {
-							self.updateMedicationList()
+						self.updateMedicationList()
 					}
 				}
 			}
 		}
 	}
 }
-
-

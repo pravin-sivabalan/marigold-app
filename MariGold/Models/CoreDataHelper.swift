@@ -25,19 +25,19 @@ struct CoreDataHelper {
 	
 	static func deleteMed(medication: Medication) {
 		context.delete(medication)
-		saveCoreData()
 	}
 	
 	static func deleteAllMeds() {
 		for med in retrieveMeds() {
 			deleteMed(medication: med)
 		}
-		saveCoreData()
 	}
 	
 	static func retrieveMeds() -> [Medication] {
 		do {
 			let fetchRequest = NSFetchRequest<Medication>(entityName: "Medication")
+			let sort = NSSortDescriptor(key: #keyPath(Medication.name), ascending: true)
+			fetchRequest.sortDescriptors = [sort]
 			let results = try context.fetch(fetchRequest)
 			return results
 		} catch let error {
@@ -61,14 +61,12 @@ struct CoreDataHelper {
 	
 	static func deleteConflict(conflict: Conflict) {
 		context.delete(conflict)
-		saveCoreData()
 	}
 	
 	static func deleteAllConflicts() {
 		for conf in retrieveAllConflicts() {
 			deleteConflict(conflict: conf)
 		}
-		saveCoreData()
 	}
 	
 	static func retrieveAllConflicts() -> [Conflict] {

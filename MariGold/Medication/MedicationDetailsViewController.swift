@@ -72,8 +72,9 @@ class MedicationDetailsViewController: UITableViewController{
 		if sender == DoneButton {
 			//Make API call and update fields
 				let body: [String: Any] = [
+					"med_id" : String(medication.id),
 					"name" : EditNameField.text!,
-					"dose" : Dosage.text!,
+					//"dose" : Dosage.text!,
 					"quantity" : Quantity.text!,
 					"temporary" : TemporarySwitch.isOn
 				]
