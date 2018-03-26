@@ -21,6 +21,7 @@ class DashboardViewController: UIViewController, UITableViewDataSource {
     var currentDate = Date()
     var daysAdded = 0;
     var notifications = [String]()
+    var notifMedObject = [Any]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,8 +34,16 @@ class DashboardViewController: UIViewController, UITableViewDataSource {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        refreshNotifications()
+    }
+
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
+    
+    func refreshNotifications() {
+        self.notifications = []
         Alamofire.request(api.rootURL + "/notification/cal", method: .get, encoding: JSONEncoding.default, headers: User.header).responseJSON { response in
-            print(response)
             if let JSON = response.result.value {
                 let data = JSON as! NSDictionary
                 if(data["error_code"] != nil) {
@@ -44,26 +53,29 @@ class DashboardViewController: UIViewController, UITableViewDataSource {
                     }
                 }
                 let notifications = data["notifications"] as! [[String:Any]]
-
                 let meds = CoreDataHelper.retrieveMeds()
                 for notification in notifications {
-                    let timeToTake = notification["time_to_take"] as! String
-                    var dateString = timeToTake.components(separatedBy: " ")
-                    let time = dateString[4]
-                    print(self.UTCToLocal(date: time))
-                    for med in meds {
-                        print(med.id)
-//                        if(med.id == )
+                    let dayToTake = notification["day_to_take"] as! Int
+                    if(dayToTake == self.daysAdded) {
+                        let timeToTake = notification["time_to_take"] as! String
+                        var dateString = timeToTake.components(separatedBy: " ")
+                        let time = dateString[4]
+                        let medId = notification["medication_id"] as! Int
+                        var medName = ""
+                        for med in meds {
+                            if(med.id == medId) {
+                                medName = med.name!
+                                self.notifMedObject.append(med)
+                                break
+                            }
+                        }
+                        self.notifications.append(medName + " " + self.UTCToLocal(date: time))
                     }
-                    self.notifications.append(self.UTCToLocal(date: time))
                 }
                 self.tableView.reloadData()
             }
         }
-    }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -80,6 +92,16 @@ class DashboardViewController: UIViewController, UITableViewDataSource {
 
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let identifier = segue.identifier else { return }
+        if identifier == "displayMedDetails" {
+            guard let indexPath = tableView.indexPathForSelectedRow else { NSLog("Could not get index path of selected medication"); return }
+            let nextVC = segue.destination as! MedicationDetailsViewController
+            let medicationSelected = notifMedObject[indexPath.row] as! Medication
+            nextVC.medication = medicationSelected
+        }
+    }
+    
     @IBAction func incrementDateAction(_ sender: UIButton) {
         if(daysAdded < 6) {
             currentDate = Calendar.current.date(byAdding: .day, value: 1, to: currentDate)!
@@ -94,6 +116,7 @@ class DashboardViewController: UIViewController, UITableViewDataSource {
         if(daysAdded >= 6) {
             incrementButton.isEnabled = false
         }
+        refreshNotifications()
     }
     
     @IBAction func decrementDateAction(_ sender: UIButton) {
@@ -113,6 +136,7 @@ class DashboardViewController: UIViewController, UITableViewDataSource {
         if(daysAdded == 0) {
             decrementButton.isEnabled = false
         }
+        refreshNotifications()
     }
     
     func createAlert(title: String, message: String) {
