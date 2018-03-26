@@ -8,6 +8,7 @@
 
 import UIKit
 import Alamofire
+import UserNotifications
 
 class AccountViewController: UIViewController {
     @IBOutlet weak var leaguesLabel: UILabel!
@@ -58,6 +59,7 @@ class AccountViewController: UIViewController {
             let vc = storyboard.instantiateViewController(withIdentifier: "AccountSetupId") as UIViewController
             self.present(vc, animated: true, completion: nil)
         })
+
         self.present(alert, animated: true)
         
     }

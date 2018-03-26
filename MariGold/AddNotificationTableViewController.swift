@@ -13,12 +13,11 @@ import Alamofire
 class AddNotificationTableViewController: UITableViewController {
     var data: [String] = []
     var med: [String: Any] = [:]
-    var localNotifications: [[String:String] ] = []
+    var localNotifications: [[String:Int] ] = []
     var dataNotifications: [[String:String]] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(med)
         if((med["phoneNotification"] as! Bool) == false && (med["emailNotification"] as! Bool) == false) {
             createMedication()
         }
@@ -46,7 +45,6 @@ class AddNotificationTableViewController: UITableViewController {
         }
         
         var body = med
-        print(body)
         let emailNotification = med["emailNotification"] as! Bool
         let phoneNotification = med["emailNotification"] as! Bool
         
@@ -56,16 +54,20 @@ class AddNotificationTableViewController: UITableViewController {
             body["alert_user"] = "0"
         }
         
+        if(phoneNotification == true) {
+            body["notifications"] = localNotifications
+            Notify.createForMedication(medication: body)
+        }
+        
         body["notifications"] = dataNotifications
         body.removeValue(forKey: "phoneNotification")
         body.removeValue(forKey: "emailNotification")
         
         
         Alamofire.request(api.rootURL + "/meds/add", method: .post, parameters: body, encoding: JSONEncoding.default, headers: User.header).responseJSON { response in
+            print(response)
             if let JSON = response.result.value {
                 let data = JSON as! NSDictionary
-                print("output")
-                print(data)
                 if(data["error_code"] != nil) {
                     switch data["error_code"] as! Int {
                     //Room for adding more detailed error messages
@@ -75,16 +77,10 @@ class AddNotificationTableViewController: UITableViewController {
                 } else if(data["message"] != nil) {
                     let message = data["message"] as! String
                     if(message == "ok") {
-//                        let storyboard = UIStoryboard(name: "Medication", bundle: nil)
-//                        let vc = storyboard.instantiateViewController(withIdentifier: "Medication.storyboard") as UIViewController
-//                        self.navigationController?.pushViewController(vc, animated: true)
-//                        return self.present(vc, animated: true, completion: nil)
-                        
                         let storyBoard: UIStoryboard = UIStoryboard(name: "Medication", bundle:nil)
                         let nextView = storyBoard.instantiateViewController(withIdentifier: "Medication.storyboard") as! MedicationViewController
                         return self.navigationController!.pushViewController(nextView, animated: true)
                     }
-                    
                 } else {
                     return self.createAlert(title: "Server Error", message: "There was an issue with the server. Please try again later.")
                 }
@@ -174,8 +170,20 @@ class AddNotificationTableViewController: UITableViewController {
                 "day": String(notifVC.weekdayPicker.selectedRow(inComponent: 1)),
                 "time": dateFormatter.string(from: today) + ":" + self.localToUTC(date: notificationTime)
             ]
+            
+            var hourInt = Int(hour)!
+            if(meridiem == "PM") {
+                hourInt += 12
+            }
+            
+            let newLocalNotification: [String: Int] = [
+                "hour": hourInt,
+                "minute": Int(minute)!,
+                "weekday": notifVC.weekdayPicker.selectedRow(inComponent: 1)
+            ]
   
             self.data.append(displayNotification)
+            self.localNotifications.append(newLocalNotification )
             self.dataNotifications.append(newDataNotification)
             self.tableView.reloadData()
         }

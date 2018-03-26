@@ -555,6 +555,7 @@
                             <state key="normal" title="Done"/>
                             <connections>
                                 <action selector="doneAction:" destination="mzW-ai-shz" eventType="touchUpInside" id="bXf-r6-qjI"/>
+                                <segue destination="jzm-8v-ITY" kind="show" id="NCY-Tt-KGC"/>
                             </connections>
                         </button>
                         <prototypes>
@@ -612,4 +613,7 @@
     <resources>
         <image name="Bottle" width="100" height="100"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="25S-Q4-LSv"/>
+    </inferredMetricsTieBreakers>
 </document>

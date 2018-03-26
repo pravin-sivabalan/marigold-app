@@ -48,12 +48,12 @@ class Notify {
     static func createForMedication(medication: [String:Any]) {
 //        let center = UNUserNotificationCenter.current()
         let notifications = medication["notifications"] as! [[String:Any]]
-    
         for notification in notifications {
             print(notification)
             let content = UNMutableNotificationContent()
+            let message = "It is time to take your " + (medication["name"] as! String)
             content.title = NSString.localizedUserNotificationString(forKey: "Time to take your medication!", arguments: nil)
-            content.body = NSString.localizedUserNotificationString(forKey: "It is time to take your ", arguments: nil)
+            content.body = NSString.localizedUserNotificationString(forKey: message, arguments: nil)
             
             var weekday = (notification["weekday"] as! Int) + 2
             if(weekday > 7) {
@@ -75,13 +75,6 @@ class Notify {
             }
             print("added notification:\(request.identifier)")
         }
-
-//        var dateInfo = DateComponents()
-//        dateInfo.hour = 7
-//        dateInfo.minute = 0
-//        let trigger = UNCalendarNotificationTrigger(dateMatching: dateInfo, repeats: false)
-//
-//        let request = UNNotificationRequest(identifier: "Med reminder for this", content: content, trigger: trigger);
     }
 }
 
