@@ -11,21 +11,30 @@ import Alamofire
 
 class AccountViewController: UIViewController {
     @IBOutlet weak var leaguesLabel: UILabel!
+    @IBOutlet weak var displayName: UILabel!
+    @IBOutlet weak var emailLabel: UILabel!
+    @IBOutlet weak var allergiesLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         Alamofire.request(api.rootURL + "/user", encoding: JSONEncoding.default, headers: User.header).responseJSON { response in
             if let JSON = response.result.value {
                 let data = JSON as! NSDictionary
                 if(data.object(forKey: "message") as! String == "ok") {
                     let profile = data["profile"] as! NSDictionary
+                    self.displayName.text = (profile["first_name"] as! String) + " " + (profile["last_name"] as! String)
+                    self.emailLabel.text = profile["email"] as? String
                     if(profile["league"] != nil) {
                         let league: String = profile["league"] as! String
                         if(league != "") {
                             self.leaguesLabel.text = league
-                        } else {
-                            self.leaguesLabel.text = "--"
+                        }
+                    }
+                    if !(profile["allergies"] is NSNull) {
+                        let allergies = profile["allergies"] as! String
+                        if(allergies != "") {
+                            self.allergiesLabel.text = allergies
                         }
                     }
                 } else {
@@ -34,7 +43,7 @@ class AccountViewController: UIViewController {
             }
         }
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -61,6 +70,7 @@ class AccountViewController: UIViewController {
         alert.addAction(UIAlertAction(title: "Cancel", style: .cancel) { (action:UIAlertAction!) in
             return
         })
+        
         alert.addAction(UIAlertAction(title: "Delete", style: .destructive) { (action:UIAlertAction!) in
             Alamofire.request(api.rootURL + "/user/delete", method: .post, encoding: JSONEncoding.default, headers: User.header).responseJSON { response in
                 if let JSON = response.result.value {
@@ -84,5 +94,6 @@ class AccountViewController: UIViewController {
         alert.addAction(UIAlertAction(title: "Try Again", style: .cancel, handler: nil))
         self.present(alert, animated: true)
     }
-
+    
 }
+
