@@ -45,7 +45,13 @@ class MedicationDetailsViewController: UITableViewController{
 		if identifier == "displayConflictList" {
 			let nextVC = segue.destination as! ConflictsViewController
 			nextVC.medication = medication
-		}
+            
+            return
+        }
+        
+        if let nextVc = segue.destination as? MedicationViewController {
+            nextVc.Refresh(self)
+        }
 	}
 	
 	@IBAction func temporaryOnOffSwitch() {
@@ -66,13 +72,16 @@ class MedicationDetailsViewController: UITableViewController{
 			formattedRunOutDate?.removeLast(13)
 		}
 		RunOutDate.text = formattedRunOutDate
-		Temporary.text = String(medication.temporary)
-		if TemporarySwitch.isOn {
-			Temporary.text = "Yes"
-		}
-		else {
-			Temporary.text = "No"
-		}
+        Temporary.text = medication.temporary ? "Yes" : "No"
+        
+        if isEditingMedication {
+            if TemporarySwitch.isOn {
+                Temporary.text = "Yes"
+            }
+            else {
+                Temporary.text = "No"
+            }
+        }
 	}
 	
 	@objc func setEditingMedication(sender: UIBarButtonItem) {
@@ -98,6 +107,7 @@ class MedicationDetailsViewController: UITableViewController{
 							}
 						}
 						else {
+                            
 							self.Name.text = self.EditNameField.text
 						}
 					}
@@ -122,6 +132,7 @@ class MedicationDetailsViewController: UITableViewController{
 			Quantity.textAlignment = .left
 			RunOutDate.textAlignment = .left
 			TemporarySwitch.isHidden = false
+            TemporarySwitch.isOn = Temporary.text == "Yes"
 			Temporary.textAlignment = .left
 		}
 		else {

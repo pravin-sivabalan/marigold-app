@@ -66,11 +66,11 @@ class Notify {
             dateComponents.weekday = weekday
             
             let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: true)
-            let request = UNNotificationRequest(identifier: "", content: content, trigger: trigger)
+            let request = UNNotificationRequest(identifier: "MedNotification", content: content, trigger: trigger)
             
             UNUserNotificationCenter.current().add(request) { (error) in
                 if let error = error {
-                    print("error in pizza reminder: \(error.localizedDescription)")
+                    print("error in reminder: \(error.localizedDescription)")
                 }
             }
             print("added notification:\(request.identifier)")

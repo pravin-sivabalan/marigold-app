@@ -39,7 +39,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6yi-dd-suV">
-                                <rect key="frame" x="16" y="463" width="343" height="21"/>
+                                <rect key="frame" x="16" y="447" width="343" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -59,8 +59,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Allergies" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZCD-o8-4tR">
-                                <rect key="frame" x="139" y="352" width="99" height="30"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Allergies" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZCD-o8-4tR">
+                                <rect key="frame" x="138" y="396" width="99" height="30"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -94,7 +94,7 @@
                             <constraint firstItem="xi4-2e-SX9" firstAttribute="top" secondItem="n9h-jK-T2X" secondAttribute="bottom" constant="30" id="ftm-hl-bM1"/>
                             <constraint firstItem="wu3-JY-HJi" firstAttribute="trailing" secondItem="gx3-J3-eDg" secondAttribute="trailingMargin" id="gg9-NR-VKE"/>
                             <constraint firstItem="5YF-z7-zTd" firstAttribute="width" secondItem="wu3-JY-HJi" secondAttribute="width" id="gtu-wf-jqF"/>
-                            <constraint firstItem="6yi-dd-suV" firstAttribute="top" secondItem="ZCD-o8-4tR" secondAttribute="bottom" constant="37" id="tNO-PU-oiV"/>
+                            <constraint firstItem="6yi-dd-suV" firstAttribute="top" secondItem="ZCD-o8-4tR" secondAttribute="bottom" constant="21" id="tNO-PU-oiV"/>
                             <constraint firstItem="T6Z-Xk-PeH" firstAttribute="top" secondItem="wNA-fZ-9vo" secondAttribute="bottom" constant="21" id="wMD-P2-m9L"/>
                             <constraint firstItem="ZCD-o8-4tR" firstAttribute="top" secondItem="T6Z-Xk-PeH" secondAttribute="bottom" constant="39" id="wdC-Xc-aRP"/>
                         </constraints>

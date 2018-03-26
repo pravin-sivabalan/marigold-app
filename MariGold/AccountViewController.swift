@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import UserNotifications
 import Alamofire
 
 class AccountViewController: UIViewController {
@@ -72,6 +73,8 @@ class AccountViewController: UIViewController {
         let alert = UIAlertController(title: "Logout", message: "Are you sure you would like to logout?", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
         alert.addAction(UIAlertAction(title: "Yes", style: .destructive) { (action:UIAlertAction!) in
+            UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
+            
             UserDefaults.standard.removeObject(forKey: "jwt")
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let vc = storyboard.instantiateViewController(withIdentifier: "AccountSetupId") as UIViewController
@@ -95,6 +98,8 @@ class AccountViewController: UIViewController {
                 if let JSON = response.result.value {
                     let data = JSON as! NSDictionary
                     if(data.object(forKey: "message") as! String == "ok") {
+                        UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
+                        
                         UserDefaults.standard.removeObject(forKey: "jwt")
                         let storyboard = UIStoryboard(name: "Main", bundle: nil)
                         let vc = storyboard.instantiateViewController(withIdentifier: "AccountSetupId") as UIViewController
