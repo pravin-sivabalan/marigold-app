@@ -10,7 +10,7 @@ import UIKit
 import Alamofire
 
 class MedicationViewController: UIViewController {
-	@IBOutlet var medicationTableView: UITableView!
+	@IBOutlet var MedicationTableView: UITableView!
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
@@ -24,14 +24,14 @@ class MedicationViewController: UIViewController {
 	override func viewDidAppear(_ animated: Bool) {
 		super.viewDidAppear(animated)
 		updateMedicationList()
-		self.medicationTableView.reloadData()
+		self.MedicationTableView.reloadData()
 	}
 	
 	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 		guard let identifier = segue.identifier else { return }
 		
 		if identifier == "displayMedicationDetails" {
-			guard let indexPath = medicationTableView.indexPathForSelectedRow else { NSLog("Could not get index path of selected medication"); return }
+			guard let indexPath = MedicationTableView.indexPathForSelectedRow else { NSLog("Could not get index path of selected medication"); return }
 			let nextVC = segue.destination as! MedicationDetailsViewController
 			let medicationSelected = CoreDataHelper.retrieveMeds()[indexPath.row]
 			nextVC.medication = medicationSelected
@@ -76,8 +76,8 @@ class MedicationViewController: UIViewController {
 						newMed.rxcui = JSONmed["rxcui"] as? String
 						newMed.temporary = JSONmed["temporary"] as! Bool
 					}
-					CoreDataHelper.saveMeds()
-					self.medicationTableView.reloadData()
+					CoreDataHelper.saveCoreData()
+					self.MedicationTableView.reloadData()
 				}
 			}
 		}
@@ -85,7 +85,7 @@ class MedicationViewController: UIViewController {
 }
 
 //Table view Classes and Methods
-class medicaitonTableViewCell: UITableViewCell {
+class medicationTableViewCell: UITableViewCell {
 	@IBOutlet var Label: UILabel!
 	@IBOutlet var ID: UILabel!
 	@IBOutlet var Temporary: UILabel!
@@ -99,7 +99,7 @@ extension MedicationViewController: UITableViewDataSource {
 	}
 	
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-		let cell = tableView.dequeueReusableCell(withIdentifier: "Plain Cell", for: indexPath) as! medicaitonTableViewCell
+		let cell = tableView.dequeueReusableCell(withIdentifier: "Plain Cell", for: indexPath) as! medicationTableViewCell
 		let medications = CoreDataHelper.retrieveMeds()
 		let medication = medications[indexPath.row]
 		cell.Label.text = medication.name
@@ -119,7 +119,7 @@ extension MedicationViewController: UITableViewDataSource {
 	}
 	
 	func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-		let cell = tableView.cellForRow(at: indexPath) as! medicaitonTableViewCell
+		let cell = tableView.cellForRow(at: indexPath) as! medicationTableViewCell
 		let medid = cell.ID.text
 		
 		if editingStyle == .delete {

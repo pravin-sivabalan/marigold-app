@@ -8,6 +8,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -20,7 +21,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Plain Cell" rowHeight="80" id="bNN-NO-77k" customClass="medicaitonTableViewCell" customModule="MariGold" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Plain Cell" rowHeight="80" id="bNN-NO-77k" customClass="medicationTableViewCell" customModule="MariGold" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="320" height="80"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="bNN-NO-77k" id="pD9-VU-WGF">
@@ -81,7 +82,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="medicationTableView" destination="Lsi-VZ-Imh" id="hPB-7a-3qq"/>
+                        <outlet property="MedicationTableView" destination="Lsi-VZ-Imh" id="hPB-7a-3qq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ezm-nl-GD7" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -350,6 +351,9 @@
                                                 </imageView>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="OfI-ne-dma" kind="show" id="Ywg-2S-84s"/>
+                                        </connections>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -543,7 +547,41 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QuH-GL-J1C" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1262" y="51"/>
+            <point key="canvasLocation" x="1292" y="51"/>
+        </scene>
+        <!--Conflicts-->
+        <scene sceneID="Flj-xc-wfQ">
+            <objects>
+                <viewController title="Conflicts" id="OfI-ne-dma" customClass="ConflictsViewController" customModule="MariGold" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rGq-y5-GbJ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="DAu-6R-JTl">
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="OfI-ne-dma" id="Rsz-VP-2gd"/>
+                                    <outlet property="delegate" destination="OfI-ne-dma" id="A0F-lB-RVj"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="DAu-6R-JTl" firstAttribute="leading" secondItem="3Py-vu-wE0" secondAttribute="leading" id="S2K-Hb-4Kr"/>
+                            <constraint firstItem="3Py-vu-wE0" firstAttribute="bottom" secondItem="DAu-6R-JTl" secondAttribute="bottom" id="alr-u4-lvd"/>
+                            <constraint firstItem="3Py-vu-wE0" firstAttribute="trailing" secondItem="DAu-6R-JTl" secondAttribute="trailing" id="iOp-Zd-CW4"/>
+                            <constraint firstItem="DAu-6R-JTl" firstAttribute="top" secondItem="3Py-vu-wE0" secondAttribute="top" id="tfO-wb-jdu"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="3Py-vu-wE0"/>
+                    </view>
+                    <connections>
+                        <outlet property="ConflictTableView" destination="DAu-6R-JTl" id="L44-4q-rhr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Dvp-Ew-Wzi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1292" y="764"/>
         </scene>
         <!--Medication-->
         <scene sceneID="Q7s-t7-3xQ">
