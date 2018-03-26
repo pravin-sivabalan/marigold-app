@@ -79,17 +79,7 @@ class AddNotificationTableViewController: UITableViewController {
                     let message = data["message"] as! String
                     if(message == "ok") {
                         let JSONconflicts = data["conflicts"] as! [[String: Any]]
-
-                        if (JSONconflicts.count > 0) {
-                            let alert: UIAlertView = UIAlertView()
-                            alert.delegate = self
-                            
-                            alert.title = "Conflicts"
-                            alert.message = "You have conflicts!"
-                            alert.addButton(withTitle: "OK")
-                            
-                            alert.show()
-                        }
+                        var messages = [String]()
                         
                         for JSONconflict in JSONconflicts {
                             let newConflict = CoreDataHelper.newConflict()
@@ -99,8 +89,21 @@ class AddNotificationTableViewController: UITableViewController {
 
                             newConflict.info = JSONconflictinfo[0]["desc"]
                             newConflict.severity = JSONconflictinfo[0]["severity"]
+                            
+                            messages.append(newConflict.info!)
                         }
-
+                        
+                        if (JSONconflicts.count > 0) {
+                            let alert: UIAlertView = UIAlertView()
+                            alert.delegate = self
+                            
+                            alert.title = "Conflicts"
+                            alert.message = "You have conflicts:\n" + messages.joined(separator: "\n")
+                            alert.addButton(withTitle: "OK")
+                            
+                            alert.show()
+                        }
+                        
                         for vc in self.navigationController!.viewControllers {
                             if let vc = vc as? MedicationViewController {
                                 vc.Refresh(self)
