@@ -37,7 +37,7 @@ class MedicationUITests: XCTestCase {
 		let tablesQuery = app.tables
 		
 		tablesQuery/*@START_MENU_TOKEN@*/.textFields["Name"]/*[[".cells.textFields[\"Name\"]",".textFields[\"Name\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
-		tablesQuery.children(matching: .cell).element(boundBy: 0).children(matching: .textField).element.typeText("Test Med")
+		tablesQuery.children(matching: .cell).element(boundBy: 0).children(matching: .textField).element.typeText("Viagra")
 		
 		tablesQuery/*@START_MENU_TOKEN@*/.textFields["Dosage"]/*[[".cells.textFields[\"Dosage\"]",".textFields[\"Dosage\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
 		tablesQuery.children(matching: .cell).element(boundBy: 1).children(matching: .textField).element.typeText("20")
@@ -61,5 +61,24 @@ class MedicationUITests: XCTestCase {
 		tablesQuery.staticTexts["Med 1"].swipeLeft()
 		tablesQuery.buttons["Delete"].tap()
 		XCTAssert(true)
+	}
+	
+	func testMedicationEdit() {
+		
+		let app = XCUIApplication()
+		app.tabBars.buttons["Medication"].tap()
+		app.tables/*@START_MENU_TOKEN@*/.staticTexts["Viagra"]/*[[".cells[\"Viagra\"].staticTexts[\"Viagra\"]",".staticTexts[\"Viagra\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+		app.navigationBars["Info"].buttons["Edit"].tap()
+		
+		let tablesQuery = app.tables
+		
+		let textField = tablesQuery.cells.containing(.staticText, identifier:"Quantity").children(matching: .textField).element
+		textField.tap()
+		textField.typeText("32")
+		
+		let infoNavigationBar = app.navigationBars["Info"]
+		infoNavigationBar.buttons["Done"].tap()
+		infoNavigationBar.buttons["Medication"].tap()
+		
 	}
 }
