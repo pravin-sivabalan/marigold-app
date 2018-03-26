@@ -27,6 +27,7 @@
 		03BB6A71204CC7F200955186 /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BB6A6B204CC7F200955186 /* CoreDataHelper.swift */; };
 		03C08A52204CE6540072E7A5 /* MedicationAdditionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C08A51204CE6540072E7A5 /* MedicationAdditionViewController.swift */; };
 		03EEF52C20645403007C5E7A /* MedicationDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03EEF52B20645403007C5E7A /* MedicationDetailsViewController.swift */; };
+		03FA050120693E7F0046AA21 /* AccountEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FA050020693E7F0046AA21 /* AccountEditViewController.swift */; };
 		088AC5A42068CC63009C3B57 /* Spinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088AC5A32068CC63009C3B57 /* Spinner.swift */; };
 		088AC5AB2068CC8D009C3B57 /* LookupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088AC5AA2068CC8D009C3B57 /* LookupViewController.swift */; };
 		088AC5AE20693D84009C3B57 /* AddNotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088AC5AD20693D84009C3B57 /* AddNotificationViewController.swift */; };
@@ -133,6 +134,7 @@
 		03BCDD28203E68D000138271 /* Pods.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Pods.xcodeproj; path = Pods/Pods.xcodeproj; sourceTree = "<group>"; };
 		03C08A51204CE6540072E7A5 /* MedicationAdditionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicationAdditionViewController.swift; sourceTree = "<group>"; };
 		03EEF52B20645403007C5E7A /* MedicationDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MedicationDetailsViewController.swift; path = Medication/MedicationDetailsViewController.swift; sourceTree = "<group>"; };
+		03FA050020693E7F0046AA21 /* AccountEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountEditViewController.swift; sourceTree = "<group>"; };
 		088AC5A32068CC63009C3B57 /* Spinner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spinner.swift; sourceTree = "<group>"; };
 		088AC5AA2068CC8D009C3B57 /* LookupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LookupViewController.swift; sourceTree = "<group>"; };
 		088AC5AD20693D84009C3B57 /* AddNotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNotificationViewController.swift; sourceTree = "<group>"; };
@@ -254,6 +256,7 @@
 				3D12B11F203CB94500FD701D /* AccountSetup */,
 				3D1762432017E62000A1C77A /* Assets.xcassets */,
 				3D17623C2017E62000A1C77A /* AppDelegate.swift */,
+				03FA050020693E7F0046AA21 /* AccountEditViewController.swift */,
 				03304F7D2049A6AA0002AAD5 /* AccountViewController.swift */,
 				037DF0DB203DDCB600D7F1A4 /* MedicationViewController.swift */,
 				088AC5AA2068CC8D009C3B57 /* LookupViewController.swift */,
@@ -694,6 +697,7 @@
 				037DF0DC203DDCB600D7F1A4 /* MedicationViewController.swift in Sources */,
 				0353585520687385005E4334 /* ConflictsViewController.swift in Sources */,
 				03BB6A71204CC7F200955186 /* CoreDataHelper.swift in Sources */,
+				03FA050120693E7F0046AA21 /* AccountEditViewController.swift in Sources */,
 				3D17623D2017E62000A1C77A /* AppDelegate.swift in Sources */,
 				088AC5AB2068CC8D009C3B57 /* LookupViewController.swift in Sources */,
 				030D0E27203B399700AC400C /* ResetPasswordViewController.swift in Sources */,
