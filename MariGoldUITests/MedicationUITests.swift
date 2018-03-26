@@ -39,28 +39,55 @@ class MedicationUITests: XCTestCase {
 		tablesQuery/*@START_MENU_TOKEN@*/.textFields["Name"]/*[[".cells.textFields[\"Name\"]",".textFields[\"Name\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
 		tablesQuery.children(matching: .cell).element(boundBy: 0).children(matching: .textField).element.typeText("Viagra")
 		
-		tablesQuery/*@START_MENU_TOKEN@*/.textFields["Dosage"]/*[[".cells.textFields[\"Dosage\"]",".textFields[\"Dosage\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
-		tablesQuery.children(matching: .cell).element(boundBy: 1).children(matching: .textField).element.typeText("20")
-		
 		tablesQuery/*@START_MENU_TOKEN@*/.textFields["Quantity"]/*[[".cells.textFields[\"Quantity\"]",".textFields[\"Quantity\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
-		tablesQuery.children(matching: .cell).element(boundBy: 2).children(matching: .textField).element.typeText("36")
+		tablesQuery.children(matching: .cell).element(boundBy: 1).children(matching: .textField).element.typeText("36")
 		
 		tablesQuery/*@START_MENU_TOKEN@*/.textFields["Times Per Week"]/*[[".cells.textFields[\"Times Per Week\"]",".textFields[\"Times Per Week\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
-		tablesQuery.children(matching: .cell).element(boundBy: 3).children(matching: .textField).element.typeText("3")
+		tablesQuery.children(matching: .cell).element(boundBy: 2).children(matching: .textField).element.typeText("3")
 		
 		app.navigationBars["Add Medication"].buttons["Done"].tap()
 		
+		app.navigationBars["Medication"].buttons["Refresh"].tap()
+		sleep(5)
+		
+		tablesQuery.cells["Viagra"].staticTexts["Viagra"].tap()
     }
+	
+	func testTemporaryMedicationAdd() {
+		let app = XCUIApplication()
+		
+		app.tabBars.buttons["Medication"].tap()
+		app.navigationBars["Medication"].buttons["Add"].tap()
+		
+		let tablesQuery = app.tables
+		
+		tablesQuery/*@START_MENU_TOKEN@*/.textFields["Name"]/*[[".cells.textFields[\"Name\"]",".textFields[\"Name\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+		tablesQuery.children(matching: .cell).element(boundBy: 0).children(matching: .textField).element.typeText("Claritin")
+		
+		tablesQuery/*@START_MENU_TOKEN@*/.textFields["Quantity"]/*[[".cells.textFields[\"Quantity\"]",".textFields[\"Quantity\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+		tablesQuery.children(matching: .cell).element(boundBy: 1).children(matching: .textField).element.typeText("36")
+		
+		tablesQuery/*@START_MENU_TOKEN@*/.textFields["Times Per Week"]/*[[".cells.textFields[\"Times Per Week\"]",".textFields[\"Times Per Week\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+		tablesQuery.children(matching: .cell).element(boundBy: 2).children(matching: .textField).element.typeText("3")
+		
+		tablesQuery/*@START_MENU_TOKEN@*/.switches["Temporary"]/*[[".cells.switches[\"Temporary\"]",".switches[\"Temporary\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+		
+		app.navigationBars["Add Medication"].buttons["Done"].tap()
+		
+		app.navigationBars["Medication"].buttons["Refresh"].tap()
+		sleep(5)
+		
+		tablesQuery.cells["Claritin"].staticTexts["Temporary"].tap()
+	}
 	
 	func testMedicationDelete() {
 		let app = XCUIApplication()
 		app.tabBars.buttons["Medication"].tap()
 		app.navigationBars["Medication"].buttons["Refresh"].tap()
-		sleep(15)
+		sleep(5)
 		let tablesQuery = app.tables
-		tablesQuery.staticTexts["Med 1"].swipeLeft()
+		tablesQuery.staticTexts["Viagra"].swipeLeft()
 		tablesQuery.buttons["Delete"].tap()
-		XCTAssert(true)
 	}
 	
 	func testMedicationEdit() {
