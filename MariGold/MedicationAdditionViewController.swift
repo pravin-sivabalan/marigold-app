@@ -63,13 +63,13 @@ class MedicationAdditionTableViewController: UITableViewController {
 							return self.createAlert(title: "Server Error", message: "There is a connection error. Please check your internet connection or try again later.")
 						}
 					}
+					else {
+						//If Successful Pop View Controller
+						self.navigationController?.popViewController(animated: true)
+					}
 				}
 			}
 		}
-		
-		
-		//If Successful Pop View Controller
-		self.navigationController?.popViewController(animated: true)
 		
 	}
 	
