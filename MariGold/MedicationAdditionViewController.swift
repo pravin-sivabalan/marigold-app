@@ -14,7 +14,6 @@ class MedicationAdditionTableViewController: UITableViewController {
 	
 	//Outlets
 	@IBOutlet var Name: UITextField!
-	@IBOutlet var Dosage: UITextField!
 	@IBOutlet var Quantity: UITextField!
 	@IBOutlet var TimesPerWeek: UITextField!
 	@IBOutlet var Done: UIBarButtonItem!
@@ -22,7 +21,7 @@ class MedicationAdditionTableViewController: UITableViewController {
 	
 	//Check if Required Fields are filled out so Done can be pressed
 	@IBAction func RequiredFieldsChanged(_ sender: Any) {
-		if(Name.text != "" && Dosage.text != "" && Quantity.text != "" && TimesPerWeek.text != "") {
+		if(Name.text != "" && Quantity.text != "" && TimesPerWeek.text != "") {
 			Done.isEnabled = true
 		}
 		else {

@@ -13,7 +13,6 @@ class MedicationDetailsViewController: UITableViewController{
 	
 	@IBOutlet var MainNameCell: UITableViewCell!
 	@IBOutlet var Name: UILabel!
-	@IBOutlet var Dosage: UITextField!
 	@IBOutlet var Quantity: UITextField!
 	@IBOutlet var RunOutDate: UITextField!
 	@IBOutlet var Temporary: UILabel!
@@ -74,7 +73,6 @@ class MedicationDetailsViewController: UITableViewController{
 				let body: [String: Any] = [
 					"med_id" : String(medication.id),
 					"name" : EditNameField.text!,
-					//"dose" : Dosage.text!,
 					"quantity" : Quantity.text!,
 					"temporary" : TemporarySwitch.isOn
 				]
@@ -111,8 +109,6 @@ class MedicationDetailsViewController: UITableViewController{
 			
 			EditNameField.isEnabled = true
 			EditNameField.textAlignment = .left
-			Dosage.isEnabled = true
-			Dosage.textAlignment = .left
 			Quantity.isEnabled = true
 			Quantity.textAlignment = .left
 			RunOutDate.textAlignment = .left
@@ -126,8 +122,6 @@ class MedicationDetailsViewController: UITableViewController{
 			
 			EditNameField.isEnabled = false
 			EditNameField.textAlignment = .right
-			Dosage.isEnabled = false
-			Dosage.textAlignment = .right
 			Quantity.isEnabled = false
 			Quantity.textAlignment = .right
 			RunOutDate.textAlignment = .right
