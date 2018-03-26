@@ -85,9 +85,14 @@ class MedicationAdditionTableViewController: UITableViewController {
 							newConflict.info = JSONconflictinfo[0]["desc"]
 							newConflict.severity = JSONconflictinfo[0]["severity"]
 						}
-						//If Successful Pop View Controller
-						self.navigationController?.popViewController(animated: true)
-					}
+						//If Successful Pop View Controllers
+                        for vc in self.navigationController!.viewControllers {
+                            if let vc = vc as? MedicationViewController {
+                                vc.Refresh(self)
+                                self.navigationController!.popToViewController(vc, animated: true)
+                            }
+                        }
+                    }
 				}
 			}
 		}

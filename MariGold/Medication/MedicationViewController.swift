@@ -40,6 +40,7 @@ class MedicationViewController: UIViewController {
 	
 	@IBAction func Refresh(_ sender: Any) {
 		updateMedicationList()
+        self.MedicationTableView.reloadData()
 	}
 	
 	
