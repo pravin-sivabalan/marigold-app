@@ -13,15 +13,23 @@ import Alamofire
 class MedicationAdditionTableViewController: UITableViewController {
 	
 	//Outlets
-	@IBOutlet var Name: UITextField!
 	@IBOutlet var Quantity: UITextField!
-	@IBOutlet var TimesPerWeek: UITextField!
 	@IBOutlet var Done: UIBarButtonItem!
 	@IBOutlet var Temporary: UISwitch!
-	
+    @IBOutlet weak var PhoneNotif: UISwitch!
+    @IBOutlet weak var EmailNotif: UISwitch!
+    
+    var Name: String!
+    var Cui: String!
+    
+    override func viewDidLoad() {
+        print(Name)
+        print(Cui)
+    }
+    
 	//Check if Required Fields are filled out so Done can be pressed
 	@IBAction func RequiredFieldsChanged(_ sender: Any) {
-		if(Name.text != "" && Quantity.text != "" && TimesPerWeek.text != "") {
+		if(Quantity.text != "") {
 			Done.isEnabled = true
 		}
 		else {
@@ -43,10 +51,9 @@ class MedicationAdditionTableViewController: UITableViewController {
 		//Valid Input
 		else {
 			let body: [String: Any] = [
-				"name" : Name.text!,
-				"cui" : "317173",
+				"name" : Name,
+				"cui" : Cui,
 				"quantity" : Quantity.text!,
-				"per_week" : TimesPerWeek.text!,
 				"temporary" : Temporary.isOn,
 				"notifications" : [String](),
 				"alert_user" : 0
@@ -64,6 +71,11 @@ class MedicationAdditionTableViewController: UITableViewController {
 					}
 					else {
 						let JSONconflicts = data["conflicts"] as! [[String: Any]]
+                        
+                        if JSONconflicts.count > 0 {
+                            
+                        }
+                        
 						for JSONconflict in JSONconflicts {
 							let newConflict = CoreDataHelper.newConflict()
 							newConflict.drug1id = JSONconflict["drug1"] as! Int64
