@@ -20,7 +20,7 @@ class AddNotificationTableViewController: UITableViewController {
         super.viewDidLoad()
         print(med)
         if((med["phoneNotification"] as! Bool) == false && (med["emailNotification"] as! Bool) == false) {
-            print("skip")
+            createMedication()
         }
 
         // Uncomment the following line to preserve selection between presentations
@@ -36,31 +36,31 @@ class AddNotificationTableViewController: UITableViewController {
     }
     
     @IBAction func doneAction(_ sender: UIButton) {
+        createMedication()
+    }
+    
+    func createMedication() {
         //Make API Call
         if(!Connectivity.isConnectedToInternet) {
             return self.createAlert(title: "Connection Error", message: "There is a connection error. Please check your internet connection or try again later.")
         }
-
-//        let body: [String: Any] = [
-//            "name" : Name.text!,
-//            "cui" : "1",
-//            "quantity" : Quantity.text!,
-//            "per_week" : TimesPerWeek.text!,
-//            "temporary" : Temporary.isOn
-//        ]
         
         var body = med
-        
+        print(body)
         let emailNotification = med["emailNotification"] as! Bool
+        let phoneNotification = med["emailNotification"] as! Bool
+        
         if(emailNotification == true) {
             body["alert_user"] = "1"
         } else {
             body["alert_user"] = "0"
         }
+        
         body["notifications"] = dataNotifications
         body.removeValue(forKey: "phoneNotification")
         body.removeValue(forKey: "emailNotification")
-
+        
+        
         Alamofire.request(api.rootURL + "/meds/add", method: .post, parameters: body, encoding: JSONEncoding.default, headers: User.header).responseJSON { response in
             if let JSON = response.result.value {
                 let data = JSON as! NSDictionary
@@ -72,14 +72,25 @@ class AddNotificationTableViewController: UITableViewController {
                     default:
                         return self.createAlert(title: "Server Error", message: "There was an issue with the server. Please try again later.")
                     }
+                } else if(data["message"] != nil) {
+                    let message = data["message"] as! String
+                    if(message == "ok") {
+//                        let storyboard = UIStoryboard(name: "Medication", bundle: nil)
+//                        let vc = storyboard.instantiateViewController(withIdentifier: "Medication.storyboard") as UIViewController
+//                        self.navigationController?.pushViewController(vc, animated: true)
+//                        return self.present(vc, animated: true, completion: nil)
+                        
+                        let storyBoard: UIStoryboard = UIStoryboard(name: "Medication", bundle:nil)
+                        let nextView = storyBoard.instantiateViewController(withIdentifier: "Medication.storyboard") as! MedicationViewController
+                        return self.navigationController!.pushViewController(nextView, animated: true)
+                    }
+                    
+                } else {
+                    return self.createAlert(title: "Server Error", message: "There was an issue with the server. Please try again later.")
                 }
             }
         }
-    
-
-
-//        If Successful Pop View Controller
-        self.navigationController?.popViewController(animated: true)
+        
     }
 
     // MARK: - Table view data source
@@ -91,18 +102,20 @@ class AddNotificationTableViewController: UITableViewController {
         return data.count
     }
     
-    @IBAction func addNotificationAction(_ sender: UIBarButtonItem) {
-        createPopup()
-    }
-    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "NotificationCell", for: indexPath)
-
+        
         // Configure the cell...
         let text = data[indexPath.row]
         cell.textLabel?.text = text
         return cell
     }
+    
+    @IBAction func addNotificationAction(_ sender: UIBarButtonItem) {
+        createPopup()
+    }
+    
+    
 
     /*
     // Override to support conditional editing of the table view.

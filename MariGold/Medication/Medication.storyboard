@@ -13,7 +13,7 @@
         <!--Medication-->
         <scene sceneID="V8A-Hl-sQe">
             <objects>
-                <viewController storyboardIdentifier="Medication.storyboard" title="Medication" useStoryboardIdentifierAsRestorationIdentifier="YES" id="jzm-8v-ITY" customClass="MedicationViewController" customModule="MariGold" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Medication.storyboard" title="Medication" id="jzm-8v-ITY" customClass="MedicationViewController" customModule="MariGold" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="75" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Lsi-VZ-Imh">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
