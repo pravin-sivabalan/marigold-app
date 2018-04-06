@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 48;
+	objectVersion = 46;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -118,17 +118,17 @@
 
 /* Begin PBXFileReference section */
 		06A565E11017DB2630EC80B1431C6DD3 /* Pods-MariGoldTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MariGoldTests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		0748879776C82F3A152D6089763DE59D /* Pastel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pastel.framework; path = Pastel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0748879776C82F3A152D6089763DE59D /* Pastel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pastel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		08066886A58F2B89F60BA26B48E6263B /* PresentationController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PresentationController.swift; path = PopupDialog/Classes/PresentationController.swift; sourceTree = "<group>"; };
 		0B0D5C46A3120CC39036C1BC1C3A1315 /* Pods-MariGold-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MariGold-resources.sh"; sourceTree = "<group>"; };
 		0B114FD7BEAEA2D57AD018D7DD667FB2 /* Pods-MariGold-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MariGold-umbrella.h"; sourceTree = "<group>"; };
 		0C76469696E43088E2E1F9C254579F34 /* DynamicBlurView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DynamicBlurView.swift; path = DynamicBlurView/DynamicBlurView.swift; sourceTree = "<group>"; };
 		0CAC2AAC40AD864146B7FB2DEED956DE /* TrackingMode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TrackingMode.swift; path = DynamicBlurView/TrackingMode.swift; sourceTree = "<group>"; };
-		10041EEEED74511C81A8B03E46BBACA7 /* Pods-MariGoldTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-MariGoldTests.modulemap"; sourceTree = "<group>"; };
+		10041EEEED74511C81A8B03E46BBACA7 /* Pods-MariGoldTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-MariGoldTests.modulemap"; sourceTree = "<group>"; };
 		102E2F383666AA5E954733F899E3CA81 /* AFError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AFError.swift; path = Source/AFError.swift; sourceTree = "<group>"; };
 		15B68F9A658B3F67B6616550625FC69A /* Pods-MariGoldTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MariGoldTests-acknowledgements.plist"; sourceTree = "<group>"; };
 		191A35725F8326C5864D1DA24C9288B0 /* PopupDialogOverlayView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PopupDialogOverlayView.swift; path = PopupDialog/Classes/PopupDialogOverlayView.swift; sourceTree = "<group>"; };
-		1AC25722AF5C1C86B60B8E02CB8ADBEC /* Pods_MariGold.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_MariGold.framework; path = "Pods-MariGold.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1AC25722AF5C1C86B60B8E02CB8ADBEC /* Pods_MariGold.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MariGold.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1EEF948D5F3F4760F33963733DCC6AC9 /* Pods-MariGold-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MariGold-acknowledgements.markdown"; sourceTree = "<group>"; };
 		2253BA184373223220B27300D99C7935 /* BlurLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BlurLayer.swift; path = DynamicBlurView/BlurLayer.swift; sourceTree = "<group>"; };
 		248C884F147FAB1EB236DFEF19D5F323 /* Pods-MariGoldUITests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MariGoldUITests-resources.sh"; sourceTree = "<group>"; };
@@ -147,14 +147,14 @@
 		4AD8072F646E0595D8CAB5B5693FA4F9 /* TransitionAnimations.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TransitionAnimations.swift; path = PopupDialog/Classes/TransitionAnimations.swift; sourceTree = "<group>"; };
 		4B6F39D28A7978B7EBE34ACC1511FC61 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4D5B0D9748066217AB2EE56BDB1C1CF1 /* UIView+Animations.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIView+Animations.swift"; path = "PopupDialog/Classes/UIView+Animations.swift"; sourceTree = "<group>"; };
-		4F91E6BDDC947DB3D18C37A679911D5A /* Pods-MariGoldUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-MariGoldUITests.modulemap"; sourceTree = "<group>"; };
+		4F91E6BDDC947DB3D18C37A679911D5A /* Pods-MariGoldUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-MariGoldUITests.modulemap"; sourceTree = "<group>"; };
 		55673F2A9CB6BE9B7FBAE909CBD0624A /* PopupDialog-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PopupDialog-umbrella.h"; sourceTree = "<group>"; };
 		566A411D446314FEBC35CD09AAE28BC3 /* Pods-MariGold.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MariGold.release.xcconfig"; sourceTree = "<group>"; };
 		58694AF0D8C8404CD07272532B8F88FE /* PopupDialogDefaultViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PopupDialogDefaultViewController.swift; path = PopupDialog/Classes/PopupDialogDefaultViewController.swift; sourceTree = "<group>"; };
-		590301CD7336541EA0F1B1877F400502 /* PopupDialog.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = PopupDialog.modulemap; sourceTree = "<group>"; };
-		59D8DC5EA9631C9116B408F3FC176EDA /* Pods-MariGold.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-MariGold.modulemap"; sourceTree = "<group>"; };
+		590301CD7336541EA0F1B1877F400502 /* PopupDialog.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = PopupDialog.modulemap; sourceTree = "<group>"; };
+		59D8DC5EA9631C9116B408F3FC176EDA /* Pods-MariGold.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-MariGold.modulemap"; sourceTree = "<group>"; };
 		5A76C52F9B43F677BA0616C00873E552 /* DynamicBlurView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DynamicBlurView-prefix.pch"; sourceTree = "<group>"; };
-		5D93025C2D2F48BA3C714B1871E76878 /* Pods_MariGoldTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_MariGoldTests.framework; path = "Pods-MariGoldTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5D93025C2D2F48BA3C714B1871E76878 /* Pods_MariGoldTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MariGoldTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DA6BD934A092AE7664C34C40AB05A1E /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		612F10A016B8BFBB15183F4726D8A3CD /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		654EA11654BE6926D5462B1F30DA9D81 /* Pods-MariGoldUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MariGoldUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -181,22 +181,22 @@
 		83052D14A652A4D90839C2E7618BE174 /* Pods-MariGold-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MariGold-frameworks.sh"; sourceTree = "<group>"; };
 		8525251ECADEB938903DBA152028003F /* Alamofire-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Alamofire-umbrella.h"; sourceTree = "<group>"; };
 		86AF7D1F4FF32AFE3C3CD263D5526767 /* DynamicBlurView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "DynamicBlurView-dummy.m"; sourceTree = "<group>"; };
-		86CF9BBC5CFA7DC3B9758333551BEDA3 /* DynamicBlurView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = DynamicBlurView.modulemap; sourceTree = "<group>"; };
+		86CF9BBC5CFA7DC3B9758333551BEDA3 /* DynamicBlurView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = DynamicBlurView.modulemap; sourceTree = "<group>"; };
 		8AEB8928FA2BE36F338BEC554076AAEA /* Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Alamofire.swift; path = Source/Alamofire.swift; sourceTree = "<group>"; };
 		8D24685921CF0066E3B248B275FBF648 /* CGContext+CGImage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "CGContext+CGImage.swift"; path = "DynamicBlurView/CGContext+CGImage.swift"; sourceTree = "<group>"; };
 		8FCBB62F35C1A9DBD348A4EBF28E7CBE /* UIImage+Blur.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIImage+Blur.swift"; path = "DynamicBlurView/UIImage+Blur.swift"; sourceTree = "<group>"; };
 		90D209B4BB8D3F597FABAC34D2CE82F0 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		91826AE1812C7A4DCCE259CD1DC3B488 /* Pods-MariGoldUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MariGoldUITests-acknowledgements.plist"; sourceTree = "<group>"; };
 		92FE1A8D67D415A97F8EF126746F78FF /* DynamicBlurView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = DynamicBlurView.xcconfig; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9618F227241C1DCE536536B1E53559DB /* PopupDialog.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = PopupDialog.framework; path = PopupDialog.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9618F227241C1DCE536536B1E53559DB /* PopupDialog.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PopupDialog.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		962CCCFEBEF5FC7EBF963895C53823DE /* Pods-MariGoldUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MariGoldUITests-umbrella.h"; sourceTree = "<group>"; };
 		97F826E78D452A674AD52BD7B13C6E6C /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Accelerate.framework; sourceTree = DEVELOPER_DIR; };
 		983B16F8B9F3B6E3E4E5ABF075FBCBFE /* PopupDialog.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PopupDialog.swift; path = PopupDialog/Classes/PopupDialog.swift; sourceTree = "<group>"; };
 		AD7EFA4C76D637014581093449C59867 /* DynamicBlurView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DynamicBlurView.h; path = DynamicBlurView/DynamicBlurView.h; sourceTree = "<group>"; };
 		AD8570984933DCB7A60BD7C4028B6F10 /* SessionDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SessionDelegate.swift; path = Source/SessionDelegate.swift; sourceTree = "<group>"; };
 		AD89C5867A8757B72C6636AB6FCD3743 /* PopupDialog-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PopupDialog-prefix.pch"; sourceTree = "<group>"; };
-		AEB722C97574BE32E80A39C2FBAC1E38 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Alamofire.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AEB722C97574BE32E80A39C2FBAC1E38 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0BA041A133C8D077464A5BE6B0E0BDD /* MultipartFormData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MultipartFormData.swift; path = Source/MultipartFormData.swift; sourceTree = "<group>"; };
 		B111DC42153702F786B2516135CF7735 /* Request.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Request.swift; path = Source/Request.swift; sourceTree = "<group>"; };
 		B2DA31B4779C629597C34D30A6720A0C /* ParameterEncoding.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ParameterEncoding.swift; path = Source/ParameterEncoding.swift; sourceTree = "<group>"; };
@@ -209,13 +209,13 @@
 		C93AEB132F966811A418DC65017AF595 /* Alamofire-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Alamofire-dummy.m"; sourceTree = "<group>"; };
 		C9EBE73F4404442CD749CCBDE908AC0D /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CB2823E88B6F0F62403A60A1F7CCEB13 /* Pods-MariGoldTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MariGoldTests-dummy.m"; sourceTree = "<group>"; };
-		CB7C4A5A5F2FE0F4D74F86990465DB06 /* Pastel.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = Pastel.modulemap; sourceTree = "<group>"; };
-		D48D74B8706FEB8636EF189200E17363 /* DynamicBlurView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = DynamicBlurView.framework; path = DynamicBlurView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CB7C4A5A5F2FE0F4D74F86990465DB06 /* Pastel.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Pastel.modulemap; sourceTree = "<group>"; };
+		D48D74B8706FEB8636EF189200E17363 /* DynamicBlurView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DynamicBlurView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D71B5789826F3AD6E2AFF5EC96EDD1A8 /* PopupDialogContainerView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PopupDialogContainerView.swift; path = PopupDialog/Classes/PopupDialogContainerView.swift; sourceTree = "<group>"; };
 		D752A4FAC15ACD8287D8B80917D36B4E /* InteractiveTransition.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = InteractiveTransition.swift; path = PopupDialog/Classes/InteractiveTransition.swift; sourceTree = "<group>"; };
 		D85418517AEB05947E553F8544150008 /* Response.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Response.swift; path = Source/Response.swift; sourceTree = "<group>"; };
 		D86B105EF3C29BC611B761F97A8A176C /* PopupDialogDefaultButtons.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PopupDialogDefaultButtons.swift; path = PopupDialog/Classes/PopupDialogDefaultButtons.swift; sourceTree = "<group>"; };
-		D898B8AD9A8B3DF8CC41C8BD2D36CF22 /* Pods_MariGoldUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_MariGoldUITests.framework; path = "Pods-MariGoldUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D898B8AD9A8B3DF8CC41C8BD2D36CF22 /* Pods_MariGoldUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MariGoldUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA7A8AC1EEB3BBB43FC117D474B3C2D0 /* NetworkReachabilityManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NetworkReachabilityManager.swift; path = Source/NetworkReachabilityManager.swift; sourceTree = "<group>"; };
 		DF2944AF6D96CFB581C4F9362E501AD3 /* Pods-MariGold-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MariGold-acknowledgements.plist"; sourceTree = "<group>"; };
 		E5326E9523F1EFC27F186EE80D50C2D3 /* Pastel-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pastel-dummy.m"; sourceTree = "<group>"; };
@@ -223,7 +223,7 @@
 		E87C884E4F752008FCDF6EC5F3D4C89A /* Pods-MariGoldUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MariGoldUITests.release.xcconfig"; sourceTree = "<group>"; };
 		EADDCCB8AF9C8E9407921F25F9455407 /* Pods-MariGold.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MariGold.debug.xcconfig"; sourceTree = "<group>"; };
 		EBC4949B9D4194D2565C3D1F7B49D108 /* Pastel.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pastel.xcconfig; sourceTree = "<group>"; };
-		F3F39A816B9AEC8E5C13112B50D56024 /* Alamofire.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = Alamofire.modulemap; sourceTree = "<group>"; };
+		F3F39A816B9AEC8E5C13112B50D56024 /* Alamofire.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Alamofire.modulemap; sourceTree = "<group>"; };
 		F46C4B5343FADCE31B5E0869C85E6752 /* TransitionAnimator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TransitionAnimator.swift; path = PopupDialog/Classes/TransitionAnimator.swift; sourceTree = "<group>"; };
 		F5B12D3D195A1E085CE861DBDCD6E750 /* Pods-MariGoldTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MariGoldTests.release.xcconfig"; sourceTree = "<group>"; };
 		FA7D5F55D286C59516D247F40D14D0D7 /* Pods-MariGoldTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MariGoldTests-umbrella.h"; sourceTree = "<group>"; };
@@ -365,7 +365,6 @@
 				80FF27041A5ED8B0891AD00BEB80E88D /* PastelView.swift */,
 				0AD0FF0D4CACC5305273A195932D5862 /* Support Files */,
 			);
-			name = Pastel;
 			path = Pastel;
 			sourceTree = "<group>";
 		};
@@ -382,7 +381,6 @@
 				8FCBB62F35C1A9DBD348A4EBF28E7CBE /* UIImage+Blur.swift */,
 				1CCBF7699FA300E98475261B23654405 /* Support Files */,
 			);
-			name = DynamicBlurView;
 			path = DynamicBlurView;
 			sourceTree = "<group>";
 		};
@@ -465,7 +463,6 @@
 				41AD8288F7D865234E6907D3238493A0 /* Validation.swift */,
 				BA7AC92B673BC4ABCAAB97AC624D557E /* Support Files */,
 			);
-			name = Alamofire;
 			path = Alamofire;
 			sourceTree = "<group>";
 		};
@@ -527,7 +524,6 @@
 				6EE4E2EEB2097F05A24C590A9E481E03 /* UIViewController+Visibility.swift */,
 				C5276776E07E10D9442C8B86471046EE /* Support Files */,
 			);
-			name = PopupDialog;
 			path = PopupDialog;
 			sourceTree = "<group>";
 		};
