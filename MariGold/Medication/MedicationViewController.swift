@@ -105,7 +105,7 @@ extension MedicationViewController: UITableViewDataSource {
 		let cell = tableView.dequeueReusableCell(withIdentifier: "Plain Cell", for: indexPath) as! medicationTableViewCell
 		let medications = CoreDataHelper.retrieveMeds()
 		let medication = medications[indexPath.row]
-		cell.Label.text = medication.name
+		cell.Label.text = String(medication.name!.prefix(upTo: medication.name!.index(of: " ") ?? medication.name!.endIndex))
 		cell.ID.text = String(medication.id)
 		
 		if medication.temporary {
