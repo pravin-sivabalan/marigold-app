@@ -4,6 +4,8 @@
 target 'MariGold' do
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!
+  
+  project 'MariGold.xcodeproj'
 
   # Pods for MariGold
   pod 'Pastel'

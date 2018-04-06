@@ -151,6 +151,8 @@ extension MedicationViewController: UITableViewDataSource {
 							return self.createAlert(title: "Server Error", message: "There is a connection error. Please check your internet connection or try again later.")
 						}
 					} else {
+						let idInt = Int64(cell.ID.text!) ?? -1
+						CoreDataHelper.deleteConflictsForID(id: idInt)
                         self.Refresh(self)
 					}
 				}

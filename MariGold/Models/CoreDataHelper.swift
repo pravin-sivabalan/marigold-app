@@ -99,4 +99,9 @@ struct CoreDataHelper {
 		}
 		return validConflicts
 	}
+	static func deleteConflictsForID(id: Int64) {
+		for conf in retrieveConflictsForID(id: id) {
+			deleteConflict(conflict: conf)
+		}
+	}
 }
