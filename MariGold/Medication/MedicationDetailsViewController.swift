@@ -17,6 +17,7 @@ class MedicationDetailsViewController: UITableViewController{
 	@IBOutlet var RunOutDate: UITextField!
 	@IBOutlet var Temporary: UILabel!
 	@IBOutlet var TemporarySwitch: UISwitch!
+	@IBOutlet var LeaguesBannedIn: UILabel!
 	@IBOutlet var EditNameField: UITextField!
 	
 	var medication: Medication!
@@ -82,6 +83,7 @@ class MedicationDetailsViewController: UITableViewController{
                 Temporary.text = "No"
             }
         }
+		LeaguesBannedIn.text = medication.leaguesbannedin ?? "None"
 	}
 	
 	@objc func setEditingMedication(sender: UIBarButtonItem) {
