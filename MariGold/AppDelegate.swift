@@ -8,9 +8,10 @@
 
 import UIKit
 import CoreData
+import UserNotifications
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterDelegate {
 
     var window: UIWindow?
 
@@ -22,7 +23,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             let vc = storyboard.instantiateViewController(withIdentifier: "tabbarControllerID") as UIViewController
             self.window?.rootViewController = vc
         }
+        
+        let center  = UNUserNotificationCenter.current()
+        center.delegate = self
+        center.requestAuthorization(options: [.sound, .alert, .badge]) { (granted, error) in
+            if error == nil{
+                DispatchQueue.main.async(execute: {
+                    UIApplication.shared.registerForRemoteNotifications()
+                })
+            }
+        }
+        
         return true
+    }
+    
+    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        completionHandler( [.alert, .badge, .sound])
+    }
+    
+    func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
+        completionHandler()
     }
 
     func applicationWillResignActive(_ application: UIApplication) {

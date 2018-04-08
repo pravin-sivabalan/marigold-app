@@ -9,8 +9,10 @@
 /* Begin PBXBuildFile section */
 		030D0E27203B399700AC400C /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030D0E26203B399700AC400C /* ResetPasswordViewController.swift */; };
 		0315BA7F203A40C500CBD416 /* RegisterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0315BA7E203A40C500CBD416 /* RegisterUITests.swift */; };
+		032A99BB2068C1F800807745 /* ConflictDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032A99BA2068C1F800807745 /* ConflictDetailsViewController.swift */; };
 		03304F7E2049A6AB0002AAD5 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03304F7D2049A6AA0002AAD5 /* AccountViewController.swift */; };
 		0350560A2034D7DF00FD8AA5 /* LoginUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035056092034D7DF00FD8AA5 /* LoginUITests.swift */; };
+		0353585520687385005E4334 /* ConflictsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0353585420687385005E4334 /* ConflictsViewController.swift */; };
 		037DF0DC203DDCB600D7F1A4 /* MedicationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037DF0DB203DDCB600D7F1A4 /* MedicationViewController.swift */; };
 		0386D6CF2040824B00E0C62E /* (null) in Sources */ = {isa = PBXBuildFile; };
 		039253B32038B7F0005A2C42 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 039253B22038B7F0005A2C42 /* LaunchScreen.storyboard */; };
@@ -25,6 +27,13 @@
 		03BB6A71204CC7F200955186 /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BB6A6B204CC7F200955186 /* CoreDataHelper.swift */; };
 		03C08A52204CE6540072E7A5 /* MedicationAdditionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C08A51204CE6540072E7A5 /* MedicationAdditionViewController.swift */; };
 		03EEF52C20645403007C5E7A /* MedicationDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03EEF52B20645403007C5E7A /* MedicationDetailsViewController.swift */; };
+		03FA050120693E7F0046AA21 /* AccountEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FA050020693E7F0046AA21 /* AccountEditViewController.swift */; };
+		088AC5A42068CC63009C3B57 /* Spinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088AC5A32068CC63009C3B57 /* Spinner.swift */; };
+		088AC5AB2068CC8D009C3B57 /* LookupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088AC5AA2068CC8D009C3B57 /* LookupViewController.swift */; };
+		088AC5AE20693D84009C3B57 /* AddNotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088AC5AD20693D84009C3B57 /* AddNotificationViewController.swift */; };
+		088AC5B020693DAA009C3B57 /* AddNotificationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088AC5AF20693DAA009C3B57 /* AddNotificationTableViewController.swift */; };
+		088AC5B520694326009C3B57 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088AC5B420694326009C3B57 /* DashboardViewController.swift */; };
+		088AC5C2206943D0009C3B57 /* AddNotificationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 088AC5C1206943D0009C3B57 /* AddNotificationViewController.xib */; };
 		3D12B123203CBD0200FD701D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D12B122203CBD0200FD701D /* Constants.swift */; };
 		3D17623D2017E62000A1C77A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D17623C2017E62000A1C77A /* AppDelegate.swift */; };
 		3D17623F2017E62000A1C77A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D17623E2017E62000A1C77A /* ViewController.swift */; };
@@ -73,6 +82,20 @@
 			remoteGlobalIDString = CDA85AC1795766EDA99896F15AB4006A;
 			remoteInfo = "Pods-MariGoldUITests";
 		};
+		088AC5BD20694327009C3B57 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 03BCDD28203E68D000138271 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D48D74B8706FEB8636EF189200E17363;
+			remoteInfo = DynamicBlurView;
+		};
+		088AC5BF20694327009C3B57 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 03BCDD28203E68D000138271 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9618F227241C1DCE536536B1E53559DB;
+			remoteInfo = PopupDialog;
+		};
 		3D17624E2017E62000A1C77A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 3D1762312017E62000A1C77A /* Project object */;
@@ -92,8 +115,10 @@
 /* Begin PBXFileReference section */
 		030D0E26203B399700AC400C /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
 		0315BA7E203A40C500CBD416 /* RegisterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterUITests.swift; sourceTree = "<group>"; };
+		032A99BA2068C1F800807745 /* ConflictDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ConflictDetailsViewController.swift; path = Conflict/ConflictDetailsViewController.swift; sourceTree = "<group>"; };
 		03304F7D2049A6AA0002AAD5 /* AccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		035056092034D7DF00FD8AA5 /* LoginUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUITests.swift; sourceTree = "<group>"; };
+		0353585420687385005E4334 /* ConflictsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConflictsViewController.swift; sourceTree = "<group>"; };
 		037DF0DB203DDCB600D7F1A4 /* MedicationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MedicationViewController.swift; path = Medication/MedicationViewController.swift; sourceTree = "<group>"; };
 		039253B22038B7F0005A2C42 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		039253BC2038E382005A2C42 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
@@ -109,6 +134,13 @@
 		03BCDD28203E68D000138271 /* Pods.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Pods.xcodeproj; path = Pods/Pods.xcodeproj; sourceTree = "<group>"; };
 		03C08A51204CE6540072E7A5 /* MedicationAdditionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicationAdditionViewController.swift; sourceTree = "<group>"; };
 		03EEF52B20645403007C5E7A /* MedicationDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MedicationDetailsViewController.swift; path = Medication/MedicationDetailsViewController.swift; sourceTree = "<group>"; };
+		03FA050020693E7F0046AA21 /* AccountEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountEditViewController.swift; sourceTree = "<group>"; };
+		088AC5A32068CC63009C3B57 /* Spinner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spinner.swift; sourceTree = "<group>"; };
+		088AC5AA2068CC8D009C3B57 /* LookupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LookupViewController.swift; sourceTree = "<group>"; };
+		088AC5AD20693D84009C3B57 /* AddNotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNotificationViewController.swift; sourceTree = "<group>"; };
+		088AC5AF20693DAA009C3B57 /* AddNotificationTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNotificationTableViewController.swift; sourceTree = "<group>"; };
+		088AC5B420694326009C3B57 /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
+		088AC5C1206943D0009C3B57 /* AddNotificationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddNotificationViewController.xib; sourceTree = "<group>"; };
 		0E4FE26337B0BA937F5A53D3 /* Pods-MariGold.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MariGold.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MariGold/Pods-MariGold.debug.xcconfig"; sourceTree = "<group>"; };
 		3D12B122203CBD0200FD701D /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		3D1762392017E62000A1C77A /* MariGold.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MariGold.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -175,10 +207,12 @@
 			isa = PBXGroup;
 			children = (
 				03BCDD31203E68D000138271 /* Alamofire.framework */,
+				088AC5BE20694327009C3B57 /* DynamicBlurView.framework */,
 				03BCDD33203E68D000138271 /* Pastel.framework */,
 				03BCDD35203E68D000138271 /* Pods_MariGold.framework */,
 				03BCDD37203E68D000138271 /* Pods_MariGoldTests.framework */,
 				03BCDD39203E68D000138271 /* Pods_MariGoldUITests.framework */,
+				088AC5C020694327009C3B57 /* PopupDialog.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -222,8 +256,15 @@
 				3D12B11F203CB94500FD701D /* AccountSetup */,
 				3D1762432017E62000A1C77A /* Assets.xcassets */,
 				3D17623C2017E62000A1C77A /* AppDelegate.swift */,
+				03FA050020693E7F0046AA21 /* AccountEditViewController.swift */,
 				03304F7D2049A6AA0002AAD5 /* AccountViewController.swift */,
+				088AC5AD20693D84009C3B57 /* AddNotificationViewController.swift */,
+				088AC5AF20693DAA009C3B57 /* AddNotificationTableViewController.swift */,
+				0353585420687385005E4334 /* ConflictsViewController.swift */,
+				032A99BA2068C1F800807745 /* ConflictDetailsViewController.swift */,
+				088AC5B420694326009C3B57 /* DashboardViewController.swift */,
 				037DF0DB203DDCB600D7F1A4 /* MedicationViewController.swift */,
+				088AC5AA2068CC8D009C3B57 /* LookupViewController.swift */,
 				03C08A51204CE6540072E7A5 /* MedicationAdditionViewController.swift */,
 				03EEF52B20645403007C5E7A /* MedicationDetailsViewController.swift */,
 				03BCDD03203E653F00138271 /* TabBarViewController.swift */,
@@ -238,6 +279,8 @@
 				03A106B22049BABE00E31BD9 /* MariGold.xcdatamodeld */,
 				03BB6A6B204CC7F200955186 /* CoreDataHelper.swift */,
 				3D12B122203CBD0200FD701D /* Constants.swift */,
+				088AC5A32068CC63009C3B57 /* Spinner.swift */,
+				088AC5C1206943D0009C3B57 /* AddNotificationViewController.xib */,
 			);
 			path = MariGold;
 			sourceTree = "<group>";
@@ -348,7 +391,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0920;
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = MariGold;
 				TargetAttributes = {
 					3D1762382017E62000A1C77A = {
@@ -429,6 +472,20 @@
 			remoteRef = 03BCDD38203E68D000138271 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
+		088AC5BE20694327009C3B57 /* DynamicBlurView.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = DynamicBlurView.framework;
+			remoteRef = 088AC5BD20694327009C3B57 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		088AC5C020694327009C3B57 /* PopupDialog.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = PopupDialog.framework;
+			remoteRef = 088AC5BF20694327009C3B57 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 /* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
@@ -443,6 +500,7 @@
 				3D1762442017E62000A1C77A /* Assets.xcassets in Resources */,
 				039940212037B91700A6AEF1 /* Search.storyboard in Resources */,
 				3D1762422017E62000A1C77A /* Main.storyboard in Resources */,
+				088AC5C2206943D0009C3B57 /* AddNotificationViewController.xib in Resources */,
 				039940252037C48900A6AEF1 /* Account.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -601,12 +659,16 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-MariGold/Pods-MariGold-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/DynamicBlurView/DynamicBlurView.framework",
 				"${BUILT_PRODUCTS_DIR}/Pastel/Pastel.framework",
+				"${BUILT_PRODUCTS_DIR}/PopupDialog/PopupDialog.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DynamicBlurView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Pastel.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PopupDialog.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -621,15 +683,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				3D12B123203CBD0200FD701D /* Constants.swift in Sources */,
+				088AC5B520694326009C3B57 /* DashboardViewController.swift in Sources */,
 				03EEF52C20645403007C5E7A /* MedicationDetailsViewController.swift in Sources */,
+				032A99BB2068C1F800807745 /* ConflictDetailsViewController.swift in Sources */,
+				088AC5A42068CC63009C3B57 /* Spinner.swift in Sources */,
 				039253BD2038E382005A2C42 /* RegisterViewController.swift in Sources */,
+				088AC5AE20693D84009C3B57 /* AddNotificationViewController.swift in Sources */,
 				03304F7E2049A6AB0002AAD5 /* AccountViewController.swift in Sources */,
 				3D17623F2017E62000A1C77A /* ViewController.swift in Sources */,
 				03A106B92049BABE00E31BD9 /* MariGold.xcdatamodeld in Sources */,
+				088AC5B020693DAA009C3B57 /* AddNotificationTableViewController.swift in Sources */,
 				03C08A52204CE6540072E7A5 /* MedicationAdditionViewController.swift in Sources */,
 				037DF0DC203DDCB600D7F1A4 /* MedicationViewController.swift in Sources */,
+				0353585520687385005E4334 /* ConflictsViewController.swift in Sources */,
 				03BB6A71204CC7F200955186 /* CoreDataHelper.swift in Sources */,
+				03FA050120693E7F0046AA21 /* AccountEditViewController.swift in Sources */,
 				3D17623D2017E62000A1C77A /* AppDelegate.swift in Sources */,
+				088AC5AB2068CC8D009C3B57 /* LookupViewController.swift in Sources */,
 				030D0E27203B399700AC400C /* ResetPasswordViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -695,6 +765,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -702,6 +773,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -752,6 +824,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -759,6 +832,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -795,10 +869,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = A5WQA479ST;
+				DEVELOPMENT_TEAM = JLKTZ5Y5UU;
 				INFOPLIST_FILE = MariGold/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = MariGold.DevinMariGold;
+				PRODUCT_BUNDLE_IDENTIFIER = MariGold.BassMariGold1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
@@ -813,10 +887,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = A5WQA479ST;
+				DEVELOPMENT_TEAM = JLKTZ5Y5UU;
 				INFOPLIST_FILE = MariGold/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = MariGold.DevinMariGold;
+				PRODUCT_BUNDLE_IDENTIFIER = MariGold.BassMariGold1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;

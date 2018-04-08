@@ -14,7 +14,10 @@ class RegisterUITests: XCTestCase {
         super.setUp()
         
         // Put setup code here. This method is called before the invocation of each test method in the class.
-        
+		
+		//Need to do this so we don't auto login
+        UserDefaults.standard.removeObject(forKey: "jwt")
+		
         // In UI tests it is usually best to stop immediately when a failure occurs.
         continueAfterFailure = false
         // UI tests must launch the application that they test. Doing this in setup will make sure it happens for each test method.
@@ -31,7 +34,7 @@ class RegisterUITests: XCTestCase {
     func testRegisterWithValidInput() {
         // Use recording to get started writing UI tests.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
-		
+
 		let app = XCUIApplication()
 		app.buttons["Create an Account"].tap()
 		

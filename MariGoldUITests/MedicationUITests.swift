@@ -9,7 +9,6 @@
 import XCTest
 
 class MedicationUITests: XCTestCase {
-        
     override func setUp() {
         super.setUp()
         
@@ -27,39 +26,101 @@ class MedicationUITests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
     }
-    
-    func testMedicationAdd() {
+	
+    //Now Manual Testing
+    //func testMedicationAdd()
+	
+	func testMedicationEdit() {
+		
+		let app = XCUIApplication()
+		app.tabBars.buttons["Medication"].tap()
+		app.tables/*@START_MENU_TOKEN@*/.staticTexts["Viagra"]/*[[".cells[\"Viagra\"].staticTexts[\"Viagra\"]",".staticTexts[\"Viagra\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+		app.navigationBars["Info"].buttons["Edit"].tap()
+		
+		let tablesQuery = app.tables
+		
+		let textField = tablesQuery.cells.containing(.staticText, identifier:"Quantity").children(matching: .textField).element
+		textField.tap()
+		textField.typeText("32")
+		
+		let infoNavigationBar = app.navigationBars["Info"]
+		infoNavigationBar.buttons["Done"].tap()
+		infoNavigationBar.buttons["Medication"].tap()
+		
+	}
+	
+	func testMedicationCameraAdd() {
 		
 		let app = XCUIApplication()
 		app.tabBars.buttons["Medication"].tap()
 		app.navigationBars["Medication"].buttons["Add"].tap()
+		app.buttons["Camera"].tap()
+		addPhotoLibrary(app)
+	}
+}
 
-		let tablesQuery = app.tables
+struct Platform {
+	static var isSimulator: Bool {
+		return TARGET_OS_SIMULATOR != 0
+	}
+}
+
+
+extension XCUIElement {
+	func tapIfExists() {
+		if exists {
+			tap()
+		}
+	}
+}
+
+// MARK: - Helper functions
+extension XCTestCase {
+	func addPhotoCamera(_ app: XCUIApplication) {
+		let pleaseSelectSheet = app.sheets.element
 		
-		tablesQuery/*@START_MENU_TOKEN@*/.textFields["Name"]/*[[".cells.textFields[\"Name\"]",".textFields[\"Name\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
-		tablesQuery.children(matching: .cell).element(boundBy: 0).children(matching: .textField).element.typeText("Test Med")
+		//["Take Picture"].tap()
+		pleaseSelectSheet.buttons.element(boundBy: 0).tap()
 		
-		tablesQuery/*@START_MENU_TOKEN@*/.textFields["Dosage"]/*[[".cells.textFields[\"Dosage\"]",".textFields[\"Dosage\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
-		tablesQuery.children(matching: .cell).element(boundBy: 1).children(matching: .textField).element.typeText("20")
+		//use coordinates and tap on Take picture button
+		let element = app
+			.children(matching: .window).element(boundBy: 0)
+			.children(matching: .other).element
+			.children(matching: .other).element
+			.children(matching: .other).element
+			.children(matching: .other).element
 		
-		tablesQuery/*@START_MENU_TOKEN@*/.textFields["Quantity"]/*[[".cells.textFields[\"Quantity\"]",".textFields[\"Quantity\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
-		tablesQuery.children(matching: .cell).element(boundBy: 2).children(matching: .textField).element.typeText("36")
+		let photoCapture = element.children(matching: .other).element
+			.children(matching: .other).element(boundBy: 1)
+			.children(matching: .other).element
 		
-		tablesQuery/*@START_MENU_TOKEN@*/.textFields["Times Per Week"]/*[[".cells.textFields[\"Times Per Week\"]",".textFields[\"Times Per Week\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
-		tablesQuery.children(matching: .cell).element(boundBy: 3).children(matching: .textField).element.typeText("3")
+		photoCapture.tap()
 		
-		app.navigationBars["Add Medication"].buttons["Done"].tap()
+		sleep(5)
 		
-    }
+		app.buttons["Use Photo"].tap()
+	}
 	
-	func testMedicationDelete() {
-		let app = XCUIApplication()
-		app.tabBars.buttons["Medication"].tap()
-		app.navigationBars["Medication"].buttons["Refresh"].tap()
-		sleep(15)
-		let tablesQuery = app.tables
-		tablesQuery.staticTexts["Med 1"].swipeLeft()
-		tablesQuery.buttons["Delete"].tap()
-		XCTAssert(true)
+	func addPhotoLibrary(_ app: XCUIApplication, index: Int = 0) {
+		//let pleaseSelectSheet = app.sheets["Add Photo"]
+		//pleaseSelectSheet.buttons.element(boundBy: 1).tap()
+		
+		sleep(10)
+		
+		//Camera Roll
+		app.tables.cells.element(boundBy: 1).tap()
+		
+		sleep(2)
+		
+		let photoCells = app.collectionViews.cells
+		if Platform.isSimulator {
+			photoCells.element(boundBy: index).tap()
+		} else {
+			photoCells.allElementsBoundByIndex.last!.firstMatch.tap()
+		}
+		
+		sleep(2)
+		
+		app.buttons["Choose"].tapIfExists()
 	}
 }

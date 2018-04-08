@@ -7,6 +7,7 @@
 //
 
 import Alamofire
+import UserNotifications
 
 struct api {
     static let rootURL = "https://marigoldapp.net"
@@ -42,3 +43,39 @@ class Connectivity {
         return NetworkReachabilityManager()!.isReachable
     }
 }
+
+class Notify {
+    static func createForMedication(medication: [String:Any]) {
+        //        let center = UNUserNotificationCenter.current()
+        let notifications = medication["notifications"] as! [[String:Any]]
+        for notification in notifications {
+            print(notification)
+            let content = UNMutableNotificationContent()
+            let message = "It is time to take your " + (medication["name"] as! String)
+            content.title = NSString.localizedUserNotificationString(forKey: "Time to take your medication!", arguments: nil)
+            content.body = NSString.localizedUserNotificationString(forKey: message, arguments: nil)
+            
+            var weekday = (notification["weekday"] as! Int) + 2
+            if(weekday > 7) {
+                weekday = 0
+            }
+            
+            var dateComponents = DateComponents()
+            dateComponents.hour = (notification["hour"] as? Int)
+            dateComponents.minute = (notification["minute"] as? Int)
+            dateComponents.weekday = weekday
+            
+            let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: true)
+            let request = UNNotificationRequest(identifier: "MedNotification", content: content, trigger: trigger)
+            
+            UNUserNotificationCenter.current().add(request) { (error) in
+                if let error = error {
+                    print("error in reminder: \(error.localizedDescription)")
+                }
+            }
+            print("added notification:\(request.identifier)")
+        }
+    }
+}
+
+

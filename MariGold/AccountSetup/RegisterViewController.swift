@@ -15,8 +15,10 @@ class RegisterViewController: UIViewController {
     @IBOutlet weak var firstNameField: UITextField!
     @IBOutlet weak var lastNameField: UITextField!
     @IBOutlet weak var emailField: UITextField!
+    @IBOutlet weak var allergiesField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
     @IBOutlet weak var confirmPasswordField: UITextField!
+    
 	@IBOutlet var NFLSwitch: UISwitch!
 	@IBOutlet var NBASwitch: UISwitch!
 	@IBOutlet var NCAASwitch: UISwitch!
@@ -58,13 +60,17 @@ class RegisterViewController: UIViewController {
 		}
 		let leagues = leagueArray.joined(separator: ", ")
 		
-        let body: [String: Any] = [
+        var body: [String: Any] = [
             "first_name" : firstNameField.text!,
             "last_name" : lastNameField.text!,
             "email" : emailField.text!,
             "password" : passwordField.text!,
             "league" : leagues
         ]
+        
+        if let allergies = allergiesField?.text {
+            body["allergies"] = allergies
+        }
         
         Alamofire.request(api.rootURL + "/user/register", method: .post, parameters: body, encoding: JSONEncoding.default, headers: nil).responseJSON { response in
             if let JSON = response.result.value {
