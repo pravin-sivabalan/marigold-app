@@ -9,7 +9,6 @@
 import XCTest
 
 class MedicationUITests: XCTestCase {
-        
     override func setUp() {
         super.setUp()
         
@@ -56,5 +55,72 @@ class MedicationUITests: XCTestCase {
 		app.tabBars.buttons["Medication"].tap()
 		app.navigationBars["Medication"].buttons["Add"].tap()
 		app.buttons["Camera"].tap()
+		addPhotoLibrary(app)
+	}
+}
+
+struct Platform {
+	static var isSimulator: Bool {
+		return TARGET_OS_SIMULATOR != 0
+	}
+}
+
+
+extension XCUIElement {
+	func tapIfExists() {
+		if exists {
+			tap()
+		}
+	}
+}
+
+// MARK: - Helper functions
+extension XCTestCase {
+	func addPhotoCamera(_ app: XCUIApplication) {
+		let pleaseSelectSheet = app.sheets.element
+		
+		//["Take Picture"].tap()
+		pleaseSelectSheet.buttons.element(boundBy: 0).tap()
+		
+		//use coordinates and tap on Take picture button
+		let element = app
+			.children(matching: .window).element(boundBy: 0)
+			.children(matching: .other).element
+			.children(matching: .other).element
+			.children(matching: .other).element
+			.children(matching: .other).element
+		
+		let photoCapture = element.children(matching: .other).element
+			.children(matching: .other).element(boundBy: 1)
+			.children(matching: .other).element
+		
+		photoCapture.tap()
+		
+		sleep(5)
+		
+		app.buttons["Use Photo"].tap()
+	}
+	
+	func addPhotoLibrary(_ app: XCUIApplication, index: Int = 0) {
+		//let pleaseSelectSheet = app.sheets["Add Photo"]
+		//pleaseSelectSheet.buttons.element(boundBy: 1).tap()
+		
+		sleep(10)
+		
+		//Camera Roll
+		app.tables.cells.element(boundBy: 1).tap()
+		
+		sleep(2)
+		
+		let photoCells = app.collectionViews.cells
+		if Platform.isSimulator {
+			photoCells.element(boundBy: index).tap()
+		} else {
+			photoCells.allElementsBoundByIndex.last!.firstMatch.tap()
+		}
+		
+		sleep(2)
+		
+		app.buttons["Choose"].tapIfExists()
 	}
 }
