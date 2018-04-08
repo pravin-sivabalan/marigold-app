@@ -16,16 +16,13 @@ class AccountEditViewController: UITableViewController {
 	@IBOutlet var NFLSwitch: UISwitch!
 	@IBOutlet var NBASwitch: UISwitch!
 	@IBOutlet var NCAASwitch: UISwitch!
-	var FirstName: String!
-	var LastName: String!
-	var Leagues: String!
-	var Allergies: String!
-	
+
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		FirstNameField.text = FirstName
-		LastNameField.text = LastName
-		AllergiesField.text = Allergies
+		FirstNameField.text = UserDefaults.standard.string(forKey: "first_name")
+		LastNameField.text = UserDefaults.standard.string(forKey: "last_name")
+		AllergiesField.text = UserDefaults.standard.string(forKey: "allergies")
+		let Leagues = UserDefaults.standard.string(forKey: "league") ?? ""
 		if Leagues.contains("NFL") {
 			NFLSwitch.isOn = true
 		}
@@ -89,6 +86,7 @@ class AccountEditViewController: UITableViewController {
 						}
 					}
 					//If Successful Pop View Controller
+					self.setAccountDetails()
 					self.navigationController?.popViewController(animated: true)
 					}
 				}
@@ -100,5 +98,24 @@ class AccountEditViewController: UITableViewController {
 		let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
 		alert.addAction(UIAlertAction(title: "Try Again", style: .cancel, handler: nil))
 		self.present(alert, animated: true)
+	}
+	
+	func setAccountDetails() {
+		Alamofire.request(api.rootURL + "/user", encoding: JSONEncoding.default, headers: User.header).responseJSON { response in
+			if let JSON = response.result.value {
+				let data = JSON as! NSDictionary
+				if(data.object(forKey: "message") as! String == "ok") {
+					let profile = data["profile"] as! NSDictionary
+					UserDefaults.standard.set(profile["first_name"] as! String, forKey: "first_name")
+					UserDefaults.standard.set(profile["last_name"] as! String, forKey: "last_name")
+					UserDefaults.standard.set(profile["email"] as? String ?? "", forKey: "email")
+					UserDefaults.standard.set(profile["league"] as? String ?? "", forKey: "league")
+					UserDefaults.standard.set(profile["allergies"] as? String ?? "", forKey: "allergies")
+				}
+				else {
+					self.createAlert(title: "Server Error", message: "There is a connection error. Please check your internet connection or try again later")
+				}
+			}
+		}
 	}
 }
