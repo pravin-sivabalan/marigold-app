@@ -52,5 +52,9 @@ class MedicationUITests: XCTestCase {
 	
 	func testMedicationCameraAdd() {
 		
+		let app = XCUIApplication()
+		app.tabBars.buttons["Medication"].tap()
+		app.navigationBars["Medication"].buttons["Add"].tap()
+		app.buttons["Camera"].tap()
 	}
 }
