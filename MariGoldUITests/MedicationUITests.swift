@@ -49,4 +49,8 @@ class MedicationUITests: XCTestCase {
 		infoNavigationBar.buttons["Medication"].tap()
 		
 	}
+	
+	func testMedicationCameraAdd() {
+		
+	}
 }
