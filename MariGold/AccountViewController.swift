@@ -15,58 +15,24 @@ class AccountViewController: UIViewController {
     @IBOutlet weak var displayName: UILabel!
     @IBOutlet weak var emailLabel: UILabel!
     @IBOutlet weak var allergiesLabel: UILabel!
-	var FirstName: String!
-	var LastName: String!
-	var Leagues: String!
-	var Allergies: String!
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-		getAccountDetails()
-		
-    }
 	
 	override func viewDidAppear(_ animated: Bool) {
 		super.viewDidAppear(animated)
 		getAccountDetails()
 	}
 	
-	func getAccountDetails() {
-		Alamofire.request(api.rootURL + "/user", encoding: JSONEncoding.default, headers: User.header).responseJSON { response in
-			if let JSON = response.result.value {
-				let data = JSON as! NSDictionary
-				if(data.object(forKey: "message") as! String == "ok") {
-					let profile = data["profile"] as! NSDictionary
-					self.FirstName = profile["first_name"] as! String
-					self.LastName = profile["last_name"] as! String
-					self.displayName.text = self.FirstName + " " + self.LastName
-					self.emailLabel.text = profile["email"] as? String
-					if(profile["league"] != nil) {
-						self.Leagues = profile["league"] as? String ?? ""
-						self.leaguesLabel.text = self.Leagues
-					}
-					if !(profile["allergies"] is NSNull) {
-						self.Allergies = profile["allergies"] as? String ?? ""
-						self.allergiesLabel.text = self.Allergies
-					}
-				}
-				else {
-					self.createAlert(title: "Server Error", message: "There is a connection error. Please check your internet connection or try again later")
-				}
-			}
-		}
+	override func viewDidLoad() {
+		super.viewDidLoad()
+		getAccountDetails()
 	}
-    
-	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-		guard let identifier = segue.identifier else { return }
-		
-		if identifier == "displayAccountEdit" {
-			let nextVC = segue.destination as! AccountEditViewController
-			nextVC.FirstName = FirstName
-			nextVC.LastName = LastName
-			nextVC.Leagues = Leagues
-			nextVC.Allergies = Allergies
-		}
+	
+	func getAccountDetails() {
+		let firstName = UserDefaults.standard.string(forKey: "first_name")
+		let lastName = UserDefaults.standard.string(forKey: "last_name")
+		displayName.text = "\(firstName ?? "?") \(lastName ?? "?")"
+		emailLabel.text = UserDefaults.standard.string(forKey: "email")
+		leaguesLabel.text = UserDefaults.standard.string(forKey: "league")
+		allergiesLabel.text = UserDefaults.standard.string(forKey: "allergies")
 	}
     
     @IBAction func logoutAction(_ sender: Any) {
@@ -76,6 +42,12 @@ class AccountViewController: UIViewController {
             UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
             
             UserDefaults.standard.removeObject(forKey: "jwt")
+			UserDefaults.standard.removeObject(forKey: "first_name")
+			UserDefaults.standard.removeObject(forKey: "last_name")
+			UserDefaults.standard.removeObject(forKey: "email")
+			UserDefaults.standard.removeObject(forKey: "league")
+			UserDefaults.standard.removeObject(forKey: "allergies")
+			
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let vc = storyboard.instantiateViewController(withIdentifier: "AccountSetupId") as UIViewController
             self.present(vc, animated: true, completion: nil)
@@ -100,7 +72,13 @@ class AccountViewController: UIViewController {
                     if(data.object(forKey: "message") as! String == "ok") {
                         UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
                         
-                        UserDefaults.standard.removeObject(forKey: "jwt")
+						UserDefaults.standard.removeObject(forKey: "jwt")
+						UserDefaults.standard.removeObject(forKey: "first_name")
+						UserDefaults.standard.removeObject(forKey: "last_name")
+						UserDefaults.standard.removeObject(forKey: "email")
+						UserDefaults.standard.removeObject(forKey: "league")
+						UserDefaults.standard.removeObject(forKey: "allergies")
+						
                         let storyboard = UIStoryboard(name: "Main", bundle: nil)
                         let vc = storyboard.instantiateViewController(withIdentifier: "AccountSetupId") as UIViewController
                         self.present(vc, animated: true, completion: nil)

@@ -67,7 +67,8 @@ class ViewController: UIViewController {
                             return self.createAlert(title: "Server Error", message: "There is a connection error. Please check your internet connection or try again later.")
                     }
                 } else if(data.object(forKey: "jwt") != nil) {
-                    UserDefaults.standard.set(data.object(forKey: "jwt"), forKey: "jwt");
+                    UserDefaults.standard.set(data.object(forKey: "jwt"), forKey: "jwt")
+					self.setAccountDetails()
                     let storyboard = UIStoryboard(name: "TabBar", bundle: nil)
                     let vc = storyboard.instantiateViewController(withIdentifier: "tabbarControllerID") as UIViewController
                     self.present(vc, animated: true, completion: nil)
@@ -83,6 +84,25 @@ class ViewController: UIViewController {
         alert.addAction(UIAlertAction(title: "Try Again", style: .cancel, handler: nil))
         self.present(alert, animated: true)
     }
+	
+	func setAccountDetails() {
+		Alamofire.request(api.rootURL + "/user", encoding: JSONEncoding.default, headers: User.header).responseJSON { response in
+			if let JSON = response.result.value {
+				let data = JSON as! NSDictionary
+				if(data.object(forKey: "message") as! String == "ok") {
+					let profile = data["profile"] as! NSDictionary
+					UserDefaults.standard.set(profile["first_name"] as! String, forKey: "first_name")
+					UserDefaults.standard.set(profile["last_name"] as! String, forKey: "last_name")
+					UserDefaults.standard.set(profile["email"] as? String ?? "", forKey: "email")
+					UserDefaults.standard.set(profile["league"] as? String ?? "", forKey: "league")
+					UserDefaults.standard.set(profile["allergies"] as? String ?? "", forKey: "allergies")
+				}
+				else {
+					self.createAlert(title: "Server Error", message: "There is a connection error. Please check your internet connection or try again later")
+				}
+			}
+		}
+	}
     
     func isValidEmail(email: String) -> Bool {
         let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"

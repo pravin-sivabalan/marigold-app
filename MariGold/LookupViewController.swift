@@ -13,20 +13,16 @@ struct Match {
     var cui: String
 }
 
-class LookupViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate {
+class LookupViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
-    var spinner: UIView!
+	var spinner: UIView!
     
     var matches: [Match] = []
     var selectedMatch = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        tableView.delegate = self
-        tableView.dataSource = self
-        searchBar.delegate = self
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -43,6 +39,23 @@ class LookupViewController: UIViewController, UITableViewDataSource, UITableView
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
+	
+	@IBAction func openPhotoLibraryButton(sender: AnyObject) {
+		if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
+			let imagePicker = UIImagePickerController()
+			imagePicker.delegate = self
+			imagePicker.sourceType = .photoLibrary
+			imagePicker.allowsEditing = true
+			self.present(imagePicker, animated: true, completion: nil)
+		}
+	}
+	
+	private func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
+		let image = info[UIImagePickerControllerOriginalImage] as! UIImage
+		//Alamofire.request(api.rootURL + "/")
+		//TODO: Send Image to Server
+		dismiss(animated:true, completion: nil)
+	}
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return matches.count
