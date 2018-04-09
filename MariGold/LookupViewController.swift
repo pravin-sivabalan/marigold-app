@@ -17,12 +17,15 @@ class LookupViewController: UIViewController, UITableViewDataSource, UITableView
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
 	var spinner: UIView!
+	
+	let imagePicker = UIImagePickerController()
     
     var matches: [Match] = []
     var selectedMatch = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
+		imagePicker.delegate = self
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -42,19 +45,45 @@ class LookupViewController: UIViewController, UITableViewDataSource, UITableView
 	
 	@IBAction func openPhotoLibraryButton(sender: AnyObject) {
 		if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
-			let imagePicker = UIImagePickerController()
-			imagePicker.delegate = self
 			imagePicker.sourceType = .photoLibrary
 			imagePicker.allowsEditing = true
 			self.present(imagePicker, animated: true, completion: nil)
 		}
 	}
 	
-	private func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
+	func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+		NSLog("here!")
 		let image = info[UIImagePickerControllerOriginalImage] as! UIImage
-		//Alamofire.request(api.rootURL + "/")
-		//TODO: Send Image to Server
-		dismiss(animated:true, completion: nil)
+		guard let imageData = UIImageJPEGRepresentation(image, 0.5)?.base64EncodedString()
+		else {
+			return self.createAlert(title: "Image Error", message: "Could not encode image.")
+		}
+		let fullBase64String = "data:image/png;base64,\(imageData))"
+		//Make API Call
+		        if(!Connectivity.isConnectedToInternet) {
+		            return self.createAlert(title: "Connection Error", message: "There is a connection error. Please check your internet connection or try again later.")
+		        }
+		
+		        //Valid Input
+		        else {
+		            let body: [String: Any] = [
+						"photo" : fullBase64String
+		            ]
+		
+		            Alamofire.request(api.rootURL + "/meds/pic", method: .post, parameters: body, encoding: JSONEncoding.default, headers: User.header).responseJSON { response in
+		                if let JSON = response.result.value {
+		                    let data = JSON as! NSDictionary
+		                    if(data["error_code"] != nil) {
+		                        switch data["error_code"] as! Int {
+		                        //Room for adding more detailed error messages
+		                        default:
+		                            return self.createAlert(title: "Server Error", message: "There is a connection error. Please check your internet connection or try again later.")
+		                        }
+		                    }
+						}
+					}
+		}
+		//dismiss(animated:true, completion: nil)
 	}
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
