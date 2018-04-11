@@ -83,7 +83,7 @@ class LookupViewController: UIViewController, UITableViewDataSource, UITableView
 						}
 					}
 		}
-		//dismiss(animated:true, completion: nil)
+		dismiss(animated:true, completion: nil)
 	}
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
