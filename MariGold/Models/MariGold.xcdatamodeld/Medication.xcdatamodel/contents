@@ -7,18 +7,29 @@
         <attribute name="severity" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <entity name="Medication" representedClassName="Medication" syncable="YES" codeGenerationType="class">
+        <attribute name="brand_name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="generic_name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="id" attributeType="Integer 64" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="inactive_ingredient" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="indications_and_usage" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="information_for_patients" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="leagues_banned_in" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="medication_id" optional="YES" attributeType="Integer 64" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="name" attributeType="String" defaultValueString="&quot;&quot;" syncable="YES"/>
         <attribute name="possible_side_effects" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="purpose" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="quantity" attributeType="Integer 64" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="questions" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="route" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="run_out_date" attributeType="String" syncable="YES"/>
         <attribute name="rxcui" attributeType="String" syncable="YES"/>
         <attribute name="temporary" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="warnings" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="warnings_and_cautions" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="when_using" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
         <element name="Conflict" positionX="-200" positionY="-18" width="128" height="103"/>
-        <element name="Medication" positionX="-63" positionY="-18" width="128" height="180"/>
+        <element name="Medication" positionX="-63" positionY="-18" width="128" height="345"/>
     </elements>
 </model>
