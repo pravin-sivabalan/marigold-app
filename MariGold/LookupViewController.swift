@@ -54,11 +54,11 @@ class LookupViewController: UIViewController, UITableViewDataSource, UITableView
 	func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
 		NSLog("here!")
 		let image = info[UIImagePickerControllerOriginalImage] as! UIImage
-		guard let imageData = UIImageJPEGRepresentation(image, 0.5)?.base64EncodedString()
+		guard let imageData = UIImageJPEGRepresentation(image, 0.01)?.base64EncodedString()
 		else {
 			return self.createAlert(title: "Image Error", message: "Could not encode image.")
 		}
-		let fullBase64String = "data:image/png;base64,\(imageData))"
+		//let fullBase64String = "data:image/png;base64,\(imageData))"
 		//Make API Call
 		        if(!Connectivity.isConnectedToInternet) {
 		            return self.createAlert(title: "Connection Error", message: "There is a connection error. Please check your internet connection or try again later.")
@@ -67,7 +67,7 @@ class LookupViewController: UIViewController, UITableViewDataSource, UITableView
 		        //Valid Input
 		        else {
 		            let body: [String: Any] = [
-						"photo" : fullBase64String
+						"photo" : imageData
 		            ]
 		
 		            Alamofire.request(api.rootURL + "/meds/pic", method: .post, parameters: body, encoding: JSONEncoding.default, headers: User.header).responseJSON { response in
