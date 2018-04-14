@@ -27,13 +27,13 @@ class LookupViewController: UIViewController, UITableViewDataSource, UITableView
         super.viewDidLoad()
 		imagePicker.delegate = self
     }
+	
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "ToAdd" {
             guard let dest = segue.destination as? MedicationAdditionTableViewController else {
                 return
             }
-            
             dest.Name = matches[selectedMatch].name
             dest.Cui = matches[selectedMatch].cui
         }
@@ -43,22 +43,26 @@ class LookupViewController: UIViewController, UITableViewDataSource, UITableView
         super.didReceiveMemoryWarning()
     }
 	
-	@IBAction func openPhotoLibraryButton(sender: AnyObject) {
+	@IBAction func openPhotoLibraryButton(sender: Any) {
 		if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
 			imagePicker.sourceType = .photoLibrary
-			imagePicker.allowsEditing = true
-			self.present(imagePicker, animated: true, completion: nil)
+			imagePicker.allowsEditing = false
+			present(imagePicker, animated: true, completion: nil)
 		}
 	}
 	
 	func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
 		NSLog("here!")
-		let image = info[UIImagePickerControllerOriginalImage] as! UIImage
+		guard let image = info[UIImagePickerControllerOriginalImage] as? UIImage
+		else {
+			return self.createAlert(title: "Image Error", message: "Could not grab image.")
+		}
+		NSLog("here!2")
 		guard let imageData = UIImageJPEGRepresentation(image, 0.01)?.base64EncodedString()
 		else {
 			return self.createAlert(title: "Image Error", message: "Could not encode image.")
 		}
-		//let fullBase64String = "data:image/png;base64,\(imageData))"
+		NSLog("here!3")
 		//Make API Call
 		        if(!Connectivity.isConnectedToInternet) {
 		            return self.createAlert(title: "Connection Error", message: "There is a connection error. Please check your internet connection or try again later.")
@@ -77,13 +81,27 @@ class LookupViewController: UIViewController, UITableViewDataSource, UITableView
 		                        switch data["error_code"] as! Int {
 		                        //Room for adding more detailed error messages
 		                        default:
-		                            return self.createAlert(title: "Server Error", message: "There is a connection error. Please check your internet connection or try again later.")
+									self.createAlert(title: "Server Error", message: "There is a connection error. Please check your internet connection or try again later.")
 		                        }
 		                    }
+							else {
+								guard let jsonMatches = data["matches"] as? [Any] else {
+									self.createAlert(title: "Lookup", message: "Could not find specified medicine")
+									NSLog("Could not read in matches")
+									self.dismiss(animated: true, completion: nil)
+									return
+								}
+								self.readInMatches(jsonMatches: jsonMatches)
+							}
 						}
 					}
+					dismiss(animated: true, completion: nil)
 		}
-		dismiss(animated:true, completion: nil)
+	}
+	
+	func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+		NSLog("Image Picking was cancelled my dude.")
+		dismiss(animated: true, completion: nil)
 	}
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
