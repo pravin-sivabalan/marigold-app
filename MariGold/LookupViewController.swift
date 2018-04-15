@@ -63,7 +63,7 @@ class LookupViewController: UIViewController, UITableViewDataSource, UITableView
 		else {
 			return self.createAlert(title: "Image Error", message: "Could not grab image.")
 		}
-		guard let imageData = UIImageJPEGRepresentation(image, 0.01)?.base64EncodedString()
+		guard let imageData = UIImageJPEGRepresentation(image, 0.4)?.base64EncodedString()
 		else {
 			return self.createAlert(title: "Image Error", message: "Could not encode image.")
 		}
