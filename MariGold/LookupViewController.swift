@@ -29,7 +29,6 @@ class LookupViewController: UIViewController, UITableViewDataSource, UITableView
 		imagePicker.delegate = self
     }
 	
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "ToAdd" {
             guard let dest = segue.destination as? MedicationAdditionTableViewController else {
@@ -112,9 +111,8 @@ class LookupViewController: UIViewController, UITableViewDataSource, UITableView
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell  = self.tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        let cell = self.tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         cell.textLabel?.text = matches[indexPath.row].name
-        
         return cell
     }
     
@@ -126,16 +124,12 @@ class LookupViewController: UIViewController, UITableViewDataSource, UITableView
     
     func readInMatches(jsonMatches: [Any]) {
         matches.removeAll()
-        
         for match in jsonMatches {
             let obj = match as! NSDictionary
-            
             let name = obj["name"] as! String
             let cui = obj["cui"] as! String
-            
             matches.append(Match(name: name, cui: cui))
         }
-        
         tableView.reloadData()
     }
     
@@ -180,7 +174,6 @@ class LookupViewController: UIViewController, UITableViewDataSource, UITableView
                 print("Could not read in matches")
                 return
             }
-            
             self.readInMatches(jsonMatches: jsonMatches)
         }
     }
