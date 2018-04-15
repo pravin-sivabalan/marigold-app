@@ -79,6 +79,8 @@ class AccountViewController: UIViewController {
 						UserDefaults.standard.removeObject(forKey: "league")
 						UserDefaults.standard.removeObject(forKey: "allergies")
 						
+                        try! KeychainPasswordItem.deleteItems()
+                        
                         let storyboard = UIStoryboard(name: "Main", bundle: nil)
                         let vc = storyboard.instantiateViewController(withIdentifier: "AccountSetupId") as UIViewController
                         self.present(vc, animated: true, completion: nil)

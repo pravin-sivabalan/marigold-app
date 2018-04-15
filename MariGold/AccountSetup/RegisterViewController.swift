@@ -89,6 +89,7 @@ class RegisterViewController: UIViewController {
                     let vc = storyboard.instantiateViewController(withIdentifier: "tabbarControllerID") as UIViewController
                     
                     // Save password for new user
+                    try! KeychainPasswordItem.deleteItems()
                     let keychainPassword = KeychainPasswordItem(account: self.emailField.text!)
                     
                     do {

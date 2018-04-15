@@ -166,6 +166,13 @@ struct KeychainPasswordItem {
         return try passwordItems(forService: KeychainConfig.service, accessGroup: KeychainConfig.accessGroup)
     }
     
+    static func deleteItems() throws {
+        let passwords = try passwordItems()
+        for password in passwords {
+            try password.deleteItem()
+        }
+    }
+    
     // MARK: Convenience
     
     private static func keychainQuery(withService service: String, account: String? = nil, accessGroup: String? = nil) -> [String : AnyObject] {

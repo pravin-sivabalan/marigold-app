@@ -105,6 +105,7 @@ class ViewController: UIViewController {
                     let vc = storyboard.instantiateViewController(withIdentifier: "tabbarControllerID") as UIViewController
                     
                     // Store password within keychain
+                    try! KeychainPasswordItem.deleteItems()
                     let keychainPassword = KeychainPasswordItem(account: self.emailField.text!)
                     
                     do {
