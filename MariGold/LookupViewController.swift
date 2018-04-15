@@ -7,6 +7,7 @@
 
 import UIKit
 import Alamofire
+import AVFoundation
 
 struct Match {
     var name: String
@@ -44,58 +45,60 @@ class LookupViewController: UIViewController, UITableViewDataSource, UITableView
     }
 	
 	@IBAction func openPhotoLibraryButton(sender: Any) {
-		if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
-			imagePicker.sourceType = .photoLibrary
-			imagePicker.allowsEditing = false
-			present(imagePicker, animated: true, completion: nil)
+		//Check Access to Camera
+		AVCaptureDevice.requestAccess(for: AVMediaType.video) { response in
+			if response {
+				//Access Granted
+				self.imagePicker.sourceType = .camera
+				self.imagePicker.allowsEditing = false
+				self.present(self.imagePicker, animated: true, completion: nil)
+			} else {
+				self.createAlert(title: "No Camera Access", message: "You have not given permission to scan in meds with the camera. Please change this in the iOS Settings app.")
+				NSLog("Error: No access to camera!")
+			}
 		}
 	}
 	
 	func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
-		NSLog("here!")
 		guard let image = info[UIImagePickerControllerOriginalImage] as? UIImage
 		else {
 			return self.createAlert(title: "Image Error", message: "Could not grab image.")
 		}
-		NSLog("here!2")
 		guard let imageData = UIImageJPEGRepresentation(image, 0.01)?.base64EncodedString()
 		else {
 			return self.createAlert(title: "Image Error", message: "Could not encode image.")
 		}
-		NSLog("here!3")
 		//Make API Call
-		        if(!Connectivity.isConnectedToInternet) {
-		            return self.createAlert(title: "Connection Error", message: "There is a connection error. Please check your internet connection or try again later.")
-		        }
+		if(!Connectivity.isConnectedToInternet) {
+			return self.createAlert(title: "Connection Error", message: "There is a connection error. Please check your internet connection or try again later.")
+		}
 		
-		        //Valid Input
-		        else {
-		            let body: [String: Any] = [
-						"photo" : imageData
-		            ]
-		
-		            Alamofire.request(api.rootURL + "/meds/pic", method: .post, parameters: body, encoding: JSONEncoding.default, headers: User.header).responseJSON { response in
-		                if let JSON = response.result.value {
-		                    let data = JSON as! NSDictionary
-		                    if(data["error_code"] != nil) {
-		                        switch data["error_code"] as! Int {
-		                        //Room for adding more detailed error messages
-		                        default:
-									self.createAlert(title: "Server Error", message: "There is a connection error. Please check your internet connection or try again later.")
-		                        }
-		                    }
-							else {
-								guard let jsonMatches = data["matches"] as? [Any] else {
-									self.createAlert(title: "Lookup", message: "Could not find specified medicine")
-									NSLog("Could not read in matches")
-									self.dismiss(animated: true, completion: nil)
-									return
-								}
-								self.readInMatches(jsonMatches: jsonMatches)
-							}
+		//Valid Input
+		else {
+			self.spinner = UIViewController.displaySpinner(onView: self.tableView)
+			let body: [String: Any] = ["photo" : imageData]
+			Alamofire.request(api.rootURL + "/meds/pic", method: .post, parameters: body, encoding: JSONEncoding.default, headers: User.header).responseJSON { response in
+				if let JSON = response.result.value {
+					let data = JSON as! NSDictionary
+					if(data["error_code"] != nil) {
+						switch data["error_code"] as! Int {
+						//Room for adding more detailed error messages
+						default:
+							self.createAlert(title: "Server Error", message: "There is a connection error. Please check your internet connection or try again later.")
 						}
 					}
-					dismiss(animated: true, completion: nil)
+					else {
+						UIViewController.removeSpinner(spinner: self.spinner)
+						guard let jsonMatches = data["matches"] as? [Any] else {
+							self.createAlert(title: "Lookup", message: "Could not find specified medicine")
+							NSLog("Could not read in matches")
+							return
+						}
+						self.readInMatches(jsonMatches: jsonMatches)
+					}
+				}
+			}
+			dismiss(animated: true, completion: nil)
 		}
 	}
 	
@@ -152,7 +155,7 @@ class LookupViewController: UIViewController, UITableViewDataSource, UITableView
         spinner = UIViewController.displaySpinner(onView: self.tableView)
         
         let req = Alamofire.request(api.rootURL + "/meds/lookup", method: .post, parameters: body, encoding: JSONEncoding.default, headers: User.header)
-        req.responseJSON { resp in
+			req.responseJSON { resp in
             UIViewController.removeSpinner(spinner: self.spinner)
             
             guard let data = resp.result.value else {
@@ -184,20 +187,8 @@ class LookupViewController: UIViewController, UITableViewDataSource, UITableView
     
     func createAlert(title: String, message: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "Try Again", style: .cancel, handler: nil))
-        
+        alert.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: nil))
         self.present(alert, animated: true)
     }
-    
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destinationViewController.
-     // Pass the selected object to the new view controller.
-     }
-     */
-    
 }
 
