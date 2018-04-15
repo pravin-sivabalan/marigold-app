@@ -69,8 +69,19 @@ class ViewController: UIViewController {
                 } else if(data.object(forKey: "jwt") != nil) {
                     UserDefaults.standard.set(data.object(forKey: "jwt"), forKey: "jwt")
 					self.setAccountDetails()
+                    
                     let storyboard = UIStoryboard(name: "TabBar", bundle: nil)
                     let vc = storyboard.instantiateViewController(withIdentifier: "tabbarControllerID") as UIViewController
+                    
+                    // Store password within keychain
+                    let keychainPassword = KeychainPasswordItem(account: self.emailField.text!)
+                    
+                    do {
+                        try keychainPassword.savePassword(self.passwordField.text!)
+                    } catch {
+                        print("Keychain saving error: \(error)")
+                    }
+                        
                     self.present(vc, animated: true, completion: nil)
                 } else {
                     return self.createAlert(title: "Server Error", message: "There is a connection error. Please check your internet connection or try again later")
