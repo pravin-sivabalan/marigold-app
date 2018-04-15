@@ -9,6 +9,7 @@
 import UIKit
 import Pastel
 import Alamofire
+import LocalAuthentication
 
 class ViewController: UIViewController {
     @IBOutlet weak var emailField: UITextField!
@@ -33,11 +34,41 @@ class ViewController: UIViewController {
 		self.navigationController?.navigationBar.isTranslucent = true
 		self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
 		self.navigationController?.navigationBar.shadowImage = UIImage()
+        
+        // Prompt for TouchID, if credentials are stored
+        if let credentials = retrieveCredentials() {
+            performTouchID(credentials)
+        }
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func retrieveCredentials() -> KeychainPasswordItem? {
+        guard let passwords = try? KeychainPasswordItem.passwordItems() else {
+            return nil
+        }
+        
+        if passwords.count == 0 {
+            return nil
+        }
+        
+        return passwords[0]
+    }
+    
+    func performTouchID(_ credentials: KeychainPasswordItem) {
+        let context = LAContext()
+        let reason = "Authenticate with Touch ID"
+    
+        context.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: reason) { (success, error) in
+            if !success {
+                return
+            }
+            
+            // Add login with credentials here boyos
+        }
     }
     
     @IBAction func signInAction(_ sender: Any) {
