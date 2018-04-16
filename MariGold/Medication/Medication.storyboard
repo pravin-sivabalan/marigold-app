@@ -363,14 +363,14 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Leagues Banned In" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="4yF-75-gL5">
-                                                    <rect key="frame" x="16" y="40" width="145.5" height="20.5"/>
+                                                    <rect key="frame" x="15" y="40" width="145.5" height="20.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Undefined" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="cah-On-DG4">
-                                                    <rect key="frame" x="224" y="40" width="80" height="20.5"/>
+                                                    <rect key="frame" x="225" y="40" width="80" height="20.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -516,6 +516,31 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="aPL-rg-sPX">
+                                        <rect key="frame" x="0.0" y="231.5" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="aPL-rg-sPX" id="2iV-ci-EIq">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Refill Notification" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ubK-gr-hkk">
+                                                    <rect key="frame" x="15" y="13" width="116.5" height="18"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Dwk-0O-Csf">
+                                                    <rect key="frame" x="256" y="6.5" width="51" height="31"/>
+                                                </switch>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Dwk-0O-Csf" firstAttribute="centerY" secondItem="2iV-ci-EIq" secondAttribute="centerY" id="58n-NC-4KS"/>
+                                                <constraint firstAttribute="trailing" secondItem="Dwk-0O-Csf" secondAttribute="trailing" constant="15" id="Ltq-eG-MWa"/>
+                                                <constraint firstItem="ubK-gr-hkk" firstAttribute="centerY" secondItem="2iV-ci-EIq" secondAttribute="centerY" id="QFV-Yn-zOo"/>
+                                                <constraint firstItem="ubK-gr-hkk" firstAttribute="leading" secondItem="2iV-ci-EIq" secondAttribute="leading" constant="15" id="yY3-cW-yrS"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
                                 </cells>
                             </tableViewSection>
                         </sections>
@@ -542,6 +567,7 @@
                         <outlet property="EmailNotif" destination="GY7-Zn-t8Q" id="dOL-Ix-zYk"/>
                         <outlet property="PhoneNotif" destination="mZL-kN-szk" id="sfn-Ps-iQd"/>
                         <outlet property="Quantity" destination="LbP-uG-Ru1" id="zWv-3l-qNW"/>
+                        <outlet property="RefillNotif" destination="Dwk-0O-Csf" id="rJl-2b-zc4"/>
                         <outlet property="Temporary" destination="YWb-DF-I7n" id="bQl-WC-dvd"/>
                     </connections>
                 </tableViewController>
