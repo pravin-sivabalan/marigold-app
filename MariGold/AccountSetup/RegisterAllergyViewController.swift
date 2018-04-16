@@ -55,15 +55,15 @@ class RegisterAllergyViewController: UIViewController {
                     let storyboard = UIStoryboard(name: "TabBar", bundle: nil)
                     let vc = storyboard.instantiateViewController(withIdentifier: "tabbarControllerID") as UIViewController
                     
-//                    // Save password for new user
-//                    try! KeychainPasswordItem.deleteItems()
-//                    let keychainPassword = KeychainPasswordItem(account: self.emailField.text!)
-//                    
-//                    do {
-//                        try keychainPassword.savePassword(self.passwordField.text!)
-//                    } catch {
-//                        print("Keychain saving error: \(error)")
-//                    }
+                    // Save password for new user
+                    try! KeychainPasswordItem.deleteItems()
+                    let keychainPassword = KeychainPasswordItem(account: self.emailField.text!)
+                    
+                    do {
+                        try keychainPassword.savePassword(self.passwordField.text!)
+                    } catch {
+                        print("Keychain saving error: \(error)")
+                    }
                     
                     self.present(vc, animated: true, completion: nil)
                 } else {

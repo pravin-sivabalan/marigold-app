@@ -94,22 +94,19 @@ class AddNotificationTableViewController: UITableViewController {
                         }
                         
                         if (JSONconflicts.count > 0) {
-                            let alert: UIAlertView = UIAlertView()
-                            alert.delegate = self
+                            let title = "Conflicts"
+                            let message = "You have conflicts:\n" + messages.joined(separator: "\n")
                             
-                            alert.title = "Conflicts"
-                            alert.message = "You have conflicts:\n" + messages.joined(separator: "\n")
-                            alert.addButton(withTitle: "OK")
-                            
-                            alert.show()
+                            let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+                            alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
+                                self.finish()
+                            }))
+
+                            self.present(alertController, animated: true, completion: nil)
+                            return
                         }
                         
-                        for vc in self.navigationController!.viewControllers {
-                            if let vc = vc as? MedicationViewController {
-                                vc.Refresh(self)
-                                self.navigationController!.popToViewController(vc, animated: true)
-                            }
-                        }
+                        self.finish()
                     }
                 } else {
                     return self.createAlert(title: "Server Error", message: "There was an issue with the server. Please try again later.")
@@ -117,6 +114,15 @@ class AddNotificationTableViewController: UITableViewController {
             }
         }
         
+    }
+    
+    func finish() {
+        for vc in self.navigationController!.viewControllers {
+            if let vc = vc as? MedicationViewController {
+                vc.Refresh(self)
+                self.navigationController!.popToViewController(vc, animated: true)
+            }
+        }
     }
     
     // MARK: - Table view data source

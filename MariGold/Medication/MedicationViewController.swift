@@ -164,6 +164,7 @@ extension MedicationViewController: UITableViewDataSource {
 					} else {
 						let idInt = Int64(cell.ID.text!) ?? -1
 						CoreDataHelper.deleteConflictsForID(id: idInt)
+						CoreDataHelper.saveCoreData()
                         self.Refresh(self)
 					}
 				}
