@@ -32,8 +32,6 @@ class RegisterAllergyViewController: UIViewController {
         if let allergies = allergiesField?.text {
             userInfo["allergies"] = allergies
         }
-        
-        print(userInfo)
 
         Alamofire.request(api.rootURL + "/user/register", method: .post, parameters: userInfo, encoding: JSONEncoding.default, headers: nil).responseJSON { response in
             if let JSON = response.result.value {
@@ -46,14 +44,27 @@ class RegisterAllergyViewController: UIViewController {
                         return self.createAlert(title: "Server Error", message: "There is a connection error. Please check your internet connection or try again later")
                     }
                 } else if(data.object(forKey: "jwt") != nil) {
+                    
                     UserDefaults.standard.set(data.object(forKey: "jwt"), forKey: "jwt");
                     UserDefaults.standard.set(self.userInfo["first_name"] as! String, forKey: "first_name")
                     UserDefaults.standard.set(self.userInfo["last_name"] as! String, forKey: "last_name")
                     UserDefaults.standard.set(self.userInfo["email"] as? String ?? "", forKey: "email")
                     UserDefaults.standard.set(self.userInfo["league"] as? String ?? "", forKey: "league")
                     UserDefaults.standard.set(self.userInfo["allergies"] as? String ?? "", forKey: "allergies")
+                    
                     let storyboard = UIStoryboard(name: "TabBar", bundle: nil)
                     let vc = storyboard.instantiateViewController(withIdentifier: "tabbarControllerID") as UIViewController
+                    
+//                    // Save password for new user
+//                    try! KeychainPasswordItem.deleteItems()
+//                    let keychainPassword = KeychainPasswordItem(account: self.emailField.text!)
+//                    
+//                    do {
+//                        try keychainPassword.savePassword(self.passwordField.text!)
+//                    } catch {
+//                        print("Keychain saving error: \(error)")
+//                    }
+                    
                     self.present(vc, animated: true, completion: nil)
                 } else {
                     return self.createAlert(title: "Server Error", message: "There is a connection error. Please check your internet connection or try again later")
