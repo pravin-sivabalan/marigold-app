@@ -379,6 +379,27 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" id="Ij0-NV-tFO">
+                                        <rect key="frame" x="0.0" y="611" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Ij0-NV-tFO" id="91a-H6-Bpc">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RsH-ew-kje">
+                                                    <rect key="frame" x="103" y="7" width="114" height="30"/>
+                                                    <state key="normal" title="Refill Medication"/>
+                                                    <connections>
+                                                        <action selector="refillMedication:" destination="1Dw-Kv-2UN" eventType="touchUpInside" id="JgT-On-Eii"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="RsH-ew-kje" firstAttribute="centerX" secondItem="91a-H6-Bpc" secondAttribute="centerX" id="XC9-Es-BBp"/>
+                                                <constraint firstItem="RsH-ew-kje" firstAttribute="centerY" secondItem="91a-H6-Bpc" secondAttribute="centerY" id="jv4-Tn-uyl"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
                                 </cells>
                             </tableViewSection>
                         </sections>

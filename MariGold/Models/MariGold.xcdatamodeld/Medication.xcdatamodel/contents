@@ -7,13 +7,13 @@
         <attribute name="severity" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <entity name="Medication" representedClassName="Medication" syncable="YES" codeGenerationType="class">
+        <attribute name="banned" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="brand_name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="generic_name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="id" attributeType="Integer 64" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="inactive_ingredient" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="indications_and_usage" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="information_for_patients" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="leagues_banned_in" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="medication_id" optional="YES" attributeType="Integer 64" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="name" attributeType="String" defaultValueString="&quot;&quot;" syncable="YES"/>
         <attribute name="possible_side_effects" optional="YES" attributeType="String" syncable="YES"/>

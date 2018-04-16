@@ -84,8 +84,28 @@ class MedicationDetailsViewController: UITableViewController{
                 Temporary.text = "No"
             }
         }
-		LeaguesBannedIn.text = medication.leagues_banned_in ?? "None Found."
+		LeaguesBannedIn.text = medication.banned ?? "None Found."
 		PossibleSideEffects.text = medication.possible_side_effects ?? "None Found."
+	}
+	
+	@IBAction func refillMedication(_ sender: Any) {
+		let body: [String: Any] = ["med_id" : String(medication.id)]
+		Alamofire.request(api.rootURL + "/meds/refill", method: .post, parameters: body, encoding: JSONEncoding.default, headers: User.header).responseJSON { response in
+			if let JSON = response.result.value {
+				let data = JSON as! NSDictionary
+				if(data["error_code"] != nil) {
+					switch data["error_code"] as! Int {
+					//Room for adding more detailed error messages
+					default:
+						self.populateFieldsWithOGMedication()
+						return self.createAlert(title: "Server Error", message: "There is a connection error. Please check your internet connection or try again later.")
+					}
+				}
+				else {
+					//Success
+				}
+			}
+		}
 	}
 	
 	@objc func setEditingMedication(sender: UIBarButtonItem) {
@@ -111,13 +131,10 @@ class MedicationDetailsViewController: UITableViewController{
 							}
 						}
 						else {
-                            
 							self.Name.text = self.EditNameField.text
 						}
 					}
 				}
-			
-			//Successful
 		}
 		
 		if sender == CancelButton {
