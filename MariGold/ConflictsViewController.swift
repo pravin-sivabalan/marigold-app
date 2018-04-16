@@ -43,13 +43,14 @@ extension ConflictsViewController: UITableViewDataSource {
 		let conflict = conflicts[indexPath.row]
 		var otherMedName: String
 		if(self.medication.id == conflict.drug1id) {
-			otherMedName = CoreDataHelper.retrieveMedWithID(id: conflict.drug2id)?.name ?? "Error"
+			otherMedName = CoreDataHelper.retrieveMedWithID(id: conflict.drug2id)?.name ?? "?"
 		}
 		else {
-			otherMedName = CoreDataHelper.retrieveMedWithID(id: conflict.drug1id)?.name ?? "Error"
+			otherMedName = CoreDataHelper.retrieveMedWithID(id: conflict.drug1id)?.name ?? "?"
 		}
-		
-		cell.ConflictLabel.text = "\(medication.name ?? "Error") & \(otherMedName)"
+		let medName = String(medication.name!.prefix(upTo: medication.name!.index(of: " ") ?? medication.name!.endIndex))
+		otherMedName = String(otherMedName.prefix(upTo: otherMedName.index(of: " ") ?? otherMedName.endIndex))
+		cell.ConflictLabel.text = "\(medName ) & \(otherMedName)"
 		return cell
 	}
 }

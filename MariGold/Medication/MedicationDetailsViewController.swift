@@ -47,9 +47,13 @@ class MedicationDetailsViewController: UITableViewController{
 		if identifier == "displayConflictList" {
 			let nextVC = segue.destination as! ConflictsViewController
 			nextVC.medication = medication
-            
             return
         }
+		else if identifier == "displayAllergyConflictList" {
+			let nextVC = segue.destination as! AllergyConflictsViewController
+			nextVC.medication = medication
+			return
+		}
         
         if let nextVc = segue.destination as? MedicationViewController {
             nextVc.Refresh(self)

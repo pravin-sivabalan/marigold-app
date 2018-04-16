@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		030D0E27203B399700AC400C /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030D0E26203B399700AC400C /* ResetPasswordViewController.swift */; };
 		0315BA7F203A40C500CBD416 /* RegisterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0315BA7E203A40C500CBD416 /* RegisterUITests.swift */; };
+		031E23AB208500B800C7141B /* AllergyConflictsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031E23AA208500B800C7141B /* AllergyConflictsViewController.swift */; };
+		031E23AF2085026700C7141B /* AllergyConflictDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031E23AE2085026700C7141B /* AllergyConflictDetailsViewController.swift */; };
 		032A99BB2068C1F800807745 /* ConflictDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032A99BA2068C1F800807745 /* ConflictDetailsViewController.swift */; };
 		03304F7E2049A6AB0002AAD5 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03304F7D2049A6AA0002AAD5 /* AccountViewController.swift */; };
 		0350560A2034D7DF00FD8AA5 /* LoginUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035056092034D7DF00FD8AA5 /* LoginUITests.swift */; };
@@ -119,6 +121,8 @@
 /* Begin PBXFileReference section */
 		030D0E26203B399700AC400C /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
 		0315BA7E203A40C500CBD416 /* RegisterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterUITests.swift; sourceTree = "<group>"; };
+		031E23AA208500B800C7141B /* AllergyConflictsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AllergyConflictsViewController.swift; path = Conflict/AllergyConflictsViewController.swift; sourceTree = "<group>"; };
+		031E23AE2085026700C7141B /* AllergyConflictDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllergyConflictDetailsViewController.swift; sourceTree = "<group>"; };
 		032A99BA2068C1F800807745 /* ConflictDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ConflictDetailsViewController.swift; path = Conflict/ConflictDetailsViewController.swift; sourceTree = "<group>"; };
 		03304F7D2049A6AA0002AAD5 /* AccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		035056092034D7DF00FD8AA5 /* LoginUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUITests.swift; sourceTree = "<group>"; };
@@ -268,6 +272,8 @@
 				3D17623C2017E62000A1C77A /* AppDelegate.swift */,
 				03FA050020693E7F0046AA21 /* AccountEditViewController.swift */,
 				03304F7D2049A6AA0002AAD5 /* AccountViewController.swift */,
+				031E23AA208500B800C7141B /* AllergyConflictsViewController.swift */,
+				031E23AE2085026700C7141B /* AllergyConflictDetailsViewController.swift */,
 				088AC5AD20693D84009C3B57 /* AddNotificationViewController.swift */,
 				088AC5AF20693DAA009C3B57 /* AddNotificationTableViewController.swift */,
 				0353585420687385005E4334 /* ConflictsViewController.swift */,
@@ -697,11 +703,13 @@
 				3D46A7D02083DFF5003ED196 /* RegisterLeagueViewController.swift in Sources */,
 				3D12B123203CBD0200FD701D /* Constants.swift in Sources */,
 				088AC5B520694326009C3B57 /* DashboardViewController.swift in Sources */,
+				031E23AB208500B800C7141B /* AllergyConflictsViewController.swift in Sources */,
 				03EEF52C20645403007C5E7A /* MedicationDetailsViewController.swift in Sources */,
 				032A99BB2068C1F800807745 /* ConflictDetailsViewController.swift in Sources */,
 				088AC5A42068CC63009C3B57 /* Spinner.swift in Sources */,
 				039253BD2038E382005A2C42 /* RegisterViewController.swift in Sources */,
 				088AC5AE20693D84009C3B57 /* AddNotificationViewController.swift in Sources */,
+				031E23AF2085026700C7141B /* AllergyConflictDetailsViewController.swift in Sources */,
 				03304F7E2049A6AB0002AAD5 /* AccountViewController.swift in Sources */,
 				3D46A7D920840CB8003ED196 /* RegisterAllergyViewController.swift in Sources */,
 				3D17623F2017E62000A1C77A /* ViewController.swift in Sources */,
@@ -885,10 +893,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = JLKTZ5Y5UU;
+				DEVELOPMENT_TEAM = A5WQA479ST;
 				INFOPLIST_FILE = MariGold/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = MariGold.BassMariGold1;
+				PRODUCT_BUNDLE_IDENTIFIER = MariGold.Deyvonn;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
@@ -903,10 +911,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = JLKTZ5Y5UU;
+				DEVELOPMENT_TEAM = A5WQA479ST;
 				INFOPLIST_FILE = MariGold/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = MariGold.BassMariGold1;
+				PRODUCT_BUNDLE_IDENTIFIER = MariGold.Deyvonn;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
