@@ -47,11 +47,11 @@ class RegisterAllergyViewController: UIViewController {
                     }
                 } else if(data.object(forKey: "jwt") != nil) {
                     UserDefaults.standard.set(data.object(forKey: "jwt"), forKey: "jwt");
-                    UserDefaults.standard.set(userInfo["first_name"] as! String, forKey: "first_name")
-                    UserDefaults.standard.set(userInfo["last_name"] as! String, forKey: "last_name")
-                    UserDefaults.standard.set(userInfo["email"] as? String ?? "", forKey: "email")
-                    UserDefaults.standard.set(userInfo["league"] as? String ?? "", forKey: "league")
-                    UserDefaults.standard.set(userInfo["allergies"] as? String ?? "", forKey: "allergies")
+                    UserDefaults.standard.set(self.userInfo["first_name"] as! String, forKey: "first_name")
+                    UserDefaults.standard.set(self.userInfo["last_name"] as! String, forKey: "last_name")
+                    UserDefaults.standard.set(self.userInfo["email"] as? String ?? "", forKey: "email")
+                    UserDefaults.standard.set(self.userInfo["league"] as? String ?? "", forKey: "league")
+                    UserDefaults.standard.set(self.userInfo["allergies"] as? String ?? "", forKey: "allergies")
                     let storyboard = UIStoryboard(name: "TabBar", bundle: nil)
                     let vc = storyboard.instantiateViewController(withIdentifier: "tabbarControllerID") as UIViewController
                     self.present(vc, animated: true, completion: nil)
