@@ -57,10 +57,10 @@ class RegisterAllergyViewController: UIViewController {
                     
                     // Save password for new user
                     try! KeychainPasswordItem.deleteItems()
-                    let keychainPassword = KeychainPasswordItem(account: self.emailField.text!)
+                    let keychainPassword = KeychainPasswordItem(account: self.userInfo["email"] as! String)
                     
                     do {
-                        try keychainPassword.savePassword(self.passwordField.text!)
+                        try keychainPassword.savePassword(self.userInfo["password"] as! String)
                     } catch {
                         print("Keychain saving error: \(error)")
                     }
