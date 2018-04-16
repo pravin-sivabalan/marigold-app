@@ -25,8 +25,6 @@ class RegisterViewController: UIViewController {
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		
-		//Setup PastelView
 		pastelView.setColors([UIColor(red: 240/255, green: 138/255, blue: 1/255, alpha: 1.0),
 							  UIColor(red: 249/255, green: 212/255, blue: 0/255, alpha: 1.0)])
 		pastelView.startAnimation()
@@ -34,76 +32,40 @@ class RegisterViewController: UIViewController {
 	
 	override func didReceiveMemoryWarning() {
 		super.didReceiveMemoryWarning()
-		// Dispose of any resources that can be recreated.
 	}
     
-    @IBAction func registerAction(_ sender: Any) {
+    override func shouldPerformSegue(withIdentifier identifier: String?, sender: Any?) -> Bool {
         if(!Connectivity.isConnectedToInternet) {
-            return createAlert(title: "Connection Error", message: "There is a connection error. Please check your internet connection or try again later")
+            createAlert(title: "Connection Error", message: "There is a connection error. Please check your internet connection or try again later")
+            return false
         } else if(firstNameField.text == "" || lastNameField.text == "" || emailField.text == "" || passwordField.text == "" || confirmPasswordField.text == "") {
-            return createAlert(title: "Not Finished", message: "Please finish filling out fields")
+            createAlert(title: "Not Finished", message: "Please finish filling out fields")
+            return false
         } else if(!isValidEmail(email: emailField.text!)) {
-            return createAlert(title: "Invalid Email", message: "Please enter a valid email")
+            createAlert(title: "Invalid Email", message: "Please enter a valid email")
+            return false
         } else if(passwordField.text != confirmPasswordField.text) {
-            return createAlert(title: "Password Do Not Match", message: "Please make sure your passwords match")
-        } 
-		
-		var leagueArray = [String]()
-		if(NFLSwitch.isOn) {
-			leagueArray.append("NFL")
-		}
-		if(NBASwitch.isOn) {
-			leagueArray.append("NBA")
-		}
-		if(NCAASwitch.isOn) {
-			leagueArray.append("NCAA")
-		}
-		let leagues = leagueArray.joined(separator: ", ")
-		
-        var body: [String: Any] = [
+            createAlert(title: "Password Do Not Match", message: "Please make sure your passwords match")
+            return false
+        }
+        
+        return true
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        var userInfo: [String: Any] = [
             "first_name" : firstNameField.text!,
             "last_name" : lastNameField.text!,
             "email" : emailField.text!,
             "password" : passwordField.text!,
-            "league" : leagues
         ]
         
         if let allergies = allergiesField?.text {
-            body["allergies"] = allergies
+            userInfo["allergies"] = allergies
         }
         
-        Alamofire.request(api.rootURL + "/user/register", method: .post, parameters: body, encoding: JSONEncoding.default, headers: nil).responseJSON { response in
-            if let JSON = response.result.value {
-                let data = JSON as! NSDictionary
-                if(data["error_code"] != nil) {
-                    switch data["error_code"] as! Int {
-                    case 23:
-                        return self.createAlert(title: "Account ", message: "This account does not exist. Please check you have entered your information correctly.")
-                    default:
-                        return self.createAlert(title: "Server Error", message: "There is a connection error. Please check your internet connection or try again later")
-                    }
-                } else if(data.object(forKey: "jwt") != nil) {
-                    UserDefaults.standard.set(data.object(forKey: "jwt"), forKey: "jwt");
-                    
-                    let storyboard = UIStoryboard(name: "TabBar", bundle: nil)
-                    let vc = storyboard.instantiateViewController(withIdentifier: "tabbarControllerID") as UIViewController
-                    
-                    // Save password for new user
-                    try! KeychainPasswordItem.deleteItems()
-                    let keychainPassword = KeychainPasswordItem(account: self.emailField.text!)
-                    
-                    do {
-                        try keychainPassword.savePassword(self.passwordField.text!)
-                    } catch {
-                        print("Keychain saving error: \(error)")
-                    }
-                        
-                    self.present(vc, animated: true, completion: nil)
-                } else {
-                    return self.createAlert(title: "Server Error", message: "There is a connection error. Please check your internet connection or try again later")
-                }
-            }
-        }
+        let vc = segue.destination as! RegisterLeagueViewController
+        vc.userInfo = userInfo
     }
     
     func createAlert(title: String, message: String) {

@@ -43,6 +43,8 @@
 		3D1762442017E62000A1C77A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D1762432017E62000A1C77A /* Assets.xcassets */; };
 		3D1762522017E62000A1C77A /* MariGoldTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D1762512017E62000A1C77A /* MariGoldTests.swift */; };
 		3D17625D2017E62000A1C77A /* MariGoldUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D17625C2017E62000A1C77A /* MariGoldUITests.swift */; };
+		3D46A7D02083DFF5003ED196 /* RegisterLeagueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D46A7CF2083DFF5003ED196 /* RegisterLeagueViewController.swift */; };
+		3D46A7D920840CB8003ED196 /* RegisterAllergyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D46A7D820840CB7003ED196 /* RegisterAllergyViewController.swift */; };
 		7D21F4DED653EE42F79EEEC6 /* Pods_MariGoldTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE1410DA3A197F6555FA1071 /* Pods_MariGoldTests.framework */; };
 		ABCF0F733D51355B26A3CAC3 /* Pods_MariGoldUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FA0AFC59CF0E40A8E40C644 /* Pods_MariGoldUITests.framework */; };
 		BF9E65D553034DDC11216C86 /* Pods_MariGold.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D673EE6A1C2DB3A996B47D2 /* Pods_MariGold.framework */; };
@@ -159,6 +161,8 @@
 		3D1762582017E62000A1C77A /* MariGoldUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MariGoldUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D17625C2017E62000A1C77A /* MariGoldUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MariGoldUITests.swift; sourceTree = "<group>"; };
 		3D17625E2017E62000A1C77A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3D46A7CF2083DFF5003ED196 /* RegisterLeagueViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterLeagueViewController.swift; sourceTree = "<group>"; };
+		3D46A7D820840CB7003ED196 /* RegisterAllergyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterAllergyViewController.swift; sourceTree = "<group>"; };
 		3FA0AFC59CF0E40A8E40C644 /* Pods_MariGoldUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MariGoldUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A844F2CD6B895BF9CF281F6 /* Pods-MariGoldUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MariGoldUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MariGoldUITests/Pods-MariGoldUITests.release.xcconfig"; sourceTree = "<group>"; };
 		85906C025E2B64319F36A99C /* Pods-MariGoldTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MariGoldTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MariGoldTests/Pods-MariGoldTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -224,9 +228,11 @@
 		3D12B11F203CB94500FD701D /* AccountSetup */ = {
 			isa = PBXGroup;
 			children = (
+				3D17623E2017E62000A1C77A /* ViewController.swift */,
 				030D0E26203B399700AC400C /* ResetPasswordViewController.swift */,
 				039253BC2038E382005A2C42 /* RegisterViewController.swift */,
-				3D17623E2017E62000A1C77A /* ViewController.swift */,
+				3D46A7CF2083DFF5003ED196 /* RegisterLeagueViewController.swift */,
+				3D46A7D820840CB7003ED196 /* RegisterAllergyViewController.swift */,
 			);
 			path = AccountSetup;
 			sourceTree = "<group>";
@@ -688,6 +694,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D46A7D02083DFF5003ED196 /* RegisterLeagueViewController.swift in Sources */,
 				3D12B123203CBD0200FD701D /* Constants.swift in Sources */,
 				088AC5B520694326009C3B57 /* DashboardViewController.swift in Sources */,
 				03EEF52C20645403007C5E7A /* MedicationDetailsViewController.swift in Sources */,
@@ -696,6 +703,7 @@
 				039253BD2038E382005A2C42 /* RegisterViewController.swift in Sources */,
 				088AC5AE20693D84009C3B57 /* AddNotificationViewController.swift in Sources */,
 				03304F7E2049A6AB0002AAD5 /* AccountViewController.swift in Sources */,
+				3D46A7D920840CB8003ED196 /* RegisterAllergyViewController.swift in Sources */,
 				3D17623F2017E62000A1C77A /* ViewController.swift in Sources */,
 				08FA5DCA2082CEE3009D3F39 /* KeychainConfig.swift in Sources */,
 				03A106B92049BABE00E31BD9 /* MariGold.xcdatamodeld in Sources */,
