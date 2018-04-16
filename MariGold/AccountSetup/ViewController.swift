@@ -9,6 +9,7 @@
 import UIKit
 import Pastel
 import Alamofire
+import LocalAuthentication
 
 class ViewController: UIViewController {
     @IBOutlet weak var emailField: UITextField!
@@ -33,11 +34,41 @@ class ViewController: UIViewController {
 		self.navigationController?.navigationBar.isTranslucent = true
 		self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
 		self.navigationController?.navigationBar.shadowImage = UIImage()
+        
+        // Prompt for TouchID, if credentials are stored
+        if let credentials = retrieveCredentials() {
+            performTouchID(credentials)
+        }
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func retrieveCredentials() -> KeychainPasswordItem? {
+        guard let passwords = try? KeychainPasswordItem.passwordItems() else {
+            return nil
+        }
+        
+        if passwords.count == 0 {
+            return nil
+        }
+        
+        return passwords[0]
+    }
+    
+    func performTouchID(_ credentials: KeychainPasswordItem) {
+        let context = LAContext()
+        let reason = "Authenticate with Touch ID"
+    
+        context.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: reason) { (success, error) in
+            if !success {
+                return
+            }
+            
+            // Add login with credentials here boyos
+        }
     }
     
     @IBAction func signInAction(_ sender: Any) {
@@ -69,8 +100,20 @@ class ViewController: UIViewController {
                 } else if(data.object(forKey: "jwt") != nil) {
                     UserDefaults.standard.set(data.object(forKey: "jwt"), forKey: "jwt")
 					self.setAccountDetails()
+                    
                     let storyboard = UIStoryboard(name: "TabBar", bundle: nil)
                     let vc = storyboard.instantiateViewController(withIdentifier: "tabbarControllerID") as UIViewController
+                    
+                    // Store password within keychain
+                    try! KeychainPasswordItem.deleteItems()
+                    let keychainPassword = KeychainPasswordItem(account: self.emailField.text!)
+                    
+                    do {
+                        try keychainPassword.savePassword(self.passwordField.text!)
+                    } catch {
+                        print("Keychain saving error: \(error)")
+                    }
+                        
                     self.present(vc, animated: true, completion: nil)
                 } else {
                     return self.createAlert(title: "Server Error", message: "There is a connection error. Please check your internet connection or try again later")
