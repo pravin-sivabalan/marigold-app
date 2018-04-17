@@ -22,6 +22,11 @@ class AllergyConflictsViewController: UIViewController {
 			nextVC.AllergyConflict = allergyConflictSelected
 		}
 	}
+	
+	override func viewDidAppear(_ animated: Bool) {
+		super.viewDidAppear(animated)
+		AllergyConflictTableView.reloadData()
+	}
 }
 
 class allergyConflictTableViewCell: UITableViewCell {

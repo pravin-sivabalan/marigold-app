@@ -22,6 +22,11 @@ class ConflictsViewController: UIViewController {
 			nextVC.conflict = conflictSelected
 		}
 	}
+	
+	override func viewDidAppear(_ animated: Bool) {
+		super.viewDidAppear(animated)
+		ConflictTableView.reloadData()
+	}
 }
 
 class conflictTableViewCell: UITableViewCell {
