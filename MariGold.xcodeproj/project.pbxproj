@@ -229,6 +229,17 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		3D0A94AB20850057007D271D /* MedicationAddition */ = {
+			isa = PBXGroup;
+			children = (
+				088AC5AD20693D84009C3B57 /* AddNotificationViewController.swift */,
+				088AC5AF20693DAA009C3B57 /* AddNotificationTableViewController.swift */,
+				088AC5AA2068CC8D009C3B57 /* LookupViewController.swift */,
+				03C08A51204CE6540072E7A5 /* MedicationAdditionViewController.swift */,
+			);
+			path = MedicationAddition;
+			sourceTree = "<group>";
+		};
 		3D12B11F203CB94500FD701D /* AccountSetup */ = {
 			isa = PBXGroup;
 			children = (
@@ -267,6 +278,7 @@
 		3D17623B2017E62000A1C77A /* MariGold */ = {
 			isa = PBXGroup;
 			children = (
+				3D0A94AB20850057007D271D /* MedicationAddition */,
 				3D12B11F203CB94500FD701D /* AccountSetup */,
 				3D1762432017E62000A1C77A /* Assets.xcassets */,
 				3D17623C2017E62000A1C77A /* AppDelegate.swift */,
@@ -274,14 +286,10 @@
 				03304F7D2049A6AA0002AAD5 /* AccountViewController.swift */,
 				031E23AA208500B800C7141B /* AllergyConflictsViewController.swift */,
 				031E23AE2085026700C7141B /* AllergyConflictDetailsViewController.swift */,
-				088AC5AD20693D84009C3B57 /* AddNotificationViewController.swift */,
-				088AC5AF20693DAA009C3B57 /* AddNotificationTableViewController.swift */,
 				0353585420687385005E4334 /* ConflictsViewController.swift */,
 				032A99BA2068C1F800807745 /* ConflictDetailsViewController.swift */,
 				088AC5B420694326009C3B57 /* DashboardViewController.swift */,
 				037DF0DB203DDCB600D7F1A4 /* MedicationViewController.swift */,
-				088AC5AA2068CC8D009C3B57 /* LookupViewController.swift */,
-				03C08A51204CE6540072E7A5 /* MedicationAdditionViewController.swift */,
 				03EEF52B20645403007C5E7A /* MedicationDetailsViewController.swift */,
 				03BCDD03203E653F00138271 /* TabBarViewController.swift */,
 				3D1762402017E62000A1C77A /* Main.storyboard */,

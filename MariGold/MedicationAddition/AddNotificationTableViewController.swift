@@ -45,18 +45,25 @@ class AddNotificationTableViewController: UITableViewController {
         }
         
         var body = med
-        let emailNotification = med["emailNotification"] as! Bool
-        let phoneNotification = med["emailNotification"] as! Bool
         
+        let emailNotification = med["emailNotification"] as! Bool
         if(emailNotification == true) {
             body["alert_user"] = "1"
         } else {
             body["alert_user"] = "0"
         }
         
+        let phoneNotification = med["phoneNotification"] as! Bool
         if(phoneNotification == true) {
             body["notifications"] = localNotifications
             Notify.createForMedication(medication: body)
+        }
+        
+        let refillNotification = med["refillNotification"] as! Bool
+        if(refillNotification == true) {
+            body["refill"] = 1
+        } else {
+            body["refill"] = 0
         }
         
         body["notifications"] = dataNotifications

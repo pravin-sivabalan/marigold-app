@@ -71,7 +71,7 @@
                                                             <color key="titleColor" red="0.93501371150000001" green="0.53374600409999995" blue="0.1995075047" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
                                                         <connections>
-                                                            <segue destination="esm-xh-GTy" kind="show" id="J4J-aH-Mde"/>
+                                                            <segue destination="esm-xh-GTy" kind="show" id="QwK-VA-q8A"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y2B-r4-OWF">
@@ -320,7 +320,7 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
-                                                    <segue destination="vOy-Zy-bq6" kind="show" id="3NJ-Vb-c9m"/>
+                                                    <segue destination="vOy-Zy-bq6" kind="show" id="PVt-HA-53H"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -367,6 +367,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="M9m-AG-s2K"/>
                     </view>
+                    <navigationItem key="navigationItem" id="2Tx-Zt-N1c"/>
                     <connections>
                         <outlet property="confirmPasswordField" destination="rzW-Wz-Y0C" id="hmI-JG-MNi"/>
                         <outlet property="emailField" destination="ueZ-kp-hJg" id="sKC-bf-mam"/>
@@ -378,7 +379,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NhY-ct-1VD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1342.5" y="-126.7605633802817"/>
+            <point key="canvasLocation" x="2280.8000000000002" y="-127.28635682158921"/>
         </scene>
         <!--Register League View Controller-->
         <scene sceneID="BEy-0v-FrF">
@@ -472,7 +473,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="acm-WO-AVb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2098" y="-127"/>
+            <point key="canvasLocation" x="3036" y="-127.28635682158921"/>
         </scene>
         <!--Register Allergy View Controller-->
         <scene sceneID="hXN-HY-LyQ">
@@ -531,13 +532,32 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7K3-xL-bdC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2820" y="-128.87323943661971"/>
+            <point key="canvasLocation" x="3759.1999999999998" y="-129.08545727136433"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="gJP-aH-PVd">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="amQ-0K-S8H" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="S4C-HR-tff">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="esm-xh-GTy" kind="relationship" relationship="rootViewController" id="ajB-vM-dB0"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hMK-vi-VeS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1420" y="-129"/>
         </scene>
     </scenes>
     <resources>
         <image name="Logo" width="866" height="189"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="QwK-VA-q8A"/>
         <segue reference="VEo-VK-Or2"/>
     </inferredMetricsTieBreakers>
 </document>

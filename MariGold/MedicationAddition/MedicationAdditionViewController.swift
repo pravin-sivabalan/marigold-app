@@ -18,13 +18,12 @@ class MedicationAdditionTableViewController: UITableViewController {
 	@IBOutlet var Temporary: UISwitch!
     @IBOutlet weak var PhoneNotif: UISwitch!
     @IBOutlet weak var EmailNotif: UISwitch!
+    @IBOutlet weak var RefillNotif: UISwitch!
     
     var Name: String!
     var Cui: String!
     
     override func viewDidLoad() {
-        print(Name)
-        print(Cui)
     }
     
 	//Check if Required Fields are filled out so Done can be pressed
@@ -49,7 +48,8 @@ class MedicationAdditionTableViewController: UITableViewController {
             "quantity" : Quantity.text!,
             "temporary" : Temporary.isOn,
             "phoneNotification": PhoneNotif.isOn,
-            "emailNotification": EmailNotif.isOn
+            "emailNotification": EmailNotif.isOn,
+            "refillNotification": RefillNotif.isOn
         ]
         
         // Create a new variable to store the instance of PlayerTableViewController

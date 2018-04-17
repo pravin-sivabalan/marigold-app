@@ -39,7 +39,7 @@ class RegisterAllergyViewController: UIViewController {
                 if(data["error_code"] != nil) {
                     switch data["error_code"] as! Int {
                     case 23:
-                        return self.createAlert(title: "Account ", message: "This account does not exist. Please check you have entered your information correctly.")
+                        return self.createAlert(title: "Account ", message: "This account already exists. Please login  .")
                     default:
                         return self.createAlert(title: "Server Error", message: "There is a connection error. Please check your internet connection or try again later")
                     }
