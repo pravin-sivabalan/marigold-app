@@ -38,6 +38,7 @@ struct CoreDataHelper {
 	
 	static func deleteMed(medication: Medication) {
 		context.delete(medication)
+		saveCoreData()
 	}
 	
 	static func deleteAllMeds() {
@@ -79,6 +80,7 @@ struct CoreDataHelper {
 	
 	static func deleteConflict(conflict: Conflict) {
 		context.delete(conflict)
+		saveCoreData()
 	}
 	
 	static func deleteAllConflicts() {
@@ -125,6 +127,7 @@ struct CoreDataHelper {
 	
 	static func deleteAllergyConflict(allergyConflict: AllergyConflict) {
 		context.delete(allergyConflict)
+		saveCoreData()
 	}
 	
 	static func deleteAllAllergyConflicts() {

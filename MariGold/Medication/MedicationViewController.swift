@@ -89,9 +89,8 @@ class MedicationViewController: UIViewController {
                         newMed.warnings = JSONmed["warnings"] as? String
                         newMed.when_using = JSONmed["when_using"] as? String
 						newMed.banned = (JSONmed["banned"] as? String)?.uppercased()
+						CoreDataHelper.saveCoreData()
 					}
-					CoreDataHelper.saveCoreData()
-                    
                     self.MedicationTableView.reloadData()
 				}
 			}

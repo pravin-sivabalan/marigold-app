@@ -62,8 +62,8 @@ class AddNotificationTableViewController: UITableViewController {
         body["notifications"] = dataNotifications
         body.removeValue(forKey: "phoneNotification")
         body.removeValue(forKey: "emailNotification")
-        
-        print(body)
+		
+		body["refill"] = 0;
         
         Alamofire.request(api.rootURL + "/meds/add", method: .post, parameters: body, encoding: JSONEncoding.default, headers: User.header).responseJSON { response in
             print(response)
@@ -84,14 +84,13 @@ class AddNotificationTableViewController: UITableViewController {
                         let JSONconflicts = data["conflicts"] as! [[String: Any]]
                         var messages = [String]()
                         for JSONconflict in JSONconflicts {
-							
                             let newConflict = CoreDataHelper.newConflict()
                             newConflict.drug1id = JSONconflict["drug1"] as! Int64
                             newConflict.drug2id = JSONconflict["drug2"] as! Int64
                             let JSONconflictinfo = JSONconflict["info"] as! [[String : String]]
                             newConflict.info = JSONconflictinfo[0]["desc"]
                             newConflict.severity = JSONconflictinfo[0]["severity"]
-                            
+							CoreDataHelper.saveCoreData()
                             messages.append(newConflict.info!)
                         }
 						
@@ -104,6 +103,7 @@ class AddNotificationTableViewController: UITableViewController {
 							newAllergyConflict.allergy = JSONallergyConflict["allergy"] as? String
 							newAllergyConflict.type = JSONallergyConflict["type"] as? String
 							newAllergyConflict.desc = JSONallergyConflict["desc"] as? String
+							CoreDataHelper.saveCoreData()
 							messages.append(newAllergyConflict.desc!)
 						}
 						
