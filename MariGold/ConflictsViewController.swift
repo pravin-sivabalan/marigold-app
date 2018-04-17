@@ -25,7 +25,7 @@ class ConflictsViewController: UIViewController {
 	
 	override func viewDidAppear(_ animated: Bool) {
 		super.viewDidAppear(animated)
-		ConflictTableView.reloadData()
+		self.ConflictTableView.reloadData()
 	}
 }
 
