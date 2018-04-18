@@ -120,7 +120,6 @@
         <!--Dashboard Tabs-->
         <scene sceneID="Gta-i7-lCu">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="GCy-wz-7ns" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController title="Dashboard Tabs" id="o3L-7T-Q3V" customClass="DashboardTabViewController" customModule="MariGold" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wqt-Pq-tAI">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -175,6 +174,7 @@
                         <outlet property="sideEffectsView" destination="akx-fu-a2z" id="z2S-kB-4X8"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GCy-wz-7ns" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="135" y="45"/>
         </scene>
@@ -186,13 +186,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="506"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="FUCK YOU" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fl2-au-aUP">
-                                <rect key="frame" x="145" y="323" width="84" height="21"/>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="F4B-dy-cQa">
+                                <rect key="frame" x="163" y="238" width="49" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            </switch>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="HbM-Mz-z8j"/>

@@ -14,9 +14,21 @@ class DashboardTabViewController: UIViewController {
     @IBOutlet weak var scheduleView: UIView!
     @IBOutlet weak var sideEffectsView: UIView!
     
+    var views: [UIView]!
+    var activeView: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        views = [scheduleView, sideEffectsView]
+        for view in views {
+            view.isHidden = true
+        }
+        
         segmentControl.selectedSegmentIndex = 0
+        activeView = views[0]
+        
+        show(views[0])
     }
 
     override func didReceiveMemoryWarning() {
@@ -24,17 +36,13 @@ class DashboardTabViewController: UIViewController {
     }
     
     func show(_ view: UIView) {
-        scheduleView.isHidden = true
-        sideEffectsView.isHidden = true
-        
+        activeView.isHidden = true
         view.isHidden = false
+    
+        activeView = view
     }
     
     @IBAction func selectedTab(_ sender: UISegmentedControl) {
-        if sender.selectedSegmentIndex == 0 {
-            show(scheduleView)
-        } else if sender.selectedSegmentIndex == 1 {
-            show(sideEffectsView)
-        }
+        show(views[sender.selectedSegmentIndex])
     }
 }
