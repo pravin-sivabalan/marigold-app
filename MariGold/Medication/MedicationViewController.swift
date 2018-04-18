@@ -88,7 +88,10 @@ class MedicationViewController: UIViewController {
                         newMed.route = JSONmed["route"] as? String
                         newMed.warnings = JSONmed["warnings"] as? String
                         newMed.when_using = JSONmed["when_using"] as? String
-						newMed.banned = (JSONmed["banned"] as? String)?.uppercased()
+						if JSONmed["banned"] as? String != "" {
+							newMed.banned = (JSONmed["banned"] as? String)?.uppercased()
+						}
+						newMed.possible_side_effects = JSONmed["possible_side_effects"] as? String
 						CoreDataHelper.saveCoreData()
 					}
                     self.MedicationTableView.reloadData()

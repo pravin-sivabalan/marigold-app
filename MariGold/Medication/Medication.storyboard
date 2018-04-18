@@ -355,46 +355,22 @@
                                             <segue destination="P1T-Gt-lZm" kind="show" identifier="displayAllergyConflictList" id="cvM-jP-gOm"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" textLabel="nLS-Oq-jkQ" detailTextLabel="6q7-zc-lTD" rowHeight="100" style="IBUITableViewCellStyleValue1" id="R8G-Fy-smh">
-                                        <rect key="frame" x="0.0" y="455" width="320" height="100"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="R8G-Fy-smh" id="tj7-GM-cQX">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="99.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Possible Side Effects" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="nLS-Oq-jkQ">
-                                                    <rect key="frame" x="16" y="40" width="160" height="20.5"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Undefined" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="6q7-zc-lTD">
-                                                    <rect key="frame" x="224" y="40" width="80" height="20.5"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" textLabel="4yF-75-gL5" detailTextLabel="cah-On-DG4" rowHeight="100" style="IBUITableViewCellStyleValue1" id="z9H-8j-o1m">
-                                        <rect key="frame" x="0.0" y="555" width="320" height="100"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" textLabel="4yF-75-gL5" detailTextLabel="cah-On-DG4" style="IBUITableViewCellStyleValue1" id="z9H-8j-o1m">
+                                        <rect key="frame" x="0.0" y="455" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="z9H-8j-o1m" id="QnN-Wk-9el">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="99.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Leagues Banned In" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="4yF-75-gL5">
-                                                    <rect key="frame" x="15" y="40" width="145.5" height="20.5"/>
+                                                    <rect key="frame" x="16" y="12" width="145.5" height="20.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Undefined" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="cah-On-DG4">
-                                                    <rect key="frame" x="225" y="40" width="80" height="20.5"/>
+                                                    <rect key="frame" x="224" y="12" width="80" height="20.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -403,24 +379,25 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" id="Ij0-NV-tFO">
-                                        <rect key="frame" x="0.0" y="655" width="320" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="300" id="R8G-Fy-smh">
+                                        <rect key="frame" x="0.0" y="499" width="320" height="300"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Ij0-NV-tFO" id="91a-H6-Bpc">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="R8G-Fy-smh" id="tj7-GM-cQX">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="299.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RsH-ew-kje">
-                                                    <rect key="frame" x="103" y="7" width="114" height="30"/>
-                                                    <state key="normal" title="Refill Medication"/>
-                                                    <connections>
-                                                        <action selector="refillMedication:" destination="1Dw-Kv-2UN" eventType="touchUpInside" id="JgT-On-Eii"/>
-                                                    </connections>
-                                                </button>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Possible Side Effects: " textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="VLK-ES-Ap3">
+                                                    <rect key="frame" x="16" y="11" width="288" height="278"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                </textView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="RsH-ew-kje" firstAttribute="centerX" secondItem="91a-H6-Bpc" secondAttribute="centerX" id="XC9-Es-BBp"/>
-                                                <constraint firstItem="RsH-ew-kje" firstAttribute="centerY" secondItem="91a-H6-Bpc" secondAttribute="centerY" id="jv4-Tn-uyl"/>
+                                                <constraint firstItem="VLK-ES-Ap3" firstAttribute="top" secondItem="tj7-GM-cQX" secondAttribute="topMargin" id="7Bn-Ld-2Jf"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="VLK-ES-Ap3" secondAttribute="bottom" id="Nho-xU-A9O"/>
+                                                <constraint firstItem="VLK-ES-Ap3" firstAttribute="leading" secondItem="tj7-GM-cQX" secondAttribute="leadingMargin" id="O2P-Xb-w1z"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="VLK-ES-Ap3" secondAttribute="trailing" id="ple-cr-HnQ"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -438,7 +415,7 @@
                         <outlet property="LeaguesBannedIn" destination="cah-On-DG4" id="3af-Gk-jOI"/>
                         <outlet property="MainNameCell" destination="nIb-dP-p4P" id="Bp8-Bi-eAJ"/>
                         <outlet property="Name" destination="DdJ-DB-ZPU" id="0fF-5p-Nor"/>
-                        <outlet property="PossibleSideEffects" destination="6q7-zc-lTD" id="n1B-v3-7ug"/>
+                        <outlet property="PossibleSideEffects" destination="VLK-ES-Ap3" id="C6R-QU-PvK"/>
                         <outlet property="Quantity" destination="Lr3-Qe-qZQ" id="LWM-f7-kYL"/>
                         <outlet property="RunOutDate" destination="W6D-NK-hf5" id="Vhv-pQ-NyK"/>
                         <outlet property="TableView" destination="prj-gE-dIY" id="gyQ-Hi-wN5"/>

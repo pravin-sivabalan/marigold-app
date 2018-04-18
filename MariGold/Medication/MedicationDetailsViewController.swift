@@ -18,7 +18,7 @@ class MedicationDetailsViewController: UITableViewController{
 	@IBOutlet var Temporary: UILabel!
 	@IBOutlet var TemporarySwitch: UISwitch!
 	@IBOutlet var LeaguesBannedIn: UILabel!
-	@IBOutlet var PossibleSideEffects: UILabel!
+	@IBOutlet var PossibleSideEffects: UITextView!
 	@IBOutlet var EditNameField: UITextField!
 	
 	var medication: Medication!
