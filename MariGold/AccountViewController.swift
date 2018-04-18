@@ -71,7 +71,7 @@ class AccountViewController: UIViewController {
                     let data = JSON as! NSDictionary
                     if(data.object(forKey: "message") as! String == "ok") {
                         UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
-                        
+						
 						UserDefaults.standard.removeObject(forKey: "jwt")
 						UserDefaults.standard.removeObject(forKey: "first_name")
 						UserDefaults.standard.removeObject(forKey: "last_name")

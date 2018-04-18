@@ -16,9 +16,10 @@ class AccountEditViewController: UITableViewController {
 	@IBOutlet var NFLSwitch: UISwitch!
 	@IBOutlet var NBASwitch: UISwitch!
 	@IBOutlet var NCAASwitch: UISwitch!
-
+	
 	override func viewDidLoad() {
 		super.viewDidLoad()
+		
 		FirstNameField.text = UserDefaults.standard.string(forKey: "first_name")
 		LastNameField.text = UserDefaults.standard.string(forKey: "last_name")
 		AllergiesField.text = UserDefaults.standard.string(forKey: "allergies")
@@ -43,6 +44,17 @@ class AccountEditViewController: UITableViewController {
 		else {
 			NCAASwitch.isOn = false
 		}
+	}
+	
+	override func viewDidAppear(_ animated: Bool) {
+		super.viewDidAppear(animated)
+		self.navigationController?.navigationBar.topItem!.title = "Edit Account"
+	}
+	
+	
+	@IBAction func SetPharmacy(_ sender: Any) {
+		//It will automatically segue
+		self.navigationController?.navigationBar.topItem!.title = " "
 	}
 	
 	@IBAction func Cancel(_ sender: Any) {
