@@ -935,6 +935,9 @@
                         </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="doneButton" destination="s49-Ed-Jfi" id="vcw-G9-mfY"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="thj-2R-qmD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
