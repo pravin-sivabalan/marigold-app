@@ -113,14 +113,65 @@ class ViewController: UIViewController {
                     } catch {
                         print("Keychain saving error: \(error)")
                     }
-                        
+					
                     self.present(vc, animated: true, completion: nil)
+					self.updateConflictList()
                 } else {
                     return self.createAlert(title: "Server Error", message: "There is a connection error. Please check your internet connection or try again later")
                 }
             }
         }
     }
+	
+	func updateConflictList() {
+		if(!Connectivity.isConnectedToInternet) {
+			return self.createAlert(title: "Connection Error", message: "There is a connection error. Please check your internet connection or try again later.")
+		}
+		Alamofire.request(api.rootURL + "/meds/conflicts", method: .get, parameters: nil, encoding: JSONEncoding.default, headers: User.header).responseJSON { response in
+			if let JSON = response.result.value {
+				let data = JSON as! NSDictionary
+				if(data["error_code"] != nil) {
+					switch data["error_code"] as! Int {
+					//Room for adding more detailed error messages
+					default:
+						return self.createAlert(title: "Server Error", message: "There is a connection error. Please check your internet connection or try again later.")
+					}
+				}
+				else {
+					CoreDataHelper.deleteAllConflicts()
+					CoreDataHelper.deleteAllAllergyConflicts()
+					CoreDataHelper.saveCoreData()
+					
+					
+					if let JSONconflicts = data["conflicts"] as? [[String: Any]] {
+						for JSONconflict in JSONconflicts {
+							let newConflict = CoreDataHelper.newConflict()
+							newConflict.drug1id = JSONconflict["drug1"] as! Int64
+							newConflict.drug2id = JSONconflict["drug2"] as! Int64
+							let JSONconflictinfo = JSONconflict["info"] as! [[String : String]]
+							newConflict.info = JSONconflictinfo[0]["desc"]
+							newConflict.severity = JSONconflictinfo[0]["severity"]
+							CoreDataHelper.saveCoreData()
+						}
+					}
+					
+					//Allergy Conflicts
+					
+					if let JSONallergyConflicts = data["allergy_conflicts"] as? [[String: Any]] {
+						for JSONallergyConflict in JSONallergyConflicts {
+							let newAllergyConflict = CoreDataHelper.newAllergyConflict()
+							newAllergyConflict.drugid = JSONallergyConflict["drug"] as! Int64
+							newAllergyConflict.allergy = JSONallergyConflict["allergy"] as? String
+							newAllergyConflict.type = JSONallergyConflict["type"] as? String
+							newAllergyConflict.desc = JSONallergyConflict["desc"] as? String
+							CoreDataHelper.saveCoreData()
+						}
+					}
+					CoreDataHelper.saveCoreData()
+				}
+			}
+		}
+	}
 
     func createAlert(title: String, message: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)

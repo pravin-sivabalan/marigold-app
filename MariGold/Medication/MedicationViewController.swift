@@ -77,20 +77,23 @@ class MedicationViewController: UIViewController {
 						newMed.run_out_date = JSONmed["run_out_date"] as? String
 						newMed.rxcui = JSONmed["rxcui"] as? String
 						newMed.temporary = JSONmed["temporary"] as! Bool
-//                        newMed.generic_name = JSONmed["generic_name"] as? String
-//                        newMed.brand_name = JSONmed["brand_name"] as? String
-//                        newMed.warnings_and_cautions = JSONmed["warnings_and_cautions"] as? String
-//                        newMed.inactive_ingredient = JSONmed["inactive_ingredient"] as? String
-//                        newMed.information_for_patients = JSONmed["information_for_patients"] as? String
-//                        newMed.purpose = JSONmed["purpose"] as? String
-//                        newMed.indications_and_usage = JSONmed["indications_and_usage"] as? String
-//                        newMed.questions = JSONmed["questions"] as? String
-//                        newMed.route = JSONmed["route"] as? String
-//                        newMed.warnings = JSONmed["warnings"] as? String
-//                        newMed.when_using = JSONmed["when_using"] as? String
+                        newMed.generic_name = JSONmed["generic_name"] as? String
+                        newMed.brand_name = JSONmed["brand_name"] as? String
+                        newMed.warnings_and_cautions = JSONmed["warnings_and_cautions"] as? String
+                        newMed.inactive_ingredient = JSONmed["inactive_ingredient"] as? String
+                        newMed.information_for_patients = JSONmed["information_for_patients"] as? String
+                        newMed.purpose = JSONmed["purpose"] as? String
+                        newMed.indications_and_usage = JSONmed["indications_and_usage"] as? String
+                        newMed.questions = JSONmed["questions"] as? String
+                        newMed.route = JSONmed["route"] as? String
+                        newMed.warnings = JSONmed["warnings"] as? String
+                        newMed.when_using = JSONmed["when_using"] as? String
+						if JSONmed["banned"] as? String != "" {
+							newMed.banned = (JSONmed["banned"] as? String)?.uppercased()
+						}
+						newMed.possible_side_effects = JSONmed["possible_side_effects"] as? String
+						CoreDataHelper.saveCoreData()
 					}
-					CoreDataHelper.saveCoreData()
-                    
                     self.MedicationTableView.reloadData()
 				}
 			}
