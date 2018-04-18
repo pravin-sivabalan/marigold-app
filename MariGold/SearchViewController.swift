@@ -30,10 +30,12 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         guard let symptom = searchBar.text else {
+            self.searchBar.endEditing(true)
             return
         }
         
         if symptom == "" {
+            self.searchBar.endEditing(true)
             return
         }
         
@@ -75,6 +77,10 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
             }
             self.readDrugs(drugs: drugs)
         }
+    }
+    
+    func searchBarCancelButtonClicked(searchBar: UISearchBar) {
+        self.searchBar.endEditing(true)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
