@@ -17,18 +17,18 @@ struct Match {
 class LookupViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
-	var spinner: UIView!
-	
-	let imagePicker = UIImagePickerController()
+    var spinner: UIView!
+    
+    let imagePicker = UIImagePickerController()
     
     var matches: [Match] = []
     var selectedMatch = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
-		imagePicker.delegate = self
+        imagePicker.delegate = self
     }
-	
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "ToAdd" {
             guard let dest = segue.destination as? MedicationAdditionTableViewController else {
@@ -42,69 +42,69 @@ class LookupViewController: UIViewController, UITableViewDataSource, UITableView
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-	
-	@IBAction func openPhotoLibraryButton(sender: Any) {
-		//Check Access to Camera
-		AVCaptureDevice.requestAccess(for: AVMediaType.video) { response in
-			if response {
-				//Access Granted
-				self.imagePicker.sourceType = .camera
-				self.imagePicker.allowsEditing = false
-				self.present(self.imagePicker, animated: true, completion: nil)
-			} else {
-				self.createAlert(title: "No Camera Access", message: "You have not given permission to scan in meds with the camera. Please change this in the iOS Settings app.")
-				NSLog("Error: No access to camera!")
-			}
-		}
-	}
-	
-	func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
-		guard let image = info[UIImagePickerControllerOriginalImage] as? UIImage
-		else {
-			return self.createAlert(title: "Image Error", message: "Could not grab image.")
-		}
-		guard let imageData = UIImageJPEGRepresentation(image, 0.4)?.base64EncodedString()
-		else {
-			return self.createAlert(title: "Image Error", message: "Could not encode image.")
-		}
-		//Make API Call
-		if(!Connectivity.isConnectedToInternet) {
-			return self.createAlert(title: "Connection Error", message: "There is a connection error. Please check your internet connection or try again later.")
-		}
-		
-		//Valid Input
-		else {
-			self.spinner = UIViewController.displaySpinner(onView: self.tableView)
-			let body: [String: Any] = ["photo" : imageData]
-			Alamofire.request(api.rootURL + "/meds/pic", method: .post, parameters: body, encoding: JSONEncoding.default, headers: User.header).responseJSON { response in
-				if let JSON = response.result.value {
-					let data = JSON as! NSDictionary
-					if(data["error_code"] != nil) {
-						switch data["error_code"] as! Int {
-						//Room for adding more detailed error messages
-						default:
-							self.createAlert(title: "Server Error", message: "There is a connection error. Please check your internet connection or try again later.")
-						}
-					}
-					else {
-						UIViewController.removeSpinner(spinner: self.spinner)
-						guard let jsonMatches = data["matches"] as? [Any] else {
-							self.createAlert(title: "Lookup", message: "Could not find specified medicine")
-							NSLog("Could not read in matches")
-							return
-						}
-						self.readInMatches(jsonMatches: jsonMatches)
-					}
-				}
-			}
-			dismiss(animated: true, completion: nil)
-		}
-	}
-	
-	func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
-		NSLog("Image Picking was cancelled my dude.")
-		dismiss(animated: true, completion: nil)
-	}
+    
+    @IBAction func openPhotoLibraryButton(sender: Any) {
+        //Check Access to Camera
+        AVCaptureDevice.requestAccess(for: AVMediaType.video) { response in
+            if response {
+                //Access Granted
+                self.imagePicker.sourceType = .camera
+                self.imagePicker.allowsEditing = false
+                self.present(self.imagePicker, animated: true, completion: nil)
+            } else {
+                self.createAlert(title: "No Camera Access", message: "You have not given permission to scan in meds with the camera. Please change this in the iOS Settings app.")
+                NSLog("Error: No access to camera!")
+            }
+        }
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        guard let image = info[UIImagePickerControllerOriginalImage] as? UIImage
+        else {
+            return self.createAlert(title: "Image Error", message: "Could not grab image.")
+        }
+        guard let imageData = UIImageJPEGRepresentation(image, 0.4)?.base64EncodedString()
+        else {
+            return self.createAlert(title: "Image Error", message: "Could not encode image.")
+        }
+        //Make API Call
+        if(!Connectivity.isConnectedToInternet) {
+            return self.createAlert(title: "Connection Error", message: "There is a connection error. Please check your internet connection or try again later.")
+        }
+        
+        //Valid Input
+        else {
+            self.spinner = UIViewController.displaySpinner(onView: self.tableView)
+            let body: [String: Any] = ["photo" : imageData]
+            Alamofire.request(api.rootURL + "/meds/pic", method: .post, parameters: body, encoding: JSONEncoding.default, headers: User.header).responseJSON { response in
+                if let JSON = response.result.value {
+                    let data = JSON as! NSDictionary
+                    if(data["error_code"] != nil) {
+                        switch data["error_code"] as! Int {
+                        //Room for adding more detailed error messages
+                        default:
+                            self.createAlert(title: "Server Error", message: "There is a connection error. Please check your internet connection or try again later.")
+                        }
+                    }
+                    else {
+                        UIViewController.removeSpinner(spinner: self.spinner)
+                        guard let jsonMatches = data["matches"] as? [Any] else {
+                            self.createAlert(title: "Lookup", message: "Could not find specified medicine")
+                            NSLog("Could not read in matches")
+                            return
+                        }
+                        self.readInMatches(jsonMatches: jsonMatches)
+                    }
+                }
+            }
+            dismiss(animated: true, completion: nil)
+        }
+    }
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        NSLog("Image Picking was cancelled my dude.")
+        dismiss(animated: true, completion: nil)
+    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return matches.count
@@ -134,6 +134,7 @@ class LookupViewController: UIViewController, UITableViewDataSource, UITableView
     }
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        print("hello")
         guard let name = searchBar.text else {
             return
         }
@@ -149,7 +150,7 @@ class LookupViewController: UIViewController, UITableViewDataSource, UITableView
         spinner = UIViewController.displaySpinner(onView: self.tableView)
         
         let req = Alamofire.request(api.rootURL + "/meds/lookup", method: .post, parameters: body, encoding: JSONEncoding.default, headers: User.header)
-			req.responseJSON { resp in
+            req.responseJSON { resp in
             UIViewController.removeSpinner(spinner: self.spinner)
             
             guard let data = resp.result.value else {

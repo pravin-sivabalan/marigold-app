@@ -88,36 +88,51 @@ class AddNotificationTableViewController: UITableViewController {
                 } else if(data["message"] != nil) {
                     let message = data["message"] as! String
                     if(message == "ok") {
+                        
+                        //Medication Conflicts
+                        
                         let JSONconflicts = data["conflicts"] as! [[String: Any]]
                         var messages = [String]()
-                        
                         for JSONconflict in JSONconflicts {
                             let newConflict = CoreDataHelper.newConflict()
                             newConflict.drug1id = JSONconflict["drug1"] as! Int64
                             newConflict.drug2id = JSONconflict["drug2"] as! Int64
                             let JSONconflictinfo = JSONconflict["info"] as! [[String : String]]
-
                             newConflict.info = JSONconflictinfo[0]["desc"]
                             newConflict.severity = JSONconflictinfo[0]["severity"]
-                            
+							CoreDataHelper.saveCoreData()
                             messages.append(newConflict.info!)
                         }
-                        
-                        if (JSONconflicts.count > 0) {
-                            let title = "Conflicts"
-                            let message = "You have conflicts:\n" + messages.joined(separator: "\n")
-                            
-                            let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
-                            alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
-                                self.finish()
-                            }))
-                            
-                            self.present(alertController, animated: true, completion: nil)
-                            return
-                        }
-                        
-                        self.finish()
-                    }
+						
+						//Allergy Conflicts
+						
+						let JSONallergyConflicts = data["allergy_conflicts"] as! [[String: Any]]
+						for JSONallergyConflict in JSONallergyConflicts {
+							let newAllergyConflict = CoreDataHelper.newAllergyConflict()
+							newAllergyConflict.drugid = JSONallergyConflict["drug"] as! Int64
+							newAllergyConflict.allergy = JSONallergyConflict["allergy"] as? String
+							newAllergyConflict.type = JSONallergyConflict["type"] as? String
+							newAllergyConflict.desc = JSONallergyConflict["desc"] as? String
+							CoreDataHelper.saveCoreData()
+							messages.append(newAllergyConflict.desc!)
+						}
+						
+						//Messages to User
+						
+						if (JSONconflicts.count > 0 || JSONallergyConflicts.count > 0) {
+							let title = "Conflicts"
+							let message = "You have conflicts:\n" + messages.joined(separator: "\n")
+							
+							let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+							alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
+								self.finish()
+							}))
+							
+							self.present(alertController, animated: true, completion: nil)
+							return
+						}
+						self.finish()
+					}
                 } else {
                     self.doneButton.isEnabled = true
                     return self.createAlert(title: "Server Error", message: "There was an issue with the server. Please try again later.")

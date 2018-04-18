@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14133" systemVersion="17E199" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="AllergyConflict" representedClassName="AllergyConflict" syncable="YES" codeGenerationType="class">
+        <attribute name="allergy" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="desc" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="drugid" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
     <entity name="Conflict" representedClassName="Conflict" syncable="YES" codeGenerationType="class">
         <attribute name="drug1id" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="drug2id" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
@@ -7,13 +13,13 @@
         <attribute name="severity" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <entity name="Medication" representedClassName="Medication" syncable="YES" codeGenerationType="class">
+        <attribute name="banned" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="brand_name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="generic_name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="id" attributeType="Integer 64" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="inactive_ingredient" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="indications_and_usage" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="information_for_patients" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="leagues_banned_in" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="medication_id" optional="YES" attributeType="Integer 64" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="name" attributeType="String" defaultValueString="&quot;&quot;" syncable="YES"/>
         <attribute name="possible_side_effects" optional="YES" attributeType="String" syncable="YES"/>
@@ -29,7 +35,8 @@
         <attribute name="when_using" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Conflict" positionX="-200" positionY="-18" width="128" height="103"/>
+        <element name="AllergyConflict" positionX="-135" positionY="135" width="128" height="105"/>
+        <element name="Conflict" positionX="-200" positionY="-18" width="128" height="105"/>
         <element name="Medication" positionX="-63" positionY="-18" width="128" height="345"/>
     </elements>
 </model>
