@@ -70,8 +70,7 @@ class AddNotificationTableViewController: UITableViewController {
         body["notifications"] = dataNotifications
         body.removeValue(forKey: "phoneNotification")
         body.removeValue(forKey: "emailNotification")
-		
-		body["refill"] = 0;
+        body.removeValue(forKey: "refillNotification")
         
         doneButton.isEnabled = false
         
@@ -89,9 +88,9 @@ class AddNotificationTableViewController: UITableViewController {
                 } else if(data["message"] != nil) {
                     let message = data["message"] as! String
                     if(message == "ok") {
-						
-						//Medication Conflicts
-						
+                        
+                        //Medication Conflicts
+                        
                         let JSONconflicts = data["conflicts"] as! [[String: Any]]
                         var messages = [String]()
                         for JSONconflict in JSONconflicts {
