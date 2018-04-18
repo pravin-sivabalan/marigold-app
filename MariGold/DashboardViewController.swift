@@ -19,16 +19,19 @@ class DashboardViewController: UIViewController, UITableViewDataSource {
     let today = Date()
     let dateFormatter = DateFormatter()
     var currentDate = Date()
-    var daysAdded = 0;
+    var daysAdded = 0
     var notifications = [String]()
     var notifMedObject = [Any]()
+    var currentWeekday = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.currentWeekday = Calendar.current.component(.weekday, from: currentDate) - 2
         dateFormatter.dateFormat = "MMM dd, yyyy"
         decrementButton.isEnabled = false
         currentDateLabel.text = dateFormatter.string(from: today)
         tableView.dataSource = self
+        
         
     }
     
@@ -55,12 +58,11 @@ class DashboardViewController: UIViewController, UITableViewDataSource {
                         return self.createAlert(title: "Server Error", message: "There was an issue with the server. Please try again later.")
                     }
                 }
-                print(data)
                 let notifications = data["notifications"] as! [[String:Any]]
                 let meds = CoreDataHelper.retrieveMeds()
                 for notification in notifications {
                     let dayToTake = notification["day_to_take"] as! Int
-                    if(dayToTake == self.daysAdded) {
+                    if(dayToTake == self.currentWeekday) {
                         let timeToTake = notification["time_to_take"] as! String
                         var dateString = timeToTake.components(separatedBy: " ")
                         let time = dateString[4]
@@ -68,7 +70,7 @@ class DashboardViewController: UIViewController, UITableViewDataSource {
                         var medName = ""
                         var exists = false
                         for med in meds {
-                            print(med)
+
                             if(med.id == medId) {
                                 medName = med.name!
                                 self.notifMedObject.append(med)
@@ -107,7 +109,6 @@ class DashboardViewController: UIViewController, UITableViewDataSource {
             guard let indexPath = tableView.indexPathForSelectedRow else { NSLog("Could not get index path of selected medication"); return }
             let nextVC = segue.destination as! MedicationDetailsViewController
             let medicationSelected = notifMedObject[indexPath.row] as! Medication
-            print(medicationSelected)
             nextVC.medication = medicationSelected
         }
     }
@@ -115,10 +116,12 @@ class DashboardViewController: UIViewController, UITableViewDataSource {
     @IBAction func incrementDateAction(_ sender: UIButton) {
         if(daysAdded < 6) {
             currentDate = Calendar.current.date(byAdding: .day, value: 1, to: currentDate)!
-            
             currentDateLabel.text = dateFormatter.string(from: currentDate)
-            
             daysAdded += 1
+            currentWeekday += 1
+            if(currentWeekday > 6) {
+                currentWeekday = 0
+            }
         }
         if(daysAdded > 0) {
             decrementButton.isEnabled = true
@@ -132,13 +135,15 @@ class DashboardViewController: UIViewController, UITableViewDataSource {
     @IBAction func decrementDateAction(_ sender: UIButton) {
         if(daysAdded > 0) {
             currentDate = Calendar.current.date(byAdding: .day, value: -1, to: currentDate)!
-            
             let dateFormatter = DateFormatter()
             dateFormatter.dateFormat = "MMM dd, yyyy"
-            
             currentDateLabel.text = dateFormatter.string(from: currentDate)
-            
             daysAdded -= 1
+            currentWeekday -= 1
+            if(currentWeekday < 0) {
+                currentWeekday = 6
+            }
+
         }
         if(daysAdded < 6) {
             incrementButton.isEnabled = true

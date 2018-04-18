@@ -15,6 +15,7 @@ class AddNotificationTableViewController: UITableViewController {
     var med: [String: Any] = [:]
     var localNotifications: [[String:Int] ] = []
     var dataNotifications: [[String:String]] = []
+    @IBOutlet weak var doneButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -72,6 +73,8 @@ class AddNotificationTableViewController: UITableViewController {
 		
 		body["refill"] = 0;
         
+        doneButton.isEnabled = false
+        
         Alamofire.request(api.rootURL + "/meds/add", method: .post, parameters: body, encoding: JSONEncoding.default, headers: User.header).responseJSON { response in
             print(response)
             if let JSON = response.result.value {
@@ -80,6 +83,7 @@ class AddNotificationTableViewController: UITableViewController {
                     switch data["error_code"] as! Int {
                     //Room for adding more detailed error messages
                     default:
+                        self.doneButton.isEnabled = true
                         return self.createAlert(title: "Server Error", message: "There was an issue with the server. Please try again later.")
                     }
                 } else if(data["message"] != nil) {
@@ -131,6 +135,7 @@ class AddNotificationTableViewController: UITableViewController {
 						self.finish()
 					}
                 } else {
+                    self.doneButton.isEnabled = true
                     return self.createAlert(title: "Server Error", message: "There was an issue with the server. Please try again later.")
                 }
             }
