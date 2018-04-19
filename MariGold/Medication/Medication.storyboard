@@ -661,6 +661,9 @@
                                                 </imageView>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="P1T-Gt-lZm" kind="show" identifier="displayAllergiesAddMed" id="1gN-wW-AiX"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" textLabel="3fO-rf-z5r" detailTextLabel="rpQ-VU-mO8" rowHeight="100" style="IBUITableViewCellStyleValue1" id="jk3-B7-IZc">
                                         <rect key="frame" x="0.0" y="375.5" width="320" height="100"/>
@@ -702,8 +705,7 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" enabled="NO" style="done" systemItem="done" id="P8g-o8-zcA">
                             <connections>
-                                <action selector="Done:" destination="TaA-Pf-vyw" id="L3T-jF-lrP"/>
-                                <segue destination="BYd-ql-bP5" kind="show" id="fb1-df-3G1"/>
+                                <segue destination="BYd-ql-bP5" kind="show" identifier="displayAddNotifications" id="EEb-tU-Hfh"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -714,6 +716,8 @@
                         <outlet property="Quantity" destination="LbP-uG-Ru1" id="zWv-3l-qNW"/>
                         <outlet property="RefillNotif" destination="Dwk-0O-Csf" id="rJl-2b-zc4"/>
                         <outlet property="Temporary" destination="YWb-DF-I7n" id="bQl-WC-dvd"/>
+                        <outlet property="allergyConflictsLabel" destination="rzw-Un-29I" id="yEi-0f-NhG"/>
+                        <outlet property="leagueConflictsField" destination="rpQ-VU-mO8" id="nDP-d8-DUr"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QuH-GL-J1C" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1228,4 +1232,7 @@
         <image name="Explosion" width="100" height="100"/>
         <image name="Medication" width="25" height="25"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="1gN-wW-AiX"/>
+    </inferredMetricsTieBreakers>
 </document>

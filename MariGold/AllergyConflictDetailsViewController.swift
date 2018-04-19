@@ -14,12 +14,22 @@ class AllergyConflictDetailsViewController: UITableViewController {
 	@IBOutlet var TypeLabel: UILabel!
 	@IBOutlet var Desc: UILabel!
 	var AllergyConflict: AllergyConflict!
-	
+    var useAllergyConflict = false
+    var allergyConflict = AllergyConflictObject(allergy: "", desc: "", type: "")
+    var medName: String = ""
+    
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		Medication.text = CoreDataHelper.retrieveMedWithID(id: AllergyConflict.drugid)?.name
-		Allergy.text = AllergyConflict.allergy
-		TypeLabel.text = AllergyConflict.type
-		Desc.text = AllergyConflict.desc
-	}
+        if(useAllergyConflict) {
+            Medication.text = medName
+            Allergy.text = allergyConflict.allergy
+            TypeLabel.text = allergyConflict.type
+            Desc.text = allergyConflict.desc
+        } else {
+            Medication.text = CoreDataHelper.retrieveMedWithID(id: AllergyConflict.drugid)?.name
+            Allergy.text = AllergyConflict.allergy
+            TypeLabel.text = AllergyConflict.type
+            Desc.text = AllergyConflict.desc
+        }
+    }
 }

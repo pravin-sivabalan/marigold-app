@@ -134,7 +134,6 @@ class LookupViewController: UIViewController, UITableViewDataSource, UITableView
     }
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        print("hello")
         guard let name = searchBar.text else {
             return
         }
