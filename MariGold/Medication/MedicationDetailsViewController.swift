@@ -107,6 +107,9 @@ class MedicationDetailsViewController: UITableViewController{
 				}
 				else {
 					//Success
+					let alert = UIAlertController(title: "Refill Success", message: "Your medication has been refilled!", preferredStyle: .alert)
+					alert.addAction(UIAlertAction(title: "Nice", style: .cancel, handler: nil))
+					self.present(alert, animated: true)
 				}
 			}
 		}
