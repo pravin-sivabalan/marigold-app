@@ -49,6 +49,7 @@
 		3D46A7D02083DFF5003ED196 /* RegisterLeagueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D46A7CF2083DFF5003ED196 /* RegisterLeagueViewController.swift */; };
 		3D46A7D920840CB8003ED196 /* RegisterAllergyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D46A7D820840CB7003ED196 /* RegisterAllergyViewController.swift */; };
 		3DDEC7DD2086CF2E001C452F /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DDEC7DC2086CF2E001C452F /* SearchViewController.swift */; };
+		3DEBA72720886D4F00B3E902 /* LabelInfoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DEBA72620886D4F00B3E902 /* LabelInfoTableViewController.swift */; };
 		3DF68D0320882E95009B2519 /* SearchDetailsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF68D0220882E95009B2519 /* SearchDetailsTableViewController.swift */; };
 		3DF68D05208855F8009B2519 /* SearchRelationsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF68D04208855F8009B2519 /* SearchRelationsTableViewController.swift */; };
 		7D21F4DED653EE42F79EEEC6 /* Pods_MariGoldTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE1410DA3A197F6555FA1071 /* Pods_MariGoldTests.framework */; };
@@ -174,6 +175,7 @@
 		3D46A7CF2083DFF5003ED196 /* RegisterLeagueViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterLeagueViewController.swift; sourceTree = "<group>"; };
 		3D46A7D820840CB7003ED196 /* RegisterAllergyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterAllergyViewController.swift; sourceTree = "<group>"; };
 		3DDEC7DC2086CF2E001C452F /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SearchViewController.swift; path = MariGold/Search/SearchViewController.swift; sourceTree = SOURCE_ROOT; };
+		3DEBA72620886D4F00B3E902 /* LabelInfoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelInfoTableViewController.swift; sourceTree = "<group>"; };
 		3DF68D0220882E95009B2519 /* SearchDetailsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDetailsTableViewController.swift; sourceTree = "<group>"; };
 		3DF68D04208855F8009B2519 /* SearchRelationsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRelationsTableViewController.swift; sourceTree = "<group>"; };
 		3FA0AFC59CF0E40A8E40C644 /* Pods_MariGoldUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MariGoldUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -301,6 +303,7 @@
 				037DF0DB203DDCB600D7F1A4 /* MedicationViewController.swift */,
 				03EEF52B20645403007C5E7A /* MedicationDetailsViewController.swift */,
 				03BCDD03203E653F00138271 /* TabBarViewController.swift */,
+				3DEBA72620886D4F00B3E902 /* LabelInfoTableViewController.swift */,
 				3D1762402017E62000A1C77A /* Main.storyboard */,
 				039253B22038B7F0005A2C42 /* LaunchScreen.storyboard */,
 				03B2062A2033EDF900C5F7F5 /* TabBar.storyboard */,
@@ -738,6 +741,7 @@
 				03EEF52C20645403007C5E7A /* MedicationDetailsViewController.swift in Sources */,
 				032A99BB2068C1F800807745 /* ConflictDetailsViewController.swift in Sources */,
 				088AC5A42068CC63009C3B57 /* Spinner.swift in Sources */,
+				3DEBA72720886D4F00B3E902 /* LabelInfoTableViewController.swift in Sources */,
 				03143E342087D84600A2BE96 /* LocationSearchTable.swift in Sources */,
 				03143E292087C47200A2BE96 /* PharmacyMapViewController.swift in Sources */,
 				088AC5AE20693D84009C3B57 /* AddNotificationViewController.swift in Sources */,
