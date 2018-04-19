@@ -54,9 +54,8 @@ class PharmacyMapViewController: UIViewController, CLLocationManagerDelegate, Ha
 		if(selectedPin != nil) {
 			address = parseAddress(selectedItem: selectedPin!)
 		}
-		let phone = selectedPinItem?.phoneNumber
+		let phone = selectedPinItem?.phoneNumber ?? "Unknown"
 		self.handlePharmacySelectionDelegate?.setPharmacyInfo(name: name, address: address, phone: phone)
-		self.dismiss(animated: true, completion: nil)
 	}
 	
 	func parseAddress(selectedItem: MKPlacemark) -> String {

@@ -29,6 +29,17 @@ class AccountViewController: UIViewController {
 		getAccountDetails()
 	}
 	
+	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+		guard let identifier = segue.identifier else { return }
+
+		if identifier == "displayAccountEditView" {
+			let nextVC = segue.destination as! AccountEditViewController
+			nextVC.PharmacyName = pharmacyNameLabel
+			nextVC.PharmacyAddress = pharmacyAddressLabel
+			nextVC.PharmacyPhone = pharmacyNumberLabel
+		}
+	}
+	
 	func getAccountDetails() {
 		let firstName = UserDefaults.standard.string(forKey: "first_name")
 		let lastName = UserDefaults.standard.string(forKey: "last_name")

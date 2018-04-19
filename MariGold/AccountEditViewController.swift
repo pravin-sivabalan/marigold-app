@@ -24,6 +24,9 @@ class AccountEditViewController: UITableViewController, HandlePharmacySelection 
 	@IBOutlet var PharmacyName: UILabel!
 	@IBOutlet var PharmacyAddress: UILabel!
 	@IBOutlet var PharmacyPhone: UILabel!
+	var newPharmacyName: String? = nil
+	var newPharmacyAddress: String? = nil
+	var newPharmacyPhone: String? = nil
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
@@ -31,9 +34,7 @@ class AccountEditViewController: UITableViewController, HandlePharmacySelection 
 		FirstNameField.text = UserDefaults.standard.string(forKey: "first_name")
 		LastNameField.text = UserDefaults.standard.string(forKey: "last_name")
 		AllergiesField.text = UserDefaults.standard.string(forKey: "allergies")
-		PharmacyName.text = UserDefaults.standard.string(forKey: "pharmacy_name")
-		PharmacyAddress.text = UserDefaults.standard.string(forKey: "pharmacy_address")
-		PharmacyPhone.text = UserDefaults.standard.string(forKey: "pharmacy_number")
+		
 		
 		let Leagues = UserDefaults.standard.string(forKey: "league") ?? ""
 		if Leagues.contains("NFL") {
@@ -61,12 +62,15 @@ class AccountEditViewController: UITableViewController, HandlePharmacySelection 
 	override func viewDidAppear(_ animated: Bool) {
 		super.viewDidAppear(animated)
 		self.navigationController?.navigationBar.topItem!.title = "Edit Account"
+		PharmacyName.text! = newPharmacyName ?? UserDefaults.standard.string(forKey: "pharmacy_name") ?? "Not Set"
+		PharmacyAddress.text! = newPharmacyAddress ?? UserDefaults.standard.string(forKey: "pharmacy_address") ?? "Not Set"
+		PharmacyPhone.text! = newPharmacyPhone ?? UserDefaults.standard.string(forKey: "pharmacy_number") ?? "Not Set"
 	}
 	
 	func setPharmacyInfo(name: String?, address: String?, phone: String?) {
-		PharmacyName.text = name
-		PharmacyAddress.text = address
-		PharmacyPhone.text = phone
+		newPharmacyName = name
+		newPharmacyAddress = address
+		newPharmacyPhone = phone
 	}
 	
 	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

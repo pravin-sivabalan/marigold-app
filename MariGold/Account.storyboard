@@ -110,7 +110,7 @@
                     <navigationItem key="navigationItem" title="Account" id="Fqi-WQ-aaF">
                         <barButtonItem key="rightBarButtonItem" title="Edit" id="7nt-Nu-CWz">
                             <connections>
-                                <segue destination="LU4-9U-zY9" kind="show" identifier="displayAccountEdit" id="qI9-vq-Xsr"/>
+                                <segue destination="LU4-9U-zY9" kind="show" identifier="displayAccountEditView" id="qI9-vq-Xsr"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
