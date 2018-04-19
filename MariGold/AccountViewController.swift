@@ -15,6 +15,9 @@ class AccountViewController: UIViewController {
     @IBOutlet weak var displayName: UILabel!
     @IBOutlet weak var emailLabel: UILabel!
     @IBOutlet weak var allergiesLabel: UILabel!
+	@IBOutlet var pharmacyNameLabel: UILabel!
+	@IBOutlet var pharmacyAddressLabel: UILabel!
+	@IBOutlet var pharmacyNumberLabel: UILabel!
 	
 	override func viewDidAppear(_ animated: Bool) {
 		super.viewDidAppear(animated)
@@ -33,6 +36,9 @@ class AccountViewController: UIViewController {
 		emailLabel.text = UserDefaults.standard.string(forKey: "email")
 		leaguesLabel.text = UserDefaults.standard.string(forKey: "league")
 		allergiesLabel.text = UserDefaults.standard.string(forKey: "allergies")
+		pharmacyNameLabel.text = UserDefaults.standard.string(forKey: "pharmacy_name")
+		pharmacyAddressLabel.text = UserDefaults.standard.string(forKey: "pharmacy_address")
+		pharmacyNumberLabel.text = UserDefaults.standard.string(forKey: "pharmacy_number")
 	}
     
     @IBAction func logoutAction(_ sender: Any) {
@@ -47,6 +53,9 @@ class AccountViewController: UIViewController {
 			UserDefaults.standard.removeObject(forKey: "email")
 			UserDefaults.standard.removeObject(forKey: "league")
 			UserDefaults.standard.removeObject(forKey: "allergies")
+			UserDefaults.standard.removeObject(forKey: "pharmacy_name")
+			UserDefaults.standard.removeObject(forKey: "pharmacy_address")
+			UserDefaults.standard.removeObject(forKey: "pharmacy_number")
 			
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let vc = storyboard.instantiateViewController(withIdentifier: "AccountSetupId") as UIViewController

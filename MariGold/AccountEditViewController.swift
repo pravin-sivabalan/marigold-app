@@ -31,6 +31,10 @@ class AccountEditViewController: UITableViewController, HandlePharmacySelection 
 		FirstNameField.text = UserDefaults.standard.string(forKey: "first_name")
 		LastNameField.text = UserDefaults.standard.string(forKey: "last_name")
 		AllergiesField.text = UserDefaults.standard.string(forKey: "allergies")
+		PharmacyName.text = UserDefaults.standard.string(forKey: "pharmacy_name")
+		PharmacyAddress.text = UserDefaults.standard.string(forKey: "pharmacy_address")
+		PharmacyPhone.text = UserDefaults.standard.string(forKey: "pharmacy_number")
+		
 		let Leagues = UserDefaults.standard.string(forKey: "league") ?? ""
 		if Leagues.contains("NFL") {
 			NFLSwitch.isOn = true
@@ -106,7 +110,10 @@ class AccountEditViewController: UITableViewController, HandlePharmacySelection 
 				"first_name" : FirstNameField.text!,
 				"last_name" : LastNameField.text!,
 				"allergies" : AllergiesField.text!,
-				"league" : leagues
+				"league" : leagues,
+				"pharmacy_name" : PharmacyName.text ?? "",
+				"pharmacy_number" : PharmacyPhone.text ?? "",
+				"pharmacy_address" : PharmacyAddress.text ?? ""
 			]
 			
 			Alamofire.request(api.rootURL + "/update/profile", method: .post, parameters: body, encoding: JSONEncoding.default, headers: User.header).responseJSON { response in
@@ -135,7 +142,9 @@ class AccountEditViewController: UITableViewController, HandlePharmacySelection 
 	}
 	
 	func setAccountDetails() {
+		let spinner = UIViewController.displaySpinner(onView: tableView)
 		Alamofire.request(api.rootURL + "/user", encoding: JSONEncoding.default, headers: User.header).responseJSON { response in
+			UIViewController.removeSpinner(spinner: spinner)
 			if let JSON = response.result.value {
 				let data = JSON as! NSDictionary
 				if(data.object(forKey: "message") as! String == "ok") {
@@ -145,6 +154,9 @@ class AccountEditViewController: UITableViewController, HandlePharmacySelection 
 					UserDefaults.standard.set(profile["email"] as? String ?? "", forKey: "email")
 					UserDefaults.standard.set(profile["league"] as? String ?? "", forKey: "league")
 					UserDefaults.standard.set(profile["allergies"] as? String ?? "", forKey: "allergies")
+					UserDefaults.standard.set(profile["pharmacy_name"] as? String ?? "", forKey: "pharmacy_name")
+					UserDefaults.standard.set(profile["pharmacy_phone"] as? String ?? "", forKey: "pharmacy_number")
+					UserDefaults.standard.set(profile["pharmacy_address"] as? String ?? "", forKey: "pharmacy_address")
 				}
 				else {
 					self.createAlert(title: "Server Error", message: "There is a connection error. Please check your internet connection or try again later")

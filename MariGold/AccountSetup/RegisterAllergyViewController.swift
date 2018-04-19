@@ -31,6 +31,9 @@ class RegisterAllergyViewController: UIViewController {
         print(userInfo)
         if let allergies = allergiesField?.text {
             userInfo["allergies"] = allergies
+			userInfo["pharmacy_name"] = ""
+			userInfo["pharmacy_number"] = ""
+			userInfo["pharmacy_address"] = ""
         }
 
         Alamofire.request(api.rootURL + "/user/register", method: .post, parameters: userInfo, encoding: JSONEncoding.default, headers: nil).responseJSON { response in

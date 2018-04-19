@@ -19,8 +19,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" translatesAutoresizingMaskIntoConstraints="NO" id="v4d-Hz-jrl">
-                                <rect key="frame" x="20" y="114" width="280" height="377.5"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" spacing="-4" translatesAutoresizingMaskIntoConstraints="NO" id="v4d-Hz-jrl">
+                                <rect key="frame" x="20" y="94" width="280" height="408"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wu3-JY-HJi">
                                         <rect key="frame" x="0.0" y="0.0" width="280" height="54"/>
@@ -29,56 +29,68 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5YF-z7-zTd">
-                                        <rect key="frame" x="0.0" y="54" width="280" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="50" width="280" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Leagues" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wNA-fZ-9vo">
-                                        <rect key="frame" x="0.0" y="86.5" width="280" height="30"/>
+                                        <rect key="frame" x="0.0" y="78.5" width="280" height="30"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T6Z-Xk-PeH">
-                                        <rect key="frame" x="0.0" y="128.5" width="280" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <rect key="frame" x="0.0" y="118" width="280" height="18"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pharmacy" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Fu-HU-OzD">
-                                        <rect key="frame" x="0.0" y="161" width="280" height="30"/>
+                                        <rect key="frame" x="0.0" y="145" width="280" height="30"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p6t-oy-bUF">
-                                        <rect key="frame" x="0.0" y="203" width="280" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <rect key="frame" x="0.0" y="184.5" width="280" height="18"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vaT-6O-ud1">
+                                        <rect key="frame" x="0.0" y="217.5" width="280" height="18"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="reG-Kz-hld">
+                                        <rect key="frame" x="0.0" y="251" width="280" height="18"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Allergies" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZCD-o8-4tR">
-                                        <rect key="frame" x="0.0" y="235.5" width="280" height="30"/>
+                                        <rect key="frame" x="0.0" y="278" width="280" height="30"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6yi-dd-suV">
-                                        <rect key="frame" x="0.0" y="277.5" width="280" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="316" width="280" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n9h-jK-T2X">
-                                        <rect key="frame" x="0.0" y="310" width="280" height="30"/>
+                                        <rect key="frame" x="0.0" y="344.5" width="280" height="30"/>
                                         <state key="normal" title="Log Out"/>
                                         <connections>
                                             <action selector="logoutAction:" destination="M2W-eh-PBb" eventType="touchUpInside" id="kw2-u8-HQG"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xi4-2e-SX9">
-                                        <rect key="frame" x="0.0" y="347.5" width="280" height="30"/>
+                                        <rect key="frame" x="0.0" y="378" width="280" height="30"/>
                                         <state key="normal" title="Delete Account"/>
                                         <connections>
                                             <action selector="deleteAccountAction:" destination="M2W-eh-PBb" eventType="touchUpInside" id="ZE8-dC-Uf2"/>
@@ -89,7 +101,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="v4d-Hz-jrl" firstAttribute="top" secondItem="wMx-Vd-KUd" secondAttribute="top" constant="50" id="bFL-80-Dpq"/>
+                            <constraint firstItem="v4d-Hz-jrl" firstAttribute="top" secondItem="wMx-Vd-KUd" secondAttribute="top" constant="30" id="bFL-80-Dpq"/>
                             <constraint firstItem="wMx-Vd-KUd" firstAttribute="trailing" secondItem="v4d-Hz-jrl" secondAttribute="trailing" constant="20" id="qRe-mS-Feo"/>
                             <constraint firstItem="v4d-Hz-jrl" firstAttribute="leading" secondItem="wMx-Vd-KUd" secondAttribute="leading" constant="20" id="xrL-Vk-AYX"/>
                         </constraints>
@@ -107,6 +119,9 @@
                         <outlet property="displayName" destination="wu3-JY-HJi" id="VoH-7o-geT"/>
                         <outlet property="emailLabel" destination="5YF-z7-zTd" id="cko-eb-dd7"/>
                         <outlet property="leaguesLabel" destination="T6Z-Xk-PeH" id="XJ0-TX-jSm"/>
+                        <outlet property="pharmacyAddressLabel" destination="vaT-6O-ud1" id="stf-WC-eb4"/>
+                        <outlet property="pharmacyNameLabel" destination="p6t-oy-bUF" id="dSi-fX-R1I"/>
+                        <outlet property="pharmacyNumberLabel" destination="reG-Kz-hld" id="GT3-OZ-6ln"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kk3-Q5-2nn" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -242,7 +257,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="44" id="9xO-ks-eWU">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="9xO-ks-eWU">
                                         <rect key="frame" x="0.0" y="293.5" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="9xO-ks-eWU" id="Vvk-Gh-SR5">
