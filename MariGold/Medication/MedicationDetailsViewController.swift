@@ -53,7 +53,11 @@ class MedicationDetailsViewController: UITableViewController{
 			let nextVC = segue.destination as! AllergyConflictsViewController
 			nextVC.medication = medication
 			return
-		}
+        } else if identifier == "showLabelInfo" {
+            let nextVC = segue.destination as! LabelInfoTableViewController
+            nextVC.medication = medication
+            return
+        }
         
         if let nextVc = segue.destination as? MedicationViewController {
             nextVc.Refresh(self)
