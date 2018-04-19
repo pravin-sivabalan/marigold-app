@@ -113,7 +113,7 @@ class MedicationAdditionTableViewController: UITableViewController {
 
             let leagueConflicts = json["leagues"] as? String
             if(leagueConflicts != "") {
-                self.leagueConflictsField.text = leagueConflicts
+                self.leagueConflictsField.text = leagueConflicts?.uppercased()
             }
         }
     }

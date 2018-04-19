@@ -331,4 +331,5 @@
     <inferredMetricsTieBreakers>
         <segue reference="Rjm-Ir-Sbg"/>
     </inferredMetricsTieBreakers>
+    <color key="tintColor" name="Mari-Orange"/>
 </document>
