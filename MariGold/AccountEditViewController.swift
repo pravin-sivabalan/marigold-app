@@ -9,19 +9,33 @@
 import UIKit
 import Alamofire
 
-class AccountEditViewController: UITableViewController {
+protocol HandlePharmacySelection {
+	func setPharmacyInfo(name: String?, address: String?, phone: String?)
+}
+
+class AccountEditViewController: UITableViewController, HandlePharmacySelection {
+	
 	@IBOutlet var FirstNameField: UITextField!
 	@IBOutlet var LastNameField: UITextField!
 	@IBOutlet var AllergiesField: UITextField!
 	@IBOutlet var NFLSwitch: UISwitch!
 	@IBOutlet var NBASwitch: UISwitch!
 	@IBOutlet var NCAASwitch: UISwitch!
-
+	@IBOutlet var PharmacyName: UILabel!
+	@IBOutlet var PharmacyAddress: UILabel!
+	@IBOutlet var PharmacyPhone: UILabel!
+	var newPharmacyName: String? = nil
+	var newPharmacyAddress: String? = nil
+	var newPharmacyPhone: String? = nil
+	
 	override func viewDidLoad() {
 		super.viewDidLoad()
+		
 		FirstNameField.text = UserDefaults.standard.string(forKey: "first_name")
 		LastNameField.text = UserDefaults.standard.string(forKey: "last_name")
 		AllergiesField.text = UserDefaults.standard.string(forKey: "allergies")
+		
+		
 		let Leagues = UserDefaults.standard.string(forKey: "league") ?? ""
 		if Leagues.contains("NFL") {
 			NFLSwitch.isOn = true
@@ -43,6 +57,34 @@ class AccountEditViewController: UITableViewController {
 		else {
 			NCAASwitch.isOn = false
 		}
+	}
+	
+	override func viewDidAppear(_ animated: Bool) {
+		super.viewDidAppear(animated)
+		self.navigationController?.navigationBar.topItem!.title = "Edit Account"
+		PharmacyName.text! = newPharmacyName ?? UserDefaults.standard.string(forKey: "pharmacy_name") ?? "Not Set"
+		PharmacyAddress.text! = newPharmacyAddress ?? UserDefaults.standard.string(forKey: "pharmacy_address") ?? "Not Set"
+		PharmacyPhone.text! = newPharmacyPhone ?? UserDefaults.standard.string(forKey: "pharmacy_number") ?? "Not Set"
+	}
+	
+	func setPharmacyInfo(name: String?, address: String?, phone: String?) {
+		newPharmacyName = name
+		newPharmacyAddress = address
+		newPharmacyPhone = phone
+	}
+	
+	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+		guard let identifier = segue.identifier else { return }
+		
+		if identifier == "displayPharmacyMapView" {
+			let nextVC = segue.destination as! PharmacyMapViewController
+			nextVC.handlePharmacySelectionDelegate = self
+		}
+	}
+	
+	@IBAction func SetPharmacy(_ sender: Any) {
+		//It will automatically segue
+		self.navigationController?.navigationBar.topItem!.title = " "
 	}
 	
 	@IBAction func Cancel(_ sender: Any) {
@@ -72,7 +114,10 @@ class AccountEditViewController: UITableViewController {
 				"first_name" : FirstNameField.text!,
 				"last_name" : LastNameField.text!,
 				"allergies" : AllergiesField.text!,
-				"league" : leagues
+				"league" : leagues,
+				"pharmacy_name" : PharmacyName.text ?? "",
+				"pharmacy_number" : PharmacyPhone.text ?? "",
+				"pharmacy_address" : PharmacyAddress.text ?? ""
 			]
 			
 			Alamofire.request(api.rootURL + "/update/profile", method: .post, parameters: body, encoding: JSONEncoding.default, headers: User.header).responseJSON { response in
@@ -101,7 +146,9 @@ class AccountEditViewController: UITableViewController {
 	}
 	
 	func setAccountDetails() {
+		let spinner = UIViewController.displaySpinner(onView: tableView)
 		Alamofire.request(api.rootURL + "/user", encoding: JSONEncoding.default, headers: User.header).responseJSON { response in
+			UIViewController.removeSpinner(spinner: spinner)
 			if let JSON = response.result.value {
 				let data = JSON as! NSDictionary
 				if(data.object(forKey: "message") as! String == "ok") {
@@ -111,6 +158,9 @@ class AccountEditViewController: UITableViewController {
 					UserDefaults.standard.set(profile["email"] as? String ?? "", forKey: "email")
 					UserDefaults.standard.set(profile["league"] as? String ?? "", forKey: "league")
 					UserDefaults.standard.set(profile["allergies"] as? String ?? "", forKey: "allergies")
+					UserDefaults.standard.set(profile["pharmacy_name"] as? String ?? "", forKey: "pharmacy_name")
+					UserDefaults.standard.set(profile["pharmacy_phone"] as? String ?? "", forKey: "pharmacy_number")
+					UserDefaults.standard.set(profile["pharmacy_address"] as? String ?? "", forKey: "pharmacy_address")
 				}
 				else {
 					self.createAlert(title: "Server Error", message: "There is a connection error. Please check your internet connection or try again later")
