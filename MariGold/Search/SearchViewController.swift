@@ -54,7 +54,6 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
 
         let req = Alamofire.request(api.rootURL + "/meds/search", method: .post, parameters: body, encoding: JSONEncoding.default, headers: User.header)
         req.responseJSON { resp in
-            print(resp)
             self.searchBar.endEditing(true)
             
             UIViewController.removeSpinner(spinner: self.spinner)
@@ -100,18 +99,27 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
         return cell
     }
     
-    // method to run when table view cell is tapped
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        selectedMatch = indexPath.row
-        performSegue(withIdentifier: "showSymtomDetails", sender: self)
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let identifier = segue.identifier else { return }
+        
+        if identifier == "displayDrugDetails" {
+            guard let indexPath = tableView.indexPathForSelectedRow else { NSLog("Could not get index path of selected medication"); return }
+            let nextVC = segue.destination as! SearchDetailsTableViewController
+            nextVC.Cui = drugs[indexPath.row].cui
+            nextVC.MedName = drugNames[indexPath.row]
+        }
     }
     
     func readDrugs(drugs: [Any]) {
         self.drugNames.removeAll()
+        self.drugs.removeAll()
         for drug in drugs {
             let obj = drug as! NSDictionary
             let name = obj["name"] as! String
+            let cui = obj["cui"] as! String
+            let tty = obj["tty"] as! String
             self.drugNames.append(name)
+            self.drugs.append(Drug(cui: cui, name: name, tty: tty))
         }
         tableView.reloadData()
     }

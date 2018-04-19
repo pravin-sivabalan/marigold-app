@@ -48,6 +48,8 @@
 		3D46A7D02083DFF5003ED196 /* RegisterLeagueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D46A7CF2083DFF5003ED196 /* RegisterLeagueViewController.swift */; };
 		3D46A7D920840CB8003ED196 /* RegisterAllergyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D46A7D820840CB7003ED196 /* RegisterAllergyViewController.swift */; };
 		3DDEC7DD2086CF2E001C452F /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DDEC7DC2086CF2E001C452F /* SearchViewController.swift */; };
+		3DF68D0320882E95009B2519 /* SearchDetailsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF68D0220882E95009B2519 /* SearchDetailsTableViewController.swift */; };
+		3DF68D05208855F8009B2519 /* SearchRelationsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF68D04208855F8009B2519 /* SearchRelationsTableViewController.swift */; };
 		7D21F4DED653EE42F79EEEC6 /* Pods_MariGoldTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE1410DA3A197F6555FA1071 /* Pods_MariGoldTests.framework */; };
 		ABCF0F733D51355B26A3CAC3 /* Pods_MariGoldUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FA0AFC59CF0E40A8E40C644 /* Pods_MariGoldUITests.framework */; };
 		BF9E65D553034DDC11216C86 /* Pods_MariGold.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D673EE6A1C2DB3A996B47D2 /* Pods_MariGold.framework */; };
@@ -169,6 +171,8 @@
 		3D46A7CF2083DFF5003ED196 /* RegisterLeagueViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterLeagueViewController.swift; sourceTree = "<group>"; };
 		3D46A7D820840CB7003ED196 /* RegisterAllergyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterAllergyViewController.swift; sourceTree = "<group>"; };
 		3DDEC7DC2086CF2E001C452F /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		3DF68D0220882E95009B2519 /* SearchDetailsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDetailsTableViewController.swift; sourceTree = "<group>"; };
+		3DF68D04208855F8009B2519 /* SearchRelationsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRelationsTableViewController.swift; sourceTree = "<group>"; };
 		3FA0AFC59CF0E40A8E40C644 /* Pods_MariGoldUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MariGoldUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A844F2CD6B895BF9CF281F6 /* Pods-MariGoldUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MariGoldUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MariGoldUITests/Pods-MariGoldUITests.release.xcconfig"; sourceTree = "<group>"; };
 		85906C025E2B64319F36A99C /* Pods-MariGoldTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MariGoldTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MariGoldTests/Pods-MariGoldTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -280,6 +284,7 @@
 		3D17623B2017E62000A1C77A /* MariGold */ = {
 			isa = PBXGroup;
 			children = (
+				3DF68CF620882D67009B2519 /* Search */,
 				3D0A94AB20850057007D271D /* MedicationAddition */,
 				3D12B11F203CB94500FD701D /* AccountSetup */,
 				3D1762432017E62000A1C77A /* Assets.xcassets */,
@@ -293,7 +298,6 @@
 				088AC5B420694326009C3B57 /* DashboardViewController.swift */,
 				037DF0DB203DDCB600D7F1A4 /* MedicationViewController.swift */,
 				03EEF52B20645403007C5E7A /* MedicationDetailsViewController.swift */,
-				3DDEC7DC2086CF2E001C452F /* SearchViewController.swift */,
 				03BCDD03203E653F00138271 /* TabBarViewController.swift */,
 				3D1762402017E62000A1C77A /* Main.storyboard */,
 				039253B22038B7F0005A2C42 /* LaunchScreen.storyboard */,
@@ -333,6 +337,16 @@
 				3D17625E2017E62000A1C77A /* Info.plist */,
 			);
 			path = MariGoldUITests;
+			sourceTree = "<group>";
+		};
+		3DF68CF620882D67009B2519 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				3DDEC7DC2086CF2E001C452F /* SearchViewController.swift */,
+				3DF68D0220882E95009B2519 /* SearchDetailsTableViewController.swift */,
+				3DF68D04208855F8009B2519 /* SearchRelationsTableViewController.swift */,
+			);
+			path = Search;
 			sourceTree = "<group>";
 		};
 		C0A7017BEC614C4E9D63BDCD /* Pods */ = {
@@ -712,6 +726,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3D46A7D02083DFF5003ED196 /* RegisterLeagueViewController.swift in Sources */,
+				3DF68D05208855F8009B2519 /* SearchRelationsTableViewController.swift in Sources */,
 				3D12B123203CBD0200FD701D /* Constants.swift in Sources */,
 				088AC5B520694326009C3B57 /* DashboardViewController.swift in Sources */,
 				031E23AB208500B800C7141B /* AllergyConflictsViewController.swift in Sources */,
@@ -725,6 +740,7 @@
 				3D46A7D920840CB8003ED196 /* RegisterAllergyViewController.swift in Sources */,
 				3D17623F2017E62000A1C77A /* ViewController.swift in Sources */,
 				08FA5DCA2082CEE3009D3F39 /* KeychainConfig.swift in Sources */,
+				3DF68D0320882E95009B2519 /* SearchDetailsTableViewController.swift in Sources */,
 				03A106B92049BABE00E31BD9 /* MariGold.xcdatamodeld in Sources */,
 				088AC5B020693DAA009C3B57 /* AddNotificationTableViewController.swift in Sources */,
 				03C08A52204CE6540072E7A5 /* MedicationAdditionViewController.swift in Sources */,

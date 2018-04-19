@@ -104,8 +104,6 @@ class MedicationAdditionTableViewController: UITableViewController {
                 return self.createAlert(title: "Conflicts", message: "Error retrieving conflicts")
             }
             
-            print(json)
-            
             guard let allergyConflicts = json["allergy_conflicts"] as? [Any] else {
                 print("Could not read in matches")
                 return
