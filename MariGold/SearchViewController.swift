@@ -9,10 +9,17 @@
 import UIKit
 import Alamofire
 
+struct Drug {
+    var cui: String
+    var name: String
+    var tty: String
+}
+
 class SearchViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     var spinner: UIView!
-    var drugs: [String] = []
+    var drugNames: [String] = []
+    var drugs: [Drug] = []
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var searchBar: UISearchBar!
@@ -47,7 +54,7 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
 
         let req = Alamofire.request(api.rootURL + "/meds/search", method: .post, parameters: body, encoding: JSONEncoding.default, headers: User.header)
         req.responseJSON { resp in
-            
+            print(resp)
             self.searchBar.endEditing(true)
             
             UIViewController.removeSpinner(spinner: self.spinner)
@@ -71,7 +78,7 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
                 self.createAlert(title: "Lookup", message: "Could not find drugs to help with your symptom")
             }
             
-            guard let drugs = json["drugs"] as? [String] else {
+            guard let drugs = json["drugs"] as? [AnyObject] else {
                 print("Could not read in matches")
                 return
             }
@@ -84,25 +91,27 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return drugs.count
+        return drugNames.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = self.tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = drugs[indexPath.row]
+        cell.textLabel?.text = drugNames[indexPath.row]
         return cell
     }
     
-//    // method to run when table view cell is tapped
-//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        selectedMatch = indexPath.row
-//        performSegue(withIdentifier: "ToAdd", sender: self)
-//    }
+    // method to run when table view cell is tapped
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        selectedMatch = indexPath.row
+        performSegue(withIdentifier: "showSymtomDetails", sender: self)
+    }
     
-    func readDrugs(drugs: [String]) {
-        self.drugs.removeAll()
+    func readDrugs(drugs: [Any]) {
+        self.drugNames.removeAll()
         for drug in drugs {
-            self.drugs.append(drug)
+            let obj = drug as! NSDictionary
+            let name = obj["name"] as! String
+            self.drugNames.append(name)
         }
         tableView.reloadData()
     }
