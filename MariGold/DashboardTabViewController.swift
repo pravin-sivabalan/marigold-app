@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol TabViewController {
+    func viewBecameActive()
+}
+
 class DashboardTabViewController: UIViewController {
     @IBOutlet weak var segmentControl: UISegmentedControl!
     
