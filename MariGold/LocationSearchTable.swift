@@ -15,6 +15,9 @@ class LocationSearchTable : UITableViewController {
 	var handleMapSearchDelegate:HandleMapSearch? = nil
 }
 
+/* Extensions
+---------------------------*/
+
 extension LocationSearchTable : UISearchResultsUpdating {
 	func updateSearchResults(for searchController: UISearchController) {
 		guard let mapView = mapView,
@@ -40,15 +43,16 @@ extension LocationSearchTable {
 		let cell = tableView.dequeueReusableCell(withIdentifier: "SearchResultCell")!
 		let selectedItem = matchingItems[indexPath.row].placemark
 		cell.textLabel?.text = selectedItem.name
-		cell.detailTextLabel?.text = matchingItems[indexPath.row].phoneNumber ?? "Phone Number Unknown" 
+		cell.detailTextLabel?.text = matchingItems[indexPath.row].phoneNumber ?? "Phone Number Unknown"
 		return cell
 	}
 }
 
 extension LocationSearchTable {
 	override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-		let selectedItem = matchingItems[indexPath.row].placemark
-		handleMapSearchDelegate?.dropPinZoomIn(placemark: selectedItem)
+		let selectedItem = matchingItems[indexPath.row]
+		let placemark = selectedItem.placemark
+		handleMapSearchDelegate?.dropPinZoomIn(mapItem: selectedItem, placemark: placemark)
 		dismiss(animated: true, completion: nil)
 	}
 }

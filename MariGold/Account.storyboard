@@ -363,8 +363,8 @@
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Phone Number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="gdf-I5-Nut">
-                                                    <rect key="frame" x="16" y="12" width="115" height="20.5"/>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Phone" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="gdf-I5-Nut">
+                                                    <rect key="frame" x="16" y="12" width="49" height="20.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -394,7 +394,7 @@
                                                     <state key="normal" title="Set Pharmacy"/>
                                                     <connections>
                                                         <action selector="SetPharmacy:" destination="LU4-9U-zY9" eventType="touchUpInside" id="QyV-MV-wFf"/>
-                                                        <segue destination="iDl-qU-7le" kind="show" id="qIz-ph-ejO"/>
+                                                        <segue destination="iDl-qU-7le" kind="show" identifier="displayPharmacyMapView" id="qIz-ph-ejO"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -427,6 +427,9 @@
                         <outlet property="NBASwitch" destination="h7n-P9-MmL" id="akV-Jh-qAE"/>
                         <outlet property="NCAASwitch" destination="nne-au-2v3" id="Lly-cu-exV"/>
                         <outlet property="NFLSwitch" destination="EBx-M4-OaQ" id="F7Z-fi-J8t"/>
+                        <outlet property="PharmacyAddress" destination="I0S-Kd-7HU" id="1f1-Ak-21Y"/>
+                        <outlet property="PharmacyName" destination="Its-hU-QuW" id="78h-gd-bFe"/>
+                        <outlet property="PharmacyPhone" destination="J9e-BS-AGT" id="M1n-k1-awZ"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mk2-G4-dyr" userLabel="First Responder" sceneMemberID="firstResponder"/>

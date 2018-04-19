@@ -9,13 +9,21 @@
 import UIKit
 import Alamofire
 
-class AccountEditViewController: UITableViewController {
+protocol HandlePharmacySelection {
+	func setPharmacyInfo(name: String?, address: String?, phone: String?)
+}
+
+class AccountEditViewController: UITableViewController, HandlePharmacySelection {
+	
 	@IBOutlet var FirstNameField: UITextField!
 	@IBOutlet var LastNameField: UITextField!
 	@IBOutlet var AllergiesField: UITextField!
 	@IBOutlet var NFLSwitch: UISwitch!
 	@IBOutlet var NBASwitch: UISwitch!
 	@IBOutlet var NCAASwitch: UISwitch!
+	@IBOutlet var PharmacyName: UILabel!
+	@IBOutlet var PharmacyAddress: UILabel!
+	@IBOutlet var PharmacyPhone: UILabel!
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
@@ -51,6 +59,20 @@ class AccountEditViewController: UITableViewController {
 		self.navigationController?.navigationBar.topItem!.title = "Edit Account"
 	}
 	
+	func setPharmacyInfo(name: String?, address: String?, phone: String?) {
+		PharmacyName.text = name
+		PharmacyAddress.text = address
+		PharmacyPhone.text = phone
+	}
+	
+	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+		guard let identifier = segue.identifier else { return }
+		
+		if identifier == "displayPharmacyMapView" {
+			let nextVC = segue.destination as! PharmacyMapViewController
+			nextVC.handlePharmacySelectionDelegate = self
+		}
+	}
 	
 	@IBAction func SetPharmacy(_ sender: Any) {
 		//It will automatically segue
