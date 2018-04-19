@@ -9,10 +9,17 @@
 import UIKit
 import Alamofire
 
+struct Drug {
+    var cui: String
+    var name: String
+    var tty: String
+}
+
 class SearchViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     var spinner: UIView!
-    var drugs: [String] = []
+    var drugNames: [String] = []
+    var drugs: [Drug] = []
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var searchBar: UISearchBar!
@@ -30,10 +37,12 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         guard let symptom = searchBar.text else {
+            self.searchBar.endEditing(true)
             return
         }
         
         if symptom == "" {
+            self.searchBar.endEditing(true)
             return
         }
         
@@ -45,7 +54,6 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
 
         let req = Alamofire.request(api.rootURL + "/meds/search", method: .post, parameters: body, encoding: JSONEncoding.default, headers: User.header)
         req.responseJSON { resp in
-            
             self.searchBar.endEditing(true)
             
             UIViewController.removeSpinner(spinner: self.spinner)
@@ -69,7 +77,7 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
                 self.createAlert(title: "Lookup", message: "Could not find drugs to help with your symptom")
             }
             
-            guard let drugs = json["drugs"] as? [String] else {
+            guard let drugs = json["drugs"] as? [AnyObject] else {
                 print("Could not read in matches")
                 return
             }
@@ -77,26 +85,41 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
         }
     }
     
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        self.searchBar.endEditing(true)
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return drugs.count
+        return drugNames.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = self.tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = drugs[indexPath.row]
+        cell.textLabel?.text = drugNames[indexPath.row]
         return cell
     }
     
-//    // method to run when table view cell is tapped
-//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        selectedMatch = indexPath.row
-//        performSegue(withIdentifier: "ToAdd", sender: self)
-//    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let identifier = segue.identifier else { return }
+        
+        if identifier == "displayDrugDetails" {
+            guard let indexPath = tableView.indexPathForSelectedRow else { NSLog("Could not get index path of selected medication"); return }
+            let nextVC = segue.destination as! SearchDetailsTableViewController
+            nextVC.Cui = drugs[indexPath.row].cui
+            nextVC.MedName = drugNames[indexPath.row]
+        }
+    }
     
-    func readDrugs(drugs: [String]) {
+    func readDrugs(drugs: [Any]) {
+        self.drugNames.removeAll()
         self.drugs.removeAll()
         for drug in drugs {
-            self.drugs.append(drug)
+            let obj = drug as! NSDictionary
+            let name = obj["name"] as! String
+            let cui = obj["cui"] as! String
+            let tty = obj["tty"] as! String
+            self.drugNames.append(name)
+            self.drugs.append(Drug(cui: cui, name: name, tty: tty))
         }
         tableView.reloadData()
     }

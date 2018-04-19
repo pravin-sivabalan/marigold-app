@@ -150,7 +150,6 @@ class ViewController: UIViewController {
 				else {
 					CoreDataHelper.deleteAllConflicts()
 					CoreDataHelper.deleteAllAllergyConflicts()
-					CoreDataHelper.deleteAllMeds()
 					CoreDataHelper.saveCoreData()
 					
 					

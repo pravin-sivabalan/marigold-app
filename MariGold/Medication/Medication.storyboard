@@ -658,6 +658,58 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
+                            <tableViewSection headerTitle="Conflicts" id="VOe-jo-8vh">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="rzw-Un-29I" imageView="qj7-fo-Y7H" style="IBUITableViewCellStyleDefault" id="Mqd-Uf-Xh1">
+                                        <rect key="frame" x="0.0" y="331.5" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Mqd-Uf-Xh1" id="ZPE-Sa-erV">
+                                            <rect key="frame" x="0.0" y="0.0" width="286" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Allergy Conflicts" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="rzw-Un-29I">
+                                                    <rect key="frame" x="16" y="0.0" width="269" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="qj7-fo-Y7H">
+                                                    <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </imageView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="P1T-Gt-lZm" kind="show" identifier="displayAllergiesAddMed" id="1gN-wW-AiX"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" textLabel="3fO-rf-z5r" detailTextLabel="rpQ-VU-mO8" rowHeight="100" style="IBUITableViewCellStyleValue1" id="jk3-B7-IZc">
+                                        <rect key="frame" x="0.0" y="375.5" width="320" height="100"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="jk3-B7-IZc" id="SKL-pH-KH4">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="99.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="League Conflicts" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="3fO-rf-z5r">
+                                                    <rect key="frame" x="16" y="40" width="128.5" height="20.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="None" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="rpQ-VU-mO8">
+                                                    <rect key="frame" x="263" y="40" width="41" height="20.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
                         </sections>
                         <connections>
                             <outlet property="dataSource" destination="TaA-Pf-vyw" id="f7p-c8-yzd"/>
@@ -672,8 +724,7 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" enabled="NO" style="done" systemItem="done" id="P8g-o8-zcA">
                             <connections>
-                                <action selector="Done:" destination="TaA-Pf-vyw" id="L3T-jF-lrP"/>
-                                <segue destination="BYd-ql-bP5" kind="show" id="fb1-df-3G1"/>
+                                <segue destination="BYd-ql-bP5" kind="show" identifier="displayAddNotifications" id="EEb-tU-Hfh"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -684,6 +735,8 @@
                         <outlet property="Quantity" destination="LbP-uG-Ru1" id="zWv-3l-qNW"/>
                         <outlet property="RefillNotif" destination="Dwk-0O-Csf" id="rJl-2b-zc4"/>
                         <outlet property="Temporary" destination="YWb-DF-I7n" id="bQl-WC-dvd"/>
+                        <outlet property="allergyConflictsLabel" destination="rzw-Un-29I" id="yEi-0f-NhG"/>
+                        <outlet property="leagueConflictsField" destination="rpQ-VU-mO8" id="nDP-d8-DUr"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QuH-GL-J1C" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1056,7 +1109,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="thj-2R-qmD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3064" y="52"/>
+            <point key="canvasLocation" x="3465" y="52"/>
         </scene>
         <!--Allergy Conflict Details-->
         <scene sceneID="evy-sz-LJE">
@@ -1198,5 +1251,7 @@
         <image name="Explosion" width="100" height="100"/>
         <image name="Medication" width="25" height="25"/>
     </resources>
-    <color key="tintColor" name="Mari-Orange"/>
+    <inferredMetricsTieBreakers>
+        <segue reference="cvM-jP-gOm"/>
+    </inferredMetricsTieBreakers>
 </document>
