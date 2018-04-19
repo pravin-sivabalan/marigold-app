@@ -200,6 +200,10 @@ class ViewController: UIViewController {
 					UserDefaults.standard.set(profile["email"] as? String ?? "", forKey: "email")
 					UserDefaults.standard.set(profile["league"] as? String ?? "", forKey: "league")
 					UserDefaults.standard.set(profile["allergies"] as? String ?? "", forKey: "allergies")
+					UserDefaults.standard.set(profile["pharmacy_name"] as? String ?? "", forKey: "pharmacy_name")
+					UserDefaults.standard.set(profile["pharmacy_phone"] as? String ?? "", forKey: "pharmacy_number")
+					UserDefaults.standard.set(profile["pharmacy_address"] as? String ?? "", forKey: "pharmacy_address")
+					
 				}
 				else {
 					self.createAlert(title: "Server Error", message: "There is a connection error. Please check your internet connection or try again later")
