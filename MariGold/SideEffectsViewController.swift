@@ -24,6 +24,8 @@ class SideEffectsViewController: UIViewController, UICollectionViewDelegate, UIC
     var sideEffects = [SideEffect]()
     var maxCount = 0
     
+    var spinner: UIView?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -39,14 +41,22 @@ class SideEffectsViewController: UIViewController, UICollectionViewDelegate, UIC
     }
     
     @IBAction func refreshPressed(_ sender: UIButton) {
+        if self.spinner != nil {
+            return
+        }
+        
         loadSideEffects()
     }
     
     func loadSideEffects() {
         sideEffects.removeAll()
         
-        let spinner = UIViewController.displaySpinner(onView: collectionView)
+        spinner = UIViewController.displaySpinner(onView: self.view)
         Alamofire.request(api.rootURL + "/user/side_effects", method: .get, parameters: nil, encoding: JSONEncoding.default, headers: User.header).responseJSON { resp in
+            defer {
+                UIViewController.removeSpinner(spinner: self.spinner!)
+                self.spinner = nil
+            }
 
             guard let json = resp.result.value as? NSDictionary else {
                 self.createAlert(title: "Server Error", message: "Could not call route for side effects.")
@@ -77,7 +87,6 @@ class SideEffectsViewController: UIViewController, UICollectionViewDelegate, UIC
             }
             
             self.collectionView.reloadData()
-            UIViewController.removeSpinner(spinner: spinner)
         }
     }
     

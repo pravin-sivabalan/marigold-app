@@ -8,52 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		030D0E27203B399700AC400C /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030D0E26203B399700AC400C /* ResetPasswordViewController.swift */; };
-		0315BA7F203A40C500CBD416 /* RegisterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0315BA7E203A40C500CBD416 /* RegisterUITests.swift */; };
-		031E23AB208500B800C7141B /* AllergyConflictsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031E23AA208500B800C7141B /* AllergyConflictsViewController.swift */; };
-		031E23AF2085026700C7141B /* AllergyConflictDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031E23AE2085026700C7141B /* AllergyConflictDetailsViewController.swift */; };
-		032A99BB2068C1F800807745 /* ConflictDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032A99BA2068C1F800807745 /* ConflictDetailsViewController.swift */; };
-		03304F7E2049A6AB0002AAD5 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03304F7D2049A6AA0002AAD5 /* AccountViewController.swift */; };
-		0350560A2034D7DF00FD8AA5 /* LoginUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035056092034D7DF00FD8AA5 /* LoginUITests.swift */; };
-		0353585520687385005E4334 /* ConflictsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0353585420687385005E4334 /* ConflictsViewController.swift */; };
-		037DF0DC203DDCB600D7F1A4 /* MedicationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037DF0DB203DDCB600D7F1A4 /* MedicationViewController.swift */; };
-		0386D6CF2040824B00E0C62E /* (null) in Sources */ = {isa = PBXBuildFile; };
-		039253B32038B7F0005A2C42 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 039253B22038B7F0005A2C42 /* LaunchScreen.storyboard */; };
-		039253BD2038E382005A2C42 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 039253BC2038E382005A2C42 /* RegisterViewController.swift */; };
-		0399401F2037B87900A6AEF1 /* Dashboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0399401E2037B87900A6AEF1 /* Dashboard.storyboard */; };
-		039940212037B91700A6AEF1 /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 039940202037B91700A6AEF1 /* Search.storyboard */; };
-		039940252037C48900A6AEF1 /* Account.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 039940242037C48900A6AEF1 /* Account.storyboard */; };
-		039940272037C9F600A6AEF1 /* Medication.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 039940262037C9F600A6AEF1 /* Medication.storyboard */; };
-		03A106B92049BABE00E31BD9 /* MariGold.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 03A106B22049BABE00E31BD9 /* MariGold.xcdatamodeld */; };
-		03A58D00205F53B1005D9B13 /* MedicationUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A58CFA205F53B0005D9B13 /* MedicationUITests.swift */; };
-		03B2062B2033EDF900C5F7F5 /* TabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03B2062A2033EDF900C5F7F5 /* TabBar.storyboard */; };
-		03BB6A71204CC7F200955186 /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BB6A6B204CC7F200955186 /* CoreDataHelper.swift */; };
-		03C08A52204CE6540072E7A5 /* MedicationAdditionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C08A51204CE6540072E7A5 /* MedicationAdditionViewController.swift */; };
-		03EEF52C20645403007C5E7A /* MedicationDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03EEF52B20645403007C5E7A /* MedicationDetailsViewController.swift */; };
-		03FA050120693E7F0046AA21 /* AccountEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FA050020693E7F0046AA21 /* AccountEditViewController.swift */; };
-		088AC5A42068CC63009C3B57 /* Spinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088AC5A32068CC63009C3B57 /* Spinner.swift */; };
-		088AC5AB2068CC8D009C3B57 /* LookupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088AC5AA2068CC8D009C3B57 /* LookupViewController.swift */; };
-		088AC5AE20693D84009C3B57 /* AddNotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088AC5AD20693D84009C3B57 /* AddNotificationViewController.swift */; };
-		088AC5B020693DAA009C3B57 /* AddNotificationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088AC5AF20693DAA009C3B57 /* AddNotificationTableViewController.swift */; };
-		088AC5B520694326009C3B57 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088AC5B420694326009C3B57 /* DashboardViewController.swift */; };
-		088AC5C2206943D0009C3B57 /* AddNotificationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 088AC5C1206943D0009C3B57 /* AddNotificationViewController.xib */; };
-		08A9CEFF2087BCAB00E297E5 /* DashboardTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A9CEF72087BCAB00E297E5 /* DashboardTabViewController.swift */; };
-		08A9CF01208874E700E297E5 /* SideEffectsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A9CF00208874E700E297E5 /* SideEffectsViewController.swift */; };
-		08FA5DCA2082CEE3009D3F39 /* KeychainConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08FA5DC92082CEE3009D3F39 /* KeychainConfig.swift */; };
-		08FA5DD32082CF4D009D3F39 /* KeychainPasswordItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08FA5DD22082CF4D009D3F39 /* KeychainPasswordItem.swift */; };
-		3D12B123203CBD0200FD701D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D12B122203CBD0200FD701D /* Constants.swift */; };
-		3D17623D2017E62000A1C77A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D17623C2017E62000A1C77A /* AppDelegate.swift */; };
-		3D17623F2017E62000A1C77A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D17623E2017E62000A1C77A /* ViewController.swift */; };
-		3D1762422017E62000A1C77A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D1762402017E62000A1C77A /* Main.storyboard */; };
-		3D1762442017E62000A1C77A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D1762432017E62000A1C77A /* Assets.xcassets */; };
-		3D1762522017E62000A1C77A /* MariGoldTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D1762512017E62000A1C77A /* MariGoldTests.swift */; };
-		3D17625D2017E62000A1C77A /* MariGoldUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D17625C2017E62000A1C77A /* MariGoldUITests.swift */; };
-		3D46A7D02083DFF5003ED196 /* RegisterLeagueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D46A7CF2083DFF5003ED196 /* RegisterLeagueViewController.swift */; };
-		3D46A7D920840CB8003ED196 /* RegisterAllergyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D46A7D820840CB7003ED196 /* RegisterAllergyViewController.swift */; };
-		3DDEC7DD2086CF2E001C452F /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DDEC7DC2086CF2E001C452F /* SearchViewController.swift */; };
-		7D21F4DED653EE42F79EEEC6 /* Pods_MariGoldTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE1410DA3A197F6555FA1071 /* Pods_MariGoldTests.framework */; };
-		ABCF0F733D51355B26A3CAC3 /* Pods_MariGoldUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FA0AFC59CF0E40A8E40C644 /* Pods_MariGoldUITests.framework */; };
-		BF9E65D553034DDC11216C86 /* Pods_MariGold.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D673EE6A1C2DB3A996B47D2 /* Pods_MariGold.framework */; };
-		030D0E27203B399700AC400C /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030D0E26203B399700AC400C /* ResetPasswordViewController.swift */; };
 		03143E292087C47200A2BE96 /* PharmacyMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03143E282087C47200A2BE96 /* PharmacyMapViewController.swift */; };
 		03143E342087D84600A2BE96 /* LocationSearchTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03143E332087D84600A2BE96 /* LocationSearchTable.swift */; };
 		0315BA7F203A40C500CBD416 /* RegisterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0315BA7E203A40C500CBD416 /* RegisterUITests.swift */; };
@@ -83,6 +37,8 @@
 		088AC5B020693DAA009C3B57 /* AddNotificationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088AC5AF20693DAA009C3B57 /* AddNotificationTableViewController.swift */; };
 		088AC5B520694326009C3B57 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088AC5B420694326009C3B57 /* DashboardViewController.swift */; };
 		088AC5C2206943D0009C3B57 /* AddNotificationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 088AC5C1206943D0009C3B57 /* AddNotificationViewController.xib */; };
+		08A9CF0C208889E000E297E5 /* DashboardTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A9CF03208889DF00E297E5 /* DashboardTabViewController.swift */; };
+		08A9CF0D208889E000E297E5 /* SideEffectsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A9CF0B208889E000E297E5 /* SideEffectsViewController.swift */; };
 		08FA5DCA2082CEE3009D3F39 /* KeychainConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08FA5DC92082CEE3009D3F39 /* KeychainConfig.swift */; };
 		08FA5DD32082CF4D009D3F39 /* KeychainPasswordItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08FA5DD22082CF4D009D3F39 /* KeychainPasswordItem.swift */; };
 		3D12B123203CBD0200FD701D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D12B122203CBD0200FD701D /* Constants.swift */; };
@@ -171,65 +127,6 @@
 
 /* Begin PBXFileReference section */
 		030D0E26203B399700AC400C /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
-		0315BA7E203A40C500CBD416 /* RegisterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterUITests.swift; sourceTree = "<group>"; };
-		031E23AA208500B800C7141B /* AllergyConflictsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AllergyConflictsViewController.swift; path = Conflict/AllergyConflictsViewController.swift; sourceTree = "<group>"; };
-		031E23AE2085026700C7141B /* AllergyConflictDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllergyConflictDetailsViewController.swift; sourceTree = "<group>"; };
-		032A99BA2068C1F800807745 /* ConflictDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ConflictDetailsViewController.swift; path = Conflict/ConflictDetailsViewController.swift; sourceTree = "<group>"; };
-		03304F7D2049A6AA0002AAD5 /* AccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
-		035056092034D7DF00FD8AA5 /* LoginUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUITests.swift; sourceTree = "<group>"; };
-		0353585420687385005E4334 /* ConflictsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConflictsViewController.swift; sourceTree = "<group>"; };
-		037DF0DB203DDCB600D7F1A4 /* MedicationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MedicationViewController.swift; path = Medication/MedicationViewController.swift; sourceTree = "<group>"; };
-		039253B22038B7F0005A2C42 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
-		039253BC2038E382005A2C42 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
-		0399401E2037B87900A6AEF1 /* Dashboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Dashboard.storyboard; sourceTree = "<group>"; };
-		039940202037B91700A6AEF1 /* Search.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
-		039940242037C48900A6AEF1 /* Account.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Account.storyboard; sourceTree = "<group>"; };
-		039940262037C9F600A6AEF1 /* Medication.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Medication.storyboard; path = Medication/Medication.storyboard; sourceTree = "<group>"; };
-		03A106B32049BABE00E31BD9 /* Medication.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Medication.xcdatamodel; sourceTree = "<group>"; };
-		03A58CFA205F53B0005D9B13 /* MedicationUITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicationUITests.swift; sourceTree = "<group>"; };
-		03B2062A2033EDF900C5F7F5 /* TabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBar.storyboard; sourceTree = "<group>"; };
-		03BB6A6B204CC7F200955186 /* CoreDataHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CoreDataHelper.swift; path = Models/CoreDataHelper.swift; sourceTree = "<group>"; };
-		03BCDD03203E653F00138271 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
-		03BCDD28203E68D000138271 /* Pods.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Pods.xcodeproj; path = Pods/Pods.xcodeproj; sourceTree = "<group>"; };
-		03C08A51204CE6540072E7A5 /* MedicationAdditionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicationAdditionViewController.swift; sourceTree = "<group>"; };
-		03EEF52B20645403007C5E7A /* MedicationDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MedicationDetailsViewController.swift; path = Medication/MedicationDetailsViewController.swift; sourceTree = "<group>"; };
-		03FA050020693E7F0046AA21 /* AccountEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountEditViewController.swift; sourceTree = "<group>"; };
-		088AC5A32068CC63009C3B57 /* Spinner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spinner.swift; sourceTree = "<group>"; };
-		088AC5AA2068CC8D009C3B57 /* LookupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LookupViewController.swift; sourceTree = "<group>"; };
-		088AC5AD20693D84009C3B57 /* AddNotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNotificationViewController.swift; sourceTree = "<group>"; };
-		088AC5AF20693DAA009C3B57 /* AddNotificationTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNotificationTableViewController.swift; sourceTree = "<group>"; };
-		088AC5B420694326009C3B57 /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
-		088AC5C1206943D0009C3B57 /* AddNotificationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddNotificationViewController.xib; sourceTree = "<group>"; };
-		08A9CEF72087BCAB00E297E5 /* DashboardTabViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardTabViewController.swift; sourceTree = "<group>"; };
-		08A9CF00208874E700E297E5 /* SideEffectsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideEffectsViewController.swift; sourceTree = "<group>"; };
-		08FA5DC92082CEE3009D3F39 /* KeychainConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainConfig.swift; sourceTree = "<group>"; };
-		08FA5DD22082CF4D009D3F39 /* KeychainPasswordItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainPasswordItem.swift; sourceTree = "<group>"; };
-		0E4FE26337B0BA937F5A53D3 /* Pods-MariGold.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MariGold.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MariGold/Pods-MariGold.debug.xcconfig"; sourceTree = "<group>"; };
-		3D12B122203CBD0200FD701D /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		3D1762392017E62000A1C77A /* MariGold.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MariGold.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		3D17623C2017E62000A1C77A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3D17623E2017E62000A1C77A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		3D1762412017E62000A1C77A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		3D1762432017E62000A1C77A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		3D1762482017E62000A1C77A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3D17624D2017E62000A1C77A /* MariGoldTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MariGoldTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		3D1762512017E62000A1C77A /* MariGoldTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MariGoldTests.swift; sourceTree = "<group>"; };
-		3D1762532017E62000A1C77A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3D1762582017E62000A1C77A /* MariGoldUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MariGoldUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		3D17625C2017E62000A1C77A /* MariGoldUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MariGoldUITests.swift; sourceTree = "<group>"; };
-		3D17625E2017E62000A1C77A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3D46A7CF2083DFF5003ED196 /* RegisterLeagueViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterLeagueViewController.swift; sourceTree = "<group>"; };
-		3D46A7D820840CB7003ED196 /* RegisterAllergyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterAllergyViewController.swift; sourceTree = "<group>"; };
-		3DDEC7DC2086CF2E001C452F /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
-		3FA0AFC59CF0E40A8E40C644 /* Pods_MariGoldUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MariGoldUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		4A844F2CD6B895BF9CF281F6 /* Pods-MariGoldUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MariGoldUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MariGoldUITests/Pods-MariGoldUITests.release.xcconfig"; sourceTree = "<group>"; };
-		85906C025E2B64319F36A99C /* Pods-MariGoldTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MariGoldTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MariGoldTests/Pods-MariGoldTests.debug.xcconfig"; sourceTree = "<group>"; };
-		85CA57AB855AC9F13EE89691 /* Pods-MariGoldTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MariGoldTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MariGoldTests/Pods-MariGoldTests.release.xcconfig"; sourceTree = "<group>"; };
-		979C2404EE5CFE1A22129EE2 /* Pods-MariGoldUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MariGoldUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MariGoldUITests/Pods-MariGoldUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		9D673EE6A1C2DB3A996B47D2 /* Pods_MariGold.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MariGold.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		AE1410DA3A197F6555FA1071 /* Pods_MariGoldTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MariGoldTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		DAE7928B40A63DCD5F4722AC /* Pods-MariGold.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MariGold.release.xcconfig"; path = "Pods/Target Support Files/Pods-MariGold/Pods-MariGold.release.xcconfig"; sourceTree = "<group>"; };
-		030D0E26203B399700AC400C /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
 		03143E282087C47200A2BE96 /* PharmacyMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PharmacyMapViewController.swift; sourceTree = "<group>"; };
 		03143E322087CD3800A2BE96 /* Purdue.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Purdue.gpx; sourceTree = "<group>"; };
 		03143E332087D84600A2BE96 /* LocationSearchTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchTable.swift; sourceTree = "<group>"; };
@@ -261,6 +158,8 @@
 		088AC5AF20693DAA009C3B57 /* AddNotificationTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNotificationTableViewController.swift; sourceTree = "<group>"; };
 		088AC5B420694326009C3B57 /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 		088AC5C1206943D0009C3B57 /* AddNotificationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddNotificationViewController.xib; sourceTree = "<group>"; };
+		08A9CF03208889DF00E297E5 /* DashboardTabViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardTabViewController.swift; sourceTree = "<group>"; };
+		08A9CF0B208889E000E297E5 /* SideEffectsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideEffectsViewController.swift; sourceTree = "<group>"; };
 		08FA5DC92082CEE3009D3F39 /* KeychainConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainConfig.swift; sourceTree = "<group>"; };
 		08FA5DD22082CF4D009D3F39 /* KeychainPasswordItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainPasswordItem.swift; sourceTree = "<group>"; };
 		0E4FE26337B0BA937F5A53D3 /* Pods-MariGold.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MariGold.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MariGold/Pods-MariGold.debug.xcconfig"; sourceTree = "<group>"; };
@@ -361,149 +260,6 @@
 			children = (
 				3D17623E2017E62000A1C77A /* ViewController.swift */,
 				030D0E26203B399700AC400C /* ResetPasswordViewController.swift */,
-				039253BC2038E382005A2C42 /* RegisterViewController.swift */,
-				3D46A7CF2083DFF5003ED196 /* RegisterLeagueViewController.swift */,
-				3D46A7D820840CB7003ED196 /* RegisterAllergyViewController.swift */,
-			);
-			path = AccountSetup;
-			sourceTree = "<group>";
-		};
-		3D1762302017E62000A1C77A = {
-			isa = PBXGroup;
-			children = (
-				03BCDD28203E68D000138271 /* Pods.xcodeproj */,
-				3D17623B2017E62000A1C77A /* MariGold */,
-				3D1762502017E62000A1C77A /* MariGoldTests */,
-				3D17625B2017E62000A1C77A /* MariGoldUITests */,
-				3D17623A2017E62000A1C77A /* Products */,
-				C0A7017BEC614C4E9D63BDCD /* Pods */,
-				01516C12690DF51AB53C9478 /* Frameworks */,
-			);
-			sourceTree = "<group>";
-		};
-		3D17623A2017E62000A1C77A /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				3D1762392017E62000A1C77A /* MariGold.app */,
-				3D17624D2017E62000A1C77A /* MariGoldTests.xctest */,
-				3D1762582017E62000A1C77A /* MariGoldUITests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		3D17623B2017E62000A1C77A /* MariGold */ = {
-			isa = PBXGroup;
-			children = (
-				3D0A94AB20850057007D271D /* MedicationAddition */,
-				3D12B11F203CB94500FD701D /* AccountSetup */,
-				3D1762432017E62000A1C77A /* Assets.xcassets */,
-				3D17623C2017E62000A1C77A /* AppDelegate.swift */,
-				03FA050020693E7F0046AA21 /* AccountEditViewController.swift */,
-				03304F7D2049A6AA0002AAD5 /* AccountViewController.swift */,
-				031E23AA208500B800C7141B /* AllergyConflictsViewController.swift */,
-				031E23AE2085026700C7141B /* AllergyConflictDetailsViewController.swift */,
-				0353585420687385005E4334 /* ConflictsViewController.swift */,
-				032A99BA2068C1F800807745 /* ConflictDetailsViewController.swift */,
-				088AC5B420694326009C3B57 /* DashboardViewController.swift */,
-				08A9CF00208874E700E297E5 /* SideEffectsViewController.swift */,
-				08A9CEF72087BCAB00E297E5 /* DashboardTabViewController.swift */,
-				037DF0DB203DDCB600D7F1A4 /* MedicationViewController.swift */,
-				03EEF52B20645403007C5E7A /* MedicationDetailsViewController.swift */,
-				3DDEC7DC2086CF2E001C452F /* SearchViewController.swift */,
-				03BCDD03203E653F00138271 /* TabBarViewController.swift */,
-				3D1762402017E62000A1C77A /* Main.storyboard */,
-				039253B22038B7F0005A2C42 /* LaunchScreen.storyboard */,
-				03B2062A2033EDF900C5F7F5 /* TabBar.storyboard */,
-				0399401E2037B87900A6AEF1 /* Dashboard.storyboard */,
-				039940262037C9F600A6AEF1 /* Medication.storyboard */,
-				039940202037B91700A6AEF1 /* Search.storyboard */,
-				039940242037C48900A6AEF1 /* Account.storyboard */,
-				3D1762482017E62000A1C77A /* Info.plist */,
-				03A106B22049BABE00E31BD9 /* MariGold.xcdatamodeld */,
-				03BB6A6B204CC7F200955186 /* CoreDataHelper.swift */,
-				3D12B122203CBD0200FD701D /* Constants.swift */,
-				088AC5A32068CC63009C3B57 /* Spinner.swift */,
-				08FA5DC92082CEE3009D3F39 /* KeychainConfig.swift */,
-				08FA5DD22082CF4D009D3F39 /* KeychainPasswordItem.swift */,
-				088AC5C1206943D0009C3B57 /* AddNotificationViewController.xib */,
-			);
-			path = MariGold;
-			sourceTree = "<group>";
-		};
-		3D1762502017E62000A1C77A /* MariGoldTests */ = {
-			isa = PBXGroup;
-			children = (
-				3D1762512017E62000A1C77A /* MariGoldTests.swift */,
-				3D1762532017E62000A1C77A /* Info.plist */,
-			);
-			path = MariGoldTests;
-			sourceTree = "<group>";
-		};
-		3D17625B2017E62000A1C77A /* MariGoldUITests */ = {
-			isa = PBXGroup;
-			children = (
-				0315BA7E203A40C500CBD416 /* RegisterUITests.swift */,
-				03A58CFA205F53B0005D9B13 /* MedicationUITests.swift */,
-				035056092034D7DF00FD8AA5 /* LoginUITests.swift */,
-				3D17625C2017E62000A1C77A /* MariGoldUITests.swift */,
-				3D17625E2017E62000A1C77A /* Info.plist */,
-			);
-			path = MariGoldUITests;
-			sourceTree = "<group>";
-		};
-		C0A7017BEC614C4E9D63BDCD /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				0E4FE26337B0BA937F5A53D3 /* Pods-MariGold.debug.xcconfig */,
-				DAE7928B40A63DCD5F4722AC /* Pods-MariGold.release.xcconfig */,
-				85906C025E2B64319F36A99C /* Pods-MariGoldTests.debug.xcconfig */,
-				85CA57AB855AC9F13EE89691 /* Pods-MariGoldTests.release.xcconfig */,
-				979C2404EE5CFE1A22129EE2 /* Pods-MariGoldUITests.debug.xcconfig */,
-				4A844F2CD6B895BF9CF281F6 /* Pods-MariGoldUITests.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		01516C12690DF51AB53C9478 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				9D673EE6A1C2DB3A996B47D2 /* Pods_MariGold.framework */,
-				AE1410DA3A197F6555FA1071 /* Pods_MariGoldTests.framework */,
-				3FA0AFC59CF0E40A8E40C644 /* Pods_MariGoldUITests.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		03BCDD29203E68D000138271 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				03BCDD31203E68D000138271 /* Alamofire.framework */,
-				088AC5BE20694327009C3B57 /* DynamicBlurView.framework */,
-				03BCDD33203E68D000138271 /* Pastel.framework */,
-				03BCDD35203E68D000138271 /* Pods_MariGold.framework */,
-				03BCDD37203E68D000138271 /* Pods_MariGoldTests.framework */,
-				03BCDD39203E68D000138271 /* Pods_MariGoldUITests.framework */,
-				088AC5C020694327009C3B57 /* PopupDialog.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		3D0A94AB20850057007D271D /* MedicationAddition */ = {
-			isa = PBXGroup;
-			children = (
-				088AC5AD20693D84009C3B57 /* AddNotificationViewController.swift */,
-				088AC5AF20693DAA009C3B57 /* AddNotificationTableViewController.swift */,
-				088AC5AA2068CC8D009C3B57 /* LookupViewController.swift */,
-				03C08A51204CE6540072E7A5 /* MedicationAdditionViewController.swift */,
-			);
-			path = MedicationAddition;
-			sourceTree = "<group>";
-		};
-		3D12B11F203CB94500FD701D /* AccountSetup */ = {
-			isa = PBXGroup;
-			children = (
-				3D17623E2017E62000A1C77A /* ViewController.swift */,
-				030D0E26203B399700AC400C /* ResetPasswordViewController.swift */,
 				3D46A7CF2083DFF5003ED196 /* RegisterLeagueViewController.swift */,
 				3D46A7D820840CB7003ED196 /* RegisterAllergyViewController.swift */,
 			);
@@ -548,6 +304,8 @@
 				0353585420687385005E4334 /* ConflictsViewController.swift */,
 				032A99BA2068C1F800807745 /* ConflictDetailsViewController.swift */,
 				088AC5B420694326009C3B57 /* DashboardViewController.swift */,
+				08A9CF03208889DF00E297E5 /* DashboardTabViewController.swift */,
+				08A9CF0B208889E000E297E5 /* SideEffectsViewController.swift */,
 				037DF0DB203DDCB600D7F1A4 /* MedicationViewController.swift */,
 				03EEF52B20645403007C5E7A /* MedicationDetailsViewController.swift */,
 				03BCDD03203E653F00138271 /* TabBarViewController.swift */,
@@ -982,61 +740,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				3D46A7D02083DFF5003ED196 /* RegisterLeagueViewController.swift in Sources */,
-				3D12B123203CBD0200FD701D /* Constants.swift in Sources */,
-				088AC5B520694326009C3B57 /* DashboardViewController.swift in Sources */,
-				08A9CEFF2087BCAB00E297E5 /* DashboardTabViewController.swift in Sources */,
-				031E23AB208500B800C7141B /* AllergyConflictsViewController.swift in Sources */,
-				03EEF52C20645403007C5E7A /* MedicationDetailsViewController.swift in Sources */,
-				032A99BB2068C1F800807745 /* ConflictDetailsViewController.swift in Sources */,
-				088AC5A42068CC63009C3B57 /* Spinner.swift in Sources */,
-				039253BD2038E382005A2C42 /* RegisterViewController.swift in Sources */,
-				088AC5AE20693D84009C3B57 /* AddNotificationViewController.swift in Sources */,
-				031E23AF2085026700C7141B /* AllergyConflictDetailsViewController.swift in Sources */,
-				03304F7E2049A6AB0002AAD5 /* AccountViewController.swift in Sources */,
-				3D46A7D920840CB8003ED196 /* RegisterAllergyViewController.swift in Sources */,
-				3D17623F2017E62000A1C77A /* ViewController.swift in Sources */,
-				08FA5DCA2082CEE3009D3F39 /* KeychainConfig.swift in Sources */,
-				03A106B92049BABE00E31BD9 /* MariGold.xcdatamodeld in Sources */,
-				088AC5B020693DAA009C3B57 /* AddNotificationTableViewController.swift in Sources */,
-				03C08A52204CE6540072E7A5 /* MedicationAdditionViewController.swift in Sources */,
-				037DF0DC203DDCB600D7F1A4 /* MedicationViewController.swift in Sources */,
-				0353585520687385005E4334 /* ConflictsViewController.swift in Sources */,
-				03BB6A71204CC7F200955186 /* CoreDataHelper.swift in Sources */,
-				3DDEC7DD2086CF2E001C452F /* SearchViewController.swift in Sources */,
-				08A9CF01208874E700E297E5 /* SideEffectsViewController.swift in Sources */,
-				03FA050120693E7F0046AA21 /* AccountEditViewController.swift in Sources */,
-				08FA5DD32082CF4D009D3F39 /* KeychainPasswordItem.swift in Sources */,
-				3D17623D2017E62000A1C77A /* AppDelegate.swift in Sources */,
-				088AC5AB2068CC8D009C3B57 /* LookupViewController.swift in Sources */,
-				030D0E27203B399700AC400C /* ResetPasswordViewController.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		3D1762492017E62000A1C77A /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				3D1762522017E62000A1C77A /* MariGoldTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		3D1762542017E62000A1C77A /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				0386D6CF2040824B00E0C62E /* (null) in Sources */,
-				3D17625D2017E62000A1C77A /* MariGoldUITests.swift in Sources */,
-				0315BA7F203A40C500CBD416 /* RegisterUITests.swift in Sources */,
-				03A58D00205F53B1005D9B13 /* MedicationUITests.swift in Sources */,
-				0350560A2034D7DF00FD8AA5 /* LoginUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		3D1762352017E62000A1C77A /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				3D46A7D02083DFF5003ED196 /* RegisterLeagueViewController.swift in Sources */,
 				3DF68D05208855F8009B2519 /* SearchRelationsTableViewController.swift in Sources */,
 				3D12B123203CBD0200FD701D /* Constants.swift in Sources */,
 				088AC5B520694326009C3B57 /* DashboardViewController.swift in Sources */,
@@ -1051,6 +754,7 @@
 				031E23AF2085026700C7141B /* AllergyConflictDetailsViewController.swift in Sources */,
 				03304F7E2049A6AB0002AAD5 /* AccountViewController.swift in Sources */,
 				3D46A7D920840CB8003ED196 /* RegisterAllergyViewController.swift in Sources */,
+				08A9CF0C208889E000E297E5 /* DashboardTabViewController.swift in Sources */,
 				3D17623F2017E62000A1C77A /* ViewController.swift in Sources */,
 				08FA5DCA2082CEE3009D3F39 /* KeychainConfig.swift in Sources */,
 				3DF68D0320882E95009B2519 /* SearchDetailsTableViewController.swift in Sources */,
@@ -1065,6 +769,7 @@
 				08FA5DD32082CF4D009D3F39 /* KeychainPasswordItem.swift in Sources */,
 				3D17623D2017E62000A1C77A /* AppDelegate.swift in Sources */,
 				088AC5AB2068CC8D009C3B57 /* LookupViewController.swift in Sources */,
+				08A9CF0D208889E000E297E5 /* SideEffectsViewController.swift in Sources */,
 				030D0E27203B399700AC400C /* ResetPasswordViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
