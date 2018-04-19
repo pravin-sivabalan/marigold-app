@@ -111,6 +111,10 @@ class MedicationDetailsViewController: UITableViewController{
 				}
 				else {
 					//Success
+					if let newRunOutDate = data["run_out_date"] as? String {
+						self.RunOutDate.text = newRunOutDate
+					}
+					
 					let alert = UIAlertController(title: "Refill Success", message: "Your medication has been refilled!", preferredStyle: .alert)
 					alert.addAction(UIAlertAction(title: "Nice", style: .cancel, handler: nil))
 					self.present(alert, animated: true)
