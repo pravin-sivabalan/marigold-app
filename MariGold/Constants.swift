@@ -13,6 +13,13 @@ struct api {
     static let rootURL = "https://marigoldapp.net"
 }
 
+
+struct AllergyConflictObject {
+    var allergy: String
+    var desc: String
+    var type: String
+}
+
 protocol ServerError {
     var error_code: Int { get }
     var message: String { get }
