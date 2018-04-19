@@ -56,6 +56,10 @@ class PharmacyMapViewController: UIViewController, CLLocationManagerDelegate, Ha
 		}
 		let phone = selectedPinItem?.phoneNumber ?? "Unknown"
 		self.handlePharmacySelectionDelegate?.setPharmacyInfo(name: name, address: address, phone: phone)
+		
+		let alert = UIAlertController(title: "Pharmacy Set", message: "Please go back to Account Edit View.", preferredStyle: .alert)
+		alert.addAction(UIAlertAction(title: "Nice", style: .cancel, handler: nil))
+		self.present(alert, animated: true)
 	}
 	
 	func parseAddress(selectedItem: MKPlacemark) -> String {
