@@ -410,9 +410,8 @@
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="otm-Id-6sf">
-                                                    <rect key="frame" x="91" y="6" width="141" height="35"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="otm-Id-6sf">
+                                                    <rect key="frame" x="89.5" y="4.5" width="141" height="35"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                                     <state key="normal" title="Refill Medication"/>
                                                     <connections>
@@ -420,6 +419,10 @@
                                                     </connections>
                                                 </button>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="otm-Id-6sf" firstAttribute="centerX" secondItem="PiX-3Y-xd7" secondAttribute="centerX" id="2LB-Yf-JIR"/>
+                                                <constraint firstItem="otm-Id-6sf" firstAttribute="centerY" secondItem="PiX-3Y-xd7" secondAttribute="centerY" id="kGN-ya-kSe"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="300" id="R8G-Fy-smh">
