@@ -1330,7 +1330,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Inactive Ingredients:" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="AXs-jn-Lot">
-                                                    <rect key="frame" x="16" y="11" width="288" height="278"/>
+                                                    <rect key="frame" x="8" y="8" width="304" height="283.5"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -1370,4 +1370,5 @@
     <inferredMetricsTieBreakers>
         <segue reference="cvM-jP-gOm"/>
     </inferredMetricsTieBreakers>
+    <color key="tintColor" name="Mari-Orange"/>
 </document>

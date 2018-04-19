@@ -10,9 +10,9 @@ import UIKit
 import Alamofire
 
 class DashboardViewController: UIViewController, UITableViewDataSource {
-    
-    
-    @IBOutlet weak var incrementButton: UIButton!
+	
+	@IBOutlet var nextMedicationLabel: UILabel!
+	@IBOutlet weak var incrementButton: UIButton!
     @IBOutlet weak var decrementButton: UIButton!
     @IBOutlet weak var currentDateLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
@@ -31,8 +31,6 @@ class DashboardViewController: UIViewController, UITableViewDataSource {
         decrementButton.isEnabled = false
         currentDateLabel.text = dateFormatter.string(from: today)
         tableView.dataSource = self
-        
-        
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -83,6 +81,14 @@ class DashboardViewController: UIViewController, UITableViewDataSource {
                         }
                     }
                 }
+				var nextMed: String
+				if(!self.notifications.isEmpty) {
+					nextMed = self.notifications[0]
+				}
+				else {
+					nextMed = "None."
+				}
+				self.nextMedicationLabel.text = "Next Medication on this day: \(nextMed)"
                 self.tableView.reloadData()
             }
         }

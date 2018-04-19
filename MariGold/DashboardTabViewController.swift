@@ -14,8 +14,8 @@ protocol TabViewController {
 
 class DashboardTabViewController: UIViewController {
     @IBOutlet weak var segmentControl: UISegmentedControl!
-    
-    @IBOutlet weak var scheduleView: UIView!
+	@IBOutlet var NextMedication: UILabel!
+	@IBOutlet weak var scheduleView: UIView!
     @IBOutlet weak var sideEffectsView: UIView!
     
     var views: [UIView]!
