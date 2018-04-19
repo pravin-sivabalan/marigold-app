@@ -75,4 +75,5 @@
         <image name="Dashboard" width="25" height="25"/>
         <image name="Medication" width="25" height="25"/>
     </resources>
+    <color key="tintColor" name="Mari-Orange"/>
 </document>

@@ -13,7 +13,6 @@
         <!--Search-->
         <scene sceneID="bPQ-s8-L6g">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="fZP-ij-JpZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="Search.storyboard" title="Search" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Zxt-Oh-acZ" customClass="SearchViewController" customModule="MariGold" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tzf-gv-WrQ" customClass="SearchS">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -49,6 +48,7 @@
                         <outlet property="tableView" destination="bOg-aK-eip" id="sp9-Ym-06u"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fZP-ij-JpZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1060" y="167.76611694152925"/>
         </scene>
@@ -73,4 +73,5 @@
             <point key="canvasLocation" x="238" y="168"/>
         </scene>
     </scenes>
+    <color key="tintColor" name="Mari-Orange"/>
 </document>
