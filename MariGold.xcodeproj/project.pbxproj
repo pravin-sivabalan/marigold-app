@@ -1,1059 +1,1071 @@
 // !$*UTF8*$!
 {
-    archiveVersion = 1;
-    classes = {
-    };
-    objectVersion = 48;
-    objects = {
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
 
 /* Begin PBXBuildFile section */
-        030D0E27203B399700AC400C /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030D0E26203B399700AC400C /* ResetPasswordViewController.swift */; };
-        0315BA7F203A40C500CBD416 /* RegisterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0315BA7E203A40C500CBD416 /* RegisterUITests.swift */; };
-        031E23AB208500B800C7141B /* AllergyConflictsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031E23AA208500B800C7141B /* AllergyConflictsViewController.swift */; };
-        031E23AF2085026700C7141B /* AllergyConflictDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031E23AE2085026700C7141B /* AllergyConflictDetailsViewController.swift */; };
-        032A99BB2068C1F800807745 /* ConflictDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032A99BA2068C1F800807745 /* ConflictDetailsViewController.swift */; };
-        03304F7E2049A6AB0002AAD5 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03304F7D2049A6AA0002AAD5 /* AccountViewController.swift */; };
-        0350560A2034D7DF00FD8AA5 /* LoginUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035056092034D7DF00FD8AA5 /* LoginUITests.swift */; };
-        0353585520687385005E4334 /* ConflictsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0353585420687385005E4334 /* ConflictsViewController.swift */; };
-        037DF0DC203DDCB600D7F1A4 /* MedicationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037DF0DB203DDCB600D7F1A4 /* MedicationViewController.swift */; };
-        0386D6CF2040824B00E0C62E /* (null) in Sources */ = {isa = PBXBuildFile; };
-        039253B32038B7F0005A2C42 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 039253B22038B7F0005A2C42 /* LaunchScreen.storyboard */; };
-        039253BD2038E382005A2C42 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 039253BC2038E382005A2C42 /* RegisterViewController.swift */; };
-        0399401F2037B87900A6AEF1 /* Dashboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0399401E2037B87900A6AEF1 /* Dashboard.storyboard */; };
-        039940212037B91700A6AEF1 /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 039940202037B91700A6AEF1 /* Search.storyboard */; };
-        039940252037C48900A6AEF1 /* Account.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 039940242037C48900A6AEF1 /* Account.storyboard */; };
-        039940272037C9F600A6AEF1 /* Medication.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 039940262037C9F600A6AEF1 /* Medication.storyboard */; };
-        03A106B92049BABE00E31BD9 /* MariGold.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 03A106B22049BABE00E31BD9 /* MariGold.xcdatamodeld */; };
-        03A58D00205F53B1005D9B13 /* MedicationUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A58CFA205F53B0005D9B13 /* MedicationUITests.swift */; };
-        03B2062B2033EDF900C5F7F5 /* TabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03B2062A2033EDF900C5F7F5 /* TabBar.storyboard */; };
-        03BB6A71204CC7F200955186 /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BB6A6B204CC7F200955186 /* CoreDataHelper.swift */; };
-        03C08A52204CE6540072E7A5 /* MedicationAdditionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C08A51204CE6540072E7A5 /* MedicationAdditionViewController.swift */; };
-        03EEF52C20645403007C5E7A /* MedicationDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03EEF52B20645403007C5E7A /* MedicationDetailsViewController.swift */; };
-        03FA050120693E7F0046AA21 /* AccountEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FA050020693E7F0046AA21 /* AccountEditViewController.swift */; };
-        088AC5A42068CC63009C3B57 /* Spinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088AC5A32068CC63009C3B57 /* Spinner.swift */; };
-        088AC5AB2068CC8D009C3B57 /* LookupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088AC5AA2068CC8D009C3B57 /* LookupViewController.swift */; };
-        088AC5AE20693D84009C3B57 /* AddNotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088AC5AD20693D84009C3B57 /* AddNotificationViewController.swift */; };
-        088AC5B020693DAA009C3B57 /* AddNotificationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088AC5AF20693DAA009C3B57 /* AddNotificationTableViewController.swift */; };
-        088AC5B520694326009C3B57 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088AC5B420694326009C3B57 /* DashboardViewController.swift */; };
-        088AC5C2206943D0009C3B57 /* AddNotificationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 088AC5C1206943D0009C3B57 /* AddNotificationViewController.xib */; };
-        08FA5DCA2082CEE3009D3F39 /* KeychainConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08FA5DC92082CEE3009D3F39 /* KeychainConfig.swift */; };
-        08FA5DD32082CF4D009D3F39 /* KeychainPasswordItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08FA5DD22082CF4D009D3F39 /* KeychainPasswordItem.swift */; };
-        3D12B123203CBD0200FD701D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D12B122203CBD0200FD701D /* Constants.swift */; };
-        3D17623D2017E62000A1C77A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D17623C2017E62000A1C77A /* AppDelegate.swift */; };
-        3D17623F2017E62000A1C77A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D17623E2017E62000A1C77A /* ViewController.swift */; };
-        3D1762422017E62000A1C77A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D1762402017E62000A1C77A /* Main.storyboard */; };
-        3D1762442017E62000A1C77A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D1762432017E62000A1C77A /* Assets.xcassets */; };
-        3D1762522017E62000A1C77A /* MariGoldTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D1762512017E62000A1C77A /* MariGoldTests.swift */; };
-        3D17625D2017E62000A1C77A /* MariGoldUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D17625C2017E62000A1C77A /* MariGoldUITests.swift */; };
-        3D46A7D02083DFF5003ED196 /* RegisterLeagueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D46A7CF2083DFF5003ED196 /* RegisterLeagueViewController.swift */; };
-        3D46A7D920840CB8003ED196 /* RegisterAllergyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D46A7D820840CB7003ED196 /* RegisterAllergyViewController.swift */; };
-        3DDEC7DD2086CF2E001C452F /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DDEC7DC2086CF2E001C452F /* SearchViewController.swift */; };
-        7D21F4DED653EE42F79EEEC6 /* Pods_MariGoldTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE1410DA3A197F6555FA1071 /* Pods_MariGoldTests.framework */; };
-        ABCF0F733D51355B26A3CAC3 /* Pods_MariGoldUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FA0AFC59CF0E40A8E40C644 /* Pods_MariGoldUITests.framework */; };
-        BF9E65D553034DDC11216C86 /* Pods_MariGold.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D673EE6A1C2DB3A996B47D2 /* Pods_MariGold.framework */; };
+		030D0E27203B399700AC400C /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030D0E26203B399700AC400C /* ResetPasswordViewController.swift */; };
+		03143E292087C47200A2BE96 /* PharmacyMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03143E282087C47200A2BE96 /* PharmacyMapViewController.swift */; };
+		03143E342087D84600A2BE96 /* LocationSearchTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03143E332087D84600A2BE96 /* LocationSearchTable.swift */; };
+		0315BA7F203A40C500CBD416 /* RegisterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0315BA7E203A40C500CBD416 /* RegisterUITests.swift */; };
+		031E23AB208500B800C7141B /* AllergyConflictsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031E23AA208500B800C7141B /* AllergyConflictsViewController.swift */; };
+		031E23AF2085026700C7141B /* AllergyConflictDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031E23AE2085026700C7141B /* AllergyConflictDetailsViewController.swift */; };
+		032A99BB2068C1F800807745 /* ConflictDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032A99BA2068C1F800807745 /* ConflictDetailsViewController.swift */; };
+		03304F7E2049A6AB0002AAD5 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03304F7D2049A6AA0002AAD5 /* AccountViewController.swift */; };
+		0350560A2034D7DF00FD8AA5 /* LoginUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035056092034D7DF00FD8AA5 /* LoginUITests.swift */; };
+		0353585520687385005E4334 /* ConflictsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0353585420687385005E4334 /* ConflictsViewController.swift */; };
+		037DF0DC203DDCB600D7F1A4 /* MedicationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037DF0DB203DDCB600D7F1A4 /* MedicationViewController.swift */; };
+		0386D6CF2040824B00E0C62E /* (null) in Sources */ = {isa = PBXBuildFile; };
+		039253B32038B7F0005A2C42 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 039253B22038B7F0005A2C42 /* LaunchScreen.storyboard */; };
+		039253BD2038E382005A2C42 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 039253BC2038E382005A2C42 /* RegisterViewController.swift */; };
+		0399401F2037B87900A6AEF1 /* Dashboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0399401E2037B87900A6AEF1 /* Dashboard.storyboard */; };
+		039940212037B91700A6AEF1 /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 039940202037B91700A6AEF1 /* Search.storyboard */; };
+		039940252037C48900A6AEF1 /* Account.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 039940242037C48900A6AEF1 /* Account.storyboard */; };
+		039940272037C9F600A6AEF1 /* Medication.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 039940262037C9F600A6AEF1 /* Medication.storyboard */; };
+		03A106B92049BABE00E31BD9 /* MariGold.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 03A106B22049BABE00E31BD9 /* MariGold.xcdatamodeld */; };
+		03A58D00205F53B1005D9B13 /* MedicationUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A58CFA205F53B0005D9B13 /* MedicationUITests.swift */; };
+		03B2062B2033EDF900C5F7F5 /* TabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03B2062A2033EDF900C5F7F5 /* TabBar.storyboard */; };
+		03BB6A71204CC7F200955186 /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BB6A6B204CC7F200955186 /* CoreDataHelper.swift */; };
+		03C08A52204CE6540072E7A5 /* MedicationAdditionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C08A51204CE6540072E7A5 /* MedicationAdditionViewController.swift */; };
+		03EEF52C20645403007C5E7A /* MedicationDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03EEF52B20645403007C5E7A /* MedicationDetailsViewController.swift */; };
+		03FA050120693E7F0046AA21 /* AccountEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FA050020693E7F0046AA21 /* AccountEditViewController.swift */; };
+		088AC5A42068CC63009C3B57 /* Spinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088AC5A32068CC63009C3B57 /* Spinner.swift */; };
+		088AC5AB2068CC8D009C3B57 /* LookupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088AC5AA2068CC8D009C3B57 /* LookupViewController.swift */; };
+		088AC5AE20693D84009C3B57 /* AddNotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088AC5AD20693D84009C3B57 /* AddNotificationViewController.swift */; };
+		088AC5B020693DAA009C3B57 /* AddNotificationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088AC5AF20693DAA009C3B57 /* AddNotificationTableViewController.swift */; };
+		088AC5B520694326009C3B57 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088AC5B420694326009C3B57 /* DashboardViewController.swift */; };
+		088AC5C2206943D0009C3B57 /* AddNotificationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 088AC5C1206943D0009C3B57 /* AddNotificationViewController.xib */; };
+		08FA5DCA2082CEE3009D3F39 /* KeychainConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08FA5DC92082CEE3009D3F39 /* KeychainConfig.swift */; };
+		08FA5DD32082CF4D009D3F39 /* KeychainPasswordItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08FA5DD22082CF4D009D3F39 /* KeychainPasswordItem.swift */; };
+		3D12B123203CBD0200FD701D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D12B122203CBD0200FD701D /* Constants.swift */; };
+		3D17623D2017E62000A1C77A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D17623C2017E62000A1C77A /* AppDelegate.swift */; };
+		3D17623F2017E62000A1C77A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D17623E2017E62000A1C77A /* ViewController.swift */; };
+		3D1762422017E62000A1C77A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D1762402017E62000A1C77A /* Main.storyboard */; };
+		3D1762442017E62000A1C77A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D1762432017E62000A1C77A /* Assets.xcassets */; };
+		3D1762522017E62000A1C77A /* MariGoldTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D1762512017E62000A1C77A /* MariGoldTests.swift */; };
+		3D17625D2017E62000A1C77A /* MariGoldUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D17625C2017E62000A1C77A /* MariGoldUITests.swift */; };
+		3D46A7D02083DFF5003ED196 /* RegisterLeagueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D46A7CF2083DFF5003ED196 /* RegisterLeagueViewController.swift */; };
+		3D46A7D920840CB8003ED196 /* RegisterAllergyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D46A7D820840CB7003ED196 /* RegisterAllergyViewController.swift */; };
+		3DDEC7DD2086CF2E001C452F /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DDEC7DC2086CF2E001C452F /* SearchViewController.swift */; };
+		7D21F4DED653EE42F79EEEC6 /* Pods_MariGoldTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE1410DA3A197F6555FA1071 /* Pods_MariGoldTests.framework */; };
+		ABCF0F733D51355B26A3CAC3 /* Pods_MariGoldUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FA0AFC59CF0E40A8E40C644 /* Pods_MariGoldUITests.framework */; };
+		BF9E65D553034DDC11216C86 /* Pods_MariGold.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D673EE6A1C2DB3A996B47D2 /* Pods_MariGold.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-        03BCDD30203E68D000138271 /* PBXContainerItemProxy */ = {
-            isa = PBXContainerItemProxy;
-            containerPortal = 03BCDD28203E68D000138271 /* Pods.xcodeproj */;
-            proxyType = 2;
-            remoteGlobalIDString = 048E32A4DC3D9C812F334C273C15A951;
-            remoteInfo = Alamofire;
-        };
-        03BCDD32203E68D000138271 /* PBXContainerItemProxy */ = {
-            isa = PBXContainerItemProxy;
-            containerPortal = 03BCDD28203E68D000138271 /* Pods.xcodeproj */;
-            proxyType = 2;
-            remoteGlobalIDString = EF1168FD75660A0A35BBEC78BC357DE3;
-            remoteInfo = Pastel;
-        };
-        03BCDD34203E68D000138271 /* PBXContainerItemProxy */ = {
-            isa = PBXContainerItemProxy;
-            containerPortal = 03BCDD28203E68D000138271 /* Pods.xcodeproj */;
-            proxyType = 2;
-            remoteGlobalIDString = 54D6B84854BE28CDFFAFC3E061BC36FD;
-            remoteInfo = "Pods-MariGold";
-        };
-        03BCDD36203E68D000138271 /* PBXContainerItemProxy */ = {
-            isa = PBXContainerItemProxy;
-            containerPortal = 03BCDD28203E68D000138271 /* Pods.xcodeproj */;
-            proxyType = 2;
-            remoteGlobalIDString = BA6B07CD5B0129F5F1802B88BC2E5E7C;
-            remoteInfo = "Pods-MariGoldTests";
-        };
-        03BCDD38203E68D000138271 /* PBXContainerItemProxy */ = {
-            isa = PBXContainerItemProxy;
-            containerPortal = 03BCDD28203E68D000138271 /* Pods.xcodeproj */;
-            proxyType = 2;
-            remoteGlobalIDString = CDA85AC1795766EDA99896F15AB4006A;
-            remoteInfo = "Pods-MariGoldUITests";
-        };
-        088AC5BD20694327009C3B57 /* PBXContainerItemProxy */ = {
-            isa = PBXContainerItemProxy;
-            containerPortal = 03BCDD28203E68D000138271 /* Pods.xcodeproj */;
-            proxyType = 2;
-            remoteGlobalIDString = D48D74B8706FEB8636EF189200E17363;
-            remoteInfo = DynamicBlurView;
-        };
-        088AC5BF20694327009C3B57 /* PBXContainerItemProxy */ = {
-            isa = PBXContainerItemProxy;
-            containerPortal = 03BCDD28203E68D000138271 /* Pods.xcodeproj */;
-            proxyType = 2;
-            remoteGlobalIDString = 9618F227241C1DCE536536B1E53559DB;
-            remoteInfo = PopupDialog;
-        };
-        3D17624E2017E62000A1C77A /* PBXContainerItemProxy */ = {
-            isa = PBXContainerItemProxy;
-            containerPortal = 3D1762312017E62000A1C77A /* Project object */;
-            proxyType = 1;
-            remoteGlobalIDString = 3D1762382017E62000A1C77A;
-            remoteInfo = MariGold;
-        };
-        3D1762592017E62000A1C77A /* PBXContainerItemProxy */ = {
-            isa = PBXContainerItemProxy;
-            containerPortal = 3D1762312017E62000A1C77A /* Project object */;
-            proxyType = 1;
-            remoteGlobalIDString = 3D1762382017E62000A1C77A;
-            remoteInfo = MariGold;
-        };
+		03BCDD30203E68D000138271 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 03BCDD28203E68D000138271 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 048E32A4DC3D9C812F334C273C15A951;
+			remoteInfo = Alamofire;
+		};
+		03BCDD32203E68D000138271 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 03BCDD28203E68D000138271 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = EF1168FD75660A0A35BBEC78BC357DE3;
+			remoteInfo = Pastel;
+		};
+		03BCDD34203E68D000138271 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 03BCDD28203E68D000138271 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 54D6B84854BE28CDFFAFC3E061BC36FD;
+			remoteInfo = "Pods-MariGold";
+		};
+		03BCDD36203E68D000138271 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 03BCDD28203E68D000138271 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = BA6B07CD5B0129F5F1802B88BC2E5E7C;
+			remoteInfo = "Pods-MariGoldTests";
+		};
+		03BCDD38203E68D000138271 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 03BCDD28203E68D000138271 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = CDA85AC1795766EDA99896F15AB4006A;
+			remoteInfo = "Pods-MariGoldUITests";
+		};
+		088AC5BD20694327009C3B57 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 03BCDD28203E68D000138271 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D48D74B8706FEB8636EF189200E17363;
+			remoteInfo = DynamicBlurView;
+		};
+		088AC5BF20694327009C3B57 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 03BCDD28203E68D000138271 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9618F227241C1DCE536536B1E53559DB;
+			remoteInfo = PopupDialog;
+		};
+		3D17624E2017E62000A1C77A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3D1762312017E62000A1C77A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3D1762382017E62000A1C77A;
+			remoteInfo = MariGold;
+		};
+		3D1762592017E62000A1C77A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3D1762312017E62000A1C77A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3D1762382017E62000A1C77A;
+			remoteInfo = MariGold;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-        030D0E26203B399700AC400C /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
-        0315BA7E203A40C500CBD416 /* RegisterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterUITests.swift; sourceTree = "<group>"; };
-        031E23AA208500B800C7141B /* AllergyConflictsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AllergyConflictsViewController.swift; path = Conflict/AllergyConflictsViewController.swift; sourceTree = "<group>"; };
-        031E23AE2085026700C7141B /* AllergyConflictDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllergyConflictDetailsViewController.swift; sourceTree = "<group>"; };
-        032A99BA2068C1F800807745 /* ConflictDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ConflictDetailsViewController.swift; path = Conflict/ConflictDetailsViewController.swift; sourceTree = "<group>"; };
-        03304F7D2049A6AA0002AAD5 /* AccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
-        035056092034D7DF00FD8AA5 /* LoginUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUITests.swift; sourceTree = "<group>"; };
-        0353585420687385005E4334 /* ConflictsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConflictsViewController.swift; sourceTree = "<group>"; };
-        037DF0DB203DDCB600D7F1A4 /* MedicationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MedicationViewController.swift; path = Medication/MedicationViewController.swift; sourceTree = "<group>"; };
-        039253B22038B7F0005A2C42 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
-        039253BC2038E382005A2C42 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
-        0399401E2037B87900A6AEF1 /* Dashboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Dashboard.storyboard; sourceTree = "<group>"; };
-        039940202037B91700A6AEF1 /* Search.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
-        039940242037C48900A6AEF1 /* Account.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Account.storyboard; sourceTree = "<group>"; };
-        039940262037C9F600A6AEF1 /* Medication.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Medication.storyboard; path = Medication/Medication.storyboard; sourceTree = "<group>"; };
-        03A106B32049BABE00E31BD9 /* Medication.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Medication.xcdatamodel; sourceTree = "<group>"; };
-        03A58CFA205F53B0005D9B13 /* MedicationUITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicationUITests.swift; sourceTree = "<group>"; };
-        03B2062A2033EDF900C5F7F5 /* TabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBar.storyboard; sourceTree = "<group>"; };
-        03BB6A6B204CC7F200955186 /* CoreDataHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CoreDataHelper.swift; path = Models/CoreDataHelper.swift; sourceTree = "<group>"; };
-        03BCDD03203E653F00138271 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
-        03BCDD28203E68D000138271 /* Pods.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Pods.xcodeproj; path = Pods/Pods.xcodeproj; sourceTree = "<group>"; };
-        03C08A51204CE6540072E7A5 /* MedicationAdditionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicationAdditionViewController.swift; sourceTree = "<group>"; };
-        03EEF52B20645403007C5E7A /* MedicationDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MedicationDetailsViewController.swift; path = Medication/MedicationDetailsViewController.swift; sourceTree = "<group>"; };
-        03FA050020693E7F0046AA21 /* AccountEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountEditViewController.swift; sourceTree = "<group>"; };
-        088AC5A32068CC63009C3B57 /* Spinner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spinner.swift; sourceTree = "<group>"; };
-        088AC5AA2068CC8D009C3B57 /* LookupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LookupViewController.swift; sourceTree = "<group>"; };
-        088AC5AD20693D84009C3B57 /* AddNotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNotificationViewController.swift; sourceTree = "<group>"; };
-        088AC5AF20693DAA009C3B57 /* AddNotificationTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNotificationTableViewController.swift; sourceTree = "<group>"; };
-        088AC5B420694326009C3B57 /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
-        088AC5C1206943D0009C3B57 /* AddNotificationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddNotificationViewController.xib; sourceTree = "<group>"; };
-        08FA5DC92082CEE3009D3F39 /* KeychainConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainConfig.swift; sourceTree = "<group>"; };
-        08FA5DD22082CF4D009D3F39 /* KeychainPasswordItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainPasswordItem.swift; sourceTree = "<group>"; };
-        0E4FE26337B0BA937F5A53D3 /* Pods-MariGold.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MariGold.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MariGold/Pods-MariGold.debug.xcconfig"; sourceTree = "<group>"; };
-        3D12B122203CBD0200FD701D /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-        3D1762392017E62000A1C77A /* MariGold.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MariGold.app; sourceTree = BUILT_PRODUCTS_DIR; };
-        3D17623C2017E62000A1C77A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-        3D17623E2017E62000A1C77A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-        3D1762412017E62000A1C77A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-        3D1762432017E62000A1C77A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-        3D1762482017E62000A1C77A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-        3D17624D2017E62000A1C77A /* MariGoldTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MariGoldTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-        3D1762512017E62000A1C77A /* MariGoldTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MariGoldTests.swift; sourceTree = "<group>"; };
-        3D1762532017E62000A1C77A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-        3D1762582017E62000A1C77A /* MariGoldUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MariGoldUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-        3D17625C2017E62000A1C77A /* MariGoldUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MariGoldUITests.swift; sourceTree = "<group>"; };
-        3D17625E2017E62000A1C77A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-        3D46A7CF2083DFF5003ED196 /* RegisterLeagueViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterLeagueViewController.swift; sourceTree = "<group>"; };
-        3D46A7D820840CB7003ED196 /* RegisterAllergyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterAllergyViewController.swift; sourceTree = "<group>"; };
-        3DDEC7DC2086CF2E001C452F /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
-        3FA0AFC59CF0E40A8E40C644 /* Pods_MariGoldUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MariGoldUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-        4A844F2CD6B895BF9CF281F6 /* Pods-MariGoldUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MariGoldUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MariGoldUITests/Pods-MariGoldUITests.release.xcconfig"; sourceTree = "<group>"; };
-        85906C025E2B64319F36A99C /* Pods-MariGoldTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MariGoldTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MariGoldTests/Pods-MariGoldTests.debug.xcconfig"; sourceTree = "<group>"; };
-        85CA57AB855AC9F13EE89691 /* Pods-MariGoldTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MariGoldTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MariGoldTests/Pods-MariGoldTests.release.xcconfig"; sourceTree = "<group>"; };
-        979C2404EE5CFE1A22129EE2 /* Pods-MariGoldUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MariGoldUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MariGoldUITests/Pods-MariGoldUITests.debug.xcconfig"; sourceTree = "<group>"; };
-        9D673EE6A1C2DB3A996B47D2 /* Pods_MariGold.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MariGold.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-        AE1410DA3A197F6555FA1071 /* Pods_MariGoldTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MariGoldTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-        DAE7928B40A63DCD5F4722AC /* Pods-MariGold.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MariGold.release.xcconfig"; path = "Pods/Target Support Files/Pods-MariGold/Pods-MariGold.release.xcconfig"; sourceTree = "<group>"; };
+		030D0E26203B399700AC400C /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
+		03143E282087C47200A2BE96 /* PharmacyMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PharmacyMapViewController.swift; sourceTree = "<group>"; };
+		03143E312087CD2A00A2BE96 /* Purdue.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = Purdue.gpx; path = ../../../../Downloads/Purdue.gpx; sourceTree = "<group>"; };
+		03143E322087CD3800A2BE96 /* Purdue.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Purdue.gpx; sourceTree = "<group>"; };
+		03143E332087D84600A2BE96 /* LocationSearchTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchTable.swift; sourceTree = "<group>"; };
+		0315BA7E203A40C500CBD416 /* RegisterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterUITests.swift; sourceTree = "<group>"; };
+		031E23AA208500B800C7141B /* AllergyConflictsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AllergyConflictsViewController.swift; path = Conflict/AllergyConflictsViewController.swift; sourceTree = "<group>"; };
+		031E23AE2085026700C7141B /* AllergyConflictDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllergyConflictDetailsViewController.swift; sourceTree = "<group>"; };
+		032A99BA2068C1F800807745 /* ConflictDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ConflictDetailsViewController.swift; path = Conflict/ConflictDetailsViewController.swift; sourceTree = "<group>"; };
+		03304F7D2049A6AA0002AAD5 /* AccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
+		035056092034D7DF00FD8AA5 /* LoginUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUITests.swift; sourceTree = "<group>"; };
+		0353585420687385005E4334 /* ConflictsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConflictsViewController.swift; sourceTree = "<group>"; };
+		037DF0DB203DDCB600D7F1A4 /* MedicationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MedicationViewController.swift; path = Medication/MedicationViewController.swift; sourceTree = "<group>"; };
+		039253B22038B7F0005A2C42 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		039253BC2038E382005A2C42 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		0399401E2037B87900A6AEF1 /* Dashboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Dashboard.storyboard; sourceTree = "<group>"; };
+		039940202037B91700A6AEF1 /* Search.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
+		039940242037C48900A6AEF1 /* Account.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Account.storyboard; sourceTree = "<group>"; };
+		039940262037C9F600A6AEF1 /* Medication.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Medication.storyboard; path = Medication/Medication.storyboard; sourceTree = "<group>"; };
+		03A106B32049BABE00E31BD9 /* Medication.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Medication.xcdatamodel; sourceTree = "<group>"; };
+		03A58CFA205F53B0005D9B13 /* MedicationUITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicationUITests.swift; sourceTree = "<group>"; };
+		03B2062A2033EDF900C5F7F5 /* TabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBar.storyboard; sourceTree = "<group>"; };
+		03BB6A6B204CC7F200955186 /* CoreDataHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CoreDataHelper.swift; path = Models/CoreDataHelper.swift; sourceTree = "<group>"; };
+		03BCDD03203E653F00138271 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		03BCDD28203E68D000138271 /* Pods.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Pods.xcodeproj; path = Pods/Pods.xcodeproj; sourceTree = "<group>"; };
+		03C08A51204CE6540072E7A5 /* MedicationAdditionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicationAdditionViewController.swift; sourceTree = "<group>"; };
+		03EEF52B20645403007C5E7A /* MedicationDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MedicationDetailsViewController.swift; path = Medication/MedicationDetailsViewController.swift; sourceTree = "<group>"; };
+		03FA050020693E7F0046AA21 /* AccountEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountEditViewController.swift; sourceTree = "<group>"; };
+		088AC5A32068CC63009C3B57 /* Spinner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spinner.swift; sourceTree = "<group>"; };
+		088AC5AA2068CC8D009C3B57 /* LookupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LookupViewController.swift; sourceTree = "<group>"; };
+		088AC5AD20693D84009C3B57 /* AddNotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNotificationViewController.swift; sourceTree = "<group>"; };
+		088AC5AF20693DAA009C3B57 /* AddNotificationTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNotificationTableViewController.swift; sourceTree = "<group>"; };
+		088AC5B420694326009C3B57 /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
+		088AC5C1206943D0009C3B57 /* AddNotificationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddNotificationViewController.xib; sourceTree = "<group>"; };
+		08FA5DC92082CEE3009D3F39 /* KeychainConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainConfig.swift; sourceTree = "<group>"; };
+		08FA5DD22082CF4D009D3F39 /* KeychainPasswordItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainPasswordItem.swift; sourceTree = "<group>"; };
+		0E4FE26337B0BA937F5A53D3 /* Pods-MariGold.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MariGold.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MariGold/Pods-MariGold.debug.xcconfig"; sourceTree = "<group>"; };
+		3D12B122203CBD0200FD701D /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		3D1762392017E62000A1C77A /* MariGold.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MariGold.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3D17623C2017E62000A1C77A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3D17623E2017E62000A1C77A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3D1762412017E62000A1C77A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3D1762432017E62000A1C77A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3D1762482017E62000A1C77A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3D17624D2017E62000A1C77A /* MariGoldTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MariGoldTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3D1762512017E62000A1C77A /* MariGoldTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MariGoldTests.swift; sourceTree = "<group>"; };
+		3D1762532017E62000A1C77A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3D1762582017E62000A1C77A /* MariGoldUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MariGoldUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3D17625C2017E62000A1C77A /* MariGoldUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MariGoldUITests.swift; sourceTree = "<group>"; };
+		3D17625E2017E62000A1C77A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3D46A7CF2083DFF5003ED196 /* RegisterLeagueViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterLeagueViewController.swift; sourceTree = "<group>"; };
+		3D46A7D820840CB7003ED196 /* RegisterAllergyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterAllergyViewController.swift; sourceTree = "<group>"; };
+		3DDEC7DC2086CF2E001C452F /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		3FA0AFC59CF0E40A8E40C644 /* Pods_MariGoldUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MariGoldUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4A844F2CD6B895BF9CF281F6 /* Pods-MariGoldUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MariGoldUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MariGoldUITests/Pods-MariGoldUITests.release.xcconfig"; sourceTree = "<group>"; };
+		85906C025E2B64319F36A99C /* Pods-MariGoldTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MariGoldTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MariGoldTests/Pods-MariGoldTests.debug.xcconfig"; sourceTree = "<group>"; };
+		85CA57AB855AC9F13EE89691 /* Pods-MariGoldTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MariGoldTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MariGoldTests/Pods-MariGoldTests.release.xcconfig"; sourceTree = "<group>"; };
+		979C2404EE5CFE1A22129EE2 /* Pods-MariGoldUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MariGoldUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MariGoldUITests/Pods-MariGoldUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		9D673EE6A1C2DB3A996B47D2 /* Pods_MariGold.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MariGold.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE1410DA3A197F6555FA1071 /* Pods_MariGoldTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MariGoldTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DAE7928B40A63DCD5F4722AC /* Pods-MariGold.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MariGold.release.xcconfig"; path = "Pods/Target Support Files/Pods-MariGold/Pods-MariGold.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-        3D1762362017E62000A1C77A /* Frameworks */ = {
-            isa = PBXFrameworksBuildPhase;
-            buildActionMask = 2147483647;
-            files = (
-                BF9E65D553034DDC11216C86 /* Pods_MariGold.framework in Frameworks */,
-            );
-            runOnlyForDeploymentPostprocessing = 0;
-        };
-        3D17624A2017E62000A1C77A /* Frameworks */ = {
-            isa = PBXFrameworksBuildPhase;
-            buildActionMask = 2147483647;
-            files = (
-                7D21F4DED653EE42F79EEEC6 /* Pods_MariGoldTests.framework in Frameworks */,
-            );
-            runOnlyForDeploymentPostprocessing = 0;
-        };
-        3D1762552017E62000A1C77A /* Frameworks */ = {
-            isa = PBXFrameworksBuildPhase;
-            buildActionMask = 2147483647;
-            files = (
-                ABCF0F733D51355B26A3CAC3 /* Pods_MariGoldUITests.framework in Frameworks */,
-            );
-            runOnlyForDeploymentPostprocessing = 0;
-        };
+		3D1762362017E62000A1C77A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF9E65D553034DDC11216C86 /* Pods_MariGold.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3D17624A2017E62000A1C77A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7D21F4DED653EE42F79EEEC6 /* Pods_MariGoldTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3D1762552017E62000A1C77A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ABCF0F733D51355B26A3CAC3 /* Pods_MariGoldUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-        01516C12690DF51AB53C9478 /* Frameworks */ = {
-            isa = PBXGroup;
-            children = (
-                9D673EE6A1C2DB3A996B47D2 /* Pods_MariGold.framework */,
-                AE1410DA3A197F6555FA1071 /* Pods_MariGoldTests.framework */,
-                3FA0AFC59CF0E40A8E40C644 /* Pods_MariGoldUITests.framework */,
-            );
-            name = Frameworks;
-            sourceTree = "<group>";
-        };
-        03BCDD29203E68D000138271 /* Products */ = {
-            isa = PBXGroup;
-            children = (
-                03BCDD31203E68D000138271 /* Alamofire.framework */,
-                088AC5BE20694327009C3B57 /* DynamicBlurView.framework */,
-                03BCDD33203E68D000138271 /* Pastel.framework */,
-                03BCDD35203E68D000138271 /* Pods_MariGold.framework */,
-                03BCDD37203E68D000138271 /* Pods_MariGoldTests.framework */,
-                03BCDD39203E68D000138271 /* Pods_MariGoldUITests.framework */,
-                088AC5C020694327009C3B57 /* PopupDialog.framework */,
-            );
-            name = Products;
-            sourceTree = "<group>";
-        };
-        3D0A94AB20850057007D271D /* MedicationAddition */ = {
-            isa = PBXGroup;
-            children = (
-                088AC5AD20693D84009C3B57 /* AddNotificationViewController.swift */,
-                088AC5AF20693DAA009C3B57 /* AddNotificationTableViewController.swift */,
-                088AC5AA2068CC8D009C3B57 /* LookupViewController.swift */,
-                03C08A51204CE6540072E7A5 /* MedicationAdditionViewController.swift */,
-            );
-            path = MedicationAddition;
-            sourceTree = "<group>";
-        };
-        3D12B11F203CB94500FD701D /* AccountSetup */ = {
-            isa = PBXGroup;
-            children = (
-                3D17623E2017E62000A1C77A /* ViewController.swift */,
-                030D0E26203B399700AC400C /* ResetPasswordViewController.swift */,
-                039253BC2038E382005A2C42 /* RegisterViewController.swift */,
-                3D46A7CF2083DFF5003ED196 /* RegisterLeagueViewController.swift */,
-                3D46A7D820840CB7003ED196 /* RegisterAllergyViewController.swift */,
-            );
-            path = AccountSetup;
-            sourceTree = "<group>";
-        };
-        3D1762302017E62000A1C77A = {
-            isa = PBXGroup;
-            children = (
-                03BCDD28203E68D000138271 /* Pods.xcodeproj */,
-                3D17623B2017E62000A1C77A /* MariGold */,
-                3D1762502017E62000A1C77A /* MariGoldTests */,
-                3D17625B2017E62000A1C77A /* MariGoldUITests */,
-                3D17623A2017E62000A1C77A /* Products */,
-                C0A7017BEC614C4E9D63BDCD /* Pods */,
-                01516C12690DF51AB53C9478 /* Frameworks */,
-            );
-            sourceTree = "<group>";
-        };
-        3D17623A2017E62000A1C77A /* Products */ = {
-            isa = PBXGroup;
-            children = (
-                3D1762392017E62000A1C77A /* MariGold.app */,
-                3D17624D2017E62000A1C77A /* MariGoldTests.xctest */,
-                3D1762582017E62000A1C77A /* MariGoldUITests.xctest */,
-            );
-            name = Products;
-            sourceTree = "<group>";
-        };
-        3D17623B2017E62000A1C77A /* MariGold */ = {
-            isa = PBXGroup;
-            children = (
-                3D0A94AB20850057007D271D /* MedicationAddition */,
-                3D12B11F203CB94500FD701D /* AccountSetup */,
-                3D1762432017E62000A1C77A /* Assets.xcassets */,
-                3D17623C2017E62000A1C77A /* AppDelegate.swift */,
-                03FA050020693E7F0046AA21 /* AccountEditViewController.swift */,
-                03304F7D2049A6AA0002AAD5 /* AccountViewController.swift */,
-                031E23AA208500B800C7141B /* AllergyConflictsViewController.swift */,
-                031E23AE2085026700C7141B /* AllergyConflictDetailsViewController.swift */,
-                0353585420687385005E4334 /* ConflictsViewController.swift */,
-                032A99BA2068C1F800807745 /* ConflictDetailsViewController.swift */,
-                088AC5B420694326009C3B57 /* DashboardViewController.swift */,
-                037DF0DB203DDCB600D7F1A4 /* MedicationViewController.swift */,
-                03EEF52B20645403007C5E7A /* MedicationDetailsViewController.swift */,
-                3DDEC7DC2086CF2E001C452F /* SearchViewController.swift */,
-                03BCDD03203E653F00138271 /* TabBarViewController.swift */,
-                3D1762402017E62000A1C77A /* Main.storyboard */,
-                039253B22038B7F0005A2C42 /* LaunchScreen.storyboard */,
-                03B2062A2033EDF900C5F7F5 /* TabBar.storyboard */,
-                0399401E2037B87900A6AEF1 /* Dashboard.storyboard */,
-                039940262037C9F600A6AEF1 /* Medication.storyboard */,
-                039940202037B91700A6AEF1 /* Search.storyboard */,
-                039940242037C48900A6AEF1 /* Account.storyboard */,
-                3D1762482017E62000A1C77A /* Info.plist */,
-                03A106B22049BABE00E31BD9 /* MariGold.xcdatamodeld */,
-                03BB6A6B204CC7F200955186 /* CoreDataHelper.swift */,
-                3D12B122203CBD0200FD701D /* Constants.swift */,
-                088AC5A32068CC63009C3B57 /* Spinner.swift */,
-                08FA5DC92082CEE3009D3F39 /* KeychainConfig.swift */,
-                08FA5DD22082CF4D009D3F39 /* KeychainPasswordItem.swift */,
-                088AC5C1206943D0009C3B57 /* AddNotificationViewController.xib */,
-            );
-            path = MariGold;
-            sourceTree = "<group>";
-        };
-        3D1762502017E62000A1C77A /* MariGoldTests */ = {
-            isa = PBXGroup;
-            children = (
-                3D1762512017E62000A1C77A /* MariGoldTests.swift */,
-                3D1762532017E62000A1C77A /* Info.plist */,
-            );
-            path = MariGoldTests;
-            sourceTree = "<group>";
-        };
-        3D17625B2017E62000A1C77A /* MariGoldUITests */ = {
-            isa = PBXGroup;
-            children = (
-                0315BA7E203A40C500CBD416 /* RegisterUITests.swift */,
-                03A58CFA205F53B0005D9B13 /* MedicationUITests.swift */,
-                035056092034D7DF00FD8AA5 /* LoginUITests.swift */,
-                3D17625C2017E62000A1C77A /* MariGoldUITests.swift */,
-                3D17625E2017E62000A1C77A /* Info.plist */,
-            );
-            path = MariGoldUITests;
-            sourceTree = "<group>";
-        };
-        C0A7017BEC614C4E9D63BDCD /* Pods */ = {
-            isa = PBXGroup;
-            children = (
-                0E4FE26337B0BA937F5A53D3 /* Pods-MariGold.debug.xcconfig */,
-                DAE7928B40A63DCD5F4722AC /* Pods-MariGold.release.xcconfig */,
-                85906C025E2B64319F36A99C /* Pods-MariGoldTests.debug.xcconfig */,
-                85CA57AB855AC9F13EE89691 /* Pods-MariGoldTests.release.xcconfig */,
-                979C2404EE5CFE1A22129EE2 /* Pods-MariGoldUITests.debug.xcconfig */,
-                4A844F2CD6B895BF9CF281F6 /* Pods-MariGoldUITests.release.xcconfig */,
-            );
-            name = Pods;
-            sourceTree = "<group>";
-        };
+		01516C12690DF51AB53C9478 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9D673EE6A1C2DB3A996B47D2 /* Pods_MariGold.framework */,
+				AE1410DA3A197F6555FA1071 /* Pods_MariGoldTests.framework */,
+				3FA0AFC59CF0E40A8E40C644 /* Pods_MariGoldUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		03BCDD29203E68D000138271 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				03BCDD31203E68D000138271 /* Alamofire.framework */,
+				088AC5BE20694327009C3B57 /* DynamicBlurView.framework */,
+				03BCDD33203E68D000138271 /* Pastel.framework */,
+				03BCDD35203E68D000138271 /* Pods_MariGold.framework */,
+				03BCDD37203E68D000138271 /* Pods_MariGoldTests.framework */,
+				03BCDD39203E68D000138271 /* Pods_MariGoldUITests.framework */,
+				088AC5C020694327009C3B57 /* PopupDialog.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3D0A94AB20850057007D271D /* MedicationAddition */ = {
+			isa = PBXGroup;
+			children = (
+				088AC5AD20693D84009C3B57 /* AddNotificationViewController.swift */,
+				088AC5AF20693DAA009C3B57 /* AddNotificationTableViewController.swift */,
+				088AC5AA2068CC8D009C3B57 /* LookupViewController.swift */,
+				03C08A51204CE6540072E7A5 /* MedicationAdditionViewController.swift */,
+			);
+			path = MedicationAddition;
+			sourceTree = "<group>";
+		};
+		3D12B11F203CB94500FD701D /* AccountSetup */ = {
+			isa = PBXGroup;
+			children = (
+				3D17623E2017E62000A1C77A /* ViewController.swift */,
+				030D0E26203B399700AC400C /* ResetPasswordViewController.swift */,
+				039253BC2038E382005A2C42 /* RegisterViewController.swift */,
+				3D46A7CF2083DFF5003ED196 /* RegisterLeagueViewController.swift */,
+				3D46A7D820840CB7003ED196 /* RegisterAllergyViewController.swift */,
+			);
+			path = AccountSetup;
+			sourceTree = "<group>";
+		};
+		3D1762302017E62000A1C77A = {
+			isa = PBXGroup;
+			children = (
+				03143E312087CD2A00A2BE96 /* Purdue.gpx */,
+				03BCDD28203E68D000138271 /* Pods.xcodeproj */,
+				3D17623B2017E62000A1C77A /* MariGold */,
+				3D1762502017E62000A1C77A /* MariGoldTests */,
+				3D17625B2017E62000A1C77A /* MariGoldUITests */,
+				3D17623A2017E62000A1C77A /* Products */,
+				C0A7017BEC614C4E9D63BDCD /* Pods */,
+				01516C12690DF51AB53C9478 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		3D17623A2017E62000A1C77A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3D1762392017E62000A1C77A /* MariGold.app */,
+				3D17624D2017E62000A1C77A /* MariGoldTests.xctest */,
+				3D1762582017E62000A1C77A /* MariGoldUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3D17623B2017E62000A1C77A /* MariGold */ = {
+			isa = PBXGroup;
+			children = (
+				3D0A94AB20850057007D271D /* MedicationAddition */,
+				3D12B11F203CB94500FD701D /* AccountSetup */,
+				3D1762432017E62000A1C77A /* Assets.xcassets */,
+				3D17623C2017E62000A1C77A /* AppDelegate.swift */,
+				03FA050020693E7F0046AA21 /* AccountEditViewController.swift */,
+				03304F7D2049A6AA0002AAD5 /* AccountViewController.swift */,
+				031E23AA208500B800C7141B /* AllergyConflictsViewController.swift */,
+				031E23AE2085026700C7141B /* AllergyConflictDetailsViewController.swift */,
+				0353585420687385005E4334 /* ConflictsViewController.swift */,
+				032A99BA2068C1F800807745 /* ConflictDetailsViewController.swift */,
+				088AC5B420694326009C3B57 /* DashboardViewController.swift */,
+				037DF0DB203DDCB600D7F1A4 /* MedicationViewController.swift */,
+				03EEF52B20645403007C5E7A /* MedicationDetailsViewController.swift */,
+				3DDEC7DC2086CF2E001C452F /* SearchViewController.swift */,
+				03BCDD03203E653F00138271 /* TabBarViewController.swift */,
+				3D1762402017E62000A1C77A /* Main.storyboard */,
+				039253B22038B7F0005A2C42 /* LaunchScreen.storyboard */,
+				03B2062A2033EDF900C5F7F5 /* TabBar.storyboard */,
+				0399401E2037B87900A6AEF1 /* Dashboard.storyboard */,
+				039940262037C9F600A6AEF1 /* Medication.storyboard */,
+				039940202037B91700A6AEF1 /* Search.storyboard */,
+				039940242037C48900A6AEF1 /* Account.storyboard */,
+				03143E282087C47200A2BE96 /* PharmacyMapViewController.swift */,
+				03143E332087D84600A2BE96 /* LocationSearchTable.swift */,
+				3D1762482017E62000A1C77A /* Info.plist */,
+				03A106B22049BABE00E31BD9 /* MariGold.xcdatamodeld */,
+				03BB6A6B204CC7F200955186 /* CoreDataHelper.swift */,
+				3D12B122203CBD0200FD701D /* Constants.swift */,
+				088AC5A32068CC63009C3B57 /* Spinner.swift */,
+				08FA5DC92082CEE3009D3F39 /* KeychainConfig.swift */,
+				08FA5DD22082CF4D009D3F39 /* KeychainPasswordItem.swift */,
+				088AC5C1206943D0009C3B57 /* AddNotificationViewController.xib */,
+				03143E322087CD3800A2BE96 /* Purdue.gpx */,
+			);
+			path = MariGold;
+			sourceTree = "<group>";
+		};
+		3D1762502017E62000A1C77A /* MariGoldTests */ = {
+			isa = PBXGroup;
+			children = (
+				3D1762512017E62000A1C77A /* MariGoldTests.swift */,
+				3D1762532017E62000A1C77A /* Info.plist */,
+			);
+			path = MariGoldTests;
+			sourceTree = "<group>";
+		};
+		3D17625B2017E62000A1C77A /* MariGoldUITests */ = {
+			isa = PBXGroup;
+			children = (
+				0315BA7E203A40C500CBD416 /* RegisterUITests.swift */,
+				03A58CFA205F53B0005D9B13 /* MedicationUITests.swift */,
+				035056092034D7DF00FD8AA5 /* LoginUITests.swift */,
+				3D17625C2017E62000A1C77A /* MariGoldUITests.swift */,
+				3D17625E2017E62000A1C77A /* Info.plist */,
+			);
+			path = MariGoldUITests;
+			sourceTree = "<group>";
+		};
+		C0A7017BEC614C4E9D63BDCD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0E4FE26337B0BA937F5A53D3 /* Pods-MariGold.debug.xcconfig */,
+				DAE7928B40A63DCD5F4722AC /* Pods-MariGold.release.xcconfig */,
+				85906C025E2B64319F36A99C /* Pods-MariGoldTests.debug.xcconfig */,
+				85CA57AB855AC9F13EE89691 /* Pods-MariGoldTests.release.xcconfig */,
+				979C2404EE5CFE1A22129EE2 /* Pods-MariGoldUITests.debug.xcconfig */,
+				4A844F2CD6B895BF9CF281F6 /* Pods-MariGoldUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-        3D1762382017E62000A1C77A /* MariGold */ = {
-            isa = PBXNativeTarget;
-            buildConfigurationList = 3D1762612017E62000A1C77A /* Build configuration list for PBXNativeTarget "MariGold" */;
-            buildPhases = (
-                0EB4B413AC7889DD00B32C33 /* [CP] Check Pods Manifest.lock */,
-                3D1762352017E62000A1C77A /* Sources */,
-                3D1762362017E62000A1C77A /* Frameworks */,
-                3D1762372017E62000A1C77A /* Resources */,
-                CE837913902A9D8EE6F6F7F8 /* [CP] Embed Pods Frameworks */,
-                9ABF47B7D1360A7BC7804986 /* [CP] Copy Pods Resources */,
-            );
-            buildRules = (
-            );
-            dependencies = (
-            );
-            name = MariGold;
-            productName = MariGold;
-            productReference = 3D1762392017E62000A1C77A /* MariGold.app */;
-            productType = "com.apple.product-type.application";
-        };
-        3D17624C2017E62000A1C77A /* MariGoldTests */ = {
-            isa = PBXNativeTarget;
-            buildConfigurationList = 3D1762642017E62000A1C77A /* Build configuration list for PBXNativeTarget "MariGoldTests" */;
-            buildPhases = (
-                2F65E66E433270308A57B1AD /* [CP] Check Pods Manifest.lock */,
-                3D1762492017E62000A1C77A /* Sources */,
-                3D17624A2017E62000A1C77A /* Frameworks */,
-                3D17624B2017E62000A1C77A /* Resources */,
-                8108E45A3DC9ACB98E5F3B5E /* [CP] Embed Pods Frameworks */,
-                3FDCE2ADCF3D9162137033D0 /* [CP] Copy Pods Resources */,
-            );
-            buildRules = (
-            );
-            dependencies = (
-                3D17624F2017E62000A1C77A /* PBXTargetDependency */,
-            );
-            name = MariGoldTests;
-            productName = MariGoldTests;
-            productReference = 3D17624D2017E62000A1C77A /* MariGoldTests.xctest */;
-            productType = "com.apple.product-type.bundle.unit-test";
-        };
-        3D1762572017E62000A1C77A /* MariGoldUITests */ = {
-            isa = PBXNativeTarget;
-            buildConfigurationList = 3D1762672017E62000A1C77A /* Build configuration list for PBXNativeTarget "MariGoldUITests" */;
-            buildPhases = (
-                0AEADBF889EBE2AE3CCEC049 /* [CP] Check Pods Manifest.lock */,
-                3D1762542017E62000A1C77A /* Sources */,
-                3D1762552017E62000A1C77A /* Frameworks */,
-                3D1762562017E62000A1C77A /* Resources */,
-                6487404EC0E4FC3FFFA3CBA5 /* [CP] Embed Pods Frameworks */,
-                828A01BFF001113E3CE5ACEE /* [CP] Copy Pods Resources */,
-            );
-            buildRules = (
-            );
-            dependencies = (
-                3D17625A2017E62000A1C77A /* PBXTargetDependency */,
-            );
-            name = MariGoldUITests;
-            productName = MariGoldUITests;
-            productReference = 3D1762582017E62000A1C77A /* MariGoldUITests.xctest */;
-            productType = "com.apple.product-type.bundle.ui-testing";
-        };
+		3D1762382017E62000A1C77A /* MariGold */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3D1762612017E62000A1C77A /* Build configuration list for PBXNativeTarget "MariGold" */;
+			buildPhases = (
+				0EB4B413AC7889DD00B32C33 /* [CP] Check Pods Manifest.lock */,
+				3D1762352017E62000A1C77A /* Sources */,
+				3D1762362017E62000A1C77A /* Frameworks */,
+				3D1762372017E62000A1C77A /* Resources */,
+				CE837913902A9D8EE6F6F7F8 /* [CP] Embed Pods Frameworks */,
+				9ABF47B7D1360A7BC7804986 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MariGold;
+			productName = MariGold;
+			productReference = 3D1762392017E62000A1C77A /* MariGold.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3D17624C2017E62000A1C77A /* MariGoldTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3D1762642017E62000A1C77A /* Build configuration list for PBXNativeTarget "MariGoldTests" */;
+			buildPhases = (
+				2F65E66E433270308A57B1AD /* [CP] Check Pods Manifest.lock */,
+				3D1762492017E62000A1C77A /* Sources */,
+				3D17624A2017E62000A1C77A /* Frameworks */,
+				3D17624B2017E62000A1C77A /* Resources */,
+				8108E45A3DC9ACB98E5F3B5E /* [CP] Embed Pods Frameworks */,
+				3FDCE2ADCF3D9162137033D0 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3D17624F2017E62000A1C77A /* PBXTargetDependency */,
+			);
+			name = MariGoldTests;
+			productName = MariGoldTests;
+			productReference = 3D17624D2017E62000A1C77A /* MariGoldTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		3D1762572017E62000A1C77A /* MariGoldUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3D1762672017E62000A1C77A /* Build configuration list for PBXNativeTarget "MariGoldUITests" */;
+			buildPhases = (
+				0AEADBF889EBE2AE3CCEC049 /* [CP] Check Pods Manifest.lock */,
+				3D1762542017E62000A1C77A /* Sources */,
+				3D1762552017E62000A1C77A /* Frameworks */,
+				3D1762562017E62000A1C77A /* Resources */,
+				6487404EC0E4FC3FFFA3CBA5 /* [CP] Embed Pods Frameworks */,
+				828A01BFF001113E3CE5ACEE /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3D17625A2017E62000A1C77A /* PBXTargetDependency */,
+			);
+			name = MariGoldUITests;
+			productName = MariGoldUITests;
+			productReference = 3D1762582017E62000A1C77A /* MariGoldUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-        3D1762312017E62000A1C77A /* Project object */ = {
-            isa = PBXProject;
-            attributes = {
-                LastSwiftUpdateCheck = 0920;
-                LastUpgradeCheck = 0930;
-                ORGANIZATIONNAME = MariGold;
-                TargetAttributes = {
-                    3D1762382017E62000A1C77A = {
-                        CreatedOnToolsVersion = 9.2;
-                        ProvisioningStyle = Automatic;
-                    };
-                    3D17624C2017E62000A1C77A = {
-                        CreatedOnToolsVersion = 9.2;
-                        ProvisioningStyle = Automatic;
-                        TestTargetID = 3D1762382017E62000A1C77A;
-                    };
-                    3D1762572017E62000A1C77A = {
-                        CreatedOnToolsVersion = 9.2;
-                        ProvisioningStyle = Automatic;
-                        TestTargetID = 3D1762382017E62000A1C77A;
-                    };
-                };
-            };
-            buildConfigurationList = 3D1762342017E62000A1C77A /* Build configuration list for PBXProject "MariGold" */;
-            compatibilityVersion = "Xcode 8.0";
-            developmentRegion = en;
-            hasScannedForEncodings = 0;
-            knownRegions = (
-                en,
-                Base,
-            );
-            mainGroup = 3D1762302017E62000A1C77A;
-            productRefGroup = 3D17623A2017E62000A1C77A /* Products */;
-            projectDirPath = "";
-            projectReferences = (
-                {
-                    ProductGroup = 03BCDD29203E68D000138271 /* Products */;
-                    ProjectRef = 03BCDD28203E68D000138271 /* Pods.xcodeproj */;
-                },
-            );
-            projectRoot = "";
-            targets = (
-                3D1762382017E62000A1C77A /* MariGold */,
-                3D17624C2017E62000A1C77A /* MariGoldTests */,
-                3D1762572017E62000A1C77A /* MariGoldUITests */,
-            );
-        };
+		3D1762312017E62000A1C77A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0930;
+				ORGANIZATIONNAME = MariGold;
+				TargetAttributes = {
+					3D1762382017E62000A1C77A = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					3D17624C2017E62000A1C77A = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 3D1762382017E62000A1C77A;
+					};
+					3D1762572017E62000A1C77A = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 3D1762382017E62000A1C77A;
+					};
+				};
+			};
+			buildConfigurationList = 3D1762342017E62000A1C77A /* Build configuration list for PBXProject "MariGold" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3D1762302017E62000A1C77A;
+			productRefGroup = 3D17623A2017E62000A1C77A /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 03BCDD29203E68D000138271 /* Products */;
+					ProjectRef = 03BCDD28203E68D000138271 /* Pods.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				3D1762382017E62000A1C77A /* MariGold */,
+				3D17624C2017E62000A1C77A /* MariGoldTests */,
+				3D1762572017E62000A1C77A /* MariGoldUITests */,
+			);
+		};
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-        03BCDD31203E68D000138271 /* Alamofire.framework */ = {
-            isa = PBXReferenceProxy;
-            fileType = wrapper.framework;
-            path = Alamofire.framework;
-            remoteRef = 03BCDD30203E68D000138271 /* PBXContainerItemProxy */;
-            sourceTree = BUILT_PRODUCTS_DIR;
-        };
-        03BCDD33203E68D000138271 /* Pastel.framework */ = {
-            isa = PBXReferenceProxy;
-            fileType = wrapper.framework;
-            path = Pastel.framework;
-            remoteRef = 03BCDD32203E68D000138271 /* PBXContainerItemProxy */;
-            sourceTree = BUILT_PRODUCTS_DIR;
-        };
-        03BCDD35203E68D000138271 /* Pods_MariGold.framework */ = {
-            isa = PBXReferenceProxy;
-            fileType = wrapper.framework;
-            path = Pods_MariGold.framework;
-            remoteRef = 03BCDD34203E68D000138271 /* PBXContainerItemProxy */;
-            sourceTree = BUILT_PRODUCTS_DIR;
-        };
-        03BCDD37203E68D000138271 /* Pods_MariGoldTests.framework */ = {
-            isa = PBXReferenceProxy;
-            fileType = wrapper.framework;
-            path = Pods_MariGoldTests.framework;
-            remoteRef = 03BCDD36203E68D000138271 /* PBXContainerItemProxy */;
-            sourceTree = BUILT_PRODUCTS_DIR;
-        };
-        03BCDD39203E68D000138271 /* Pods_MariGoldUITests.framework */ = {
-            isa = PBXReferenceProxy;
-            fileType = wrapper.framework;
-            path = Pods_MariGoldUITests.framework;
-            remoteRef = 03BCDD38203E68D000138271 /* PBXContainerItemProxy */;
-            sourceTree = BUILT_PRODUCTS_DIR;
-        };
-        088AC5BE20694327009C3B57 /* DynamicBlurView.framework */ = {
-            isa = PBXReferenceProxy;
-            fileType = wrapper.framework;
-            path = DynamicBlurView.framework;
-            remoteRef = 088AC5BD20694327009C3B57 /* PBXContainerItemProxy */;
-            sourceTree = BUILT_PRODUCTS_DIR;
-        };
-        088AC5C020694327009C3B57 /* PopupDialog.framework */ = {
-            isa = PBXReferenceProxy;
-            fileType = wrapper.framework;
-            path = PopupDialog.framework;
-            remoteRef = 088AC5BF20694327009C3B57 /* PBXContainerItemProxy */;
-            sourceTree = BUILT_PRODUCTS_DIR;
-        };
+		03BCDD31203E68D000138271 /* Alamofire.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Alamofire.framework;
+			remoteRef = 03BCDD30203E68D000138271 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		03BCDD33203E68D000138271 /* Pastel.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Pastel.framework;
+			remoteRef = 03BCDD32203E68D000138271 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		03BCDD35203E68D000138271 /* Pods_MariGold.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Pods_MariGold.framework;
+			remoteRef = 03BCDD34203E68D000138271 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		03BCDD37203E68D000138271 /* Pods_MariGoldTests.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Pods_MariGoldTests.framework;
+			remoteRef = 03BCDD36203E68D000138271 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		03BCDD39203E68D000138271 /* Pods_MariGoldUITests.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Pods_MariGoldUITests.framework;
+			remoteRef = 03BCDD38203E68D000138271 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		088AC5BE20694327009C3B57 /* DynamicBlurView.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = DynamicBlurView.framework;
+			remoteRef = 088AC5BD20694327009C3B57 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		088AC5C020694327009C3B57 /* PopupDialog.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = PopupDialog.framework;
+			remoteRef = 088AC5BF20694327009C3B57 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 /* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
-        3D1762372017E62000A1C77A /* Resources */ = {
-            isa = PBXResourcesBuildPhase;
-            buildActionMask = 2147483647;
-            files = (
-                03B2062B2033EDF900C5F7F5 /* TabBar.storyboard in Resources */,
-                039253B32038B7F0005A2C42 /* LaunchScreen.storyboard in Resources */,
-                039940272037C9F600A6AEF1 /* Medication.storyboard in Resources */,
-                0399401F2037B87900A6AEF1 /* Dashboard.storyboard in Resources */,
-                3D1762442017E62000A1C77A /* Assets.xcassets in Resources */,
-                039940212037B91700A6AEF1 /* Search.storyboard in Resources */,
-                3D1762422017E62000A1C77A /* Main.storyboard in Resources */,
-                088AC5C2206943D0009C3B57 /* AddNotificationViewController.xib in Resources */,
-                039940252037C48900A6AEF1 /* Account.storyboard in Resources */,
-            );
-            runOnlyForDeploymentPostprocessing = 0;
-        };
-        3D17624B2017E62000A1C77A /* Resources */ = {
-            isa = PBXResourcesBuildPhase;
-            buildActionMask = 2147483647;
-            files = (
-            );
-            runOnlyForDeploymentPostprocessing = 0;
-        };
-        3D1762562017E62000A1C77A /* Resources */ = {
-            isa = PBXResourcesBuildPhase;
-            buildActionMask = 2147483647;
-            files = (
-            );
-            runOnlyForDeploymentPostprocessing = 0;
-        };
+		3D1762372017E62000A1C77A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				03B2062B2033EDF900C5F7F5 /* TabBar.storyboard in Resources */,
+				039253B32038B7F0005A2C42 /* LaunchScreen.storyboard in Resources */,
+				039940272037C9F600A6AEF1 /* Medication.storyboard in Resources */,
+				0399401F2037B87900A6AEF1 /* Dashboard.storyboard in Resources */,
+				3D1762442017E62000A1C77A /* Assets.xcassets in Resources */,
+				039940212037B91700A6AEF1 /* Search.storyboard in Resources */,
+				3D1762422017E62000A1C77A /* Main.storyboard in Resources */,
+				088AC5C2206943D0009C3B57 /* AddNotificationViewController.xib in Resources */,
+				039940252037C48900A6AEF1 /* Account.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3D17624B2017E62000A1C77A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3D1762562017E62000A1C77A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-        0AEADBF889EBE2AE3CCEC049 /* [CP] Check Pods Manifest.lock */ = {
-            isa = PBXShellScriptBuildPhase;
-            buildActionMask = 2147483647;
-            files = (
-            );
-            inputPaths = (
-                "${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-                "${PODS_ROOT}/Manifest.lock",
-            );
-            name = "[CP] Check Pods Manifest.lock";
-            outputPaths = (
-                "$(DERIVED_FILE_DIR)/Pods-MariGoldUITests-checkManifestLockResult.txt",
-            );
-            runOnlyForDeploymentPostprocessing = 0;
-            shellPath = /bin/sh;
-            shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-            showEnvVarsInLog = 0;
-        };
-        0EB4B413AC7889DD00B32C33 /* [CP] Check Pods Manifest.lock */ = {
-            isa = PBXShellScriptBuildPhase;
-            buildActionMask = 2147483647;
-            files = (
-            );
-            inputPaths = (
-                "${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-                "${PODS_ROOT}/Manifest.lock",
-            );
-            name = "[CP] Check Pods Manifest.lock";
-            outputPaths = (
-                "$(DERIVED_FILE_DIR)/Pods-MariGold-checkManifestLockResult.txt",
-            );
-            runOnlyForDeploymentPostprocessing = 0;
-            shellPath = /bin/sh;
-            shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-            showEnvVarsInLog = 0;
-        };
-        2F65E66E433270308A57B1AD /* [CP] Check Pods Manifest.lock */ = {
-            isa = PBXShellScriptBuildPhase;
-            buildActionMask = 2147483647;
-            files = (
-            );
-            inputPaths = (
-                "${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-                "${PODS_ROOT}/Manifest.lock",
-            );
-            name = "[CP] Check Pods Manifest.lock";
-            outputPaths = (
-                "$(DERIVED_FILE_DIR)/Pods-MariGoldTests-checkManifestLockResult.txt",
-            );
-            runOnlyForDeploymentPostprocessing = 0;
-            shellPath = /bin/sh;
-            shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-            showEnvVarsInLog = 0;
-        };
-        3FDCE2ADCF3D9162137033D0 /* [CP] Copy Pods Resources */ = {
-            isa = PBXShellScriptBuildPhase;
-            buildActionMask = 2147483647;
-            files = (
-            );
-            inputPaths = (
-            );
-            name = "[CP] Copy Pods Resources";
-            outputPaths = (
-            );
-            runOnlyForDeploymentPostprocessing = 0;
-            shellPath = /bin/sh;
-            shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MariGoldTests/Pods-MariGoldTests-resources.sh\"\n";
-            showEnvVarsInLog = 0;
-        };
-        6487404EC0E4FC3FFFA3CBA5 /* [CP] Embed Pods Frameworks */ = {
-            isa = PBXShellScriptBuildPhase;
-            buildActionMask = 2147483647;
-            files = (
-            );
-            inputPaths = (
-            );
-            name = "[CP] Embed Pods Frameworks";
-            outputPaths = (
-            );
-            runOnlyForDeploymentPostprocessing = 0;
-            shellPath = /bin/sh;
-            shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MariGoldUITests/Pods-MariGoldUITests-frameworks.sh\"\n";
-            showEnvVarsInLog = 0;
-        };
-        8108E45A3DC9ACB98E5F3B5E /* [CP] Embed Pods Frameworks */ = {
-            isa = PBXShellScriptBuildPhase;
-            buildActionMask = 2147483647;
-            files = (
-            );
-            inputPaths = (
-            );
-            name = "[CP] Embed Pods Frameworks";
-            outputPaths = (
-            );
-            runOnlyForDeploymentPostprocessing = 0;
-            shellPath = /bin/sh;
-            shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MariGoldTests/Pods-MariGoldTests-frameworks.sh\"\n";
-            showEnvVarsInLog = 0;
-        };
-        828A01BFF001113E3CE5ACEE /* [CP] Copy Pods Resources */ = {
-            isa = PBXShellScriptBuildPhase;
-            buildActionMask = 2147483647;
-            files = (
-            );
-            inputPaths = (
-            );
-            name = "[CP] Copy Pods Resources";
-            outputPaths = (
-            );
-            runOnlyForDeploymentPostprocessing = 0;
-            shellPath = /bin/sh;
-            shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MariGoldUITests/Pods-MariGoldUITests-resources.sh\"\n";
-            showEnvVarsInLog = 0;
-        };
-        9ABF47B7D1360A7BC7804986 /* [CP] Copy Pods Resources */ = {
-            isa = PBXShellScriptBuildPhase;
-            buildActionMask = 2147483647;
-            files = (
-            );
-            inputPaths = (
-            );
-            name = "[CP] Copy Pods Resources";
-            outputPaths = (
-            );
-            runOnlyForDeploymentPostprocessing = 0;
-            shellPath = /bin/sh;
-            shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MariGold/Pods-MariGold-resources.sh\"\n";
-            showEnvVarsInLog = 0;
-        };
-        CE837913902A9D8EE6F6F7F8 /* [CP] Embed Pods Frameworks */ = {
-            isa = PBXShellScriptBuildPhase;
-            buildActionMask = 2147483647;
-            files = (
-            );
-            inputPaths = (
-                "${SRCROOT}/Pods/Target Support Files/Pods-MariGold/Pods-MariGold-frameworks.sh",
-                "${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-                "${BUILT_PRODUCTS_DIR}/DynamicBlurView/DynamicBlurView.framework",
-                "${BUILT_PRODUCTS_DIR}/Pastel/Pastel.framework",
-                "${BUILT_PRODUCTS_DIR}/PopupDialog/PopupDialog.framework",
-            );
-            name = "[CP] Embed Pods Frameworks";
-            outputPaths = (
-                "${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-                "${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DynamicBlurView.framework",
-                "${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Pastel.framework",
-                "${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PopupDialog.framework",
-            );
-            runOnlyForDeploymentPostprocessing = 0;
-            shellPath = /bin/sh;
-            shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MariGold/Pods-MariGold-frameworks.sh\"\n";
-            showEnvVarsInLog = 0;
-        };
+		0AEADBF889EBE2AE3CCEC049 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MariGoldUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		0EB4B413AC7889DD00B32C33 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MariGold-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2F65E66E433270308A57B1AD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MariGoldTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3FDCE2ADCF3D9162137033D0 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MariGoldTests/Pods-MariGoldTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6487404EC0E4FC3FFFA3CBA5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MariGoldUITests/Pods-MariGoldUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8108E45A3DC9ACB98E5F3B5E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MariGoldTests/Pods-MariGoldTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		828A01BFF001113E3CE5ACEE /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MariGoldUITests/Pods-MariGoldUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9ABF47B7D1360A7BC7804986 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MariGold/Pods-MariGold-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CE837913902A9D8EE6F6F7F8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-MariGold/Pods-MariGold-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/DynamicBlurView/DynamicBlurView.framework",
+				"${BUILT_PRODUCTS_DIR}/Pastel/Pastel.framework",
+				"${BUILT_PRODUCTS_DIR}/PopupDialog/PopupDialog.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DynamicBlurView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Pastel.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PopupDialog.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MariGold/Pods-MariGold-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-        3D1762352017E62000A1C77A /* Sources */ = {
-            isa = PBXSourcesBuildPhase;
-            buildActionMask = 2147483647;
-            files = (
-                3D46A7D02083DFF5003ED196 /* RegisterLeagueViewController.swift in Sources */,
-                3D12B123203CBD0200FD701D /* Constants.swift in Sources */,
-                088AC5B520694326009C3B57 /* DashboardViewController.swift in Sources */,
-                031E23AB208500B800C7141B /* AllergyConflictsViewController.swift in Sources */,
-                03EEF52C20645403007C5E7A /* MedicationDetailsViewController.swift in Sources */,
-                032A99BB2068C1F800807745 /* ConflictDetailsViewController.swift in Sources */,
-                088AC5A42068CC63009C3B57 /* Spinner.swift in Sources */,
-                039253BD2038E382005A2C42 /* RegisterViewController.swift in Sources */,
-                088AC5AE20693D84009C3B57 /* AddNotificationViewController.swift in Sources */,
-                031E23AF2085026700C7141B /* AllergyConflictDetailsViewController.swift in Sources */,
-                03304F7E2049A6AB0002AAD5 /* AccountViewController.swift in Sources */,
-                3D46A7D920840CB8003ED196 /* RegisterAllergyViewController.swift in Sources */,
-                3D17623F2017E62000A1C77A /* ViewController.swift in Sources */,
-                08FA5DCA2082CEE3009D3F39 /* KeychainConfig.swift in Sources */,
-                03A106B92049BABE00E31BD9 /* MariGold.xcdatamodeld in Sources */,
-                088AC5B020693DAA009C3B57 /* AddNotificationTableViewController.swift in Sources */,
-                03C08A52204CE6540072E7A5 /* MedicationAdditionViewController.swift in Sources */,
-                037DF0DC203DDCB600D7F1A4 /* MedicationViewController.swift in Sources */,
-                0353585520687385005E4334 /* ConflictsViewController.swift in Sources */,
-                03BB6A71204CC7F200955186 /* CoreDataHelper.swift in Sources */,
-                3DDEC7DD2086CF2E001C452F /* SearchViewController.swift in Sources */,
-                03FA050120693E7F0046AA21 /* AccountEditViewController.swift in Sources */,
-                08FA5DD32082CF4D009D3F39 /* KeychainPasswordItem.swift in Sources */,
-                3D17623D2017E62000A1C77A /* AppDelegate.swift in Sources */,
-                088AC5AB2068CC8D009C3B57 /* LookupViewController.swift in Sources */,
-                030D0E27203B399700AC400C /* ResetPasswordViewController.swift in Sources */,
-            );
-            runOnlyForDeploymentPostprocessing = 0;
-        };
-        3D1762492017E62000A1C77A /* Sources */ = {
-            isa = PBXSourcesBuildPhase;
-            buildActionMask = 2147483647;
-            files = (
-                3D1762522017E62000A1C77A /* MariGoldTests.swift in Sources */,
-            );
-            runOnlyForDeploymentPostprocessing = 0;
-        };
-        3D1762542017E62000A1C77A /* Sources */ = {
-            isa = PBXSourcesBuildPhase;
-            buildActionMask = 2147483647;
-            files = (
-                0386D6CF2040824B00E0C62E /* (null) in Sources */,
-                3D17625D2017E62000A1C77A /* MariGoldUITests.swift in Sources */,
-                0315BA7F203A40C500CBD416 /* RegisterUITests.swift in Sources */,
-                03A58D00205F53B1005D9B13 /* MedicationUITests.swift in Sources */,
-                0350560A2034D7DF00FD8AA5 /* LoginUITests.swift in Sources */,
-            );
-            runOnlyForDeploymentPostprocessing = 0;
-        };
+		3D1762352017E62000A1C77A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3D46A7D02083DFF5003ED196 /* RegisterLeagueViewController.swift in Sources */,
+				3D12B123203CBD0200FD701D /* Constants.swift in Sources */,
+				088AC5B520694326009C3B57 /* DashboardViewController.swift in Sources */,
+				031E23AB208500B800C7141B /* AllergyConflictsViewController.swift in Sources */,
+				03EEF52C20645403007C5E7A /* MedicationDetailsViewController.swift in Sources */,
+				032A99BB2068C1F800807745 /* ConflictDetailsViewController.swift in Sources */,
+				088AC5A42068CC63009C3B57 /* Spinner.swift in Sources */,
+				03143E342087D84600A2BE96 /* LocationSearchTable.swift in Sources */,
+				039253BD2038E382005A2C42 /* RegisterViewController.swift in Sources */,
+				03143E292087C47200A2BE96 /* PharmacyMapViewController.swift in Sources */,
+				088AC5AE20693D84009C3B57 /* AddNotificationViewController.swift in Sources */,
+				031E23AF2085026700C7141B /* AllergyConflictDetailsViewController.swift in Sources */,
+				03304F7E2049A6AB0002AAD5 /* AccountViewController.swift in Sources */,
+				3D46A7D920840CB8003ED196 /* RegisterAllergyViewController.swift in Sources */,
+				3D17623F2017E62000A1C77A /* ViewController.swift in Sources */,
+				08FA5DCA2082CEE3009D3F39 /* KeychainConfig.swift in Sources */,
+				03A106B92049BABE00E31BD9 /* MariGold.xcdatamodeld in Sources */,
+				088AC5B020693DAA009C3B57 /* AddNotificationTableViewController.swift in Sources */,
+				03C08A52204CE6540072E7A5 /* MedicationAdditionViewController.swift in Sources */,
+				037DF0DC203DDCB600D7F1A4 /* MedicationViewController.swift in Sources */,
+				0353585520687385005E4334 /* ConflictsViewController.swift in Sources */,
+				03BB6A71204CC7F200955186 /* CoreDataHelper.swift in Sources */,
+				3DDEC7DD2086CF2E001C452F /* SearchViewController.swift in Sources */,
+				03FA050120693E7F0046AA21 /* AccountEditViewController.swift in Sources */,
+				08FA5DD32082CF4D009D3F39 /* KeychainPasswordItem.swift in Sources */,
+				3D17623D2017E62000A1C77A /* AppDelegate.swift in Sources */,
+				088AC5AB2068CC8D009C3B57 /* LookupViewController.swift in Sources */,
+				030D0E27203B399700AC400C /* ResetPasswordViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3D1762492017E62000A1C77A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3D1762522017E62000A1C77A /* MariGoldTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3D1762542017E62000A1C77A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0386D6CF2040824B00E0C62E /* (null) in Sources */,
+				3D17625D2017E62000A1C77A /* MariGoldUITests.swift in Sources */,
+				0315BA7F203A40C500CBD416 /* RegisterUITests.swift in Sources */,
+				03A58D00205F53B1005D9B13 /* MedicationUITests.swift in Sources */,
+				0350560A2034D7DF00FD8AA5 /* LoginUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-        3D17624F2017E62000A1C77A /* PBXTargetDependency */ = {
-            isa = PBXTargetDependency;
-            target = 3D1762382017E62000A1C77A /* MariGold */;
-            targetProxy = 3D17624E2017E62000A1C77A /* PBXContainerItemProxy */;
-        };
-        3D17625A2017E62000A1C77A /* PBXTargetDependency */ = {
-            isa = PBXTargetDependency;
-            target = 3D1762382017E62000A1C77A /* MariGold */;
-            targetProxy = 3D1762592017E62000A1C77A /* PBXContainerItemProxy */;
-        };
+		3D17624F2017E62000A1C77A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3D1762382017E62000A1C77A /* MariGold */;
+			targetProxy = 3D17624E2017E62000A1C77A /* PBXContainerItemProxy */;
+		};
+		3D17625A2017E62000A1C77A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3D1762382017E62000A1C77A /* MariGold */;
+			targetProxy = 3D1762592017E62000A1C77A /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-        3D1762402017E62000A1C77A /* Main.storyboard */ = {
-            isa = PBXVariantGroup;
-            children = (
-                3D1762412017E62000A1C77A /* Base */,
-            );
-            name = Main.storyboard;
-            sourceTree = "<group>";
-        };
+		3D1762402017E62000A1C77A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3D1762412017E62000A1C77A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-        3D17625F2017E62000A1C77A /* Debug */ = {
-            isa = XCBuildConfiguration;
-            buildSettings = {
-                ALWAYS_SEARCH_USER_PATHS = NO;
-                CLANG_ANALYZER_NONNULL = YES;
-                CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-                CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-                CLANG_CXX_LIBRARY = "libc++";
-                CLANG_ENABLE_MODULES = YES;
-                CLANG_ENABLE_OBJC_ARC = YES;
-                CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-                CLANG_WARN_BOOL_CONVERSION = YES;
-                CLANG_WARN_COMMA = YES;
-                CLANG_WARN_CONSTANT_CONVERSION = YES;
-                CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
-                CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-                CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-                CLANG_WARN_EMPTY_BODY = YES;
-                CLANG_WARN_ENUM_CONVERSION = YES;
-                CLANG_WARN_INFINITE_RECURSION = YES;
-                CLANG_WARN_INT_CONVERSION = YES;
-                CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-                CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
-                CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-                CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-                CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-                CLANG_WARN_STRICT_PROTOTYPES = YES;
-                CLANG_WARN_SUSPICIOUS_MOVE = YES;
-                CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-                CLANG_WARN_UNREACHABLE_CODE = YES;
-                CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-                CODE_SIGN_IDENTITY = "iPhone Developer";
-                COPY_PHASE_STRIP = NO;
-                DEBUG_INFORMATION_FORMAT = dwarf;
-                ENABLE_STRICT_OBJC_MSGSEND = YES;
-                ENABLE_TESTABILITY = YES;
-                GCC_C_LANGUAGE_STANDARD = gnu11;
-                GCC_DYNAMIC_NO_PIC = NO;
-                GCC_NO_COMMON_BLOCKS = YES;
-                GCC_OPTIMIZATION_LEVEL = 0;
-                GCC_PREPROCESSOR_DEFINITIONS = (
-                    "DEBUG=1",
-                    "$(inherited)",
-                );
-                GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-                GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-                GCC_WARN_UNDECLARED_SELECTOR = YES;
-                GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-                GCC_WARN_UNUSED_FUNCTION = YES;
-                GCC_WARN_UNUSED_VARIABLE = YES;
-                IPHONEOS_DEPLOYMENT_TARGET = 11.2;
-                MTL_ENABLE_DEBUG_INFO = YES;
-                ONLY_ACTIVE_ARCH = YES;
-                SDKROOT = iphoneos;
-                SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-                SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-            };
-            name = Debug;
-        };
-        3D1762602017E62000A1C77A /* Release */ = {
-            isa = XCBuildConfiguration;
-            buildSettings = {
-                ALWAYS_SEARCH_USER_PATHS = NO;
-                CLANG_ANALYZER_NONNULL = YES;
-                CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-                CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-                CLANG_CXX_LIBRARY = "libc++";
-                CLANG_ENABLE_MODULES = YES;
-                CLANG_ENABLE_OBJC_ARC = YES;
-                CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-                CLANG_WARN_BOOL_CONVERSION = YES;
-                CLANG_WARN_COMMA = YES;
-                CLANG_WARN_CONSTANT_CONVERSION = YES;
-                CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
-                CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-                CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-                CLANG_WARN_EMPTY_BODY = YES;
-                CLANG_WARN_ENUM_CONVERSION = YES;
-                CLANG_WARN_INFINITE_RECURSION = YES;
-                CLANG_WARN_INT_CONVERSION = YES;
-                CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-                CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
-                CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-                CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-                CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-                CLANG_WARN_STRICT_PROTOTYPES = YES;
-                CLANG_WARN_SUSPICIOUS_MOVE = YES;
-                CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-                CLANG_WARN_UNREACHABLE_CODE = YES;
-                CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-                CODE_SIGN_IDENTITY = "iPhone Developer";
-                COPY_PHASE_STRIP = NO;
-                DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-                ENABLE_NS_ASSERTIONS = NO;
-                ENABLE_STRICT_OBJC_MSGSEND = YES;
-                GCC_C_LANGUAGE_STANDARD = gnu11;
-                GCC_NO_COMMON_BLOCKS = YES;
-                GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-                GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-                GCC_WARN_UNDECLARED_SELECTOR = YES;
-                GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-                GCC_WARN_UNUSED_FUNCTION = YES;
-                GCC_WARN_UNUSED_VARIABLE = YES;
-                IPHONEOS_DEPLOYMENT_TARGET = 11.2;
-                MTL_ENABLE_DEBUG_INFO = NO;
-                SDKROOT = iphoneos;
-                SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-                VALIDATE_PRODUCT = YES;
-            };
-            name = Release;
-        };
-        3D1762622017E62000A1C77A /* Debug */ = {
-            isa = XCBuildConfiguration;
-            baseConfigurationReference = 0E4FE26337B0BA937F5A53D3 /* Pods-MariGold.debug.xcconfig */;
-            buildSettings = {
-                ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-                "CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-                CODE_SIGN_STYLE = Automatic;
+		3D17625F2017E62000A1C77A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		3D1762602017E62000A1C77A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3D1762622017E62000A1C77A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0E4FE26337B0BA937F5A53D3 /* Pods-MariGold.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = H929AZVP97;
-                INFOPLIST_FILE = MariGold/Info.plist;
-                LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				INFOPLIST_FILE = MariGold/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = MariGold.BassMariGold2;
-                PRODUCT_NAME = "$(TARGET_NAME)";
-                PROVISIONING_PROFILE_SPECIFIER = "";
-                SWIFT_VERSION = 4.0;
-                TARGETED_DEVICE_FAMILY = "1,2";
-            };
-            name = Debug;
-        };
-        3D1762632017E62000A1C77A /* Release */ = {
-            isa = XCBuildConfiguration;
-            baseConfigurationReference = DAE7928B40A63DCD5F4722AC /* Pods-MariGold.release.xcconfig */;
-            buildSettings = {
-                ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-                "CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-                CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3D1762632017E62000A1C77A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DAE7928B40A63DCD5F4722AC /* Pods-MariGold.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = H929AZVP97;
-                INFOPLIST_FILE = MariGold/Info.plist;
-                LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				INFOPLIST_FILE = MariGold/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = MariGold.BassMariGold2;
-                PRODUCT_NAME = "$(TARGET_NAME)";
-                PROVISIONING_PROFILE_SPECIFIER = "";
-                SWIFT_VERSION = 4.0;
-                TARGETED_DEVICE_FAMILY = "1,2";
-            };
-            name = Release;
-        };
-        3D1762652017E62000A1C77A /* Debug */ = {
-            isa = XCBuildConfiguration;
-            baseConfigurationReference = 85906C025E2B64319F36A99C /* Pods-MariGoldTests.debug.xcconfig */;
-            buildSettings = {
-                ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-                BUNDLE_LOADER = "$(TEST_HOST)";
-                CODE_SIGN_STYLE = Automatic;
-                INFOPLIST_FILE = MariGoldTests/Info.plist;
-                LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-                PRODUCT_BUNDLE_IDENTIFIER = MariGold.MariGoldTests;
-                PRODUCT_NAME = "$(TARGET_NAME)";
-                SWIFT_VERSION = 4.0;
-                TARGETED_DEVICE_FAMILY = "1,2";
-                TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MariGold.app/MariGold";
-            };
-            name = Debug;
-        };
-        3D1762662017E62000A1C77A /* Release */ = {
-            isa = XCBuildConfiguration;
-            baseConfigurationReference = 85CA57AB855AC9F13EE89691 /* Pods-MariGoldTests.release.xcconfig */;
-            buildSettings = {
-                ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-                BUNDLE_LOADER = "$(TEST_HOST)";
-                CODE_SIGN_STYLE = Automatic;
-                INFOPLIST_FILE = MariGoldTests/Info.plist;
-                LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-                PRODUCT_BUNDLE_IDENTIFIER = MariGold.MariGoldTests;
-                PRODUCT_NAME = "$(TARGET_NAME)";
-                SWIFT_VERSION = 4.0;
-                TARGETED_DEVICE_FAMILY = "1,2";
-                TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MariGold.app/MariGold";
-            };
-            name = Release;
-        };
-        3D1762682017E62000A1C77A /* Debug */ = {
-            isa = XCBuildConfiguration;
-            baseConfigurationReference = 979C2404EE5CFE1A22129EE2 /* Pods-MariGoldUITests.debug.xcconfig */;
-            buildSettings = {
-                ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-                CODE_SIGN_STYLE = Automatic;
-                INFOPLIST_FILE = MariGoldUITests/Info.plist;
-                LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-                PRODUCT_BUNDLE_IDENTIFIER = MariGold.MariGoldUITests;
-                PRODUCT_NAME = "$(TARGET_NAME)";
-                SWIFT_VERSION = 4.0;
-                TARGETED_DEVICE_FAMILY = "1,2";
-                TEST_TARGET_NAME = MariGold;
-            };
-            name = Debug;
-        };
-        3D1762692017E62000A1C77A /* Release */ = {
-            isa = XCBuildConfiguration;
-            baseConfigurationReference = 4A844F2CD6B895BF9CF281F6 /* Pods-MariGoldUITests.release.xcconfig */;
-            buildSettings = {
-                ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-                CODE_SIGN_STYLE = Automatic;
-                INFOPLIST_FILE = MariGoldUITests/Info.plist;
-                LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-                PRODUCT_BUNDLE_IDENTIFIER = MariGold.MariGoldUITests;
-                PRODUCT_NAME = "$(TARGET_NAME)";
-                SWIFT_VERSION = 4.0;
-                TARGETED_DEVICE_FAMILY = "1,2";
-                TEST_TARGET_NAME = MariGold;
-            };
-            name = Release;
-        };
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		3D1762652017E62000A1C77A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 85906C025E2B64319F36A99C /* Pods-MariGoldTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = MariGoldTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = MariGold.MariGoldTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MariGold.app/MariGold";
+			};
+			name = Debug;
+		};
+		3D1762662017E62000A1C77A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 85CA57AB855AC9F13EE89691 /* Pods-MariGoldTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = MariGoldTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = MariGold.MariGoldTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MariGold.app/MariGold";
+			};
+			name = Release;
+		};
+		3D1762682017E62000A1C77A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 979C2404EE5CFE1A22129EE2 /* Pods-MariGoldUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = MariGoldUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = MariGold.MariGoldUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MariGold;
+			};
+			name = Debug;
+		};
+		3D1762692017E62000A1C77A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4A844F2CD6B895BF9CF281F6 /* Pods-MariGoldUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = MariGoldUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = MariGold.MariGoldUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MariGold;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-        3D1762342017E62000A1C77A /* Build configuration list for PBXProject "MariGold" */ = {
-            isa = XCConfigurationList;
-            buildConfigurations = (
-                3D17625F2017E62000A1C77A /* Debug */,
-                3D1762602017E62000A1C77A /* Release */,
-            );
-            defaultConfigurationIsVisible = 0;
-            defaultConfigurationName = Release;
-        };
-        3D1762612017E62000A1C77A /* Build configuration list for PBXNativeTarget "MariGold" */ = {
-            isa = XCConfigurationList;
-            buildConfigurations = (
-                3D1762622017E62000A1C77A /* Debug */,
-                3D1762632017E62000A1C77A /* Release */,
-            );
-            defaultConfigurationIsVisible = 0;
-            defaultConfigurationName = Release;
-        };
-        3D1762642017E62000A1C77A /* Build configuration list for PBXNativeTarget "MariGoldTests" */ = {
-            isa = XCConfigurationList;
-            buildConfigurations = (
-                3D1762652017E62000A1C77A /* Debug */,
-                3D1762662017E62000A1C77A /* Release */,
-            );
-            defaultConfigurationIsVisible = 0;
-            defaultConfigurationName = Release;
-        };
-        3D1762672017E62000A1C77A /* Build configuration list for PBXNativeTarget "MariGoldUITests" */ = {
-            isa = XCConfigurationList;
-            buildConfigurations = (
-                3D1762682017E62000A1C77A /* Debug */,
-                3D1762692017E62000A1C77A /* Release */,
-            );
-            defaultConfigurationIsVisible = 0;
-            defaultConfigurationName = Release;
-        };
+		3D1762342017E62000A1C77A /* Build configuration list for PBXProject "MariGold" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3D17625F2017E62000A1C77A /* Debug */,
+				3D1762602017E62000A1C77A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3D1762612017E62000A1C77A /* Build configuration list for PBXNativeTarget "MariGold" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3D1762622017E62000A1C77A /* Debug */,
+				3D1762632017E62000A1C77A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3D1762642017E62000A1C77A /* Build configuration list for PBXNativeTarget "MariGoldTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3D1762652017E62000A1C77A /* Debug */,
+				3D1762662017E62000A1C77A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3D1762672017E62000A1C77A /* Build configuration list for PBXNativeTarget "MariGoldUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3D1762682017E62000A1C77A /* Debug */,
+				3D1762692017E62000A1C77A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-        03A106B22049BABE00E31BD9 /* MariGold.xcdatamodeld */ = {
-            isa = XCVersionGroup;
-            children = (
-                03A106B32049BABE00E31BD9 /* Medication.xcdatamodel */,
-            );
-            currentVersion = 03A106B32049BABE00E31BD9 /* Medication.xcdatamodel */;
-            name = MariGold.xcdatamodeld;
-            path = Models/MariGold.xcdatamodeld;
-            sourceTree = "<group>";
-            versionGroupType = wrapper.xcdatamodel;
-        };
+		03A106B22049BABE00E31BD9 /* MariGold.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				03A106B32049BABE00E31BD9 /* Medication.xcdatamodel */,
+			);
+			currentVersion = 03A106B32049BABE00E31BD9 /* Medication.xcdatamodel */;
+			name = MariGold.xcdatamodeld;
+			path = Models/MariGold.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
 /* End XCVersionGroup section */
-    };
-    rootObject = 3D1762312017E62000A1C77A /* Project object */;
+	};
+	rootObject = 3D1762312017E62000A1C77A /* Project object */;
 }

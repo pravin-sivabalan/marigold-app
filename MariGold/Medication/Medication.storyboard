@@ -118,7 +118,7 @@
                                                     <attributedString key="attributedText">
                                                         <fragment content="Med Name">
                                                             <attributes>
-                                                                <color key="NSColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <color key="NSColor" red="0.93850249050000001" green="0.53418391939999998" blue="0.2004626095" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <font key="NSFont" metaFont="system" size="28"/>
                                                             </attributes>
                                                         </fragment>
@@ -998,7 +998,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <button key="tableFooterView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="s49-Ed-Jfi">
+                        <button key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="s49-Ed-Jfi">
                             <rect key="frame" x="0.0" y="38" width="320" height="44"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <state key="normal" title="Done"/>
@@ -1179,4 +1179,5 @@
         <image name="Explosion" width="100" height="100"/>
         <image name="Medication" width="25" height="25"/>
     </resources>
+    <color key="tintColor" name="Mari-Orange"/>
 </document>
